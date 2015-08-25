@@ -1,0 +1,258 @@
+{
+    "scheming_version": 1,
+        "dataset_type": "dataset",
+        "about":"Metadata schema for data.wa.gov.au",
+        "about_url": "http://github.com/florianm/ckanext-scheming",
+        "dataset_fields": [
+        {
+            "field_name": "title",
+            "label": "Title",
+	    "display_property": "dcat:Dataset/dct:title",
+            "validators": "if_empty_same_as(name) unicode",
+            "form_snippet": "large_text.html",
+            "form_attrs": {"data-module": "slug-preview-target"},
+            "form_placeholder": "eg. A descriptive title"
+        },
+        {
+            "field_name": "name",
+            "label": "URL",
+            "validators": "not_empty unicode name_validator package_name_validator",
+            "form_snippet": "slug.html",
+            "form_placeholder": "eg. my-dataset"
+        },
+        {
+            "field_name": "notes",
+            "label": "Description",
+	    "display_property": "dcat:Dataset/dct:description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "eg. Some useful notes about the data"
+        },
+        {
+            "field_name": "tag_string",
+            "label": "Tags",
+	    "display_property": "dcat:Dataset/dct:keyword",
+            "validators": "ignore_missing tag_string_convert",
+            "form_placeholder": "type to auto-complete",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-tags": "",
+                "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
+            }
+        },
+        {
+            "field_name": "license_id",
+            "label": "License",
+	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "form_snippet": "license.html"
+        },
+        {
+            "field_name": "owner_org",
+            "label": "Organization",
+	    "display_property": "dct:publisher",
+            "validators": "owner_org_validator unicode",
+            "form_snippet": "organization.html"
+        },
+        {
+            "field_name": "doi",
+            "label": "DOI",
+            "help_text": "Digital Object Identifier",
+            "help_inline": true,
+            "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
+            "display_property": "foaf:homepage",
+            "display_snippet": "link.html"
+        },
+        {
+            "field_name": "author",
+            "label": "Author",
+            "help_text": "The author (dataset custodian) is responsible for the content of attached data resources",
+            "help_inline": true,
+            "form_placeholder": "Joe Bloggs",
+            "display_property": "dc:creator",
+            "hide_field": "true"
+        },
+        {
+            "field_name": "author_email",
+            "label": "Author Email",
+            "form_placeholder": "joe@example.com",
+            "display_property": "dc:creator",
+            "display_snippet": "email.html",
+            "display_email_name_field": "author"
+        },
+        {
+            "field_name": "citation",
+            "label": "Citation",
+            "help_text": "Comprehensive attribution of authors and their affiliation",
+            "help_inline": true,
+            "form_placeholder": "Author AB (year): Publication",
+            "display_property": "citation",
+            "display_snippet": "text.html"
+        },
+        {
+            "field_name": "maintainer",
+            "label": "Maintainer",
+            "help_text": "The metadata maintainer updates this page on behalf of the author",
+            "help_inline": true,
+            "form_placeholder": "Joe Bloggs",
+            "display_property": "dc:contributor",
+            "hide_field": "true"
+        },
+        {
+            "field_name": "maintainer_email",
+            "label": "Maintainer Email",
+            "form_placeholder": "joe@example.com",
+            "display_property": "dc:contributor",
+            "display_snippet": "email.html",
+            "display_email_name_field": "maintainer"
+        },
+        {
+            "field_name": "published_on",
+            "label": "Publish date",
+            "help_text": "The date on which this dataset was or shall be published",
+            "help_inline": true,
+	    "display_property": "dcat:Dataset/dct:issued",
+            "preset": "date"
+        },
+        {
+            "field_name": "last_updated_on",
+            "label": "Data last updated on",
+            "help_text": "Last modification of the content of data resources",
+            "help_inline": true,
+	    "display_property": "dcat:Dataset/dct:modified",
+            "preset": "date"
+        },
+        {
+            "field_name":"update_frequency",
+            "label": "Update frequency",
+            "help_text": "How often are data resources expected to be updated?",
+            "help_inline": true,
+	    "display_property": "dcat:Dataset/dct:accrualPeriodocity",
+            "preset": "select",
+            "choices": [
+            {"value":"static", "label":"one-off snapshot"},
+            {"value":"infrequent", "label":"infrequently"},
+            {"value":"frequent", "label":"frequently"},
+            {"value":"yearly", "label":"yearly"},
+            {"value":"monthly", "label":"monthly"},
+            {"value":"weekly", "label":"weekly"},
+            {"value":"daily", "label":"daily"},
+            {"value":"unknown", "label":"unknown"}
+            ]
+        },
+        {
+            "field_name": "data_temporal_extent_begin",
+            "label": "Temporal coverage from",
+            "help_text": "Earliest record in data resources",
+            "help_inline": true,
+            "preset": "date",
+            "display_property": "dcat:Dataset/dct:temporal"
+        },
+        {
+            "field_name": "data_temporal_extent_end",
+            "label": "Temporal coverage to",
+            "help_text": "Latest record in data resources",
+            "help_inline": true,
+            "preset": "date",
+            "display_property": "dcat:Dataset/dct:temporal"
+        },
+        {
+            "field_name": "spatial",
+            "label": "Geospatial coverage",
+	    "display_property": "dcat:Dataset/dct:spatial",
+            "form_placeholder": "Paste a valid GeoJSON geometry",
+            "form_snippet":"spatial.html",
+            "display_snippet":"spatial.html",
+            "choices": [
+            {"label":"Western Australia",
+                "value":{
+                    "type":"MultiPolygon",
+                    "coordinates":[[[
+                        [128.84765625000003,-11.523087506868514],
+                    [128.67187500000003,-34.88593094075316],
+                    [114.43359375000001,-37.020098201368114],
+                    [110.91796875000001,-19.973348786110602],
+                    [128.84765625000003,-11.523087506868514]
+                        ]]]
+                }
+            },
+            {"label": "IBRA NUL01 Carlisle",
+                "value": {"coordinates": [[[[127.97891231400001, -29.07719802799994],
+                    [128.4196166900001, -29.453792579999973],
+                    [129.00158855100005, -29.3176470399999],
+                    [129.0015363660001, -30.019301357999954],
+                    [128.62449622000008, -30.117902838999953],
+                    [128.6041717820001, -30.345117626999976],
+                    [128.4488678560001, -30.143999056999974],
+                    [128.281463647, -30.405420223999958],
+                    [128.33554083700005, -30.20363629799994],
+                    [127.47898861800002, -29.929881997999928],
+                    [126.03502659000004, -30.43778610399994],
+                    [125.97803501200008, -30.61715514499997],
+                    [125.79311363300008, -30.42799369399995],
+                    [125.18556210900012, -30.68363956199994],
+                    [124.48764042600011, -30.73550040899994],
+                    [124.63977046000002, -30.333997690999983],
+                    [124.93494420900005, -30.365713135999954],
+                    [124.99262243200009, -30.021957372999964],
+                    [124.80995947200006, -29.996629775999963],
+                    [125.19277959800003, -29.65657998699993],
+                    [125.04314418600006, -29.50138100299995],
+                    [125.7674941780001, -28.985576618999968],
+                    [126.88920589200008, -28.89371498299994],
+                    [127.97891231400001, -29.07719802799994]]]],
+                    "type": "MultiPolygon"}}
+            ]
+        }
+    ],
+        "resource_fields": [
+        {
+            "field_name": "url",
+            "label": "URL",
+            "help_text": "Resource file or download URL",
+            "help_inline": true,
+            "validators": "not_empty unicode remove_whitespace",
+            "form_snippet": "upload.html",
+            "form_placeholder": "http://example.com/my-data.csv",
+            "upload_field": "upload",
+            "upload_clear": "clear_upload",
+            "upload_label": "File"
+        },
+        {
+            "field_name": "access_url",
+            "label": "Access URL",
+            "help_text": "Where to request access to the resource if no direct download is given",
+            "help_inline": true,
+            "form_placeholder": "http://domain.com",
+            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:accessURL",
+            "display_snippet": "link.html",
+            
+	    "validators": "unicode remove_whitespace",
+            "form_snippet": "upload.html",
+            "form_placeholder": "http://example.com/my-data.csv",
+            "upload_field": "upload",
+            "upload_clear": "clear_upload",
+            "upload_label": "File"
+        },
+        {
+            "field_name": "name",
+            "label": "Name",
+            "form_placeholder": "eg. Observations of X at Y"
+        },
+        {
+            "field_name": "description",
+            "label": "Description",
+            "form_snippet": "markdown.html",
+            "form_placeholder": "Some useful notes"
+        },
+        {
+            "field_name": "format",
+            "label": "Format",
+	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
+            "validators": "if_empty_guess_format ignore_missing clean_format unicode",
+            "form_placeholder": "eg. CSV, PDF, JPG, PNG, GeoJSON, XML",
+            "form_attrs": {
+                "data-module": "autocomplete",
+                "data-module-source": "/api/2/util/resource/format_autocomplete?incomplete=?"
+            }
+        }
+    ]
+}
