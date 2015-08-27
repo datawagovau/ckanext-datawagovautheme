@@ -53,13 +53,35 @@
             "form_snippet": "organization.html"
         },
         {
+            "field_name": "data_portal",
+            "label": "Data portal",
+            "help_text": "URL this dataset was harvested from, or original point of truth",
+            "help_inline": true,
+            "display_property": "dcat:Dataset/dcat:landingPage"
+        },
+        {
+            "field_name": "landing_page",
+            "label": "Landing Page",
+            "help_text": "URL to access point and detailed metadata if available",
+            "help_inline": true,
+            "display_property": "dcat:Dataset/dcat:landingPage"
+        },
+        {
             "field_name": "doi",
             "label": "DOI",
             "help_text": "Digital Object Identifier",
             "help_inline": true,
             "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
-            "display_property": "foaf:homepage",
-            "display_snippet": "link.html"
+            "display_property": "dc:identifier"
+        },
+        {
+            "field_name": "citation",
+            "label": "Citation",
+            "help_text": "Comprehensive attribution of authors and their affiliation",
+            "help_inline": true,
+            "form_placeholder": "Author AB (year): Publication",
+            "display_property": "citation",
+            "display_snippet": "text.html"
         },
         {
             "field_name": "author",
@@ -77,15 +99,6 @@
             "display_property": "dc:creator",
             "display_snippet": "email.html",
             "display_email_name_field": "author"
-        },
-        {
-            "field_name": "citation",
-            "label": "Citation",
-            "help_text": "Comprehensive attribution of authors and their affiliation",
-            "help_inline": true,
-            "form_placeholder": "Author AB (year): Publication",
-            "display_property": "citation",
-            "display_snippet": "text.html"
         },
         {
             "field_name": "maintainer",
@@ -106,7 +119,7 @@
         },
         {
             "field_name": "published_on",
-            "label": "Publish date",
+            "label": "Published on",
             "help_text": "The date on which this dataset was or shall be published",
             "help_inline": true,
 	    "display_property": "dcat:Dataset/dct:issued",
@@ -210,22 +223,6 @@
             "help_text": "Resource file or download URL",
             "help_inline": true,
             "validators": "not_empty unicode remove_whitespace",
-            "form_snippet": "upload.html",
-            "form_placeholder": "http://example.com/my-data.csv",
-            "upload_field": "upload",
-            "upload_clear": "clear_upload",
-            "upload_label": "File"
-        },
-        {
-            "field_name": "access_url",
-            "label": "Access URL",
-            "help_text": "Where to request access to the resource if no direct download is given",
-            "help_inline": true,
-            "form_placeholder": "http://domain.com",
-            "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:accessURL",
-            "display_snippet": "link.html",
-            
-	    "validators": "unicode remove_whitespace",
             "form_snippet": "upload.html",
             "form_placeholder": "http://example.com/my-data.csv",
             "upload_field": "upload",
