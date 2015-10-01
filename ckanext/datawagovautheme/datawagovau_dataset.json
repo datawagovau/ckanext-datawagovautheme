@@ -55,16 +55,18 @@
         {
             "field_name": "data_portal",
             "label": "Data portal",
-            "help_text": "URL this dataset was harvested from, or original point of truth",
+            "help_text": "Dataset URL on original data catalogue (set automatically if harvested)",
             "help_inline": true,
-            "display_property": "dcat:Dataset/dcat:landingPage"
+            "display_property": "dcat:Dataset/dcat:landingPage",
+	    "display_snippet": "link.html"
         },
         {
-            "field_name": "landing_page",
-            "label": "Landing Page",
-            "help_text": "URL to access point and detailed metadata if available",
+            "field_name": "data_homepage",
+            "label": "Data Homepage",
+            "help_text": "URL of access point and detailed metadata of attached data resources",
             "help_inline": true,
-            "display_property": "dcat:Dataset/dcat:landingPage"
+            "display_property": "dcat:Dataset/dcat:landingPage",
+	    "display_snippet": "link.html"
         },
         {
             "field_name": "doi",
@@ -72,7 +74,8 @@
             "help_text": "Digital Object Identifier",
             "help_inline": true,
             "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
-            "display_property": "dc:identifier"
+            "display_property": "dc:identifier",
+	    "display_snippet": "link.html"
         },
         {
             "field_name": "citation",
@@ -220,14 +223,7 @@
         {
             "field_name": "url",
             "label": "URL",
-            "help_text": "Resource file or download URL",
-            "help_inline": true,
-            "validators": "not_empty unicode remove_whitespace",
-            "form_snippet": "upload.html",
-            "form_placeholder": "http://example.com/my-data.csv",
-            "upload_field": "upload",
-            "upload_clear": "clear_upload",
-            "upload_label": "File"
+	    "preset": "resource_url_upload"
         },
         {
             "field_name": "name",
@@ -238,18 +234,13 @@
             "field_name": "description",
             "label": "Description",
             "form_snippet": "markdown.html",
-            "form_placeholder": "Some useful notes"
+            "form_placeholder": "Some useful notes about the resource"
         },
         {
             "field_name": "format",
             "label": "Format",
-	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format",
-            "validators": "if_empty_guess_format ignore_missing clean_format unicode",
-            "form_placeholder": "eg. CSV, PDF, JPG, PNG, GeoJSON, XML",
-            "form_attrs": {
-                "data-module": "autocomplete",
-                "data-module-source": "/api/2/util/resource/format_autocomplete?incomplete=?"
-            }
+	    "preset": "resource_format_autocomplete",
+	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format"
         }
     ]
 }
