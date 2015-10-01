@@ -6,20 +6,6 @@
 /* Hide featured section */
 .featured {visibility:hidden; height:0px;}
 
-/* Repair Leaflet-draw CSS */
-.leaflet-draw {
-	margin-left: 13px;
-	margin-top: 12px;
-	}
-
-.leaflet-draw-draw-rectangle, 
-.leaflet-draw-draw-polygon, 
-.leaflet-draw-edit-edit, 
-.leaflet-draw-edit-remove {
- height:22px; 
- width:22px;
-}
-
 .account-masthead {
   background-color: #FEFEFE;
 }
