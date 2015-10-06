@@ -1,0 +1,72 @@
+{
+  "scheming_version": 1,
+  "organization_type": "organization",
+  "about_url": "https://github.com/datawagovau/ckanext-datawagovautheme",
+  "fields": [
+    {
+      	"field_name": "title",
+      	"label": "Name",
+      	"validators": "ignore_missing unicode",
+      	"form_snippet": "large_text.html",
+      	"form_attrs": {"data-module": "slug-preview-target"},
+      	"form_placeholder": "Organisation name"
+    },
+    {
+      	"field_name": "name",
+      	"label": "URL",
+      	"validators": "not_empty unicode name_validator group_name_validator",
+      	"form_snippet": "slug.html",
+      	"form_placeholder": "organisation-acronym"
+    },
+    {
+      	"field_name": "notes",
+      	"label": "Description",
+      	"form_snippet": "markdown.html",
+	"form_placeholder": "A little information about the organisation..."
+    },
+    {
+      	"field_name": "url",
+      	"label": "Logo URL",
+      	"form_placeholder": "http://example.com/my-logo.jpg"
+    },
+    {
+       	"field_name": "organization_homepage",
+       	"label": "Homepage",
+       	"help_text": "Organisation Homepage",
+       	"help_inline": true,
+       	"display_property": "dcat:Dataset/dcat:landingPage",
+	"display_snippet": "link.html"
+    },
+    {
+        "field_name": "contact_name",
+        "label": "Contact",
+        "help_text": "The primary contact for data requests",
+        "help_inline": true,
+        "form_placeholder": "Joe Bloggs",
+        "display_property": "dc:creator",
+        "hide_field": "true"
+    },
+    {
+        "field_name": "contact_email",
+        "label": "Contact Email",
+        "form_placeholder": "joe@example.com",
+        "display_property": "dc:creator",
+        "display_snippet": "email.html",
+        "display_email_name_field": "author"
+    },
+    {
+      	"field_name": "contact_phone",
+      	"label": "Contact Phone",
+      	"form_placeholder": "e.g. +61 8 9999 9999"
+    },
+    {
+        "field_name": "jurisdiction",
+        "label": "Jurisdiction",
+        "help_text": "The jurisdiction under which the organisation operates",
+        "help_inline": true,
+        "form_placeholder": "Western Australia",
+        "display_property": "jurisdiction",
+        "display_snippet": "text.html"
+    }
+  ]
+}

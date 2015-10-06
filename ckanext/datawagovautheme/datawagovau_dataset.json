@@ -54,7 +54,7 @@
         },
         {
             "field_name": "data_portal",
-            "label": "Data portal",
+            "label": "Data Portal",
             "help_text": "Dataset URL on original data catalogue (set automatically if harvested)",
             "help_inline": true,
             "display_property": "dcat:Dataset/dcat:landingPage",
@@ -121,6 +121,15 @@
             "display_email_name_field": "maintainer"
         },
         {
+            "field_name": "language",
+            "label": "Language",
+            "help_text": "The primary language of this dataset",
+            "help_inline": true,
+            "form_placeholder": "English",
+            "display_property": "language",
+            "display_snippet": "text.html"
+        },
+        {
             "field_name": "published_on",
             "label": "Published on",
             "help_text": "The date on which this dataset was or shall be published",
@@ -138,8 +147,8 @@
         },
         {
             "field_name":"update_frequency",
-            "label": "Update frequency",
-            "help_text": "How often are data resources expected to be updated?",
+            "label": "Update Frequency",
+            "help_text": "How often will the data resources be updated?",
             "help_inline": true,
 	    "display_property": "dcat:Dataset/dct:accrualPeriodocity",
             "preset": "select",
@@ -172,7 +181,7 @@
         },
         {
             "field_name": "spatial",
-            "label": "Geospatial coverage",
+            "label": "Geospatial Coverage",
 	    "display_property": "dcat:Dataset/dct:spatial",
             "form_placeholder": "Paste a valid GeoJSON geometry",
             "form_snippet":"spatial.html",
