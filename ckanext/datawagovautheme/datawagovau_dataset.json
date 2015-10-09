@@ -123,7 +123,7 @@
         {
             "field_name":"theme",
             "label": "Theme",
-            "help_text": "The governmentn jurisdiction defined business function to which the resource relates",
+            "help_text": "The government jurisdiction defined business function to which the resource relates",
             "help_inline": true,
 	    "display_property": "agls:function",
             "preset": "select",
