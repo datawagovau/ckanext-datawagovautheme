@@ -65,7 +65,8 @@
     </div>
   </header>
 {% endblock %}
-<header class="navbar navbar-static-top masthead">
+<div class="" style="background: none; background-color: #FEFEFE;">
+<header class="navbar navbar-static-top masthead" style="background-color: #FEFEFE;">
   {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
       <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
@@ -132,4 +133,5 @@
     </div>
   </div>
 </header>
+</div>
 {% endblock %}

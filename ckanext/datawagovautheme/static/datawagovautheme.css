@@ -7,12 +7,14 @@
 .featured {visibility:hidden; height:0px;}
 
 .account-masthead {
+  height: 39px;
+  background: none;
   background-color: #FEFEFE;
 }
 
 /* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
-  background-color: #FEFEFE;
+  background-color: #FCFCFC;
 }
 
 /* The text and icons in the user account info. */
@@ -33,13 +35,36 @@
    ======================================================================== */
 
 .masthead {
-  background-color: #FCFCFC;
+}
+
+.dwga-header {
+background: none;
+background-color: #FCFCFC;
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+color: rgb(86, 86, 86);
+display: block;
+font-family: Helvetica, Arial, sans-serif;
+font-size: 17px;
+font-weight: normal;
+height: 134px;
+line-height: 27.09375px;
+margin-bottom: 0px;
+margin-left: 101px;
+margin-right: 101px;
+margin-top: 0px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+
 }
 
 /* The "navigation pills" in the masthead (the links to Datasets,
    Organizations, etc) when the user's pointer hovers over them. */
 .masthead .navigation .nav-pills li a:hover {
-  background-color: rgb(48, 48, 48);
+  background: none;
+  background-color: #FCFCFC;
   color: white;
 }
 /* The "active" navigation pill (for example, when you're on the /dataset page
