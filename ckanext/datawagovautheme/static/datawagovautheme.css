@@ -34,6 +34,14 @@
    The main masthead bar that contains the site logo, nav links, and search
    ======================================================================== */
 
+.dwga-header-container {
+  padding: 5px;
+}
+
+.dwga-site-search-margin {
+  margin-top: 10px;
+  float: right;
+}
 .masthead {
 }
 
@@ -62,16 +70,14 @@ padding-top: 10px;
 
 /* The "navigation pills" in the masthead (the links to Datasets,
    Organizations, etc) when the user's pointer hovers over them. */
-.masthead .navigation .nav-pills li a:hover {
+.masthead .navigation ul.nav li a:hover,
+.masthead .navigation ul.nav li.active a {
   background: none;
-  background-color: #FCFCFC;
-  color: white;
-}
-/* The "active" navigation pill (for example, when you're on the /dataset page
-   the "Datasets" link is active). */
-.masthead .navigation .nav-pills li.active a {
-  background-color: rgb(74, 74, 74);
-  color: white;
+  color: #69737c;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-shadow: rgb(105, 115, 124) 0px 2px 0px 0px;
+
 }
 /* The "box shadow" effect that appears around the search box when it
    has the keyboard cursor's focus. */
@@ -108,7 +114,7 @@ padding-top: 10px;
    The content in the middle of the front page
    =========================================== */
 
-.hero {
+.hero, [role=main] {
   background:#FEFEFE;
 }
 

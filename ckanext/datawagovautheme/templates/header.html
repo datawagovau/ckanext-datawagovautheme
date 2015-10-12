@@ -72,7 +72,7 @@
       <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
     {% endif %}
   {% endblock %}
-  <div class="container">
+  <div class="container" id="dwga-header-container" >
     <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -81,42 +81,42 @@
     
     {# The .header-image class sits next to the main text and uses image replacement for the title #}
     <div class="row dwga-header-branding">
-    <hgroup class="{{ g.header_class }}">
-
-      {% block header_logo %}
-        {% if g.site_logo %}
-	<div class="site-logo">
-          <a class="logo pull-left" href="{{ h.url('home') }}"><img 
-		src="{{ h.url_for_static_or_external(g.site_logo) }}" 
-		alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
-	</div>
-        {% endif %}
-          <div class="site-title"><h1 class="site-title-text" style="margin-left:30px;">
-		<a href="{{ h.url('home') }}">{{ g.site_title }}</a>
-          {% if g.site_description %} <small>  {{ g.site_description }}</small></h1>
-	  </div>
-	  {% endif %}
-      {% endblock %}
+    <hgroup class="dwga-header-image">
 
       {% block header_site_search %}
-        <form class="section site-search simple-input pull-right" 
-	style="margin-left: 100px; margin-top:50px;"
-	action="{% url_for controller='package', action='search' %}" method="get">
+			<div class="dwga-site-search-margin">
+        <form class="site-search simple-input" 
+					action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
             <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
             <button class="btn-search" type="submit"><i class="icon-search"></i></button>
           </div>
         </form>
+			</div>
       {% endblock %}
+
+
+      {% block header_logo %}
+				<div class="site-logo">
+  				<a class="logo pull-left" href="{{ h.url('home') }}"><img 
+						src="ckan-datawagovau.png" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+				<!--/div>
+    		<div class="site-title">
+					<h1 class="site-title-text" style="margin-left:30px;">
+					<a href="{{ h.url('home') }}">{{ g.site_title }}</a>
+          <small>{{ g.site_description }}</small></h1>
+	  		</div-->
+      {% endblock %}
+
     </hgroup>
     </div>
 
-    <div class="nav-collapse collapse pull-left">
 
+    <div class="nav-collapse collapse">
       {% block header_site_navigation %}
         <nav class="section navigation">
-          <ul class="nav nav-pills">
+          <ul class="nav">
             {% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
@@ -128,9 +128,8 @@
           </ul>
         </nav>
       {% endblock %}
+    </div><!-- .nav-collapse collapse pull-left -->
 
-
-    </div>
   </div>
 </header>
 </div>
