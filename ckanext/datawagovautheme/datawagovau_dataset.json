@@ -128,6 +128,7 @@
 	    "display_property": "agls:function",
             "preset": "select",
             "choices": [
+		{"value":"Business and Economy", "label":"Business and Economy"},
 		{"value":"Business Support and Regulation", "label":"Business Support and Regulation"},
 		{"value":"Civic Infrastructure", "label":"Civic Infrastructure"},
 		{"value":"Communications", "label":"Communications"},
@@ -138,6 +139,7 @@
 		{"value":"Employment", "label":"Employment"},
 		{"value":"Environment", "label":"Environment"},
 		{"value":"Finance Management", "label":"Finance Management"},
+		{"value":"Geological and Geophysical", "label":"Geological and Geophysical"},
 		{"value":"Governance", "label":"Governance"},
 		{"value":"Health Care", "label":"Health Care"},
 		{"value":"Immigration", "label":"Immigration"},
