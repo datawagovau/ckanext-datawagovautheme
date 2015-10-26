@@ -152,7 +152,8 @@
 		{"value":"Sport and Recreation", "label":"Sport and Recreation"},
 		{"value":"Tourism", "label":"Tourism"},
 		{"value":"Trade", "label":"Trade"},
-		{"value":"Transport", "label":"Transport"}
+		{"value":"Transport", "label":"Transport"},
+		{"value":"Utilities and Communication", "label":"Utilities and Communication"}
             ]
         },
         {
