@@ -2,6 +2,19 @@
    The "account masthead" bar across the top of the site
    ===================================================== */
 
+
+.leaflet-draw-toolbar a {
+        background-image: url('img/spritesheet.png');
+        background-repeat: no-repeat;
+}
+
+.leaflet-retina .leaflet-draw-toolbar a {
+        background-image: url('img/spritesheet-2x.png');
+        background-size: 270px 30px;
+}
+
+
+
 .account-masthead {
   height: 39px;
   background: none;
