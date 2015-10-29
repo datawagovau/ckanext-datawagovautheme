@@ -45,6 +45,11 @@
   background: none;
 }
 
+/* Invisible debug output for controller/action */
+.debug {
+  color: #FEFEFE;
+}
+
 .dwga-search {
   float: right;
 }
@@ -216,4 +221,10 @@ body {
 /* The link texts in the footer. */
 .site-footer a {
   color: rgb(105,115,124);
+}
+
+
+/* The debug toggle */
+#debug-toggle {
+ color: rgb(200, 200, 200);
 }
