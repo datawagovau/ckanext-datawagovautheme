@@ -18,7 +18,7 @@
 .account-masthead {
   height: 39px;
   background: none;
-  background-color: #FEFEFE;
+  background-color: #fff;
 }
 
 /* The "bubble" containing the number of new notifications. */
@@ -69,8 +69,8 @@
 
 /* Padding around logo and search */
 .dwga-header-row {
-  padding: 10px;
-  margin-left: 0px; 
+  padding: 10px 0;
+  margin-left: 0px;
 }
 
 
@@ -148,12 +148,12 @@
 
 .masthead a,
 .masthead hgroup h2,
-.masthead .nav > li > a, 
-.masthead .nav > li > a:focus, 
-.masthead .nav > li > a:hover, 
-.masthead .nav > .active > a, 
-.masthead .nav > .active > a:hover, 
-.masthead .nav > .active > a:focus, 
+.masthead .nav > li > a,
+.masthead .nav > li > a:focus,
+.masthead .nav > li > a:hover,
+.masthead .nav > .active > a,
+.masthead .nav > .active > a:hover,
+.masthead .nav > .active > a:focus,
 .account-masthead .account .notifications a span {
   color: rgb(105,115,124);
   text-shadow: none;
@@ -240,4 +240,55 @@ body {
 /* The debug toggle */
 #debug-toggle {
  color: rgb(200, 200, 200);
+}
+
+.row{
+  margin-left: 0;
+}
+@media(min-width: 1280px){
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container{
+    width: 1280px;
+    padding-left: 35px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .navbar.navbar-static-top.masthead,
+  header.account-masthead,
+  [role=main],
+  .site-footer
+  {
+    margin-left: -15px;
+  }
+  #content{
+    padding-left: 79px;
+    padding-right: 130px;
+  }
+
+}
+@media(max-width: 940px) and (min-width: 768px){
+  .primary.span9{
+    width: auto;
+  }
+  #content{
+    width: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media(max-width: 767px){
+  [role="main"]{
+
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 0 20px;
+  }
+  .primary.span9{
+    background-color: #fff;
+  }
+  .module-content{
+    padding: 0;
+  }
 }
