@@ -223,19 +223,61 @@ a, a:active, a:hover, a:focus {
 .site-footer,
 body {
   color: rgb(86,86,86);
-  background-color: rgb(200, 200, 200);
+  background: #eff1f2;
+}
+.site-footer{
+  padding-top: 33px;
+}
+.site-footer > .container .row{
+  margin-bottom: 22px;
+}
+
+.site-footer .attribution{
+  margin-left: 0;
+}
+.site-footer .attribution > a{
+  margin-right: 20px;
+}
+.site-footer .inline-links{
+  margin-bottom: 11px;
+}
+.site-footer .inline-links li{
+  display: inline;
+  text-decoration: underline;
+}
+.site-footer .inline-links li:after{
+  content: '';
+  border-right: 1px solid #565656;
+  margin-right: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.site-footer .inline-links li:last-child:after{
+  margin-right: 0;
+  margin-left: 0;
+  border-right: none;
 }
 /* The text in the footer. */
 .site-footer,
 .site-footer label,
-.site-footer small {
-  color: rgb(105,115,124);
-}
-/* The link texts in the footer. */
+.site-footer small,
 .site-footer a {
-  color: rgb(105,115,124);
+  color: #565656;
+  font-size: 15px;
 }
-
+.footer-wa-link-wrapper{
+  position: relative;
+}
+.site-footer .footer-wa-link{
+  position: absolute;
+  left: 0;
+  font-size: 25px;
+  margin-top: 8px;
+  margin-left: 22px;
+}
+.without-margin{
+  margin: 0;
+}
 
 /* The debug toggle */
 #debug-toggle {
@@ -268,7 +310,61 @@ body {
   }
 
 }
-@media(max-width: 940px) and (min-width: 768px){
+.paragraph-copyright{
+    font-size: 17px;
+    line-height: 1.3;
+}
+@media(max-width: 979px){
+  .site-footer .footer-links,
+  .site-footer .attribution,
+  .site-footer .footer-wa-link-wrapper,
+  .site-footer .secondary-footer-links,
+  .site-footer .without-margin{
+    display: block;
+    text-align: center;
+    float: none;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .site-footer{
+    padding-top: 24px;
+  }
+
+  .footer-links{
+    width: auto;
+  }
+  .site-footer .attribution label,
+  .site-footer .attribution p{
+    text-align: left;
+  }
+  .site-footer .attribution{
+    text-align: center;
+    width: 280px;
+  }
+  .site-footer .attribution label{
+    display: block;
+  }
+  .site-footer .footer-wa-link{
+    position: static;
+  }
+  .site-footer .lang-select > *{
+    float: none;
+  }
+  .site-footer .lang-select .lang-container{
+    width: 280px!important;
+    text-align: center;
+  }
+  .site-footer > .container .row{
+    margin-bottom: 14px;
+  }
+  .site-footer .footer-wa-link{
+    margin-left: 0;
+  }
+  .paragraph-copyright{
+    margin-top: 43px;
+  }
+}
+@media(max-width: 979px) and (min-width: 768px){
   .primary.span9{
     width: auto;
   }
