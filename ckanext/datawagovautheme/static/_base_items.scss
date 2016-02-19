@@ -1,20 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Arimo);
 
-.site-footer,
 body {
   background: #eff1f2;
   font-family: Arial;
-  font-size: 16px;
+  font-size: $body-fz;
   color: $font-color;
-  line-height: 1.59375em;
+  line-height: $body-lh;
 }
 
 
 h1,h2,h3,h4,h5,h6{
   font-family: "Open Sans", sans-serif;
-  color: #69737c;
+  color: $h-color;
   font-weight: 600;
-  line-height: 1.59375em;
+  line-height: $body-lh;
 }
 h5, h5{
   text-transform: uppercase;
@@ -23,10 +22,10 @@ h1{
   font-size: 35px;
 }
 h2{
-  font-size: 28px;
+  font-size: $h2-fz;
 }
 h3{
-  font-size: 22px;
+  font-size: $h3-fz;
 }
 h4{
   font-size: 18px;

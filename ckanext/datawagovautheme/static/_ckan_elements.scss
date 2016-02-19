@@ -1,0 +1,23 @@
+.module-heading{
+  font-size: $body-fz;
+  background: #fbfbfc;
+  line-height: $body-lh;
+  border-bottom: none;
+  a{
+    font-size: $h3-fz;
+  }
+}
+.group-list .module-heading h3 a{
+  @extend a;
+}
+.module-content:first-child{
+  padding-top: 0;
+}
+
+.search-form{
+  h2{
+    font-size: $h2-fz;
+    color: $h-color;
+    line-height: $body-lh;
+  }
+}
