@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo);
 .site-footer,
 body {
   background: #eff1f2;
@@ -5,6 +6,203 @@ body {
   font-size: 16px;
   color: #565656;
   line-height: 1.59375em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font: "Open Sans", sans-serif;
+  color: #69737c;
+  font-weight: 600;
+  line-height: 1.59375em; }
+
+h5, h5 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 12px; }
+
+h6 {
+  font-size: 12px;
+  font-style: italic; }
+
+.account-masthead {
+  height: 39px;
+  background: none;
+  background-color: #fff; }
+  .account-masthead .account {
+    margin-top: 10px;
+    /* The "bubble" containing the number of new notifications. */
+    /* Transparent separator between links */ }
+    .account-masthead .account .notifications a {
+      /* The "dashboard" and number of notifiations background */ }
+      .account-masthead .account .notifications a span {
+        background-color: #FCFCFC; }
+      .account-masthead .account .notifications a:hover span {
+        color: #69737c;
+        background-color: inherit; }
+    .account-masthead .account ul li {
+      border-left: 2px transparent;
+      /* The text and icons in the user account info. */ }
+      .account-masthead .account ul li a {
+        font: 15px "Arimo", sans-serif;
+        padding: 0px 8px;
+        color: #565656; }
+        .account-masthead .account ul li a:hover {
+          color: #565656;
+          background-color: #FFFFFF;
+          text-decoration: underline; }
+
+/* ========================================================================
+   The main masthead bar that contains the site logo, nav links, and search
+   ======================================================================== */
+.dwga-header-container {
+  padding: 5px;
+  background: none; }
+
+/* Invisible debug output for controller/action */
+.debug {
+  color: #FEFEFE; }
+
+/* Padding around logo and search */
+.dwga-header-row {
+  padding: 10px 0;
+  margin-left: 0px; }
+
+.dwga-inlineblock {
+  display: inline-block; }
+
+.dwga-title {
+  margin-left: 15px;
+  display: block;
+  float: left; }
+  .dwga-title h1 {
+    font-size: 36px;
+    line-height: 1.25em;
+    margin: 5px 0 15px;
+    color: #69737c;
+    float: none !important; }
+    .dwga-title h1 a {
+      color: #69737c; }
+      .dwga-title h1 a:hover {
+        color: #69737c; }
+  .dwga-title h3 {
+    font-size: 25px;
+    line-height: 1.25em;
+    margin: 5px 0 15px;
+    color: #69737c; }
+
+.dwga-header {
+  color: #69737c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  height: 134px;
+  line-height: 27.09375px;
+  margin-bottom: 0px;
+  margin-left: 101px;
+  margin-right: 101px;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px; }
+
+.dwga-logo {
+  margin-top: -2px;
+  float: left; }
+
+.dwga-search {
+  padding-right: 20px;
+  float: right; }
+  .dwga-search .site-search .field button[type="submit"] {
+    font-size: 18px;
+    width: 20.5%;
+    height: 44px;
+    color: #fff;
+    border: none;
+    background: #999;
+    float: right;
+    margin-right: 0;
+    font-family: 'ready-steady-gov';
+    background: #95c677;
+    top: 10px;
+    right: -8px; }
+  .dwga-search .site-search .field button .icon-search:before {
+    font-size: 19px; }
+
+.masthead {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background: none;
+  background-color: #FCFCFC;
+  height: 202px;
+  /* Float the navbar left */
+  /* data.wa.gov.au floats left, here it looks better floating right */
+  /* Alignment of navigation */ }
+  .masthead .site-search input {
+    height: 34px;
+    width: 314px;
+    border-color: #c7cacd;
+    font-family: "Open Sans Regular";
+    font-size: 14px;
+    color: #565656;
+    margin-left: 0;
+    border-radius: 0; }
+  .masthead .nav-collapse {
+    float: left;
+    padding-top: 32px; }
+  .masthead .navigation, .masthead ul.nav {
+    margin: 0px 0px 2px 0px; }
+  .masthead .navigation ul.nav li a {
+    font-size: 15px;
+    color: #69737c;
+    font-family: "Open Sans";
+    font-weight: 400;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: -3 px; }
+  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li.active a {
+    background: none;
+    color: #69737c; }
+  .masthead .navigation ul.nav li.active {
+    background: none;
+    box-shadow: #69737c 0px 2px 0px 0px; }
+  .masthead .navigation ul.nav li:hover {
+    background-color: #f5f6f7;
+    box-shadow: none;
+    border-bottom: 2px solid #69737c;
+    color: #69737c; }
+  .masthead .navigation ul.nav li:hover > ul.dropdown-menu {
+    display: inline; }
+  .masthead input[type="text"]:focus {
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
+
+.navbar .nav.dropdown-menu {
+  display: none; }
+.navbar .nav > .active > a {
+  box-shadow: none;
+  background: none; }
+.navbar .nav > li > a {
+  padding: 9px 0px 8px 0px;
+  color: #69737c;
+  margin-left: 2px; }
 
 /* ====================================
    The footer at the bottom of the site
@@ -94,124 +292,6 @@ body {
 .leaflet-retina .leaflet-draw-toolbar a {
   background-image: url("img/spritesheet-2x.png");
   background-size: 270px 30px; }
-
-.account-masthead {
-  height: 39px;
-  background: none;
-  background-color: #fff; }
-
-/* The "bubble" containing the number of new notifications. */
-.account-masthead .account .notifications a span {
-  background-color: #FCFCFC; }
-
-/* The text and icons in the user account info. */
-.account-masthead .account ul li a {
-  color: #69737c; }
-
-/* Transparent separator between links */
-.account-masthead .account ul li {
-  border-left: 2px transparent; }
-
-/* Links on a:hover. */
-.account-masthead .account ul li a:hover {
-  color: #282828;
-  background-color: #FFFFFF; }
-
-/* The "dashboard" and number of notifiations background */
-.account-masthead .account .notifications a:hover span {
-  color: #69737c;
-  background-color: inherit; }
-
-/* ========================================================================
-   The main masthead bar that contains the site logo, nav links, and search
-   ======================================================================== */
-.dwga-header-container {
-  padding: 5px;
-  background: none; }
-
-/* Invisible debug output for controller/action */
-.debug {
-  color: #FEFEFE; }
-
-.dwga-search {
-  float: right; }
-
-/* Padding around logo and search */
-.dwga-header-row {
-  padding: 10px 0;
-  margin-left: 0px; }
-
-.dwga-inlineblock {
-  display: inline-block; }
-
-.dwga-title {
-  margin-left: 15px; }
-
-.masthead {
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
-  background: none;
-  background-color: #FCFCFC; }
-
-.dwga-header {
-  color: #69737c;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  display: block;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  font-weight: normal;
-  height: 134px;
-  line-height: 27.09375px;
-  margin-bottom: 0px;
-  margin-left: 101px;
-  margin-right: 101px;
-  margin-top: 0px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px; }
-
-/* Alignment of navigation */
-.masthead .navigation, ul.nav {
-  margin: 0px 0px 2px 0px; }
-
-/* Float the navbar left */
-/* data.wa.gov.au floats left, here it looks better floating right */
-.masthead .nav-collapse {
-  float: left; }
-
-/* Navigation links on hover */
-.masthead .navigation ul.nav li a:hover,
-.masthead .navigation ul.nav li.active a {
-  background: none;
-  color: #69737c;
-  text-decoration: none;
-  box-shadow: #69737c 0px 2px 0px 0px; }
-
-/* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
-.navbar .nav > li > a {
-  margin-left: 2px; }
-
-/* The "box shadow" effect that appears around the search box when it
-has the keyboard cursor's focus. */
-.masthead input[type="text"]:focus {
-  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
-
-.masthead a,
-.masthead hgroup h2,
-.masthead .nav > li > a,
-.masthead .nav > li > a:focus,
-.masthead .nav > li > a:hover,
-.masthead .nav > .active > a,
-.masthead .nav > .active > a:hover,
-.masthead .nav > .active > a:focus,
-.account-masthead .account .notifications a span {
-  color: #69737c;
-  text-shadow: none;
-  margin-left: 2px; }
 
 /* ===========================================
    The content in the middle of the front page

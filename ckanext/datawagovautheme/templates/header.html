@@ -57,6 +57,9 @@
               {% if h.check_access('user_create') %}
                 <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
+              <li><a class="sub">Site Map</a></li>
+              <li><a class="sub">Accessibility</a></li>
+              <li><a class="sub">Contact us</a></li>
               {% endblock %}
             </ul>
           </nav>
@@ -84,10 +87,11 @@
       {% block header_logo %}
 				<div class="dwga-logo dwga-inlineblock">
   				<a class="logo pull-left" href="{{ h.url('home') }}"><img 
-						src="{{ g.site_logo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+						src="{{ 'Logo_n.png' }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
 				</div>
     		<div class="dwga-title dwga-inlineblock">
-					<h1><a href="{{ h.url('home') }}">{{ g.site_title }}</a></h1>
+          <h1><a href="{{ 'data.wa.gov.au' }}">{{ 'data.wa.gov.au' }}</a></h1>
+					<h3>Providing access to WA government data</h3>
           <!--h1><small>{{ g.site_description }}</small></h1-->
 	  		</div>
       {% endblock header_logo %}
@@ -98,7 +102,7 @@
 					action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search') }}" />
+            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search for data...') }}" />
             <button class="btn-search" type="submit"><i class="icon-search"></i></button>
           </div>
         </form>
@@ -112,14 +116,35 @@
       {% block header_site_navigation %}
         <nav class="section navigation">
           <ul class="nav">
-            {% block header_site_navigation_tabs %}
+            {#{% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
-                ('search', _('Datasets')),
-                ('organizations_index', _('Organizations')),
-                ('group_index', _('Groups')),
-                ('about', _('About'))
+                ('about', _('Home')),
+                ('search', _('Data')),
+                ('about', _('About')),
+                ('search', _('Fact sheets and toolkit')),
+                ('search', _('Open Data Policy')),
+                ('organizations_index', _('SLIP')),
+                ('group_index', _('Blog and Resources'))
               ) }}
-            {% endblock %}
+            {% endblock %}#}
+            <li class="active"><a href="/about">Home</a>
+              <ul class="nav dropdown-menu">
+                <li><a href="/dataset">Data</a></li>
+                <li><a href="/about">About</a></li><li>
+                <li><a href="/dataset">Open Data Policy</a></li>
+              </ul>
+            </li>
+            <li><a href="/dataset">Data</a></li>
+            <li><a href="/about">About</a>
+              <ul class="nav dropdown-menu">
+                <li><a href="/about">Home</a></li>
+                <li><a href="/dataset">Data</a></li>
+                <li><a href="/about">About</a></li><li>
+              </ul>
+            <li>
+            <li><a href="/dataset">Fact sheets and toolkit</a></li>
+            <li><a href="/dataset">Open Data Policy</a></li>
+            <li><a href="/organization">SLIP</a></li><li><a href="/group">Blog and Resources</a></li>
           </ul>
         </nav>
       {% endblock %}

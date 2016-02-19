@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+
 .site-footer,
 body {
   background: #eff1f2;
@@ -5,4 +7,34 @@ body {
   font-size: 16px;
   color: $font-color;
   line-height: 1.59375em;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font: "Open Sans", sans-serif;
+  color: #69737c;
+  font-weight: 600;
+  line-height: 1.59375em;
+}
+h5, h5{
+  text-transform: uppercase;
+}
+h1{
+  font-size: 35px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 22px;
+}
+h4{
+  font-size: 18px;
+}
+h5{
+  font-size: 12px;
+}
+h6{
+  font-size: 12px;
+  font-style: italic;
 }
