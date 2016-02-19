@@ -1,5 +1,5 @@
-<footer class="site-footer">
-  <div class="container">
+{% ckan_extends %}
+
     {% block footer_content %}
     <div class="row">
       <div class="span6 footer-links pull-left">
@@ -17,7 +17,7 @@
           <a href="http://www.opendefinition.org/okd/"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}"></a>
         {% endblock %}
       </div>
-     <div class="span6 pull-right witho">
+     <div class="span6 pull-right without-margin">
         <div class="span3 attribution">
          {% block footer_attribution %}
            <p>{% trans %}<strong>Powered by</strong>{% endtrans %}</p>
@@ -47,12 +47,4 @@
       </div>
     </div>
     {% endblock %}
-  </div>
-
-  {% block footer_debug %}
-    {% if g.debug %}
-      {% include 'snippets/debug.html' %}
-    {% endif %}
-  {% endblock %}
-</footer>
 

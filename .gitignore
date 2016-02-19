@@ -3,3 +3,5 @@
 ckanext_datawagovautheme.egg-info/*
 build/*
 dist/*
+*.css.map
+.sass-cache

@@ -1,94 +1,157 @@
+.site-footer,
+body {
+  background: #eff1f2;
+  font-family: Arial;
+  font-size: 16px;
+  color: #565656;
+  line-height: 1.59375em; }
+
+/* ====================================
+   The footer at the bottom of the site
+   ==================================== */
+.site-footer {
+  padding-top: 33px; }
+  .site-footer, .site-footer label, .site-footer small, .site-footer a {
+    color: #565656;
+    font-size: 15px; }
+  .site-footer > .container .row {
+    margin-bottom: 22px; }
+  .site-footer .attribution {
+    margin-left: 0; }
+    .site-footer .attribution > a {
+      margin-right: 20px; }
+  .site-footer .inline-links {
+    margin-bottom: 11px; }
+    .site-footer .inline-links li {
+      display: inline;
+      text-decoration: underline; }
+      .site-footer .inline-links li:after {
+        content: '';
+        border-right: 1px solid #565656;
+        text-decoration: none;
+        margin-right: 5px;
+        margin-left: 10px; }
+      .site-footer .inline-links li:last-child:after {
+        border-right: none;
+        margin-right: 0;
+        margin-left: 0; }
+  .site-footer .footer-wa-link-wrapper {
+    position: relative; }
+  .site-footer .footer-wa-link {
+    position: absolute;
+    left: 0;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-left: 22px; }
+  .site-footer .without-margin {
+    margin: 0; }
+  .site-footer .row {
+    margin-left: 0; }
+  @media (max-width: 979px) {
+    .site-footer {
+      padding-top: 24px; }
+      .site-footer .footer-links,
+      .site-footer .attribution,
+      .site-footer .footer-wa-link-wrapper,
+      .site-footer .secondary-footer-links,
+      .site-footer .without-margin {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: auto;
+        margin-bottom: 30px; }
+      .site-footer .footer-links {
+        width: auto; }
+      .site-footer .attribution {
+        text-align: center;
+        width: 280px; }
+        .site-footer .attribution label,
+        .site-footer .attribution p {
+          text-align: left; }
+        .site-footer .attribution label {
+          display: block; }
+      .site-footer .footer-wa-link {
+        position: static; }
+      .site-footer .lang-select > * {
+        float: none; }
+      .site-footer .lang-select .lang-container {
+        width: 280px !important;
+        text-align: center; }
+      .site-footer > .container .row {
+        margin-bottom: 14px; }
+      .site-footer .footer-wa-link {
+        margin-left: 0; }
+      .site-footer .paragraph-copyright {
+        margin-top: 43px; } }
+
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
-
-
 .leaflet-draw-toolbar a {
-        background-image: url('img/spritesheet.png');
-        background-repeat: no-repeat;
-}
+  background-image: url("img/spritesheet.png");
+  background-repeat: no-repeat; }
 
 .leaflet-retina .leaflet-draw-toolbar a {
-        background-image: url('img/spritesheet-2x.png');
-        background-size: 270px 30px;
-}
-
-
+  background-image: url("img/spritesheet-2x.png");
+  background-size: 270px 30px; }
 
 .account-masthead {
   height: 39px;
   background: none;
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 /* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
-  background-color: #FCFCFC;
-}
+  background-color: #FCFCFC; }
 
 /* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-  color: rgb(105,115,124);
-}
+  color: #69737c; }
 
 /* Transparent separator between links */
 .account-masthead .account ul li {
-  border-left: 2px transparent;
-}
+  border-left: 2px transparent; }
 
 /* Links on a:hover. */
 .account-masthead .account ul li a:hover {
-  color: rgb(40, 40, 40);
-  background-color: #FFFFFF;
-}
+  color: #282828;
+  background-color: #FFFFFF; }
 
 /* The "dashboard" and number of notifiations background */
 .account-masthead .account .notifications a:hover span {
-  color: rgb(105,115,124);
-  background-color: inherit;
-}
-
+  color: #69737c;
+  background-color: inherit; }
 
 /* ========================================================================
    The main masthead bar that contains the site logo, nav links, and search
    ======================================================================== */
-
 .dwga-header-container {
   padding: 5px;
-  background: none;
-}
+  background: none; }
 
 /* Invisible debug output for controller/action */
 .debug {
-  color: #FEFEFE;
-}
+  color: #FEFEFE; }
 
 .dwga-search {
-  float: right;
-}
+  float: right; }
 
 /* Padding around logo and search */
 .dwga-header-row {
   padding: 10px 0;
-  margin-left: 0px;
-}
-
+  margin-left: 0px; }
 
 .dwga-inlineblock {
-  display: inline-block;
-}
+  display: inline-block; }
 
 .dwga-title {
-  margin-left: 15px;
-}
+  margin-left: 15px; }
 
 .masthead {
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
   background: none;
-  background-color: #FCFCFC;
-}
-
+  background-color: #FCFCFC; }
 
 .dwga-header {
   color: #69737c;
@@ -108,19 +171,16 @@
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-}
+  padding-top: 10px; }
 
 /* Alignment of navigation */
 .masthead .navigation, ul.nav {
- margin: 0px 0px 2px 0px;
-}
+  margin: 0px 0px 2px 0px; }
 
 /* Float the navbar left */
 /* data.wa.gov.au floats left, here it looks better floating right */
 .masthead .nav-collapse {
-  float: left;
-}
+  float: left; }
 
 /* Navigation links on hover */
 .masthead .navigation ul.nav li a:hover,
@@ -128,23 +188,17 @@
   background: none;
   color: #69737c;
   text-decoration: none;
-  box-shadow: rgb(105, 115, 124) 0px 2px 0px 0px;
-
-}
-
+  box-shadow: #69737c 0px 2px 0px 0px; }
 
 /* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
 .navbar .nav > li > a {
- margin-left: 2px;
-}
+  margin-left: 2px; }
 
 /* The "box shadow" effect that appears around the search box when it
-   has the keyboard cursor's focus. */
+has the keyboard cursor's focus. */
 .masthead input[type="text"]:focus {
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
-}
-
+  box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
 
 .masthead a,
 .masthead hgroup h2,
@@ -155,236 +209,102 @@
 .masthead .nav > .active > a:hover,
 .masthead .nav > .active > a:focus,
 .account-masthead .account .notifications a span {
-  color: rgb(105,115,124);
+  color: #69737c;
   text-shadow: none;
-  margin-left: 2px;
-}
-
+  margin-left: 2px; }
 
 /* ===========================================
    The content in the middle of the front page
    =========================================== */
-
 /* Hide featured section */
-.featured {visibility:hidden; height:0px;}
+.featured {
+  visibility: hidden;
+  height: 0px; }
 
 /* The background outside of the hero pane */
 .hero, [role=main] {
-  background:#FEFEFE;
-}
+  background: #FEFEFE; }
 
 /* Remove the "box shadow" effect around various boxes on the page. */
 .box {
-  box-shadow: none;
-}
+  box-shadow: none; }
+
 /* Remove the borders around the "Welcome to CKAN" and "Search Your Data"
-   boxes. */
+boxes. */
 .hero .box {
- border: none;
-}
+  border: none; }
+
 /* Change the colors of the "Search Your Data" box. */
 .homepage .module-search .module-content {
-  color: rgb(105,115,124);
-  background-color: white;
-}
+  color: #69737c;
+  background-color: white; }
+
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
-  color: rgb(105,115,124);
-  background-color: #FCFCFC;
-}
+  color: #69737c;
+  background-color: #FCFCFC; }
+
 /* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
-   and "Search Your Data" boxes line up. */
+and "Search Your Data" boxes line up. */
 .module-content:last-child {
-  padding-bottom: 0px;
-}
+  padding-bottom: 0px; }
+
 .homepage .module-search {
-  padding: 0px;
-}
+  padding: 0px; }
+
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
-  min-height: 100px;
-}
+  min-height: 100px; }
 
 a, a:active, a:hover, a:focus {
-  color: rgb(32, 57, 157);
-  text-decoration: none;
-}
+  color: #20399d;
+  text-decoration: none; }
 
 /* The box around featured orgs/groups */
 .box {
-  border:none;
-}
+  border: none; }
 
-
-/* ====================================
-   The footer at the bottom of the site
-   ==================================== */
-
-.site-footer,
-body {
-  color: rgb(86,86,86);
-  background: #eff1f2;
-}
-.site-footer{
-  padding-top: 33px;
-}
-.site-footer > .container .row{
-  margin-bottom: 22px;
-}
-
-.site-footer .attribution{
-  margin-left: 0;
-}
-.site-footer .attribution > a{
-  margin-right: 20px;
-}
-.site-footer .inline-links{
-  margin-bottom: 11px;
-}
-.site-footer .inline-links li{
-  display: inline;
-  text-decoration: underline;
-}
-.site-footer .inline-links li:after{
-  content: '';
-  border-right: 1px solid #565656;
-  margin-right: 5px;
-  margin-left: 10px;
-  text-decoration: none;
-}
-.site-footer .inline-links li:last-child:after{
-  margin-right: 0;
-  margin-left: 0;
-  border-right: none;
-}
-/* The text in the footer. */
-.site-footer,
-.site-footer label,
-.site-footer small,
-.site-footer a {
-  color: #565656;
-  font-size: 15px;
-}
-.footer-wa-link-wrapper{
-  position: relative;
-}
-.site-footer .footer-wa-link{
-  position: absolute;
-  left: 0;
-  font-size: 25px;
-  margin-top: 8px;
-  margin-left: 22px;
-}
-.without-margin{
-  margin: 0;
-}
-
-/* The debug toggle */
-#debug-toggle {
- color: rgb(200, 200, 200);
-}
-
-.row{
-  margin-left: 0;
-}
-@media(min-width: 1280px){
+@media (min-width: 1280px) {
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
-  .navbar-fixed-bottom .container{
+  .navbar-fixed-bottom .container {
     width: 1280px;
     padding-left: 35px;
     padding-right: 20px;
-    box-sizing: border-box;
-  }
+    box-sizing: border-box; }
+
   .navbar.navbar-static-top.masthead,
   header.account-masthead,
   [role=main],
-  .site-footer
-  {
-    margin-left: -15px;
-  }
-  #content{
+  .site-footer {
+    margin-left: -15px; }
+
+  #content {
     padding-left: 79px;
-    padding-right: 130px;
-  }
+    padding-right: 130px; } }
+.paragraph-copyright {
+  font-size: 17px;
+  line-height: 1.3; }
 
-}
-.paragraph-copyright{
-    font-size: 17px;
-    line-height: 1.3;
-}
-@media(max-width: 979px){
-  .site-footer .footer-links,
-  .site-footer .attribution,
-  .site-footer .footer-wa-link-wrapper,
-  .site-footer .secondary-footer-links,
-  .site-footer .without-margin{
-    display: block;
-    text-align: center;
-    float: none;
-    margin: auto;
-    margin-bottom: 30px;
-  }
-  .site-footer{
-    padding-top: 24px;
-  }
+@media (max-width: 979px) and (min-width: 768px) {
+  .primary.span9 {
+    width: auto; }
 
-  .footer-links{
-    width: auto;
-  }
-  .site-footer .attribution label,
-  .site-footer .attribution p{
-    text-align: left;
-  }
-  .site-footer .attribution{
-    text-align: center;
-    width: 280px;
-  }
-  .site-footer .attribution label{
-    display: block;
-  }
-  .site-footer .footer-wa-link{
-    position: static;
-  }
-  .site-footer .lang-select > *{
-    float: none;
-  }
-  .site-footer .lang-select .lang-container{
-    width: 280px!important;
-    text-align: center;
-  }
-  .site-footer > .container .row{
-    margin-bottom: 14px;
-  }
-  .site-footer .footer-wa-link{
-    margin-left: 0;
-  }
-  .paragraph-copyright{
-    margin-top: 43px;
-  }
-}
-@media(max-width: 979px) and (min-width: 768px){
-  .primary.span9{
-    width: auto;
-  }
-  #content{
+  #content {
     width: auto;
     padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-@media(max-width: 767px){
-  [role="main"]{
-
+    padding-right: 60px; } }
+@media (max-width: 767px) {
+  [role="main"] {
     margin-left: -20px;
     margin-right: -20px;
-    padding: 0 20px;
-  }
-  .primary.span9{
-    background-color: #fff;
-  }
-  .module-content{
-    padding: 0;
-  }
-}
+    padding: 0 20px; }
+
+  .primary.span9 {
+    background-color: #fff; }
+
+  .module-content {
+    padding: 0; } }
+
+/*# sourceMappingURL=datawagovautheme.css.map */
