@@ -114,7 +114,7 @@
 
     <div class="nav-collapse collapse">
       {% block header_site_navigation %}
-        <nav class="section navigation">
+        <nav class="section navigation" data-module="drop_down_menu">
           <ul class="nav">
             {#{% block header_site_navigation_tabs %}
               {{ h.build_nav_main(
@@ -127,7 +127,7 @@
                 ('group_index', _('Blog and Resources'))
               ) }}
             {% endblock %}#}
-            <li class="active"><a href="/about">Home</a>
+            <li><a href="/group_index">Home</a>
               <ul class="nav dropdown-menu">
                 <li><a href="/dataset">Data</a></li>
                 <li><a href="/about">About</a></li><li>
