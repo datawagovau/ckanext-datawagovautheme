@@ -43,6 +43,9 @@ a, .group-list .module-heading h3 a {
 [role="main"] ul li ul li {
   list-style: square; }
 
+.search-form input {
+  border-radius: 0; }
+
 .module-heading {
   font-size: 16px;
   background: #fbfbfc;
@@ -58,6 +61,28 @@ a, .group-list .module-heading h3 a {
   font-size: 28px;
   color: #69737c;
   line-height: 1.59375em; }
+.search-form .search-input.search-giant {
+  position: relative; }
+  .search-form .search-input.search-giant button {
+    background: #95c677;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    height: auto;
+    width: 100px;
+    border-bottom: 2px solid #7bb855; }
+    .search-form .search-input.search-giant button:hover {
+      background: #87be65; }
+    .search-form .search-input.search-giant button i {
+      color: #fff; }
+
+.tag {
+  color: #565656; }
+  .tag:hover {
+    color: #fff;
+    background: #1e527c;
+    border: 1px solid #0d3454; }
 
 .account-masthead {
   height: 39px;
@@ -307,6 +332,18 @@ a, .group-list .module-heading h3 a {
       .site-footer .paragraph-copyright {
         margin-top: 43px; } }
 
+.homepage .stats ul li a {
+  font-size: 16px; }
+  .homepage .stats ul li a:hover {
+    text-decoration: underline; }
+  .homepage .stats ul li a b {
+    font-size: 28px;
+    line-height: 1.59375em; }
+.homepage .module-heading a, .homepage .group-list .module-heading h3 a, .group-list .homepage .module-heading h3 a {
+  font-size: 28px; }
+.homepage .search-form {
+  padding: 0; }
+
 .custom-group-list .module-image {
   width: 190px;
   height: 113px;
@@ -406,7 +443,10 @@ and "Search Your Data" boxes line up. */
 
   #content {
     padding-left: 79px;
-    padding-right: 130px; } }
+    padding-right: 130px; }
+
+  .span6 {
+    width: 600px; } }
 .paragraph-copyright {
   font-size: 17px;
   line-height: 1.3; }

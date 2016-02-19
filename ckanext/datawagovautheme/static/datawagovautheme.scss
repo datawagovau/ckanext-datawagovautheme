@@ -3,6 +3,7 @@
 @import 'ckan_elements';
 @import 'header';
 @import 'footer';
+@import 'home';
 @import 'group';
 /* =====================================================
    The "account masthead" bar across the top of the site
@@ -96,6 +97,9 @@ and "Search Your Data" boxes line up. */
   #content{
     padding-left: 79px;
     padding-right: 130px;
+  }
+  .span6{
+    width: 600px
   }
 
 }
