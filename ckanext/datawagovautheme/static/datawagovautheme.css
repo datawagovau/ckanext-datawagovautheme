@@ -1,7 +1,7 @@
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
-
+@import url(https://fonts.googleapis.com/css?family=Arimo);
 
 .leaflet-draw-toolbar a {
         background-image: url('img/spritesheet.png');
@@ -21,6 +21,10 @@
   background-color: #fff;
 }
 
+.account-masthead .account {
+  margin-top: 10px;
+}
+
 /* The "bubble" containing the number of new notifications. */
 .account-masthead .account .notifications a span {
   background-color: #FCFCFC;
@@ -28,7 +32,9 @@
 
 /* The text and icons in the user account info. */
 .account-masthead .account ul li a {
-  color: rgb(105,115,124);
+  font: 15px "Arimo", sans-serif;
+  padding: 0px 8px;
+  color: #565656;
 }
 
 /* Transparent separator between links */
@@ -38,8 +44,9 @@
 
 /* Links on a:hover. */
 .account-masthead .account ul li a:hover {
-  color: rgb(40, 40, 40);
+  color: #565656;
   background-color: #FFFFFF;
+  text-decoration: underline;
 }
 
 /* The "dashboard" and number of notifiations background */
@@ -63,10 +70,6 @@
   color: #FEFEFE;
 }
 
-.dwga-search {
-  float: right;
-}
-
 /* Padding around logo and search */
 .dwga-header-row {
   padding: 10px 0;
@@ -80,6 +83,8 @@
 
 .dwga-title {
   margin-left: 15px;
+  display: block;
+  float: left;
 }
 
 .masthead {
@@ -87,6 +92,7 @@
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
+  height: 202px;
 }
 
 
@@ -111,6 +117,71 @@
   padding-top: 10px;
 }
 
+.dwga-logo {
+  margin-top: -2px;
+  float: left;
+}
+
+.dwga-title h1 {
+  font: 36px/2.56em "Open Sans";
+  font-weight: 600;
+  line-height: 1.25em;
+  margin: 5px 0 15px;
+  color: #69737c;
+  float: none !important;
+}
+
+.dwga-title h1 a {
+  color: #69737c;
+}
+
+.dwga-title h1 a:hover {
+  color: #69737c;
+}
+
+.dwga-title h3 {
+  font: 25px/1.62em "Open Sans";
+  font-weight: 600;
+  line-height: 1.25em;
+  margin: 5px 0 15px;
+  color: #69737c;
+}
+
+.dwga-search {
+  padding-right: 20px;
+  float: right;
+}
+
+.masthead .site-search input {
+  height: 34px;
+  width: 314px;
+  border-color: #c7cacd;
+  font-family:"Open Sans Regular";
+  font-size: 14px;
+  color: #565656;
+  margin-left: 0;
+  border-radius: 0;
+}
+
+.dwga-search .site-search .field button[type="submit"] {
+  font-size: 18px;
+  width: 20.5%;
+  height: 44px;
+  color: #fff;
+  border: none;
+  background: #999;
+  float: right;
+  margin-right: 0;
+  font-family: 'ready-steady-gov';
+  background: #95c677;
+  top: 10px;
+  right: -8px;
+}
+
+.dwga-search .site-search .field button .icon-search:before {
+  font-size: 19px;
+}
+
 /* Alignment of navigation */
 .masthead .navigation, ul.nav {
  margin: 0px 0px 2px 0px;
@@ -120,22 +191,63 @@
 /* data.wa.gov.au floats left, here it looks better floating right */
 .masthead .nav-collapse {
   float: left;
+  padding-top: 32px;
+}
+
+.navbar .nav>li>a {
+  padding: 9px 0px 8px 0px ;
+}
+
+.masthead .navigation ul.nav li a {
+  font-size: 15px ;
+  color: #69737c;
+  font-family: "Open Sans";
+  font-weight: 400;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-bottom: -3 px;
+}
+
+.nav.dropdown-menu {
+  display: none;
 }
 
 /* Navigation links on hover */
-.masthead .navigation ul.nav li a:hover,
-.masthead .navigation ul.nav li.active a {
+
+.navbar .nav>.active>a {
+  box-shadow: none;
+  background: none;
+}
+
+.navbar .nav>.active>a:hover,
+.navbar .nav>.active>a:focus {
+  box-shadow: none;
   background: none;
   color: #69737c;
-  text-decoration: none;
-  box-shadow: rgb(105, 115, 124) 0px 2px 0px 0px;
+}
 
+.masthead .navigation ul.nav li.active {
+  background: none;  
+  box-shadow: #69737c 0px 2px 0px 0px;
+}
+
+.masthead .navigation ul.nav li:hover {
+  background-color: #f5f6f7;
+  box-shadow: none;
+  border-bottom: 2px solid #69737c;
+  color: #69737c;
+}
+
+.masthead .navigation ul.nav li:hover > ul.dropdown-menu {
+  display: inline;
 }
 
 
 /* Space the nav links (Dataset, Orgs, Groups) so the hover/active underline is separated */
 .navbar .nav > li > a {
- margin-left: 2px;
+ color: #69737c;
 }
 
 /* The "box shadow" effect that appears around the search box when it
@@ -146,7 +258,7 @@
 }
 
 
-.masthead a,
+/*.masthead a,
 .masthead hgroup h2,
 .masthead .nav > li > a,
 .masthead .nav > li > a:focus,
@@ -158,7 +270,7 @@
   color: rgb(105,115,124);
   text-shadow: none;
   margin-left: 2px;
-}
+}*/
 
 
 /* ===========================================
@@ -251,7 +363,7 @@ body {
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container{
     width: 1280px;
-    padding-left: 35px;
+    padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
   }
@@ -268,7 +380,7 @@ body {
   }
 
 }
-@media(max-width: 940px) and (min-width: 768px){
+@media(max-width: 979px) and (min-width: 768px){
   .primary.span9{
     width: auto;
   }
