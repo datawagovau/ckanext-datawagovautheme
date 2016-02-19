@@ -1,0 +1,20 @@
+.homepage {
+  .stats {
+    ul li a {
+      font-size: $body-fz;
+      &:hover{
+        text-decoration: underline;
+      }
+      b{
+        font-size: $h2-fz;
+        line-height: $body-lh;
+      }
+    }
+  }
+  .module-heading a{
+    font-size: $h2-fz;
+  }
+  .search-form{
+    padding: 0;
+  }
+}

@@ -1,0 +1,54 @@
+.module-heading{
+  font-size: $body-fz;
+  background: #fbfbfc;
+  line-height: $body-lh;
+  border-bottom: none;
+  a{
+    font-size: $h3-fz;
+  }
+}
+.group-list .module-heading h3 a{
+  @extend a;
+}
+.module-content:first-child{
+  padding-top: 0;
+}
+
+.search-form{
+  h2{
+    font-size: $h2-fz;
+    color: $h-color;
+    line-height: $body-lh;
+  }
+  .search-input{
+    &.search-giant{
+      position: relative;
+      button{
+        background: $search-button;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        height: auto;
+        width: 100px;
+        border-bottom: 2px solid $search-button-border;
+        &:hover{
+          background: $search-button-hover;
+        }
+        i{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.tag{
+  color: #565656;
+  &:hover{
+    color: #fff;
+    background: #1e527c;
+    border: 1px solid #0d3454;
+
+  }
+}

@@ -1,0 +1,22 @@
+{# {% ckan_extends %}
+
+{% block group_list %}
+<ul>
+  {% block group_list_inner %}
+    {{ super() }}
+  {% endblock %}
+</ul>
+{% endblock %}
+ #}
+
+ {% block group_list %}
+{# <ul class="media-grid" data-module="media-grid"> #}
+<div class="custom-group-list">
+  {% block group_list_inner %}
+    {% for group in groups %}
+      {% snippet "snippets/group_item.html", group=group, position=loop.index %}
+    {% endfor %}
+  {% endblock %}
+</div>
+{# </ul> #}
+{% endblock %}
