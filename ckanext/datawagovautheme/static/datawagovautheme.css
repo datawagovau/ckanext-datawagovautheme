@@ -8,7 +8,7 @@ body {
   line-height: 1.59375em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #69737c;
   font-weight: 600;
   line-height: 1.59375em; }
@@ -34,6 +34,15 @@ h5 {
 h6 {
   font-size: 12px;
   font-style: italic; }
+
+a {
+  color: #20399d;
+  text-decoration: underline; }
+  a:hover {
+    color: #1e527c; }
+
+[role="main"] ul li ul li {
+  list-style: square; }
 
 .account-masthead {
   height: 39px;
