@@ -2,11 +2,12 @@
 @import 'mixins';
 @import 'base_items';
 @import 'ckan_elements';
-@import 'header';
+// @import 'header';
 @import 'footer';
 @import 'home';
 @import 'group';
 @import 'organization';
+@import 'dataset';
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
@@ -103,7 +104,9 @@ and "Search Your Data" boxes line up. */
   .span6{
     width: 600px
   }
-
+  .span3{
+    width: 240px;
+  }
 }
 .paragraph-copyright{
   font-size: 17px;
@@ -111,15 +114,22 @@ and "Search Your Data" boxes line up. */
 }
 
 @media(max-width: $tablet-top){
+
   .search-form {
     .control-order-by select{
       width: 100%;
     }
   }
+  .module:last-child{
+    margin-bottom: 20px;
+  }
 }
 @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
   .primary.span9{
     width: auto;
+  }
+  .secondary.span3{
+    width: 100%;
   }
   #content{
     width: auto;
@@ -145,5 +155,16 @@ and "Search Your Data" boxes line up. */
   }
   .secondary.span3{
     float: left;
+  }
+  .js .show-filters.btn{
+    border: none;
+    @include landgate-primary;
+    border-radius: 0;
+    text-shadow: none;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 12px 10px;
+    font-size: 16px;
   }
 }
