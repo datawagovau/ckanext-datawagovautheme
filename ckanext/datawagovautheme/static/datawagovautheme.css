@@ -34,14 +34,16 @@ h6 {
   font-size: 12px;
   font-style: italic; }
 
-a, .group-list .module-heading h3 a {
+a, .group-list .module-heading h3 a, #publisher-tree > ul > li {
   color: #20399d;
   text-decoration: underline; }
-  a:hover, .group-list .module-heading h3 a:hover {
+  a:hover, .group-list .module-heading h3 a:hover, #publisher-tree > ul > li:hover {
     color: #1e527c; }
 
-[role="main"] ul li ul li {
-  list-style: square; }
+[role="main"] ul {
+  margin-left: 15px; }
+  [role="main"] ul li ul li {
+    list-style: square; }
 
 .search-form input {
   border-radius: 0; }
@@ -50,12 +52,25 @@ a, .group-list .module-heading h3 a {
   font-size: 16px;
   background: #fbfbfc;
   line-height: 1.59375em;
-  border-bottom: none; }
-  .module-heading a, .group-list .module-heading h3 a {
+  border-bottom: 1px solid #eee; }
+  .module-heading a, .group-list .module-heading h3 a, .module-heading #publisher-tree > ul > li {
     font-size: 22px; }
 
 .module-content:first-child {
   padding-top: 0; }
+
+.breadcrumb a, .breadcrumb .group-list .module-heading h3 a, .group-list .module-heading h3 .breadcrumb a, .breadcrumb #publisher-tree > ul > li {
+  text-decoration: none; }
+
+.btn-primary {
+  background: #95c677;
+  border-bottom: 2px solid #7bb855;
+  text-decoration: none;
+  border-radius: 0; }
+  .btn-primary:hover {
+    background: #87be65; }
+  .btn-primary i {
+    color: #fff; }
 
 .search-form h2 {
   font-size: 28px;
@@ -65,13 +80,13 @@ a, .group-list .module-heading h3 a {
   position: relative; }
   .search-form .search-input.search-giant button {
     background: #95c677;
+    border-bottom: 2px solid #7bb855;
     top: 0;
     bottom: 0;
     right: 0;
     margin: 0;
     height: auto;
-    width: 100px;
-    border-bottom: 2px solid #7bb855; }
+    width: 100px; }
     .search-form .search-input.search-giant button:hover {
       background: #87be65; }
     .search-form .search-input.search-giant button i {
@@ -92,21 +107,21 @@ a, .group-list .module-heading h3 a {
     margin-top: 10px;
     /* The "bubble" containing the number of new notifications. */
     /* Transparent separator between links */ }
-    .account-masthead .account .notifications a {
+    .account-masthead .account .notifications a, .account-masthead .account .notifications #publisher-tree > ul > li {
       /* The "dashboard" and number of notifiations background */ }
-      .account-masthead .account .notifications a span {
+      .account-masthead .account .notifications a span, .account-masthead .account .notifications #publisher-tree > ul > li span {
         background-color: #FCFCFC; }
-      .account-masthead .account .notifications a:hover span {
+      .account-masthead .account .notifications a:hover span, .account-masthead .account .notifications #publisher-tree > ul > li:hover span {
         color: #69737c;
         background-color: inherit; }
     .account-masthead .account ul li {
       border-left: 2px transparent;
       /* The text and icons in the user account info. */ }
-      .account-masthead .account ul li a {
+      .account-masthead .account ul li a, .account-masthead .account ul li #publisher-tree > ul > li {
         font: 15px "Arimo", sans-serif;
         padding: 0px 8px;
         color: #565656; }
-        .account-masthead .account ul li a:hover {
+        .account-masthead .account ul li a:hover, .account-masthead .account ul li #publisher-tree > ul > li:hover {
           color: #565656;
           background-color: #FFFFFF;
           text-decoration: underline; }
@@ -140,9 +155,9 @@ a, .group-list .module-heading h3 a {
     margin: 5px 0 15px;
     color: #69737c;
     float: none !important; }
-    .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a {
+    .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a, .dwga-title h1 #publisher-tree > ul > li {
       color: #69737c; }
-      .dwga-title h1 a:hover {
+      .dwga-title h1 a:hover, .dwga-title h1 #publisher-tree > ul > li:hover {
         color: #69737c; }
   .dwga-title h3 {
     font-size: 25px;
@@ -216,7 +231,7 @@ a, .group-list .module-heading h3 a {
     padding-top: 32px; }
   .masthead .navigation, .masthead ul.nav {
     margin: 0px 0px 2px 0px; }
-  .masthead .navigation ul.nav li a {
+  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li #publisher-tree > ul > li {
     font-size: 15px;
     color: #69737c;
     font-family: "Open Sans";
@@ -226,7 +241,7 @@ a, .group-list .module-heading h3 a {
     margin-left: 27px;
     margin-right: 27px;
     margin-bottom: -3 px; }
-  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li.active a {
+  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
     background: none;
     color: #69737c;
     box-shadow: none; }
@@ -253,7 +268,7 @@ a, .group-list .module-heading h3 a {
     margin-top: -57px; }
   .masthead .navigation ul.nav li ul.dropdown-menu li {
     margin-top: 42px; }
-  .masthead .navigation ul.nav li ul.dropdown-menu li a {
+  .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
     font-size: 15px;
     color: #69737c;
     font-family: "Open Sans";
@@ -281,7 +296,7 @@ a, .group-list .module-heading h3 a {
   border-top: 20px solid transparent;
   box-sizing: content-box;
   margin-top: -57px; }
-.navbar .nav > .active > a {
+.navbar .nav > .active > a, .navbar #publisher-tree.nav > ul.active > li {
   box-shadow: none;
   background: none; }
 .navbar .nav > li > a {
@@ -298,14 +313,14 @@ a, .group-list .module-heading h3 a {
 .site-footer {
   background: #eff1f2;
   padding-top: 33px; }
-  .site-footer, .site-footer label, .site-footer small, .site-footer a, .site-footer .group-list .module-heading h3 a, .group-list .module-heading h3 .site-footer a {
+  .site-footer, .site-footer label, .site-footer small, .site-footer a, .site-footer .group-list .module-heading h3 a, .group-list .module-heading h3 .site-footer a, .site-footer #publisher-tree > ul > li {
     color: #565656;
     font-size: 15px; }
   .site-footer > .container .row {
     margin-bottom: 22px; }
   .site-footer .attribution {
     margin-left: 0; }
-    .site-footer .attribution > a, .site-footer .group-list .module-heading h3 .attribution > a, .group-list .module-heading h3 .site-footer .attribution > a {
+    .site-footer .attribution > a, .site-footer .group-list .module-heading h3 .attribution > a, .group-list .module-heading h3 .site-footer .attribution > a, .site-footer #publisher-tree > ul.attribution > li {
       margin-right: 20px; }
   .site-footer .inline-links {
     margin-bottom: 11px; }
@@ -371,14 +386,14 @@ a, .group-list .module-heading h3 a {
       .site-footer .paragraph-copyright {
         margin-top: 43px; } }
 
-.homepage .stats ul li a {
+.homepage .stats ul li a, .homepage .stats ul li #publisher-tree > ul > li {
   font-size: 16px; }
-  .homepage .stats ul li a:hover {
+  .homepage .stats ul li a:hover, .homepage .stats ul li #publisher-tree > ul > li:hover {
     text-decoration: underline; }
-  .homepage .stats ul li a b {
+  .homepage .stats ul li a b, .homepage .stats ul li #publisher-tree > ul > li b {
     font-size: 28px;
     line-height: 1.59375em; }
-.homepage .module-heading a, .homepage .group-list .module-heading h3 a, .group-list .homepage .module-heading h3 a {
+.homepage .module-heading a, .homepage .group-list .module-heading h3 a, .group-list .homepage .module-heading h3 a, .homepage .module-heading #publisher-tree > ul > li {
   font-size: 28px; }
 .homepage .search-form {
   padding: 0; }
@@ -403,14 +418,54 @@ a, .group-list .module-heading h3 a {
   font-size: 22px;
   line-height: 1.59375em; }
 
+#publisher-tree > ul {
+  margin: 0; }
+  #publisher-tree > ul > li {
+    position: relative;
+    font-size: 28px;
+    padding: 23.5px;
+    margin-bottom: 20px;
+    line-height: 1;
+    background: #f5f5f5;
+    list-style: none;
+    word-break: break-word; }
+    #publisher-tree > ul > li:before {
+      width: 39px;
+      height: 37px;
+      display: inline-block;
+      content: "";
+      background: #95c677 url("/plus.png") 50% 50% no-repeat;
+      border-bottom: 2px solid #7bb855;
+      cursor: pointer;
+      position: absolute;
+      top: 18px; }
+    #publisher-tree > ul > li.open:before {
+      background: #e7e9ec url("/minus.png") 50% 50% no-repeat;
+      border-bottom: 2px solid #cccfd1; }
+    #publisher-tree > ul > li > a {
+      margin-left: 55px;
+      display: inline-block; }
+    #publisher-tree > ul > li > ul {
+      display: none; }
+    #publisher-tree > ul > li.open > ul {
+      display: block;
+      margin-top: 20px; }
+    #publisher-tree > ul > li > ul > li {
+      font-size: 16px;
+      line-height: 1.59375em;
+      list-style: disc;
+      margin-left: 55px; }
+#publisher-tree + .pagination {
+  display: none; }
+
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
-.leaflet-draw-toolbar a, .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-draw-toolbar a {
+.leaflet-draw-toolbar a, .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-draw-toolbar a, .leaflet-draw-toolbar #publisher-tree > ul > li {
   background-image: url("img/spritesheet.png");
   background-repeat: no-repeat; }
 
-.leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-retina .leaflet-draw-toolbar a {
+.leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar #publisher-tree > ul > li {
   background-image: url("img/spritesheet-2x.png");
   background-size: 270px 30px; }
 
