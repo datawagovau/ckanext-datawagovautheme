@@ -1,0 +1,51 @@
+#publisher-tree{
+  & > ul {
+    margin: 0;
+    & > li{
+      position: relative;
+      @extend a;
+      font-size: $h2-fz;
+      padding: (75px - $h2-fz) / 2;
+      margin-bottom: 20px;
+      line-height: 1;
+      background: #f5f5f5;
+      list-style: none;
+      word-break: break-word;
+      &:before{
+        width: 39px;
+        height: 37px;
+        display: inline-block;
+        content: "";
+        background: $btn-primary-color url("/plus.png") 50% 50% no-repeat;
+        border-bottom: 2px solid $btn-primary-border;
+        cursor: pointer;
+        position: absolute;
+        top: 18px;
+      }
+      &.open:before{
+        background: $btn-default-color url("/minus.png") 50% 50% no-repeat;
+        border-bottom: 2px solid $btn-default-border;
+      }
+      & > a{
+        margin-left: 55px;
+        display: inline-block;
+      }
+      & > ul{
+        display: none;
+      }
+      &.open > ul{
+        display: block;
+        margin-top: 20px;
+      }
+      & > ul > li{
+        font-size: $body-fz;
+        line-height: $body-lh;
+        list-style: disc;
+        margin-left: 55px;
+      }
+    }
+  }
+  & + .pagination{
+    display: none;
+  }
+}

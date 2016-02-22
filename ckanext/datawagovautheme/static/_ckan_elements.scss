@@ -2,7 +2,7 @@
   font-size: $body-fz;
   background: #fbfbfc;
   line-height: $body-lh;
-  border-bottom: none;
+  border-bottom: 1px solid #eee;
   a{
     font-size: $h3-fz;
   }
@@ -14,6 +14,15 @@
   padding-top: 0;
 }
 
+
+.breadcrumb a{
+  text-decoration: none;
+}
+.btn-primary{
+  @include landgate-primary;
+  text-decoration: none;
+  border-radius: 0;
+}
 .search-form{
   h2{
     font-size: $h2-fz;
@@ -24,20 +33,13 @@
     &.search-giant{
       position: relative;
       button{
-        background: $search-button;
+        @include landgate-primary;
         top: 0;
         bottom: 0;
         right: 0;
         margin: 0;
         height: auto;
         width: 100px;
-        border-bottom: 2px solid $search-button-border;
-        &:hover{
-          background: $search-button-hover;
-        }
-        i{
-          color: #fff;
-        }
       }
     }
   }

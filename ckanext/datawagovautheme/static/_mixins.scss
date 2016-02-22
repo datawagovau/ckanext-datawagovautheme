@@ -1,0 +1,20 @@
+@mixin landgate-primary{
+  background: $btn-primary-color;
+  border-bottom: 2px solid $btn-primary-border;
+  &:hover{
+    background: $btn-primary-hover;
+  }
+  i{
+    color: #fff;
+  }
+}
+@mixin landgate-default{
+  background: $btn-default-color;
+  border-bottom: 2px solid $btn-default-border;
+  &:hover{
+    background: $btn-default-hover;
+  }
+  i{
+    color: #69737c;
+  }
+}
