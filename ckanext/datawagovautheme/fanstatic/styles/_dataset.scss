@@ -1,0 +1,11 @@
+.dataset-item{
+  border-bottom: 1px dotted #efefef;
+  .dataset-heading{
+    a{
+      color: $a-color;
+      &:hover{
+        color: $a-hover-color;
+      }
+    }
+  }
+}

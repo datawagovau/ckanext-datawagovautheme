@@ -38,10 +38,10 @@ h6{
   font-style: italic;
 }
 a{
-  color: #20399d;
+  color: $a-color;
   text-decoration: underline;
   &:hover{
-    color: #1e527c;
+    color: $a-hover-color;
   }
 }
 
@@ -62,4 +62,30 @@ input{
   .search-form &{
     border-radius: 0;
   }
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input{
+  &:focus{
+    border-color: #95c677;
+    box-shadow: inset 0 1px 1px #95c677, 0 0 8px #95c677;
+  }
+}
+
+small{
+  font-size: 13px;
 }
