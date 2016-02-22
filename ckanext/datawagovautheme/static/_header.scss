@@ -197,7 +197,7 @@
       color: $link-hover-color;
     }
     &:hover > ul.dropdown-menu {
-      display:table-cell;
+      display: block;
       position: relative;
       height: 121px;
       width: 100%;
@@ -208,7 +208,7 @@
       border-radius: 0;
       border-top: 20px solid transparent;
       box-sizing: content-box;
-      margin-top: -20px;
+      margin-top: -57px;
     }
     & ul.dropdown-menu li {
       margin-top: 42px;
@@ -233,6 +233,21 @@
 .navbar{
   .nav.dropdown-menu {
     display: none;
+  }
+
+  ul.dropdown-menu {
+    display: block;
+    position: relative;
+    height: 121px;
+    width: 100%;
+    box-shadow: none;
+    top: 52px;
+    border: none;
+    background-color: #f5f6f7;
+    border-radius: 0;
+    border-top: 20px solid transparent;
+    box-sizing: content-box;
+    margin-top: -57px;
   }
 
   .nav>.active>a {
