@@ -184,6 +184,7 @@
     &.active a{
       background: none;
       color: $link-hover-color;
+      box-shadow: none;
     }
     &.active {
       background: none;
@@ -196,7 +197,31 @@
       color: $link-hover-color;
     }
     &:hover > ul.dropdown-menu {
-      display: inline;
+      display: block;
+      position: relative;
+      height: 121px;
+      width: 100%;
+      box-shadow: none;
+      top: 52px;
+      border: none;
+      background-color: #f5f6f7;
+      border-radius: 0;
+      border-top: 20px solid transparent;
+      box-sizing: content-box;
+      margin-top: -57px;
+    }
+    & ul.dropdown-menu li {
+      margin-top: 42px;
+    }
+    & ul.dropdown-menu li a {
+      font-size: 15px ;
+      color: $link-hover-color;
+      font-family: "Open Sans";
+      font-weight: 400;
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: 27px;
+      margin-right: 27px;
     }
   }
   input[type="text"]:focus {
@@ -210,6 +235,21 @@
     display: none;
   }
 
+  ul.dropdown-menu {
+    display: block;
+    position: relative;
+    height: 121px;
+    width: 100%;
+    box-shadow: none;
+    top: 52px;
+    border: none;
+    background-color: #f5f6f7;
+    border-radius: 0;
+    border-top: 20px solid transparent;
+    box-sizing: content-box;
+    margin-top: -57px;
+  }
+
   .nav>.active>a {
     box-shadow: none;
     background: none;
@@ -220,5 +260,8 @@
     color: $link-hover-color;
     margin-left: 2px;
   }
-
+  .nav>li>.dropdown-menu:before, 
+  .nav>li>.dropdown-menu:after {
+    display: none;
+  }
 }
