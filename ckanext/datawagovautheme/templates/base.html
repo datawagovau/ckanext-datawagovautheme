@@ -2,7 +2,7 @@
 
 {% block styles %}
   {{ super() }}
-  <link rel="stylesheet" href="/datawagovautheme.css" />
+  {% resource 'datawagovautheme/styles/datawagovautheme.css' %}
   {% resource 'datawagovautheme/drop_down_menu.js' %}
 {% endblock %}
 
