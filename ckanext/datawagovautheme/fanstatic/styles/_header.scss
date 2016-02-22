@@ -25,6 +25,7 @@
         font: 15px "Arimo", sans-serif;
         padding: 0px 8px;
         color: #565656;
+        text-decoration: none;
         &:hover {
           color: #565656;
           background-color: #FFFFFF;
@@ -74,6 +75,7 @@
     float: none !important;
     a {
       color: $link-hover-color;
+      text-decoration: none;
       &:hover {
         color: $link-hover-color;
       }
@@ -111,6 +113,7 @@
 .dwga-logo {
   margin-top: -2px;
   float: left;
+  padding-left: 20px;
 }
 
 .dwga-search {
@@ -150,7 +153,7 @@
   height: 202px;
   .site-search input {
     height: 34px;
-    width: 314px;
+    width: 315px;
     border-color: #c7cacd;
     font-family:"Open Sans Regular";
     font-size: 14px;
@@ -167,6 +170,20 @@
   /* Alignment of navigation */
   .navigation, ul.nav {
     margin: 0px 0px 2px 0px;
+  }
+  .navigation ul.nav li ul.dropdown-menu {
+    //display: block;
+    position: absolute;
+    height: 111px;
+    width: 100%;
+    box-shadow: none;
+    top: 88px;
+    border: none;
+    background-color: #f5f6f7;
+    border-radius: 0;
+    border-top: 20px solid transparent;
+    box-sizing: content-box;
+    margin-top: -57px;
   }
   .navigation ul.nav li {
     a {
@@ -198,11 +215,11 @@
     }
     &:hover > ul.dropdown-menu {
       display: block;
-      position: relative;
-      height: 121px;
+      position: absolute;
+      height: 111px;
       width: 100%;
       box-shadow: none;
-      top: 52px;
+      top: 88px;
       border: none;
       background-color: #f5f6f7;
       border-radius: 0;
@@ -223,6 +240,13 @@
       margin-left: 27px;
       margin-right: 27px;
     }
+    &.children-active {
+      height: 52px;
+      background-color: #f5f6f7;
+    }
+    &.children-active ul.dropdown-menu {
+      z-index: 10;
+    }
   }
   input[type="text"]:focus {
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
@@ -233,21 +257,6 @@
 .navbar{
   .nav.dropdown-menu {
     display: none;
-  }
-
-  ul.dropdown-menu {
-    display: block;
-    position: relative;
-    height: 121px;
-    width: 100%;
-    box-shadow: none;
-    top: 52px;
-    border: none;
-    background-color: #f5f6f7;
-    border-radius: 0;
-    border-top: 20px solid transparent;
-    box-sizing: content-box;
-    margin-top: -57px;
   }
 
   .nav>.active>a {
@@ -263,5 +272,39 @@
   .nav>li>.dropdown-menu:before, 
   .nav>li>.dropdown-menu:after {
     display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .dwga-logo {
+    padding-left: 20px;
+  }
+  .masthead .site-search input {
+    width: 248px;
+  }
+}
+
+@media (max-width: 979px) {
+  .masthead {
+    background: none;
+    background-color: #FCFCFC;
+    height: 0px;
+    min-height: 0px;
+  }
+  .account-masthead .account.not-authed ul li:nth-child(n+3) {
+    display: none;
+  }
+  .dwga-logo {
+    margin-top: -4px;
+    & .logo img {
+      width: 80px;
+      height: 78px;
+    }
+  }
+  .dwga-title h1 a {
+    font-size: 16px;
+  }
+  .dwga-title h3 {
+    font-size: 8px;
   }
 }
