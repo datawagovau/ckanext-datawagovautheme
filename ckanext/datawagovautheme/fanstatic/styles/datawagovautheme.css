@@ -191,6 +191,248 @@ ul.nav {
 .span9 .module:last-child {
   line-height: 1; }
 
+.account-masthead {
+  height: 39px;
+  background: none;
+  background-color: #fff; }
+  .account-masthead .account {
+    margin-top: 10px;
+    /* The "bubble" containing the number of new notifications. */
+    /* Transparent separator between links */ }
+    .account-masthead .account .notifications a, .account-masthead .account .notifications .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account .notifications #publisher-tree > ul > li {
+      /* The "dashboard" and number of notifiations background */ }
+      .account-masthead .account .notifications a span, .account-masthead .account .notifications .datawa-organization-list #publisher-tree > ul > li span, .datawa-organization-list .account-masthead .account .notifications #publisher-tree > ul > li span {
+        background-color: #FCFCFC; }
+      .account-masthead .account .notifications a:hover span, .account-masthead .account .notifications .datawa-organization-list #publisher-tree > ul > li:hover span, .datawa-organization-list .account-masthead .account .notifications #publisher-tree > ul > li:hover span {
+        color: #69737c;
+        background-color: inherit; }
+    .account-masthead .account ul li {
+      border-left: 2px transparent;
+      /* The text and icons in the user account info. */ }
+      .account-masthead .account ul li a, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li {
+        font: 15px "Arimo", sans-serif;
+        padding: 0px 8px;
+        color: #565656;
+        text-decoration: none; }
+        .account-masthead .account ul li a:hover, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li:hover {
+          color: #565656;
+          background-color: #FFFFFF;
+          text-decoration: underline; }
+
+/* ========================================================================
+   The main masthead bar that contains the site logo, nav links, and search
+   ======================================================================== */
+.dwga-header-container {
+  padding: 5px;
+  background: none; }
+
+/* Invisible debug output for controller/action */
+.debug {
+  color: #FEFEFE; }
+
+/* Padding around logo and search */
+.dwga-header-row {
+  padding: 10px 0;
+  margin-left: 0px; }
+
+.dwga-inlineblock {
+  display: inline-block; }
+
+.dwga-title {
+  margin-left: 15px;
+  display: block;
+  float: left; }
+  .dwga-title h1 {
+    font-size: 36px;
+    line-height: 1.25em;
+    margin: 5px 0 15px;
+    color: #69737c;
+    float: none !important; }
+    .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li {
+      color: #69737c;
+      text-decoration: none; }
+      .dwga-title h1 a:hover, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li:hover {
+        color: #69737c; }
+  .dwga-title h3 {
+    font-size: 25px;
+    line-height: 1.25em;
+    margin: 5px 0 15px;
+    color: #69737c; }
+
+.dwga-header {
+  color: #69737c;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  height: 134px;
+  line-height: 27.09375px;
+  margin-bottom: 0px;
+  margin-left: 101px;
+  margin-right: 101px;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px; }
+
+.dwga-logo {
+  margin-top: -2px;
+  float: left;
+  padding-left: 20px; }
+
+.dwga-search {
+  padding-right: 20px;
+  float: right; }
+  .dwga-search .site-search .field button[type="submit"] {
+    font-size: 18px;
+    width: 20.5%;
+    height: 44px;
+    color: #fff;
+    border: none;
+    background: #999;
+    float: right;
+    margin-right: 0;
+    font-family: 'ready-steady-gov';
+    background: #95c677;
+    top: 10px;
+    right: -8px; }
+  .dwga-search .site-search .field button .icon-search:before {
+    font-size: 19px; }
+
+.masthead {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background: none;
+  background-color: #FCFCFC;
+  height: 202px;
+  /* Float the navbar left */
+  /* data.wa.gov.au floats left, here it looks better floating right */
+  /* Alignment of navigation */ }
+  .masthead .site-search input {
+    height: 34px;
+    width: 315px;
+    border-color: #c7cacd;
+    font-family: "Open Sans Regular";
+    font-size: 14px;
+    color: #565656;
+    margin-left: 0;
+    border-radius: 0; }
+  .masthead .nav-collapse {
+    float: left;
+    padding-top: 32px; }
+  .masthead .navigation, .masthead ul.nav {
+    margin: 0px 0px 2px 0px; }
+  .masthead .navigation ul.nav li ul.dropdown-menu {
+    position: absolute;
+    height: 111px;
+    width: 100%;
+    box-shadow: none;
+    top: 88px;
+    border: none;
+    background-color: #f5f6f7;
+    border-radius: 0;
+    border-top: 20px solid transparent;
+    box-sizing: content-box;
+    margin-top: -57px; }
+  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+    font-size: 15px;
+    color: #69737c;
+    font-family: "Open Sans";
+    font-weight: 400;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: -3 px; }
+  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
+    background: none;
+    color: #69737c;
+    box-shadow: none; }
+  .masthead .navigation ul.nav li.active {
+    background: none;
+    box-shadow: #69737c 0px 2px 0px 0px; }
+  .masthead .navigation ul.nav li:hover {
+    background-color: #f5f6f7;
+    box-shadow: none;
+    border-bottom: 2px solid #69737c;
+    color: #69737c; }
+  .masthead .navigation ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+    position: absolute;
+    height: 111px;
+    width: 100%;
+    box-shadow: none;
+    top: 88px;
+    border: none;
+    background-color: #f5f6f7;
+    border-radius: 0;
+    border-top: 20px solid transparent;
+    box-sizing: content-box;
+    margin-top: -57px; }
+  .masthead .navigation ul.nav li ul.dropdown-menu li {
+    margin-top: 42px; }
+  .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
+    font-size: 15px;
+    color: #69737c;
+    font-family: "Open Sans";
+    font-weight: 400;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 27px;
+    margin-right: 27px; }
+  .masthead .navigation ul.nav li.children-active {
+    height: 52px;
+    background-color: #f5f6f7; }
+  .masthead .navigation ul.nav li.children-active ul.dropdown-menu {
+    z-index: 10; }
+  .masthead input[type="text"]:focus {
+    -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
+
+.navbar .nav.dropdown-menu {
+  display: none; }
+.navbar .nav > .active > a, .navbar .datawa-organization-list #publisher-tree.nav > ul.active > li, .datawa-organization-list .navbar #publisher-tree.nav > ul.active > li {
+  box-shadow: none;
+  background: none; }
+.navbar .nav > li > a {
+  padding: 9px 0px 8px 0px;
+  color: #69737c;
+  margin-left: 2px; }
+.navbar .nav > li > .dropdown-menu:before,
+.navbar .nav > li > .dropdown-menu:after {
+  display: none; }
+
+@media (max-width: 1279px) {
+  .dwga-logo {
+    padding-left: 20px; }
+
+  .masthead .site-search input {
+    width: 248px; } }
+@media (max-width: 979px) {
+  .masthead {
+    background: none;
+    background-color: #FCFCFC;
+    height: 0px;
+    min-height: 0px; }
+
+  .account-masthead .account.not-authed ul li:nth-child(n+3) {
+    display: none; }
+
+  .dwga-logo {
+    margin-top: -4px; }
+    .dwga-logo .logo img {
+      width: 80px;
+      height: 78px; }
+
+  .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li {
+    font-size: 16px; }
+
+  .dwga-title h3 {
+    font-size: 8px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
