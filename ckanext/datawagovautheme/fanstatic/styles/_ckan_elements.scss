@@ -12,6 +12,8 @@
   .action{
     font-size: $body-fz;
     color: $a-color;
+    font-weight: 300;
+    line-height: $body-lh;
     &:hover{
       color: $a-hover-color;
     }
@@ -77,6 +79,9 @@
   .search-input{
     &.search-giant{
       position: relative;
+      input{
+        border: 1px solid #c7cacd;
+      }
       button{
         @include landgate-primary;
         top: 0;
@@ -90,13 +95,16 @@
   }
 }
 
-.tag{
+
+
+a.tag{
   color: #565656;
+  text-decoration: none;
   &:hover{
     color: #fff;
     background: $a-hover-color;
     border: 1px solid #0d3454;
-
+    box-shadow: none;
   }
 }
 
@@ -115,14 +123,19 @@ ul.nav{
 }
 
 .module {
+  div.api-info-section{
+    padding-bottom: 20px;
+  }
   .read-more{
     font-size: $body-fz;
     color: $a-color;
+    font-weight: 300;
     &:hover{
       color: $a-hover-color;
     }
   }
   .pagination{
+    padding-top: 25px;
     ul{
       li{
         &.disabled a,
@@ -144,16 +157,23 @@ ul.nav{
     }
   }
 }
+.module-content{
+  padding-left: 0;
+  padding-right: 0;
+}
 .module-narrow{
   .nav-item{
     a{
       padding-left: 10px;
       padding-right: 10px;
+      font-size: $body-fz;
+      text-decoration: none;
     }
   }
-  .module-footer{
+  .module-footer, .module-heading{
     padding-left: 10px;
     padding-right: 10px;
+
   }
 }
 

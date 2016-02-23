@@ -1,13 +1,26 @@
 .homepage {
+  .media-heading{
+    word-break: inherit;
+    hyphens: manual;
+  }
   .stats {
-    ul li a {
-      font-size: $body-fz;
-      &:hover{
-        text-decoration: underline;
-      }
-      b{
-        font-size: $h2-fz;
-        line-height: $body-lh;
+
+    ul li {
+        @media(max-width: 500px){
+          &:nth-child(2n - 1){
+            clear: both;
+          }
+          width: 50%;
+        }
+        a {
+        font-size: $body-fz;
+        &:hover{
+          text-decoration: underline;
+        }
+        b{
+          font-size: $h2-fz;
+          line-height: $body-lh;
+        }
       }
     }
   }

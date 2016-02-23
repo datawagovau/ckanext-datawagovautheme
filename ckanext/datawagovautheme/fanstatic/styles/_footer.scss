@@ -49,9 +49,9 @@
     position: absolute;
     left: 0;
     font-size: 25px;
+    text-decoration: none;
     margin: {
       top: 8px;
-      left: 22px;
     }
   }
   .without-margin{
@@ -62,6 +62,11 @@
     margin-left: 0;
   }
   @media(max-width: $tablet-top){
+    border:{
+      left: 20px solid #fff;
+      right: 20px solid #fff;
+      bottom: 20px solid #fff;
+    }
     padding-top: 24px;
     .footer-links,
     .attribution,
@@ -110,7 +115,32 @@
       margin-top: 43px;
     }
   }
+  @media(max-width: $mobile-top){
+    margin:{
+      left: -20px;
+      right: -20px;
+    }
+  }
 }
 
-
-
+@media(min-width: 1280px){
+  .site-footer{
+    .footer-powered-section{
+      margin-left: 20px;
+    }
+    .attribution{
+      &:first-child{
+        margin-left: 158px;
+      }
+      width: auto;
+      max-width: 220px;
+      margin-left: 20px;
+      label{
+        display: block;
+      }
+      .lang-select .lang-container{
+        float: none;
+      }
+    }
+  }
+}

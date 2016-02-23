@@ -1,10 +1,68 @@
 .dataset-item{
   border-bottom: 1px dotted #efefef;
   .dataset-heading{
+    font-size: $h3-fz;
     a{
       color: $a-color;
       &:hover{
         color: $a-hover-color;
+      }
+    }
+  }
+  .dataset-resources{
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: $tablet-top){
+  .js{
+     [role=main] .secondary .filters {
+          display: none;
+          position: fixed;
+          overflow: auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          padding: 10px;
+          background-color: #000000;
+          background-color: rgba(0,0,0,0.5);
+      }
+
+     .show-filters.btn{
+      border: none;
+      @include landgate-primary;
+      border-radius: 0;
+      text-shadow: none;
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      padding: 12px 10px;
+      font-size: 16px;
+    }
+    body.filters-modal{
+      .secondary .filters .hide-filters {
+        text-decoration: none;
+        i{
+          font-size: 28px;
+        }
+      }
+      .secondary .filters {
+          display: block;
+          & > div{
+            background: #fff;
+          }
+      }
+
+      .secondary .filters .hide-filters {
+          display: inline-block;
+          position: absolute;
+          top: 14px;
+          right: 17px;
+          opacity: 0.6;
       }
     }
   }

@@ -6,11 +6,14 @@ body {
   color: #565656;
   line-height: 1.59375em; }
 
+label, input, button, select, textarea {
+  font-size: 16px; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
   color: #69737c;
   font-weight: 600;
-  line-height: 1.59375em; }
+  line-height: 1.25em; }
 
 h5, h5 {
   text-transform: uppercase; }
@@ -42,8 +45,10 @@ a, .group-list .module-heading h3 a, .datawa-organization-list #publisher-tree >
 
 [role="main"] ul {
   margin-left: 15px; }
-  [role="main"] ul li ul li {
-    list-style: square; }
+  [role="main"] ul li {
+    line-height: 1.59375em; }
+    [role="main"] ul li ul li {
+      list-style: square; }
 
 .search-form input {
   border-radius: 0; }
@@ -81,7 +86,9 @@ small {
     display: none; }
   .module-heading .action {
     font-size: 16px;
-    color: #20399d; }
+    color: #20399d;
+    font-weight: 300;
+    line-height: 1.59375em; }
     .module-heading .action:hover {
       color: #1e527c; }
 
@@ -127,6 +134,8 @@ small {
   line-height: 1.59375em; }
 .search-form .search-input.search-giant {
   position: relative; }
+  .search-form .search-input.search-giant input {
+    border: 1px solid #c7cacd; }
   .search-form .search-input.search-giant button {
     background: #95c677;
     border-bottom: 2px solid #7bb855;
@@ -141,12 +150,14 @@ small {
     .search-form .search-input.search-giant button i {
       color: #fff; }
 
-.tag {
-  color: #565656; }
-  .tag:hover {
+a.tag, .group-list .module-heading h3 a.tag, .datawa-organization-list #publisher-tree > ul > li.tag {
+  color: #565656;
+  text-decoration: none; }
+  a.tag:hover, .group-list .module-heading h3 a.tag:hover, .datawa-organization-list #publisher-tree > ul > li.tag:hover {
     color: #fff;
     background: #1e527c;
-    border: 1px solid #0d3454; }
+    border: 1px solid #0d3454;
+    box-shadow: none; }
 
 ul.nav {
   margin-left: 0; }
@@ -158,33 +169,44 @@ ul.nav {
     color: #20399d;
     background: #f5f5f5; }
 
+.module div.api-info-section {
+  padding-bottom: 20px; }
 .module .read-more {
   font-size: 16px;
-  color: #20399d; }
+  color: #20399d;
+  font-weight: 300; }
   .module .read-more:hover {
     color: #1e527c; }
-.module .pagination ul li.disabled a, .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.disabled #publisher-tree > ul > li,
-.module .pagination ul li a,
-.module .pagination ul li .datawa-organization-list #publisher-tree > ul > li,
-.datawa-organization-list .module .pagination ul li #publisher-tree > ul > li {
-  border: 1px solid #e8e8e8;
-  background: #f5f5f5;
-  color: #20399d; }
-  .module .pagination ul li.disabled a:hover, .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .module .pagination ul li.disabled #publisher-tree > ul > li:hover,
-  .module .pagination ul li a:hover,
-  .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover,
-  .datawa-organization-list .module .pagination ul li #publisher-tree > ul > li:hover {
-    color: #1e527c;
-    text-decoration: underline; }
-.module .pagination ul li.active a, .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.active #publisher-tree > ul > li {
-  border: 1px solid #7bb855;
-  color: #fff;
-  background: #95c677; }
+.module .pagination {
+  padding-top: 25px; }
+  .module .pagination ul li.disabled a, .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.disabled #publisher-tree > ul > li,
+  .module .pagination ul li a,
+  .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li,
+  .datawa-organization-list .module .pagination ul li #publisher-tree > ul > li {
+    border: 1px solid #e8e8e8;
+    background: #f5f5f5;
+    color: #20399d; }
+    .module .pagination ul li.disabled a:hover, .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .module .pagination ul li.disabled #publisher-tree > ul > li:hover,
+    .module .pagination ul li a:hover,
+    .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover,
+    .datawa-organization-list .module .pagination ul li #publisher-tree > ul > li:hover {
+      color: #1e527c;
+      text-decoration: underline; }
+  .module .pagination ul li.active a, .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.active #publisher-tree > ul > li {
+    border: 1px solid #7bb855;
+    color: #fff;
+    background: #95c677; }
+
+.module-content {
+  padding-left: 0;
+  padding-right: 0; }
 
 .module-narrow .nav-item a, .module-narrow .nav-item .group-list .module-heading h3 a, .group-list .module-heading h3 .module-narrow .nav-item a, .module-narrow .nav-item .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module-narrow .nav-item #publisher-tree > ul > li {
   padding-left: 10px;
-  padding-right: 10px; }
-.module-narrow .module-footer {
+  padding-right: 10px;
+  font-size: 16px;
+  text-decoration: none; }
+.module-narrow .module-footer, .module-narrow .module-heading {
   padding-left: 10px;
   padding-right: 10px; }
 
@@ -469,14 +491,17 @@ ul.nav {
     position: absolute;
     left: 0;
     font-size: 25px;
-    margin-top: 8px;
-    margin-left: 22px; }
+    text-decoration: none;
+    margin-top: 8px; }
   .site-footer .without-margin {
     margin: 0; }
   .site-footer .row {
     margin-left: 0; }
   @media (max-width: 979px) {
     .site-footer {
+      border-left: 20px solid #fff;
+      border-right: 20px solid #fff;
+      border-bottom: 20px solid #fff;
       padding-top: 24px; }
       .site-footer .footer-links,
       .site-footer .attribution,
@@ -511,7 +536,32 @@ ul.nav {
         margin-left: 0; }
       .site-footer .paragraph-copyright {
         margin-top: 43px; } }
+  @media (max-width: 767px) {
+    .site-footer {
+      margin-left: -20px;
+      margin-right: -20px; } }
 
+@media (min-width: 1280px) {
+  .site-footer .footer-powered-section {
+    margin-left: 20px; }
+  .site-footer .attribution {
+    width: auto;
+    max-width: 220px;
+    margin-left: 20px; }
+    .site-footer .attribution:first-child {
+      margin-left: 158px; }
+    .site-footer .attribution label {
+      display: block; }
+    .site-footer .attribution .lang-select .lang-container {
+      float: none; } }
+.homepage .media-heading {
+  word-break: inherit;
+  hyphens: manual; }
+@media (max-width: 500px) {
+  .homepage .stats ul li {
+    width: 50%; }
+    .homepage .stats ul li:nth-child(2n - 1) {
+      clear: both; } }
 .homepage .stats ul li a, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li {
   font-size: 16px; }
   .homepage .stats ul li a:hover, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li:hover {
@@ -586,11 +636,57 @@ ul.nav {
 
 .dataset-item {
   border-bottom: 1px dotted #efefef; }
-  .dataset-item .dataset-heading a, .dataset-item .dataset-heading .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-heading a, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li {
-    color: #20399d; }
-    .dataset-item .dataset-heading a:hover, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:hover {
-      color: #1e527c; }
+  .dataset-item .dataset-heading {
+    font-size: 22px; }
+    .dataset-item .dataset-heading a, .dataset-item .dataset-heading .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-heading a, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li {
+      color: #20399d; }
+      .dataset-item .dataset-heading a:hover, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:hover {
+        color: #1e527c; }
+  .dataset-item .dataset-resources a, .dataset-item .dataset-resources .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-resources a, .dataset-item .dataset-resources .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-resources #publisher-tree > ul > li {
+    text-decoration: none; }
 
+@media (max-width: 979px) {
+  .js [role=main] .secondary .filters {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 10px;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .js .show-filters.btn {
+    border: none;
+    background: #95c677;
+    border-bottom: 2px solid #7bb855;
+    border-radius: 0;
+    text-shadow: none;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 12px 10px;
+    font-size: 16px; }
+    .js .show-filters.btn:hover {
+      background: #87be65; }
+    .js .show-filters.btn i {
+      color: #fff; }
+  .js body.filters-modal .secondary .filters .hide-filters {
+    text-decoration: none; }
+    .js body.filters-modal .secondary .filters .hide-filters i {
+      font-size: 28px; }
+  .js body.filters-modal .secondary .filters {
+    display: block; }
+    .js body.filters-modal .secondary .filters > div {
+      background: #fff; }
+  .js body.filters-modal .secondary .filters .hide-filters {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    opacity: 0.6; } }
 /* =====================================================
    The "account masthead" bar across the top of the site
    ===================================================== */
@@ -632,6 +728,8 @@ boxes. */
 .homepage .module-search .tags {
   color: #69737c;
   background-color: #FCFCFC; }
+  .homepage .module-search .tags h3 {
+    font-size: 16px; }
 
 /* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
 and "Search Your Data" boxes line up. */
@@ -649,38 +747,66 @@ and "Search Your Data" boxes line up. */
 .box {
   border: none; }
 
+body {
+  overflow-x: hidden; }
+
+.row {
+  margin-left: 0; }
+
 @media (min-width: 1280px) {
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 1280px;
-    padding-left: 35px;
+    padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box; }
 
-  .navbar.navbar-static-top.masthead,
-  header.account-masthead,
-  [role=main],
-  .site-footer {
-    margin-left: -15px; }
+  .site-footer .container {
+    padding-left: 0;
+    padding-right: 0; }
 
   .primary.span9 {
     width: 830px; }
 
-  #content {
-    padding-left: 79px;
-    padding-right: 130px; }
+  #content,
+  .homepage [role="main"] .container {
+    padding-left: 54px;
+    padding-right: 105px; }
 
   .span6 {
     width: 600px; }
 
+  .homepage .span6 {
+    width: 550px;
+    margin: 0; }
+    .homepage .span6:first-child {
+      margin-right: 20px; }
+
   .span3 {
-    width: 240px; } }
+    width: 270px; } }
 .paragraph-copyright {
   font-size: 17px;
   line-height: 1.3; }
 
+@media (min-width: 980px) {
+  .form-select.control-order-by {
+    position: relative; }
+    .form-select.control-order-by:after {
+      pointer-events: none;
+      content: "\f107";
+      background: #fff;
+      display: inline-block;
+      font-family: "FontAwesome";
+      line-height: 16px;
+      pointer-events: none;
+      position: absolute;
+      right: 7px;
+      top: 7px; } }
+@media (max-width: 1279px) and (min-width: 980px) {
+  .homepage .span6 {
+    width: 450px; } }
 @media (max-width: 979px) {
   .search-form .control-order-by select {
     width: 100%; }
@@ -688,6 +814,12 @@ and "Search Your Data" boxes line up. */
   .module:last-child {
     margin-bottom: 20px; } }
 @media (max-width: 979px) and (min-width: 768px) {
+  .homepage .span6 {
+    float: none;
+    width: auto; }
+  .homepage .hidden-phone {
+    display: none; }
+
   .primary.span9 {
     width: auto; }
 
@@ -698,7 +830,7 @@ and "Search Your Data" boxes line up. */
     width: auto;
     padding-left: 60px;
     padding-right: 60px; } }
-@media (max-width: 767px) {
+@media (max-width: 979px) {
   [role="main"] {
     margin-left: -20px;
     margin-right: -20px;
@@ -714,22 +846,6 @@ and "Search Your Data" boxes line up. */
     display: none; }
 
   .secondary.span3 {
-    float: left; }
-
-  .js .show-filters.btn {
-    border: none;
-    background: #95c677;
-    border-bottom: 2px solid #7bb855;
-    border-radius: 0;
-    text-shadow: none;
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    padding: 12px 10px;
-    font-size: 16px; }
-    .js .show-filters.btn:hover {
-      background: #87be65; }
-    .js .show-filters.btn i {
-      color: #fff; } }
+    float: left; } }
 
 /*# sourceMappingURL=datawagovautheme.css.map */
