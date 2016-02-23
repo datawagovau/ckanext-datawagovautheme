@@ -95,8 +95,8 @@ body{
     box-sizing: border-box;
   }
   .site-footer .container{
-    padding-left: 0;
-    padding-right: 0;
+    // padding-left: 0;
+    // padding-right: 0;
   }
   .primary.span9{
     width: 830px;
@@ -182,12 +182,12 @@ body{
 }
 @media(max-width: $tablet-top){
   [role="main"]{
-
     margin-left: -20px;
     margin-right: -20px;
     padding: 0 20px;
   }
   .primary.span9{
+    padding-top: 20px;
     background-color: #fff;
   }
   .module-content{

@@ -116,16 +116,16 @@ small {
   width: 19px;
   height: 20px; }
 
-.btn-primary {
+.btn-primary, .btn-primary:focus, .btn-success, .btn-success:focus {
   border: none;
   background: #95c677;
   border-bottom: 2px solid #7bb855;
   text-decoration: none;
   border-radius: 0;
   text-shadow: none; }
-  .btn-primary:hover {
+  .btn-primary:hover, .btn-primary:focus:hover, .btn-success:hover, .btn-success:focus:hover {
     background: #87be65; }
-  .btn-primary i {
+  .btn-primary i, .btn-primary:focus i, .btn-success i, .btn-success:focus i {
     color: #fff; }
 
 .search-form h2 {
@@ -210,8 +210,25 @@ ul.nav {
   padding-left: 10px;
   padding-right: 10px; }
 
-.span9 .module:last-child {
+.content_action .btn {
+  border: none;
+  background: #e7e9ec;
+  border-bottom: 2px solid #cccfd1;
+  background: #f5f6f7;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 0;
+  padding: 5px 22px; }
+  .content_action .btn:hover {
+    background: #e7e9ec; }
+  .content_action .btn i {
+    color: #69737c; }
+
+.api-info-section {
   line-height: 1; }
+
+.page-header {
+  background: #fff; }
 
 .account-masthead {
   height: 39px;
@@ -438,7 +455,7 @@ ul.nav {
   .masthead {
     background: none;
     background-color: #FCFCFC;
-    height: 0px;
+    height: auto;
     min-height: 0px; }
 
   .account-masthead .account.not-authed ul li:nth-child(n+3) {
@@ -645,6 +662,121 @@ ul.nav {
   .dataset-item .dataset-resources a, .dataset-item .dataset-resources .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-resources a, .dataset-item .dataset-resources .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-resources #publisher-tree > ul > li {
     text-decoration: none; }
 
+.context-info h1.heading {
+  hyphens: none;
+  word-break: inherit; }
+
+@media (max-width: 768px) {
+  .page-header .content_action {
+    float: none;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 2px; }
+  .page-header .nav-tabs {
+    margin: 0;
+    float: none; }
+    .page-header .nav-tabs a, .page-header .nav-tabs .group-list .module-heading h3 a, .group-list .module-heading h3 .page-header .nav-tabs a, .page-header .nav-tabs .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs #publisher-tree > ul > li {
+      border: 1px solid #ddd; } }
+.page-header .nav-tabs li a, .page-header .nav-tabs li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs li #publisher-tree > ul > li {
+  color: #20399d;
+  border-radius: 0;
+  text-decoration: none; }
+  .page-header .nav-tabs li a:hover, .page-header .nav-tabs li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li #publisher-tree > ul > li:hover {
+    color: #1e527c;
+    background: #f5f5f5; }
+.page-header .nav-tabs li.active a, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li, .page-header .nav-tabs li.active a:hover, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li:hover {
+  color: #69737c; }
+.page-header .nav-tabs li.active a:hover, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li:hover {
+  background: #fff; }
+
+.module-content .label.label-inverse {
+  background: #f5f6f7;
+  border-bottom: 2px solid #c7cacd;
+  font-size: 16px;
+  border-radius: 0;
+  padding: 11px 32px; }
+  .module-content .label.label-inverse img {
+    vertical-align: bottom; }
+  .module-content .label.label-inverse:hover {
+    background: #e7e9ec; }
+  .module-content .label.label-inverse a, .module-content .label.label-inverse .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module-content .label.label-inverse #publisher-tree > ul > li {
+    text-decoration: none;
+    color: #69737c !important;
+    text-shadow: none; }
+
+.tags .tag-list {
+  margin-left: 0; }
+
+.resources .resource-list {
+  margin-left: 0; }
+@media (max-width: 979px) {
+  .resources .resource-item {
+    padding-bottom: 60px; } }
+.resources .resource-item .heading {
+  color: #20399d;
+  font-size: 16px; }
+  .resources .resource-item .heading:hover, .resources .resource-item .heading:active {
+    color: #1e527c; }
+.resources .resource-item .description {
+  font-size: 14px; }
+@media (max-width: 979px) {
+  .resources .resource-item .dropdown {
+    top: 65px;
+    left: 0; }
+    .resources .resource-item .dropdown > a, .resources .resource-item .group-list .module-heading h3 .dropdown > a, .resources .resource-item .datawa-organization-list #publisher-tree > ul.dropdown > li, .datawa-organization-list .resources .resource-item #publisher-tree > ul.dropdown > li {
+      position: absolute;
+      right: 0;
+      left: 0; }
+    .resources .resource-item .dropdown.open .dropdown-menu {
+      margin: 0;
+      top: 42px;
+      width: 100%;
+      box-sizing: border-box; } }
+@media (max-width: 768px) {
+  .resources .resource-item .dropdown {
+    display: block; } }
+.resources .resource-item .dropdown a, .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown #publisher-tree > ul > li {
+  border-radius: 0;
+  padding: 10px 32px;
+  border-bottom-color: #7eba59;
+  font-size: 16px; }
+.resources .resource-item .dropdown.open a, .resources .resource-item .dropdown.open .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown.open #publisher-tree > ul > li {
+  background: #87be65; }
+.resources .resource-item .dropdown.open ul {
+  border-radius: 0; }
+  .resources .resource-item .dropdown.open ul li {
+    list-style: none; }
+    .resources .resource-item .dropdown.open ul li a, .resources .resource-item .dropdown.open ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown.open ul li #publisher-tree > ul > li {
+      background: #fff;
+      color: #20399d;
+      text-decoration: none; }
+      .resources .resource-item .dropdown.open ul li a:hover, .resources .resource-item .dropdown.open ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .resources .resource-item .dropdown.open ul li #publisher-tree > ul > li:hover {
+        color: #1e527c;
+        text-decoration: underline; }
+.resources .resource-item .dropdown .icon-share-alt:before {
+  content: '';
+  background: url("/drop-arrow-icon.png") 50% 50% no-repeat;
+  width: 19px;
+  height: 11px; }
+
+.additional-info .table, .additional-info .table-striped {
+  border-left: none;
+  border-right: none;
+  border-radius: none;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef; }
+  .additional-info .table thead th:first-child, .additional-info .table thead td:first-child, .additional-info .table-striped thead th:first-child, .additional-info .table-striped thead td:first-child {
+    width: 190px; }
+  .additional-info .table th, .additional-info .table td,
+  .additional-info .table tbody tr td, .additional-info .table tbody tr th, .additional-info .table-striped th, .additional-info .table-striped td,
+  .additional-info .table-striped tbody tr td, .additional-info .table-striped tbody tr th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #efefef;
+    background: #fff; }
+
 @media (max-width: 979px) {
   .js [role=main] .secondary .filters {
     display: none;
@@ -763,10 +895,6 @@ body {
     padding-right: 20px;
     box-sizing: border-box; }
 
-  .site-footer .container {
-    padding-left: 0;
-    padding-right: 0; }
-
   .primary.span9 {
     width: 830px; }
 
@@ -837,6 +965,7 @@ body {
     padding: 0 20px; }
 
   .primary.span9 {
+    padding-top: 20px;
     background-color: #fff; }
 
   .module-content {
