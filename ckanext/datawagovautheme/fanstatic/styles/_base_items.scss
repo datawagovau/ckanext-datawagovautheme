@@ -8,12 +8,16 @@ body {
   line-height: $body-lh;
 }
 
+label, input, button, select, textarea{
+  font-size: $body-fz;
+}
+
 
 h1,h2,h3,h4,h5,h6{
   font-family: "Open Sans", sans-serif;
   color: $h-color;
   font-weight: 600;
-  line-height: $body-lh;
+  line-height: $h-lh;
 }
 h5, h5{
   text-transform: uppercase;
@@ -51,6 +55,7 @@ a{
     margin-left: 15px;
     li{
       // list-style: circle;
+      line-height: $body-lh;
       ul li{
         list-style: square
       }
