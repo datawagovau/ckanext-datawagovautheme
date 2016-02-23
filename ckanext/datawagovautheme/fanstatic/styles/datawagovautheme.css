@@ -416,14 +416,14 @@ ul.nav {
   .masthead {
     background: none;
     background-color: #FCFCFC;
-    height: 0px;
     min-height: 0px; }
 
   .account-masthead .account.not-authed ul li:nth-child(n+3) {
     display: none; }
 
   .dwga-logo {
-    margin-top: -4px; }
+    margin-top: -4px;
+    padding-left: 0; }
     .dwga-logo .logo img {
       width: 80px;
       height: 78px; }
@@ -432,7 +432,79 @@ ul.nav {
     font-size: 16px; }
 
   .dwga-title h3 {
-    font-size: 8px; } }
+    font-size: 8px; }
+
+  .masthead .site-search {
+    display: block; } }
+@media (max-width: 320px) {
+  .dwga-search .site-search .field button[type="submit"] {
+    width: 21%;
+    height: 43px;
+    font-size: 0px;
+    top: 10px;
+    right: -19px; }
+
+  .masthead hgroup h1 {
+    margin-left: -1px;
+    letter-spacing: 0px; }
+
+  .masthead .site-search input {
+    padding-top: 5px;
+    padding-left: 9px;
+    height: 32px;
+    font-size: 16px; }
+
+  .dwga-title {
+    top: 17px;
+    left: 95px;
+    position: absolute;
+    margin-bottom: 17px; }
+
+  .dwga-title h3 {
+    margin-top: 9px;
+    margin-left: 0px; }
+
+  .dwga-search {
+    padding-right: 0px;
+    float: right;
+    margin-right: -6px;
+    margin-top: 23px; }
+
+  form.site-search.simple-input {
+    width: 270px;
+    margin-right: -14px;
+    margin-top: 2px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: #69737c; }
+
+  #dwga-header-container .btn.btn-navbar .icon-bar {
+    margin-top: -9px;
+    height: 3px;
+    margin-left: -6px;
+    width: 19px; }
+
+  #dwga-header-container button.btn.btn-navbar {
+    padding-left: 22px;
+    padding-top: 30px;
+    margin-left: 25px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    margin-right: -15px;
+    margin-top: 20px;
+    height: 49px;
+    width: 48px;
+    border-radius: 0; }
+
+  .dwga-search .site-search .field button .icon-search:before {
+    margin-left: 4px;
+    margin-top: -4px;
+    font-size: 22px; }
+
+  .account-masthead {
+    margin-right: -42px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
