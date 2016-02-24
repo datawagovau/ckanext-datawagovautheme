@@ -61,7 +61,7 @@
   .row{
     margin-left: 0;
   }
-  @media(max-width: $tablet-top){
+  @media(max-width: $mobile-top){
     border:{
       left: 20px solid #fff;
       right: 20px solid #fff;
@@ -129,9 +129,7 @@
       margin-left: 20px;
     }
     .attribution{
-      &:first-child{
-        margin-left: 158px;
-      }
+
       width: auto;
       max-width: 220px;
       margin-left: 20px;

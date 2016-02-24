@@ -3,7 +3,7 @@
 {% block resource_item_description %}
   <p class="description">
     {% if res.description %}
-      {{ h.markdown_extract(res.description, extract_length=60) }}
+      {{ h.markdown_extract(res.description, extract_length=50) }}
     {% endif %}
   </p>
 {% endblock %}
