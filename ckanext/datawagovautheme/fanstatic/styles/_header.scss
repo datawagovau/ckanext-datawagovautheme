@@ -22,7 +22,7 @@
       border-left: 2px transparent;
       /* The text and icons in the user account info. */
       a {
-        font: 15px "Arimo", sans-serif;
+        font: 15px "Arial", sans-serif;
         padding: 0px 8px;
         color: #565656;
         text-decoration: none;
@@ -150,7 +150,7 @@
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
-  height: 202px;
+  height: 192px;
   .site-search input {
     height: 34px;
     width: 315px;
@@ -190,13 +190,17 @@
       font-size: 15px ;
       color: $link-hover-color;
       font-family: "Open Sans";
-      font-weight: 400;
-      padding-right: 0;
-      padding-left: 0;
-      margin-left: 27px;
-      margin-right: 27px;
+      font-weight: 600;
+      padding-right: 27px;
+      padding-left: 27px;
+      margin-left: 0px;
+      margin-right: 0px;
       margin-bottom: -3 px;
+      letter-spacing: -0.6px;
     }
+    /* &:last-child a {
+      margin-right: 0;
+    } */
     a:hover,
     &.active a{
       background: none;
@@ -213,7 +217,7 @@
       border-bottom: 2px solid $link-hover-color;
       color: $link-hover-color;
     }
-    &:hover > ul.dropdown-menu {
+    /* &:hover > ul.dropdown-menu {
       display: block;
       position: absolute;
       height: 111px;
@@ -226,7 +230,7 @@
       border-top: 20px solid transparent;
       box-sizing: content-box;
       margin-top: -57px;
-    }
+    } */
     & ul.dropdown-menu li {
       margin-top: 42px;
     }
@@ -284,65 +288,120 @@
   }
 }
 
-@media (max-width: 979px) {
-  .masthead {
-    background: none;
-    background-color: #FCFCFC;
-    min-height: 0px;
-  }
+@media screen and (min-width: $tablet-top + 1) {
+  .navigation ul.nav li:hover > ul.dropdown-menu {
+      display: block;
+      position: absolute;
+      height: 111px;
+      width: 100%;
+      box-shadow: none;
+      top: 88px;
+      border: none;
+      background-color: #f5f6f7;
+      border-radius: 0;
+      border-top: 20px solid transparent;
+      box-sizing: content-box;
+      margin-top: -57px;
+    }
+}
+
+@media screen and (max-width: $tablet-top) {
   .account-masthead .account.not-authed ul li:nth-child(n+3) {
     display: none;
   }
-  .dwga-logo {
-    margin-top: -4px;
+
+  .masthead .container {
     padding-left: 0;
-    & .logo img {
-      width: 80px;
-      height: 78px;
-    }
+    padding-right: 0;
+    background: #69737c;
   }
-  .dwga-title h1 a {
-    font-size: 16px;
+
+  hgroup {
+    background-color: #FEFEFE;
+    padding-right: 0px;
+    margin-right: 0px;
   }
-  .dwga-title h3 {
-    font-size: 8px;
+  
+  .masthead {
+    border-bottom: 0;
   }
+
+  .masthead .nav-collapse {
+    padding-top: 0;
+    height: auto;
+    top: 48px;
+  }
+
   .masthead .site-search {
     display: block;
   }
-}
+  .masthead .navigation ul.nav li a{
+    color: #fff
+  }
 
-@media (max-width: 320px) {
+/*   .navigation ul.nav li:hover > ul.dropdown-menu {
+    display: none;
+  } */
+  
+  .simple-input .field {
+    padding: 20px 15px 20px 15px;
+    background: #69737c;
+    position: absolute;
+    top: 79px;
+    right: -30px;
+    width: 100%;
+    border: none;
+    display: inline-block;
+    margin-top: 30px;
+  }
+
   .dwga-search .site-search .field button[type="submit"] {
-    width: 21%;
+    font-size: 18px;
+    width: 16%;
     height: 43px;
-    font-size: 0px;
-    top: 10px;
-    right: -19px;
+    color: #fff;
+    border: none;
+    float: right;
+    margin-right: 0;
+    font-family: 'ready-steady-gov';
+    background: #95c677;
+    top: 30px;
+    right: 47px;
   }
 
   .masthead hgroup h1 {
-    margin-left: -1px;
+    margin-top: 12px;
+    margin-left: -5px;
     letter-spacing: 0px;
+    background: none;
+    /* background-color: #FCFCFC; */
+    min-height: 0px;
   }
 
   .masthead .site-search input {
     padding-top: 5px;
     padding-left: 9px;
+    margin-right: -40px;
     height: 32px;
     font-size: 16px;
+    width: 80%;
   }
 
   .dwga-title {
-    top: 17px;
-    left: 95px;
-    position: absolute;
     margin-bottom: 17px;
   }
 
+  .dgwa-logo {
+    padding-left: 20px;
+  }
+
+  .dwga-logo .logo img {
+      width: 80px;
+      height: 78px;
+  }
+
   .dwga-title h3 {
-    margin-top: 9px;
-    margin-left: 0px;
+    margin-left: -6px;
   }
 
   .dwga-search {
@@ -350,10 +409,11 @@
     float: right;
     margin-right: -6px;
     margin-top: 23px;
+    width: 100%;
   }
 
-  form.site-search.simple-input {
-    width: 270px;
+  /* form.site-search.simple-input {
+    width: 100%;
     margin-right: -14px;
     margin-top: 2px;
     padding-top: 20px;
@@ -361,7 +421,7 @@
     padding-left: 20px;
     padding-bottom: 20px;
     background-color: #69737c;
-  }
+  } */
 
   #dwga-header-container .btn.btn-navbar .icon-bar {
     margin-top: -9px;
@@ -373,9 +433,9 @@
     padding-left: 22px;
     padding-top: 30px;
     margin-left: 25px;
-    padding-right: 0px;
+    padding-right: 20px;
     padding-bottom: 3px;
-    margin-right: -15px;
+    margin-right: 20px;
     margin-top: 20px;
     height: 49px;
     width: 48px;
@@ -384,11 +444,34 @@
   
   .dwga-search .site-search .field button .icon-search:before {
     margin-left: 4px;
-    margin-top: -4px;
-    font-size: 22px;
+    font-size: 20px;
+    padding-bottom: 6px;
   }
 
   .account-masthead {
     margin-right: -42px;
   }
 }
+
+@media (max-width: 374px) {
+  .masthead hgroup h1 {
+    margin-top: -47px;
+  }
+}
+
+@media (max-width: $mobile-top) {
+  .dwga-logo {
+    margin-top: -4px;
+    padding-left: 20px;
+  }
+  .dwga-title h1 a {
+    font-size: 16px;
+  }
+  .dwga-title h3 {
+    font-size: 8px;
+  }
+  .account-masthead .account.not-authed {
+    margin-right: 15px;
+  }
+}
+

@@ -1,4 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Arimo);
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arial/arial0.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/arial/arial0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/arial/arial0.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/arial/arial0.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/arial/arial0.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/arial/arial0.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialBold';
+    src: url('../fonts/arial/arialbd0.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/arial/arialbd0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/arial/arialbd0.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/arial/arialbd0.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/arial/arialbd0.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/arial/arialbd0.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
   background: #eff1f2;

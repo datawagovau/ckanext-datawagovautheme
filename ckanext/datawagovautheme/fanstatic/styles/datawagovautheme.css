@@ -1,4 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Arimo);
+@font-face {
+  font-family: 'Arial';
+  src: url("../fonts/arial/arial0.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arial/arial0.eot?#iefix") format("embedded-opentype"), url("../fonts/arial/arial0.woff2") format("woff2"), url("../fonts/arial/arial0.woff") format("woff"), url("../fonts/arial/arial0.ttf") format("truetype"), url("../fonts/arial/arial0.svg") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ArialBold';
+  src: url("../fonts/arial/arialbd0.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arial/arialbd0.eot?#iefix") format("embedded-opentype"), url("../fonts/arial/arialbd0.woff2") format("woff2"), url("../fonts/arial/arialbd0.woff") format("woff"), url("../fonts/arial/arialbd0.ttf") format("truetype"), url("../fonts/arial/arialbd0.svg") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
 body {
   background: #eff1f2;
   font-family: Arial;
@@ -232,7 +247,7 @@ ul.nav {
       border-left: 2px transparent;
       /* The text and icons in the user account info. */ }
       .account-masthead .account ul li a, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li {
-        font: 15px "Arimo", sans-serif;
+        font: 15px "Arial", sans-serif;
         padding: 0px 8px;
         color: #565656;
         text-decoration: none; }
@@ -330,7 +345,7 @@ ul.nav {
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
-  height: 202px;
+  height: 192px;
   /* Float the navbar left */
   /* data.wa.gov.au floats left, here it looks better floating right */
   /* Alignment of navigation */ }
@@ -360,57 +375,63 @@ ul.nav {
     border-top: 20px solid transparent;
     box-sizing: content-box;
     margin-top: -57px; }
-  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
-    font-size: 15px;
-    color: #69737c;
-    font-family: "Open Sans";
-    font-weight: 400;
-    padding-right: 0;
-    padding-left: 0;
-    margin-left: 27px;
-    margin-right: 27px;
-    margin-bottom: -3 px; }
-  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
-    background: none;
-    color: #69737c;
-    box-shadow: none; }
-  .masthead .navigation ul.nav li.active {
-    background: none;
-    box-shadow: #69737c 0px 2px 0px 0px; }
-  .masthead .navigation ul.nav li:hover {
-    background-color: #f5f6f7;
-    box-shadow: none;
-    border-bottom: 2px solid #69737c;
-    color: #69737c; }
-  .masthead .navigation ul.nav li:hover > ul.dropdown-menu {
-    display: block;
-    position: absolute;
-    height: 111px;
-    width: 100%;
-    box-shadow: none;
-    top: 88px;
-    border: none;
-    background-color: #f5f6f7;
-    border-radius: 0;
-    border-top: 20px solid transparent;
-    box-sizing: content-box;
-    margin-top: -57px; }
-  .masthead .navigation ul.nav li ul.dropdown-menu li {
-    margin-top: 42px; }
-  .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
-    font-size: 15px;
-    color: #69737c;
-    font-family: "Open Sans";
-    font-weight: 400;
-    padding-right: 0;
-    padding-left: 0;
-    margin-left: 27px;
-    margin-right: 27px; }
-  .masthead .navigation ul.nav li.children-active {
-    height: 52px;
-    background-color: #f5f6f7; }
-  .masthead .navigation ul.nav li.children-active ul.dropdown-menu {
-    z-index: 10; }
+  .masthead .navigation ul.nav li {
+    /* &:last-child a {
+      margin-right: 0;
+    } */
+    /* &:hover > ul.dropdown-menu {
+      display: block;
+      position: absolute;
+      height: 111px;
+      width: 100%;
+      box-shadow: none;
+      top: 88px;
+      border: none;
+      background-color: #f5f6f7;
+      border-radius: 0;
+      border-top: 20px solid transparent;
+      box-sizing: content-box;
+      margin-top: -57px;
+    } */ }
+    .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+      font-size: 15px;
+      color: #69737c;
+      font-family: "Open Sans";
+      font-weight: 600;
+      padding-right: 27px;
+      padding-left: 27px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: -3 px;
+      letter-spacing: -0.6px; }
+    .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
+      background: none;
+      color: #69737c;
+      box-shadow: none; }
+    .masthead .navigation ul.nav li.active {
+      background: none;
+      box-shadow: #69737c 0px 2px 0px 0px; }
+    .masthead .navigation ul.nav li:hover {
+      background-color: #f5f6f7;
+      box-shadow: none;
+      border-bottom: 2px solid #69737c;
+      color: #69737c; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li {
+      margin-top: 42px; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
+      font-size: 15px;
+      color: #69737c;
+      font-family: "Open Sans";
+      font-weight: 400;
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: 27px;
+      margin-right: 27px; }
+    .masthead .navigation ul.nav li.children-active {
+      height: 52px;
+      background-color: #f5f6f7; }
+    .masthead .navigation ul.nav li.children-active ul.dropdown-menu {
+      z-index: 10; }
   .masthead input[type="text"]:focus {
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
@@ -434,74 +455,121 @@ ul.nav {
 
   .masthead .site-search input {
     width: 248px; } }
-@media (max-width: 979px) {
-  .masthead {
-    background: none;
-    background-color: #FCFCFC;
-    min-height: 0px; }
-
+@media screen and (min-width: 980px) {
+  .navigation ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+    position: absolute;
+    height: 111px;
+    width: 100%;
+    box-shadow: none;
+    top: 88px;
+    border: none;
+    background-color: #f5f6f7;
+    border-radius: 0;
+    border-top: 20px solid transparent;
+    box-sizing: content-box;
+    margin-top: -57px; } }
+@media screen and (max-width: 979px) {
   .account-masthead .account.not-authed ul li:nth-child(n+3) {
     display: none; }
 
-  .dwga-logo {
-    margin-top: -4px;
-    padding-left: 0; }
-    .dwga-logo .logo img {
-      width: 80px;
-      height: 78px; }
+  .masthead .container {
+    padding-left: 0;
+    padding-right: 0;
+    background: #69737c; }
 
-  .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li {
-    font-size: 16px; }
+  hgroup {
+    background-color: #FEFEFE;
+    padding-right: 0px;
+    margin-right: 0px; }
 
-  .dwga-title h3 {
-    font-size: 8px; }
+  .masthead {
+    border-bottom: 0; }
+
+  .masthead .nav-collapse {
+    padding-top: 0;
+    height: auto;
+    top: 48px; }
 
   .masthead .site-search {
-    display: block; } }
-@media (max-width: 320px) {
+    display: block; }
+
+  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+    color: #fff; }
+
+  /*   .navigation ul.nav li:hover > ul.dropdown-menu {
+      display: none;
+    } */
+  .simple-input .field {
+    padding: 20px 15px 20px 15px;
+    background: #69737c;
+    position: absolute;
+    top: 79px;
+    right: -30px;
+    width: 100%;
+    border: none;
+    display: inline-block;
+    margin-top: 30px; }
+
   .dwga-search .site-search .field button[type="submit"] {
-    width: 21%;
+    font-size: 18px;
+    width: 16%;
     height: 43px;
-    font-size: 0px;
-    top: 10px;
-    right: -19px; }
+    color: #fff;
+    border: none;
+    float: right;
+    margin-right: 0;
+    font-family: 'ready-steady-gov';
+    background: #95c677;
+    top: 30px;
+    right: 47px; }
 
   .masthead hgroup h1 {
-    margin-left: -1px;
-    letter-spacing: 0px; }
+    margin-top: 12px;
+    margin-left: -5px;
+    letter-spacing: 0px;
+    background: none;
+    /* background-color: #FCFCFC; */
+    min-height: 0px; }
 
   .masthead .site-search input {
     padding-top: 5px;
     padding-left: 9px;
+    margin-right: -40px;
     height: 32px;
-    font-size: 16px; }
+    font-size: 16px;
+    width: 80%; }
 
   .dwga-title {
-    top: 17px;
-    left: 95px;
-    position: absolute;
     margin-bottom: 17px; }
 
+  .dgwa-logo {
+    padding-left: 20px; }
+
+  .dwga-logo .logo img {
+    width: 80px;
+    height: 78px; }
+
   .dwga-title h3 {
-    margin-top: 9px;
-    margin-left: 0px; }
+    margin-left: -6px; }
 
   .dwga-search {
     padding-right: 0px;
     float: right;
     margin-right: -6px;
-    margin-top: 23px; }
+    margin-top: 23px;
+    width: 100%; }
 
-  form.site-search.simple-input {
-    width: 270px;
+  /* form.site-search.simple-input {
+    width: 100%;
     margin-right: -14px;
     margin-top: 2px;
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
-    background-color: #69737c; }
-
+    background-color: #69737c;
+  } */
   #dwga-header-container .btn.btn-navbar .icon-bar {
     margin-top: -9px;
     height: 3px;
@@ -512,9 +580,9 @@ ul.nav {
     padding-left: 22px;
     padding-top: 30px;
     margin-left: 25px;
-    padding-right: 0px;
+    padding-right: 20px;
     padding-bottom: 3px;
-    margin-right: -15px;
+    margin-right: 20px;
     margin-top: 20px;
     height: 49px;
     width: 48px;
@@ -522,11 +590,27 @@ ul.nav {
 
   .dwga-search .site-search .field button .icon-search:before {
     margin-left: 4px;
-    margin-top: -4px;
-    font-size: 22px; }
+    font-size: 20px;
+    padding-bottom: 6px; }
 
   .account-masthead {
     margin-right: -42px; } }
+@media (max-width: 374px) {
+  .masthead hgroup h1 {
+    margin-top: -47px; } }
+@media (max-width: 767px) {
+  .dwga-logo {
+    margin-top: -4px;
+    padding-left: 20px; }
+
+  .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li {
+    font-size: 16px; }
+
+  .dwga-title h3 {
+    font-size: 8px; }
+
+  .account-masthead .account.not-authed {
+    margin-right: 15px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
