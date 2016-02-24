@@ -2,6 +2,7 @@
   #publisher-tree{
     & > ul {
       margin: 0;
+      padding-left: 0;
       & > li{
         position: relative;
         @extend a;
@@ -32,6 +33,7 @@
           display: inline-block;
         }
         & > ul{
+          padding-left: 0;
           display: none;
         }
         &.open > ul{

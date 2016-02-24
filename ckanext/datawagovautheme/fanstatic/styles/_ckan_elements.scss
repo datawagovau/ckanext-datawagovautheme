@@ -62,12 +62,15 @@
     }
   }
 }
-.btn-primary{
-  border: none;
-  @include landgate-primary;
-  text-decoration: none;
-  border-radius: 0;
-  text-shadow: none;
+.btn-primary, .btn-success{
+  &, &:focus{
+
+    border: none;
+    @include landgate-primary;
+    text-decoration: none;
+    border-radius: 0;
+    text-shadow: none;
+  }
 }
 
 .search-form{
@@ -176,9 +179,22 @@ ul.nav{
 
   }
 }
+.content_action{
+  .btn{
+    border: none;
+    @include landgate-default;
+    background: #f5f6f7;
+    font-size: $body-fz;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 5px 22px;
+  }
+}
 
-
-.span9 .module:last-child{
+.api-info-section{
   line-height: 1;
 }
 
+.page-header{
+  background: #fff;
+}

@@ -3,9 +3,12 @@
     word-break: inherit;
     hyphens: manual;
   }
+
   .stats {
 
-    ul li {
+    ul {
+      padding-left: 0;
+      li {
         @media(max-width: 500px){
           &:nth-child(2n - 1){
             clear: both;
@@ -13,13 +16,14 @@
           width: 50%;
         }
         a {
-        font-size: $body-fz;
-        &:hover{
-          text-decoration: underline;
-        }
-        b{
-          font-size: $h2-fz;
-          line-height: $body-lh;
+          font-size: $body-fz;
+          &:hover{
+            text-decoration: underline;
+          }
+          b{
+            font-size: $h2-fz;
+            line-height: $body-lh;
+          }
         }
       }
     }

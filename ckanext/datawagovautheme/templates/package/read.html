@@ -12,11 +12,11 @@ From {{h.get_pkg_dict_extra(pkg,'harvest_source_title') }}
 
 <span class="label label-inverse" style="float: right;">
 <img src="/json-icon.png"/>
-<a style="color: lightgrey;" href="/api/3/action/{{ h.url_for('package_show', id=c.pkg.id) }}">JSON</a>
+<a href="/api/3/action/{{ h.url_for('package_show', id=c.pkg.id) }}">JSON</a>
 </span>&nbsp;
 <span class="label label-inverse" style="float: right;margin-right: 10px;">
 <img src="/rdf-icon.png"/>
-<a style="color: lightgrey;" href="{{ h.url_for('dataset_read', id=c.pkg.id) }}.rdf">RDF</a>
+<a href="{{ h.url_for('dataset_read', id=c.pkg.id) }}.rdf">RDF</a>
 </span>
 <!--span class="label label-inverse" style="float: right; margin-right: 10px;margin-left: 10px;">
 <i class="icon-file-alt"></i>
