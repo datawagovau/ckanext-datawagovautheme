@@ -169,6 +169,9 @@ ul.dataset-list{
       th, td{
         &:first-child{
           width: 190px;
+          @media(max-width: $tablet-top){
+            width: 100px;
+          }
         }
       }
     }

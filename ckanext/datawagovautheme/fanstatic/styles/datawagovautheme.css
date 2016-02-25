@@ -946,6 +946,9 @@ ul.dataset-list {
   border-bottom: 1px solid #efefef; }
   .additional-info .table thead th:first-child, .additional-info .table thead td:first-child, .additional-info .table-striped thead th:first-child, .additional-info .table-striped thead td:first-child {
     width: 190px; }
+    @media (max-width: 979px) {
+      .additional-info .table thead th:first-child, .additional-info .table thead td:first-child, .additional-info .table-striped thead th:first-child, .additional-info .table-striped thead td:first-child {
+        width: 100px; } }
   .additional-info .table th, .additional-info .table td,
   .additional-info .table tbody tr td, .additional-info .table tbody tr th, .additional-info .table-striped th, .additional-info .table-striped td,
   .additional-info .table-striped tbody tr td, .additional-info .table-striped tbody tr th {
