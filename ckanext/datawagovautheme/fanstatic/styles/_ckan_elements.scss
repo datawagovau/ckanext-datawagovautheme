@@ -6,6 +6,12 @@
   a{
     font-size: $h3-fz;
   }
+  p a{
+    font-size: $body-fz;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
   & > i{
     display: none;
   }
