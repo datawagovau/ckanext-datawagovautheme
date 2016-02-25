@@ -365,7 +365,7 @@ ul.nav {
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
-  height: 192px;
+  height: 202px;
   /* Float the navbar left */
   /* data.wa.gov.au floats left, here it looks better floating right */
   /* Alignment of navigation */ }
@@ -395,63 +395,53 @@ ul.nav {
     border-top: 20px solid transparent;
     box-sizing: content-box;
     margin-top: -57px; }
-  .masthead .navigation ul.nav li {
-    /* &:last-child a {
-      margin-right: 0;
-    } */
-    /* &:hover > ul.dropdown-menu {
+    .masthead .navigation ul.nav li ul.dropdown-menu:before {
       display: block;
+      content: "";
       position: absolute;
-      height: 111px;
-      width: 100%;
-      box-shadow: none;
-      top: 88px;
-      border: none;
-      background-color: #f5f6f7;
-      border-radius: 0;
-      border-top: 20px solid transparent;
-      box-sizing: content-box;
-      margin-top: -57px;
-    } */ }
-    .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
-      font-size: 15px;
-      color: #69737c;
-      font-family: "Open Sans";
-      font-weight: 600;
-      padding-right: 27px;
-      padding-left: 27px;
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-bottom: -3 px;
-      letter-spacing: -0.6px; }
-    .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
-      background: none;
-      color: #69737c;
-      box-shadow: none; }
-    .masthead .navigation ul.nav li.active {
-      background: none;
-      box-shadow: #69737c 0px 2px 0px 0px; }
-    .masthead .navigation ul.nav li:hover {
-      background-color: #f5f6f7;
-      box-shadow: none;
-      border-bottom: 2px solid #69737c;
-      color: #69737c; }
-    .masthead .navigation ul.nav li ul.dropdown-menu li {
-      margin-top: 42px; }
-    .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
-      font-size: 15px;
-      color: #69737c;
-      font-family: "Open Sans";
-      font-weight: 400;
-      padding-right: 0;
-      padding-left: 0;
-      margin-left: 27px;
-      margin-right: 27px; }
-    .masthead .navigation ul.nav li.children-active {
-      height: 52px;
-      background-color: #f5f6f7; }
-    .masthead .navigation ul.nav li.children-active ul.dropdown-menu {
-      z-index: 10; }
+      background: #f5f6f7;
+      border-bottom: 0;
+      top: 0;
+      bottom: 0;
+      left: -4000px;
+      width: 9999px;
+      z-index: -1; }
+  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+    font-size: 15px;
+    color: #69737c;
+    font-family: "Open Sans";
+    font-weight: 600;
+    padding-right: 27px;
+    padding-left: 27px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: -2px;
+    letter-spacing: -0.6px; }
+  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
+    background: none;
+    color: #69737c;
+    box-shadow: none; }
+  .masthead .navigation ul.nav li.active {
+    background: none;
+    box-shadow: #69737c 0px 2px 0px 0px; }
+  .masthead .navigation ul.nav li:hover, .masthead .navigation ul.nav li.children-active:hover {
+    background-color: #f5f6f7;
+    box-shadow: none;
+    border-bottom: 2px solid #69737c;
+    color: #69737c; }
+  .masthead .navigation ul.nav li ul.dropdown-menu li {
+    margin-top: 42px; }
+  .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
+    font-size: 15px;
+    color: #69737c;
+    font-family: "Open Sans";
+    font-weight: 400;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 27px;
+    margin-right: 27px; }
+  .masthead .navigation ul.nav li.children-active ul.dropdown-menu {
+    z-index: 10; }
   .masthead input[type="text"]:focus {
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
@@ -489,7 +479,15 @@ ul.nav {
     border-top: 20px solid transparent;
     box-sizing: content-box;
     margin-top: -57px; } }
+@media (max-width: 979px) and (min-width: 768px) {
+  .container-header {
+    width: 660px;
+    margin-right: auto;
+    margin-left: auto; } }
 @media screen and (max-width: 979px) {
+  .container-header {
+    width: auto; }
+
   .account-masthead .account.not-authed ul li:nth-child(n+3) {
     display: none; }
 
@@ -506,6 +504,9 @@ ul.nav {
   .masthead {
     border-bottom: 0; }
 
+  .masthead .navigation {
+    padding-bottom: 62px; }
+
   .masthead .nav-collapse {
     padding-top: 0;
     height: auto;
@@ -514,12 +515,17 @@ ul.nav {
   .masthead .site-search {
     display: block; }
 
-  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+  .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li, .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+    color: #fff;
+    padding-left: 46px;
+    padding-bottom: 0px;
+    padding-top: 15px; }
+  .masthead .navigation ul.nav li:hover, .masthead .navigation ul.nav li.children-active:hover {
+    border-bottom: 0;
+    background-color: #69737c; }
+  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover {
     color: #fff; }
 
-  /*   .navigation ul.nav li:hover > ul.dropdown-menu {
-      display: none;
-    } */
   .simple-input .field {
     padding: 20px 15px 20px 15px;
     background: #69737c;
@@ -580,16 +586,6 @@ ul.nav {
     margin-top: 23px;
     width: 100%; }
 
-  /* form.site-search.simple-input {
-    width: 100%;
-    margin-right: -14px;
-    margin-top: 2px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    background-color: #69737c;
-  } */
   #dwga-header-container .btn.btn-navbar .icon-bar {
     margin-top: -9px;
     height: 3px;

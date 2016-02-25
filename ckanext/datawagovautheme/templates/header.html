@@ -1,6 +1,6 @@
 {% block header_wrapper %}
 {% block header_account %}
-  <header class="account-masthead">
+  <header class="account-masthead container-header">
     <div class="container">
       {% block header_account_container_content %}
         {% if c.userobj %}
@@ -68,7 +68,7 @@
     </div>
   </header>
 {% endblock %}
-<div class="" style="background: none; background-color: #FEFEFE;">
+<div class="container-header" style="background: none; background-color: #FEFEFE;">
 <header class="navbar navbar-static-top masthead">
   {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
@@ -128,14 +128,14 @@
                 ('group_index', _('Resources'))
               ) }}
             {% endblock %}#}
-            <li><a href="http://data.wa.gov.au/">Home</a></li>
-            <li><a href="#">Data</a>
+            <li><a href="#">Home</a></li>
+            <li><a href="/">Data</a>
               <ul class="nav dropdown-menu">
-                <li><a href="http://catalogue.beta.data.wa.gov.au/">Data Home</a></li>
-                <li><a href="http://catalogue.beta.data.wa.gov.au/dataset">Datasets</a></li>
-                <li><a href="http://catalogue.beta.data.wa.gov.au/organization">Organisations</a></li><li>
-                <li><a href="http://catalogue.beta.data.wa.gov.au/group">Groups</a></li><li>
-                <li><a href="http://catalogue.beta.data.wa.gov.au/about">About</a></li><li>
+                <li><a href="/dataset">Data Home</a></li>
+                <li><a href="/dataset">Datasets</a></li>
+                <li><a href="/organization">Organisations</a></li><li>
+                <li><a href="/group">Groups</a></li><li>
+                <li><a href="/about">About</a></li><li>
                 <li><a href="http://map.beta.data.wa.gov.au/">WA Map</a></li><li>
               </ul>
             </li>
