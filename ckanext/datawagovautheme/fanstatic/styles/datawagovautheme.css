@@ -1093,20 +1093,23 @@ body {
   #content,
   .homepage [role="main"] .container {
     padding-left: 48px; } }
-@media (min-width: 980px) {
-  .form-select.control-order-by {
-    position: relative; }
-    .form-select.control-order-by:after {
-      pointer-events: none;
-      content: "\f107";
-      background: #fff;
-      display: inline-block;
-      font-family: "FontAwesome";
-      line-height: 16px;
-      pointer-events: none;
-      position: absolute;
-      right: 7px;
-      top: 7px; } }
+.form-select.control-order-by {
+  position: relative; }
+  .form-select.control-order-by:after {
+    pointer-events: none;
+    content: "\f107";
+    background: #fff;
+    display: inline-block;
+    font-family: "FontAwesome";
+    line-height: 16px;
+    pointer-events: none;
+    position: absolute;
+    right: 7px;
+    top: 7px; }
+    @media (max-width: 979px) {
+      .form-select.control-order-by:after {
+        top: 33px; } }
+
 .span9 div.module-content {
   padding-left: 0; }
 

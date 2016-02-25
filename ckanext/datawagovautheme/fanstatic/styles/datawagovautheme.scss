@@ -126,20 +126,21 @@ body{
     padding-left: 48px;
   }
 }
-@media(min-width: $tablet-top + 1px){
-  .form-select.control-order-by{
-    position: relative;
-    &:after{
-      pointer-events:none;
-      content: "\f107";
-      background: #fff  ;
-      display: inline-block;
-      font-family: "FontAwesome";
-      line-height: 16px;
-      pointer-events: none;
-      position: absolute;
-      right: 7px;
-      top: 7px;
+.form-select.control-order-by{
+  position: relative;
+  &:after{
+    pointer-events:none;
+    content: "\f107";
+    background: #fff  ;
+    display: inline-block;
+    font-family: "FontAwesome";
+    line-height: 16px;
+    pointer-events: none;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    @media(max-width: $tablet-top){
+      top: 33px;
     }
   }
 }
