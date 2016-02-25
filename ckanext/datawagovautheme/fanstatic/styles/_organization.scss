@@ -6,6 +6,7 @@
       & > li{
         position: relative;
         @extend a;
+        text-decoration: none;
         font-size: $h2-fz;
         padding: (75px - $h2-fz) / 2;
         margin-bottom: 20px;

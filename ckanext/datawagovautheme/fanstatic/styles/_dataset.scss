@@ -167,8 +167,12 @@ ul.dataset-list{
     }
     thead{
       th, td{
+        width: 100%;
         &:first-child{
           width: 190px;
+          @media(max-width: $tablet-top){
+            width: 100px;
+          }
         }
       }
     }
@@ -187,6 +191,7 @@ ul.dataset-list{
     }
   }
 }
+
 @media (max-width: $tablet-top){
   .js{
      [role=main] .secondary .filters {
