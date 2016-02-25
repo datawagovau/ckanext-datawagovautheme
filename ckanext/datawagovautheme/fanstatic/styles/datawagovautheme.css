@@ -679,17 +679,24 @@ ul.nav {
     left: 0;
     font-size: 25px;
     text-decoration: none;
+    color: #44505b;
     margin-top: 8px; }
   .site-footer .without-margin {
     margin: 0; }
   .site-footer .row {
     margin-left: 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 1499px) {
     .site-footer {
       border-left: 20px solid #fff;
       border-right: 20px solid #fff;
-      border-bottom: 20px solid #fff;
-      padding-top: 24px; }
+      border-bottom: 20px solid #fff; } }
+  @media (max-width: 767px) {
+    .site-footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-top: 24px;
+      padding-left: 20px;
+      padding-right: 20px; }
       .site-footer .footer-links,
       .site-footer .attribution,
       .site-footer .footer-wa-link-wrapper,
@@ -704,7 +711,7 @@ ul.nav {
         width: auto; }
       .site-footer .attribution {
         text-align: center;
-        width: 280px; }
+        max-width: 320px; }
         .site-footer .attribution label,
         .site-footer .attribution p {
           text-align: left; }
@@ -715,7 +722,6 @@ ul.nav {
       .site-footer .lang-select > * {
         float: none; }
       .site-footer .lang-select .lang-container {
-        width: 280px !important;
         text-align: center; }
       .site-footer > .container .row {
         margin-bottom: 14px; }
@@ -723,10 +729,6 @@ ul.nav {
         margin-left: 0; }
       .site-footer .paragraph-copyright {
         margin-top: 43px; } }
-  @media (max-width: 767px) {
-    .site-footer {
-      margin-left: -20px;
-      margin-right: -20px; } }
 
 @media (min-width: 1280px) {
   .site-footer .footer-powered-section {
@@ -1173,6 +1175,9 @@ body, html {
     .container#content, .container.homepage [role="main"] .container {
       padding-right: 6px; }
 
+  .site-footer .container {
+    width: 1020px; }
+
   .span9 {
     width: 670px; }
 
@@ -1191,6 +1196,9 @@ body, html {
     width: 762px; }
     .container#content, .container.homepage [role="main"] .container {
       padding-right: 6px; }
+
+  .site-footer .container {
+    width: 860px; }
 
   .span9 {
     width: 560px; }

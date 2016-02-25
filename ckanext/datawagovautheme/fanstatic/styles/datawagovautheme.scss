@@ -204,6 +204,9 @@ body, html{
       padding-right: 6px;
     }
   }
+  .site-footer .container{
+    width: 1020px;
+  }
   .span9{
     width: 670px;
   }
@@ -229,6 +232,9 @@ body, html{
     &.homepage [role="main"] .container{
       padding-right: 6px;
     }
+  }
+  .site-footer .container{
+    width: 860px;
   }
   .span9{
     width: 560px;
