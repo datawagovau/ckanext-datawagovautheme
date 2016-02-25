@@ -789,6 +789,7 @@ ul.nav {
   padding-left: 0; }
   .datawa-organization-list #publisher-tree > ul > li {
     position: relative;
+    text-decoration: none;
     font-size: 28px;
     padding: 23.5px;
     margin-bottom: 20px;
