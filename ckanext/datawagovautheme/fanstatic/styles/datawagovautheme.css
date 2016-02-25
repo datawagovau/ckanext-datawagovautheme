@@ -749,6 +749,11 @@ ul.nav {
       width: 50%; }
       .homepage .stats ul li:nth-child(2n - 1) {
         clear: both; } }
+  @media (min-width: 980px) and (max-width: 1099px) {
+    .homepage .stats ul li {
+      width: 50%; }
+      .homepage .stats ul li:nth-child(2n - 1) {
+        clear: both; } }
   .homepage .stats ul li a, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li {
     font-size: 16px; }
     .homepage .stats ul li a:hover, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li:hover {

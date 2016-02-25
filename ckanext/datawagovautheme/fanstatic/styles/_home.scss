@@ -15,6 +15,12 @@
           }
           width: 50%;
         }
+        @media(min-width: $tablet-top + 1px) and (max-width: $desktop-top){
+          &:nth-child(2n - 1){
+            clear: both;
+          }
+          width: 50%;
+        }
         a {
           font-size: $body-fz;
           &:hover{
