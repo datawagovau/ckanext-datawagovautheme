@@ -31,7 +31,14 @@
 .module-content:first-child{
   padding-top: 0;
 }
-
+.pill{
+  background: $a-hover-color;
+  a.remove{
+    &:hover{
+      color: #fff;
+    }
+  }
+}
 .toolbar{
   .breadcrumb{
     li{
@@ -161,6 +168,7 @@ ul.nav{
           border: 1px solid #7bb855;
           color: #fff;
           background: #95c677;
+          pointer-events: none;
         }
       }
     }

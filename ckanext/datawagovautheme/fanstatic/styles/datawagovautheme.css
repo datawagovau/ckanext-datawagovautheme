@@ -118,6 +118,11 @@ small {
 .module-content:first-child {
   padding-top: 0; }
 
+.pill {
+  background: #1e527c; }
+  .pill a.remove:hover, .pill .datawa-organization-list #publisher-tree > ul > li.remove:hover, .datawa-organization-list .pill #publisher-tree > ul > li.remove:hover {
+    color: #fff; }
+
 .toolbar .breadcrumb li:after {
   font-size: 14px; }
 .toolbar .breadcrumb a, .toolbar .breadcrumb .group-list .module-heading h3 a, .group-list .module-heading h3 .toolbar .breadcrumb a, .toolbar .breadcrumb .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .toolbar .breadcrumb #publisher-tree > ul > li {
@@ -218,7 +223,8 @@ ul.nav {
   .module .pagination ul li.active a, .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.active #publisher-tree > ul > li {
     border: 1px solid #7bb855;
     color: #fff;
-    background: #95c677; }
+    background: #95c677;
+    pointer-events: none; }
 
 .module-content {
   padding-left: 0;
@@ -1003,17 +1009,6 @@ ul.dataset-list {
     top: 14px;
     right: 17px;
     opacity: 0.6; } }
-/* =====================================================
-   The "account masthead" bar across the top of the site
-   ===================================================== */
-.leaflet-draw-toolbar a, .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-draw-toolbar a, .leaflet-draw-toolbar .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .leaflet-draw-toolbar #publisher-tree > ul > li {
-  background-image: url("img/spritesheet.png");
-  background-repeat: no-repeat; }
-
-.leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .leaflet-retina .leaflet-draw-toolbar #publisher-tree > ul > li {
-  background-image: url("img/spritesheet-2x.png");
-  background-size: 270px 30px; }
-
 /* ===========================================
    The content in the middle of the front page
    =========================================== */
@@ -1063,7 +1058,7 @@ and "Search Your Data" boxes line up. */
 .box {
   border: none; }
 
-body {
+body, html {
   overflow-x: hidden; }
 
 .row {
@@ -1099,26 +1094,29 @@ body {
   #content,
   .homepage [role="main"] .container {
     padding-left: 48px; } }
-.form-select.control-order-by {
-  position: relative; }
-  .form-select.control-order-by:after {
-    pointer-events: none;
-    content: "\f107";
-    background: #fff;
-    display: inline-block;
-    font-family: "FontAwesome";
-    line-height: 16px;
-    pointer-events: none;
-    position: absolute;
-    right: 7px;
-    top: 7px; }
-    @media (max-width: 979px) {
-      .form-select.control-order-by:after {
-        top: 33px; } }
-
+@-moz-document url-prefix() {
+  .form-select.control-order-by {
+    position: relative; }
+    .form-select.control-order-by:after {
+      pointer-events: none;
+      content: "\f107";
+      background: #fff;
+      display: inline-block;
+      font-family: "FontAwesome";
+      line-height: 16px;
+      pointer-events: none;
+      position: absolute;
+      right: 7px;
+      top: 7px; }
+      @media (max-width: 979px) {
+        .form-select.control-order-by:after {
+          top: 33px; } } }
 .span9 div.module-content {
   padding-left: 0; }
 
+@media (min-width: 980px) {
+  .form-select.control-group.control-order-by {
+    margin-top: 5px; } }
 @media (max-width: 979px) {
   .search-form .control-order-by select {
     width: 100%; }

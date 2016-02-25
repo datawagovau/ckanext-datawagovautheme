@@ -8,21 +8,6 @@
 @import 'group';
 @import 'organization';
 @import 'dataset';
-/* =====================================================
-   The "account masthead" bar across the top of the site
-   ===================================================== */
-
-
-.leaflet-draw-toolbar a {
-  background-image: url('img/spritesheet.png');
-  background-repeat: no-repeat;
-}
-
-.leaflet-retina .leaflet-draw-toolbar a {
-  background-image: url('img/spritesheet-2x.png');
-  background-size: 270px 30px;
-}
-
 
 
 
@@ -78,7 +63,7 @@ and "Search Your Data" boxes line up. */
   border:none;
 }
 
-body{
+body, html{
   overflow-x: hidden;
 }
 .row{
@@ -126,21 +111,23 @@ body{
     padding-left: 48px;
   }
 }
-.form-select.control-order-by{
-  position: relative;
-  &:after{
-    pointer-events:none;
-    content: "\f107";
-    background: #fff  ;
-    display: inline-block;
-    font-family: "FontAwesome";
-    line-height: 16px;
-    pointer-events: none;
-    position: absolute;
-    right: 7px;
-    top: 7px;
-    @media(max-width: $tablet-top){
-      top: 33px;
+@-moz-document url-prefix() {
+  .form-select.control-order-by{
+    position: relative;
+    &:after{
+      pointer-events:none;
+      content: "\f107";
+      background: #fff  ;
+      display: inline-block;
+      font-family: "FontAwesome";
+      line-height: 16px;
+      pointer-events: none;
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      @media(max-width: $tablet-top){
+        top: 33px;
+      }
     }
   }
 }
@@ -148,6 +135,9 @@ body{
   padding-left: 0;
 }
 @media(min-width: $tablet-top + 1px){
+  .form-select.control-group.control-order-by{
+    margin-top: 5px;
+  }
 }
 @media(max-width: $tablet-top){
   .search-form {
