@@ -14,6 +14,9 @@
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal; }
+* {
+  -webkit-hyphens: none; }
+
 body {
   background: #eff1f2;
   font-family: Arial, sans-serif;
