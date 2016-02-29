@@ -57,7 +57,7 @@
               {% if h.check_access('user_create') %}
                 <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
-              <li><a class="sub">Site Map</a></li>
+              <li><a class="sub">Site map</a></li>
               <li><a class="sub">Accessibility</a></li>
               <li><a class="sub">Contact us</a></li>
               {% endblock %}
@@ -114,29 +114,22 @@
 
     <div class="nav-collapse collapse">
       {% block header_site_navigation %}
-        <nav class="section navigation" data-module="drop_down_menu">
+        <nav class="section navigation">
           <ul class="nav">
-            {#{% block header_site_navigation_tabs %}
-              {{ h.build_nav_main(
-                ('about', _('Home')),
-                ('search', _('Data')),
-                ('about', _('About')),
-                ('search', _('Fact sheets and toolkit')),
-                ('search', _('Open Data Policy')),
-                ('organizations_index', _('SLIP')),
-                ('group_index', _('Blog'))
-                ('group_index', _('Resources'))
-              ) }}
-            {% endblock %}#}
-            <li><a href="#">Home</a></li>
-            <li><a href="/var/">Data</a>
+            <li><a href="http://data.wa.gov.au">Home</a></li>
+            <li>
+              <a href="/">Data</a>
               <ul class="nav dropdown-menu">
-                <li><a href="/dataset">Data Home</a></li>
-                <li><a href="/dataset">Datasets</a></li>
-                <li><a href="/organization">Organisations</a></li><li>
-                <li><a href="/group">Groups</a></li><li>
-                <li><a href="/about">About</a></li><li>
-                <li><a href="http://map.beta.data.wa.gov.au/">WA Map</a></li><li>
+                {% block header_site_navigation_tabs %}
+                {{ h.build_nav_main(
+                  ('home', _('Data Home')),
+                  ('search', _('Datasets')),
+                  ('organizations_index', _('Organizations')),
+                  ('group_index', _('Groups')),
+                  ('about', _('About')),
+                  ('about', _('WA Map'))
+                ) }}
+                {% endblock %}
               </ul>
             </li>
             <li><a href="http://data.wa.gov.au/about">About</a><li>
@@ -148,6 +141,11 @@
           </ul>
         </nav>
       {% endblock %}
+      <ul class="nav nav-secondary">
+        <li><a href="http://data.wa.gov.au/site-map/site-map-listing">Site map</a><li>
+        <li><a href="http://data.wa.gov.au/accessibility">Accessibility</a></li>
+        <li><a href="http://data.wa.gov.au/contact-us">Contact us</a></li>
+      </ul>
     </div><!-- .nav-collapse collapse pull-left -->
 
   </div>

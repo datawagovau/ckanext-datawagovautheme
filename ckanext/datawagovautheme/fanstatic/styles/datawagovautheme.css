@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Arial';
-  src: url("../fonts/arial/arial0.eot");
+  src: url("/fonts/arial/arial0.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/arial/arial0.eot?#iefix") format("embedded-opentype"), url("../fonts/arial/arial0.woff2") format("woff2"), url("../fonts/arial/arial0.woff") format("woff"), url("../fonts/arial/arial0.ttf") format("truetype"), url("../fonts/arial/arial0.svg") format("svg");
+  src: url("/fonts/arial/arial0.eot?#iefix") format("embedded-opentype"), url("/fonts/arial/arial0.woff2") format("woff2"), url("/fonts/arial/arial0.woff") format("woff"), url("/fonts/arial/arial0.ttf") format("truetype"), url("/fonts/arial/arial0.svg") format("svg");
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'ArialBold';
-  src: url("../fonts/arial/arialbd0.eot");
+  src: url("/fonts/arial/arialbd0.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/arial/arialbd0.eot?#iefix") format("embedded-opentype"), url("../fonts/arial/arialbd0.woff2") format("woff2"), url("../fonts/arial/arialbd0.woff") format("woff"), url("../fonts/arial/arialbd0.ttf") format("truetype"), url("../fonts/arial/arialbd0.svg") format("svg");
+  src: url("/fonts/arial/arialbd0.eot?#iefix") format("embedded-opentype"), url("/fonts/arial/arialbd0.woff2") format("woff2"), url("/fonts/arial/arialbd0.woff") format("woff"), url("/fonts/arial/arialbd0.ttf") format("truetype"), url("/fonts/arial/arialbd0.svg") format("svg");
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal; }
@@ -286,6 +286,8 @@ ul.nav {
           color: #565656;
           background-color: #FFFFFF;
           text-decoration: underline; }
+  .account-masthead .container {
+    margin-right: 71px; }
 
 /* ========================================================================
    The main masthead bar that contains the site logo, nav links, and search
@@ -311,7 +313,8 @@ ul.nav {
   display: block;
   float: left; }
   .dwga-title h1 {
-    font-size: 36px;
+    padding-left: 13px;
+    font-size: 35px;
     line-height: 1.25em;
     margin: 5px 0 15px;
     color: #69737c;
@@ -322,7 +325,7 @@ ul.nav {
       .dwga-title h1 a:hover, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li:hover {
         color: #69737c; }
   .dwga-title h3 {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.25em;
     margin: 5px 0 15px;
     color: #69737c; }
@@ -353,11 +356,12 @@ ul.nav {
   padding-left: 20px; }
 
 .dwga-search {
-  padding-right: 20px;
+  /* padding-right: 20px;
+  margin-right: 20px; */
   float: right; }
   .dwga-search .site-search .field button[type="submit"] {
     font-size: 18px;
-    width: 20.5%;
+    width: 21%;
     height: 44px;
     color: #fff;
     border: none;
@@ -367,7 +371,8 @@ ul.nav {
     font-family: 'ready-steady-gov';
     background: #95c677;
     top: 10px;
-    right: -8px; }
+    right: -34px;
+    box-shadow: inset 0 -2px 0 #7bb855; }
   .dwga-search .site-search .field button .icon-search:before {
     font-size: 19px; }
 
@@ -382,7 +387,7 @@ ul.nav {
   /* Alignment of navigation */ }
   .masthead .site-search input {
     height: 34px;
-    width: 315px;
+    width: 351px;
     border-color: #c7cacd;
     font-family: "Open Sans Regular";
     font-size: 14px;
@@ -391,10 +396,14 @@ ul.nav {
     border-radius: 0; }
   .masthead .nav-collapse {
     float: left;
-    padding-top: 32px; }
+    padding-top: 32px;
+    width: 100%; }
+    .masthead .nav-collapse.collapse {
+      height: 0; }
   .masthead .navigation, .masthead ul.nav {
     margin: 0px 0px 2px 0px; }
   .masthead .navigation ul.nav li ul.dropdown-menu {
+    display: block;
     position: absolute;
     height: 111px;
     width: 100%;
@@ -417,42 +426,67 @@ ul.nav {
       left: -4000px;
       width: 9999px;
       z-index: -1; }
-  .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
-    font-size: 15px;
-    color: #69737c;
-    font-family: "Open Sans";
-    font-weight: 600;
-    padding-right: 27px;
-    padding-left: 27px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: -2px;
-    letter-spacing: -0.6px; }
-  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
-    background: none;
-    color: #69737c;
-    box-shadow: none; }
-  .masthead .navigation ul.nav li.active {
-    background: none;
-    box-shadow: #69737c 0px 2px 0px 0px; }
-  .masthead .navigation ul.nav li:hover, .masthead .navigation ul.nav li.children-active:hover {
-    background-color: #f5f6f7;
-    box-shadow: none;
-    border-bottom: 2px solid #69737c;
-    color: #69737c; }
-  .masthead .navigation ul.nav li ul.dropdown-menu li {
-    margin-top: 42px; }
-  .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
-    font-size: 15px;
-    color: #69737c;
-    font-family: "Open Sans";
-    font-weight: 400;
-    padding-right: 0;
-    padding-left: 0;
-    margin-left: 27px;
-    margin-right: 27px; }
-  .masthead .navigation ul.nav li.children-active ul.dropdown-menu {
-    z-index: 10; }
+  .masthead .navigation ul.nav li {
+    /* &:nth-child(2) {
+      color: #69737c;
+      background-color: #fff;
+      box-sizing: border-box;
+      border-right: 20px solid #69737c;
+      border-left: 20px solid #69737c;
+      margin-bottom: -3px;
+      padding-top: 9px;
+      padding-left: 26px;
+      a {
+        background-color: #fff;
+        color: #69737c;
+        border-radius: 0;
+        padding-right: 0px;
+        padding-left: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-top: 0;
+      }
+    } */
+    /* &:last-child a {
+      padding-right: 0;
+    } */
+    /* &.children-active ul.dropdown-menu {
+      z-index: 10;
+    } */ }
+    .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+      font-size: 15px;
+      color: #69737c;
+      font-family: "Open Sans";
+      font-weight: 600;
+      padding-right: 27px;
+      padding-left: 27px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: -2px;
+      letter-spacing: -0.6px; }
+    .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
+      background: none;
+      color: #69737c;
+      box-shadow: none; }
+    .masthead .navigation ul.nav li.active {
+      background: none;
+      box-shadow: #69737c 0px 2px 0px 0px; }
+    .masthead .navigation ul.nav li:hover, .masthead .navigation ul.nav li.children-active:hover {
+      background-color: #f5f6f7;
+      box-shadow: none;
+      border-bottom: 2px solid #69737c;
+      color: #69737c; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li {
+      margin-top: 10px; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
+      font-size: 15px;
+      color: #69737c;
+      font-family: "Open Sans";
+      font-weight: 400;
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: 27px;
+      margin-right: 27px; }
   .masthead input[type="text"]:focus {
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
@@ -470,12 +504,19 @@ ul.nav {
 .navbar .nav > li > .dropdown-menu:after {
   display: none; }
 
+.masthead .nav-collapse ul.nav.nav-secondary {
+  display: none; }
+  .masthead .nav-collapse ul.nav.nav-secondary li a, .masthead .nav-collapse ul.nav.nav-secondary li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .nav-collapse ul.nav.nav-secondary li #publisher-tree > ul > li {
+    padding: 0; }
+
 @media (max-width: 1279px) {
   .dwga-logo {
     padding-left: 20px; }
 
   .masthead .site-search input {
-    width: 248px; } }
+    width: 340px;
+    padding-left: 15px;
+    letter-spacing: 0.9px; } }
 @media screen and (min-width: 980px) {
   .navigation ul.nav li:hover > ul.dropdown-menu {
     display: block;
@@ -506,6 +547,27 @@ ul.nav {
     padding-left: 0;
     padding-right: 0;
     background: #69737c; }
+    .masthead .container .nav-collapse ul.nav.nav-secondary {
+      background-color: #FFF;
+      display: block;
+      border-top: 15px solid #69737c;
+      box-sizing: border-box;
+      padding-top: 7px;
+      padding-bottom: 22px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #efefef; }
+      .masthead .container .nav-collapse ul.nav.nav-secondary li {
+        margin-left: 44px;
+        padding-top: 4px; }
+      .masthead .container .nav-collapse ul.nav.nav-secondary li:hover, .masthead .container .nav-collapse ul.nav.nav-secondary li a:hover, .masthead .container .nav-collapse ul.nav.nav-secondary li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .container .nav-collapse ul.nav.nav-secondary li #publisher-tree > ul > li:hover {
+        background-color: #FFF;
+        cursor: pointer; }
+      .masthead .container .nav-collapse ul.nav.nav-secondary li a, .masthead .container .nav-collapse ul.nav.nav-secondary li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .container .nav-collapse ul.nav.nav-secondary li #publisher-tree > ul > li {
+        font-size: 15px;
+        color: #69737c;
+        font-family: "Open Sans";
+        font-weight: 600;
+        letter-spacing: -0.6px; }
 
   hgroup {
     background-color: #FEFEFE;
@@ -513,29 +575,71 @@ ul.nav {
     margin-right: 0px; }
 
   .masthead {
-    border-bottom: 0; }
+    border-bottom: 0;
+    /*     .navigation {
+          padding-bottom: 18px;
+        } */
+    /* ul.nav {
+      z-index: 25;
+    } */ }
+    .masthead .section {
+      float: none; }
+    .masthead .nav-collapse {
+      padding-top: 24px;
+      height: auto;
+      top: 32px; }
+    .masthead .site-search {
+      display: block; }
 
-  .masthead .navigation {
-    padding-bottom: 62px; }
-
-  .masthead .nav-collapse {
+  /* .masthead .navigation {
+    padding-bottom: 18px;
+  } */
+  /* .masthead .nav-collapse {
     padding-top: 0;
     height: auto;
-    top: 48px; }
-
-  .masthead .site-search {
-    display: block; }
-
-  .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li, .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
-    color: #fff;
-    padding-left: 46px;
-    padding-bottom: 0px;
-    padding-top: 15px; }
-  .masthead .navigation ul.nav li:hover, .masthead .navigation ul.nav li.children-active:hover {
-    border-bottom: 0;
-    background-color: #69737c; }
-  .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover {
-    color: #fff; }
+    top: 48px;
+  } */
+  /* .masthead .site-search {
+    display: block;
+  } */
+  .masthead .navigation ul.nav li {
+    background-color: #69737c;
+    /* &.children-active ul.dropdown-menu li:last-child a{
+      padding-bottom: 15px;
+    } */ }
+    .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li, .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+      color: #fff;
+      padding-left: 46px;
+      padding-bottom: 0px;
+      /* padding-top: 15px; */ }
+    .masthead .navigation ul.nav li:hover, .masthead .navigation ul.nav li.children-active:hover {
+      border-bottom: 0;
+      background-color: #69737c; }
+    .masthead .navigation ul.nav li.children-active a, .masthead .navigation ul.nav li.children-active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.children-active #publisher-tree > ul > li, .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover {
+      color: #fff; }
+    .masthead .navigation ul.nav li ul.nav.dropdown-menu {
+      display: block;
+      position: relative;
+      height: auto;
+      border-top: 0;
+      margin-top: -78px;
+      margin-left: 0;
+      box-sizing: border-box;
+      /* border-left: 20px solid #69737c; */
+      border-right: 20px solid #69737c; }
+      .masthead .navigation ul.nav li ul.nav.dropdown-menu li, .masthead .navigation ul.nav li ul.nav.dropdown-menu li:hover {
+        background-color: #FFF; }
+      .masthead .navigation ul.nav li ul.nav.dropdown-menu li {
+        margin-top: 0px;
+        padding-left: 15px; }
+        .masthead .navigation ul.nav li ul.nav.dropdown-menu li a, .masthead .navigation ul.nav li ul.nav.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.nav.dropdown-menu li #publisher-tree > ul > li {
+          padding: 0;
+          padding-bottom: 8px; }
+    .masthead .navigation ul.nav li ul.dropdown-menu:before {
+      background: none; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li:last-child {
+      margin-bottom: 62px;
+      padding-bottom: 0px; }
 
   .simple-input .field {
     padding: 20px 15px 20px 15px;
