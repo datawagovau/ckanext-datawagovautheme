@@ -141,13 +141,16 @@ body, html{
 }
 @media(min-width: $tablet-top + 1px){
   .form-select.control-group.control-order-by{
-    margin-top: 5px;
+    margin-top: 13px;
   }
 }
 @media(max-width: $tablet-top){
   .search-form {
     .control-order-by select{
       width: 100%;
+    }
+    .filter-list{
+      margin-bottom: 20px;
     }
   }
   .module:last-child{
