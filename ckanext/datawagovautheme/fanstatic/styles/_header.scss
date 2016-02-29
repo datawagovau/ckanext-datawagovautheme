@@ -34,6 +34,9 @@
       }
     }
   }
+  .container {
+    margin-right: 71px;
+  }
 }
 
 
@@ -68,7 +71,8 @@
   display: block;
   float: left;
   h1 {
-    font-size: 36px;
+    padding-left: 13px;
+    font-size: 35px;
     line-height: 1.25em;
     margin: 5px 0 15px;
     color: $link-hover-color;
@@ -82,7 +86,7 @@
     }
   }
   h3 {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.25em;
     margin: 5px 0 15px;
     color: $link-hover-color;
@@ -117,13 +121,14 @@
 }
 
 .dwga-search {
-  padding-right: 20px;
+  /* padding-right: 20px;
+  margin-right: 20px; */
   float: right;
   .site-search .field {
     button{
       &[type="submit"] {
         font-size: 18px;
-        width: 20.5%;
+        width: 21%;
         height: 44px;
         color: #fff;
         border: none;
@@ -133,7 +138,8 @@
         font-family: 'ready-steady-gov';
         background: #95c677;
         top: 10px;
-        right: -8px;
+        right: -34px;
+        box-shadow: inset 0 -2px 0 #7bb855;
       }
       .icon-search:before {
         font-size: 19px;
@@ -150,10 +156,10 @@
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
-  height: 192px;
+  height: 202px;
   .site-search input {
     height: 34px;
-    width: 315px;
+    width: 351px;
     border-color: #c7cacd;
     font-family:"Open Sans Regular";
     font-size: 14px;
@@ -166,13 +172,17 @@
   .nav-collapse {
     float: left;
     padding-top: 32px;
+    width: 100%;
+    &.collapse {
+      height: 0;
+    }
   }
   /* Alignment of navigation */
   .navigation, ul.nav {
     margin: 0px 0px 2px 0px;
   }
   .navigation ul.nav li ul.dropdown-menu {
-    //display: block;
+    display: block;
     position: absolute;
     height: 111px;
     width: 100%;
@@ -184,7 +194,20 @@
     border-top: 20px solid transparent;
     box-sizing: content-box;
     margin-top: -57px;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      background: #f5f6f7;
+      border-bottom: 0;
+      top: 0;
+      bottom: 0;
+      left: -4000px;
+      width: 9999px;
+      z-index: -1;
+    }
   }
+  
   .navigation ul.nav li {
     a {
       font-size: 15px ;
@@ -195,12 +218,9 @@
       padding-left: 27px;
       margin-left: 0px;
       margin-right: 0px;
-      margin-bottom: -3 px;
+      margin-bottom: -2px;
       letter-spacing: -0.6px;
     }
-    /* &:last-child a {
-      margin-right: 0;
-    } */
     a:hover,
     &.active a{
       background: none;
@@ -211,28 +231,16 @@
       background: none;
       box-shadow: $link-hover-color 0px 2px 0px 0px;
     }
-    &:hover {
+    &:hover,
+    &.children-active:hover {
       background-color: #f5f6f7;
       box-shadow: none;
       border-bottom: 2px solid $link-hover-color;
       color: $link-hover-color;
     }
-    /* &:hover > ul.dropdown-menu {
-      display: block;
-      position: absolute;
-      height: 111px;
-      width: 100%;
-      box-shadow: none;
-      top: 88px;
-      border: none;
-      background-color: #f5f6f7;
-      border-radius: 0;
-      border-top: 20px solid transparent;
-      box-sizing: content-box;
-      margin-top: -57px;
-    } */
+
     & ul.dropdown-menu li {
-      margin-top: 42px;
+      margin-top: 10px;
     }
     & ul.dropdown-menu li a {
       font-size: 15px ;
@@ -244,13 +252,32 @@
       margin-left: 27px;
       margin-right: 27px;
     }
-    &.children-active {
-      height: 52px;
-      background-color: #f5f6f7;
-    }
-    &.children-active ul.dropdown-menu {
+    /* &:nth-child(2) {
+      color: #69737c;
+      background-color: #fff;
+      box-sizing: border-box;
+      border-right: 20px solid #69737c;
+      border-left: 20px solid #69737c;
+      margin-bottom: -3px;
+      padding-top: 9px;
+      padding-left: 26px;
+      a {
+        background-color: #fff;
+        color: #69737c;
+        border-radius: 0;
+        padding-right: 0px;
+        padding-left: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-top: 0;
+      }
+    } */
+    /* &:last-child a {
+      padding-right: 0;
+    } */
+    /* &.children-active ul.dropdown-menu {
       z-index: 10;
-    }
+    } */
   }
   input[type="text"]:focus {
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
@@ -279,12 +306,21 @@
   }
 }
 
+.masthead .nav-collapse ul.nav.nav-secondary {
+    display: none;
+    li a {
+      padding: 0;
+    }
+  }
+
 @media (max-width: 1279px) {
   .dwga-logo {
     padding-left: 20px;
   }
   .masthead .site-search input {
-    width: 248px;
+    width: 340px;
+    padding-left: 15px;
+    letter-spacing: 0.9px;
   }
 }
 
@@ -305,15 +341,53 @@
     }
 }
 
+@media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
+  .container-header{
+    width: 660px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 @media screen and (max-width: $tablet-top) {
-  .account-masthead .account.not-authed ul li:nth-child(n+3) {
-    display: none;
+  .container-header{
+    width: auto;
+  }
+  .account-masthead {
+    .account.not-authed ul li:nth-child(n+3) {
+      display: none;
+    }
   }
 
   .masthead .container {
     padding-left: 0;
     padding-right: 0;
     background: #69737c;
+    .nav-collapse ul.nav.nav-secondary {
+      background-color: #FFF;
+      display: block;
+      border-top: 15px solid #69737c;
+      box-sizing: border-box;
+      padding-top: 7px;
+      padding-bottom: 22px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid #efefef;
+      li {
+        margin-left: 44px;
+        padding-top: 4px;
+      }
+      li:hover, li a:hover {
+        background-color: #FFF;
+        cursor: pointer;
+      }
+      li a {
+        font-size: 15px ;
+        color: $link-hover-color;
+        font-family: "Open Sans";
+        font-weight: 600;
+        letter-spacing: -0.6px;
+      }
+    }
   }
 
   hgroup {
@@ -324,24 +398,89 @@
 
   .masthead {
     border-bottom: 0;
+    .section {
+      float: none;
+    }
+/*     .navigation {
+      padding-bottom: 18px;
+    } */
+    .nav-collapse {
+      padding-top: 24px;
+      height: auto;
+      top: 32px;
+    }
+    .site-search {
+      display: block;
+    }
+    /* ul.nav {
+      z-index: 25;
+    } */ 
+
   }
 
-  .masthead .nav-collapse {
+  /* .masthead .navigation {
+    padding-bottom: 18px;
+  } */
+
+  /* .masthead .nav-collapse {
     padding-top: 0;
     height: auto;
     top: 48px;
-  }
-
-  .masthead .site-search {
-    display: block;
-  }
-  .masthead .navigation ul.nav li a{
-    color: #fff
-  }
-
-/*   .navigation ul.nav li:hover > ul.dropdown-menu {
-    display: none;
   } */
+
+  /* .masthead .site-search {
+    display: block;
+  } */
+
+  .masthead .navigation ul.nav li {
+    background-color: #69737c;
+    &.active a, a {
+      color: #fff;
+      padding-left: 46px;
+      padding-bottom: 0px;
+      /* padding-top: 15px; */
+    }
+    &:hover,
+    &.children-active:hover {
+      border-bottom: 0;
+      background-color: #69737c;
+    }
+    &.children-active a, a:hover {
+      color: #fff;
+    }
+    ul.nav.dropdown-menu {
+      display: block;
+      position: relative;
+      height: auto;
+      border-top: 0;
+      margin-top: -78px;
+      margin-left: 0;
+      box-sizing: border-box;
+      /* border-left: 20px solid #69737c; */
+      border-right: 20px solid #69737c;
+      li, li:hover {
+        background-color: #FFF;
+      }
+      li {
+        margin-top: 0px;
+        padding-left: 15px;
+        a {
+          padding: 0;
+          padding-bottom: 8px;
+        }
+      }
+    }
+    ul.dropdown-menu:before {
+      background: none;
+    }
+    ul.dropdown-menu li:last-child {
+      margin-bottom: 62px;
+      padding-bottom: 0px;
+    }
+    /* &.children-active ul.dropdown-menu li:last-child a{
+      padding-bottom: 15px;
+    } */
+  }
 
   .simple-input .field {
     padding: 20px 15px 20px 15px;
@@ -411,17 +550,6 @@
     margin-top: 23px;
     width: 100%;
   }
-
-  /* form.site-search.simple-input {
-    width: 100%;
-    margin-right: -14px;
-    margin-top: 2px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    background-color: #69737c;
-  } */
 
   #dwga-header-container .btn.btn-navbar .icon-bar {
     margin-top: -9px;
