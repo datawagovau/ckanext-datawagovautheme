@@ -387,12 +387,14 @@ ul.nav {
     border: none;
     background: #999;
     float: right;
-    margin-right: 0;
+    /* margin-right: 0; */
     font-family: 'ready-steady-gov';
     background: #95c677;
     top: 10px;
     right: -34px;
-    box-shadow: inset 0 -2px 0 #7bb855; }
+    box-shadow: inset 0 -2px 0 #7bb855;
+    margin-top: -13px;
+    margin-right: 7px; }
   .dwga-search .site-search .field button .icon-search:before {
     font-size: 19px; }
 
@@ -413,15 +415,27 @@ ul.nav {
     font-size: 14px;
     color: #565656;
     margin-left: 0;
-    border-radius: 0; }
+    border-radius: 0;
+    margin-top: -3px; }
+  .masthead hgroup h1 {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 0px; }
+  .masthead hgroup h3 {
+    margin-top: 11px;
+    margin-left: 12px;
+    font-size: 28px;
+    letter-spacing: -0.1px; }
   .masthead .nav-collapse {
     float: left;
-    padding-top: 32px;
+    padding-top: 14px;
     width: 100%; }
     .masthead .nav-collapse.collapse {
       height: 0; }
   .masthead .navigation, .masthead ul.nav {
-    margin: 0px 0px 2px 0px; }
+    margin: 0px 0px 2px 0px;
+    padding-bottom: 1px;
+    margin-bottom: 8px; }
   .masthead .navigation ul.nav li ul.dropdown-menu {
     display: block;
     position: absolute;
@@ -480,7 +494,7 @@ ul.nav {
       font-weight: 600;
       padding-right: 27px;
       padding-left: 27px;
-      margin-left: 0px;
+      margin-left: 6px;
       margin-right: 0px;
       margin-bottom: -2px;
       letter-spacing: -0.6px; }
@@ -529,14 +543,115 @@ ul.nav {
   .masthead .nav-collapse ul.nav.nav-secondary li a, .masthead .nav-collapse ul.nav.nav-secondary li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .nav-collapse ul.nav.nav-secondary li #publisher-tree > ul > li {
     padding: 0; }
 
-@media (max-width: 1279px) {
+@media (min-width: 1500px) {
+  body {
+    background-color: #FFF; }
+
+  .account-masthead .container {
+    width: 100%; }
+
+  .account-masthead.container-header,
+  .container-header {
+    width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto; }
+
+  .container-header {
+    margin-bottom: 111px; }
+
+  .navbar.navbar-static-top.masthead .container hgroup h1 {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 0px; }
+  .navbar.navbar-static-top.masthead .container hgroup h3 {
+    margin-top: 11px;
+    margin-left: 12px;
+    font-size: 28px;
+    letter-spacing: -0.1px; }
+  .navbar.navbar-static-top.masthead .container hgroup .dwga-search {
+    padding-right: 0px; }
+    .navbar.navbar-static-top.masthead .container hgroup .dwga-search .site-search .field {
+      left: -18px; }
+  .navbar.navbar-static-top.masthead .container .nav-collapse {
+    padding-top: 14px; }
+    .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child {
+      margin-left: 20px; }
+      .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child a, .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child #publisher-tree > ul > li {
+        margin-left: 0; } }
+@media (min-width: 1280px) and (max-width: 1499px) {
+  body {
+    background-color: #FFF; }
+
+  header.account-masthead.container-header {
+    width: 1020px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto; }
+
+  .account-masthead .container {
+    width: 100%; }
+
+  .container-header {
+    width: 1020px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto; }
+    .container-header hgroup .dwga-logo {
+      padding-left: 0; }
+    .container-header hgroup .dwga-search .site-search .field {
+      left: -225px; }
+      .container-header hgroup .dwga-search .site-search .field button[type="submit"] {
+        top: 12px;
+        right: -20px; }
+      .container-header hgroup .dwga-search .site-search .field input {
+        width: 310px;
+        margin-top: -1px; } }
+@media (min-width: 980px) and (max-width: 1279px) {
+  body {
+    background-color: #FFF; }
+
+  .navbar-static-top .container {
+    width: 860px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto; }
+
+  header.account-masthead.container-header {
+    width: 860px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto; }
+
+  .account-masthead .container {
+    width: 100%; }
+
+  .masthead .navigation ul.nav li ul.dropdown-menu {
+    top: 111px; }
+
+  .container-header {
+    width: 860px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    margin-bottom: 111px; }
+
   .dwga-logo {
     padding-left: 20px; }
 
-  .masthead .site-search input {
-    width: 340px;
-    padding-left: 15px;
-    letter-spacing: 0.9px; } }
+  .masthead {
+    height: 276px; }
+    .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
+      margin-left: 0; }
+    .masthead .site-search input {
+      width: 340px;
+      padding-left: 15px;
+      letter-spacing: 0.9px; }
+
+  .navbar.navbar-static-top.masthead .container hgroup .dwga-search {
+    padding-right: 0px; }
+    .navbar.navbar-static-top.masthead .container hgroup .dwga-search .site-search .field {
+      left: -100px; } }
 @media screen and (min-width: 980px) {
   .navigation ul.nav li:hover > ul.dropdown-menu {
     display: block;
@@ -750,6 +865,9 @@ ul.nav {
   .masthead hgroup h1 {
     margin-top: -47px; } }
 @media (max-width: 767px) {
+  .account-masthead.container-header {
+    display: none; }
+
   .dwga-logo {
     margin-top: -4px;
     padding-left: 20px; }
@@ -757,11 +875,14 @@ ul.nav {
   .dwga-title h1 a, .dwga-title h1 .group-list .module-heading h3 a, .group-list .module-heading h3 .dwga-title h1 a, .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dwga-title h1 #publisher-tree > ul > li {
     font-size: 16px; }
 
-  .dwga-title h3 {
+  .masthead hgroup h3 {
     font-size: 8px; }
 
   .account-masthead .account.not-authed {
-    margin-right: 15px; } }
+    margin-right: 15px; }
+
+  .masthead .navigation ul.nav li ul.nav.dropdown-menu {
+    display: none; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
