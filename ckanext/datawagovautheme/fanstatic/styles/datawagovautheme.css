@@ -1346,9 +1346,7 @@ body, html {
   .form-select.control-order-by {
     position: relative; }
     .form-select.control-order-by #field-order-by {
-      -moz-appearance: toolbarbutton;
-      -moz-outline-radius: 3px;
-      outline: 1px solid #c7cacd; }
+      -moz-appearance: none; }
     .form-select.control-order-by:after {
       pointer-events: none;
       content: "\f107";

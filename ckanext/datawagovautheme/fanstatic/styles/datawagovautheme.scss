@@ -114,9 +114,9 @@ body, html{
 @-moz-document url-prefix() {
   .form-select.control-order-by{
     #field-order-by{
-      -moz-appearance: toolbarbutton;
-      -moz-outline-radius: 3px;
-      outline: 1px solid #c7cacd;
+      -moz-appearance: none;
+      // -moz-outline-radius: 3px;
+      // outline: 1px solid #c7cacd;
     }
     position: relative;
     &:after{
