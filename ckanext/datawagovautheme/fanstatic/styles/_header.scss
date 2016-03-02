@@ -1,9 +1,11 @@
 .account-masthead {
   height: 39px;
   background: none;
-  background-color: #fff;
+  background-color: #fcfcfc;
   .account {
     margin-top: 10px;
+    left: 20px;
+    position: relative;
     /* The "bubble" containing the number of new notifications. */
     .notifications{
       a {
@@ -158,16 +160,22 @@
 
 
 .masthead {
-  border-top: 1px solid #efefef;
+  /* border-top: 1px solid #efefef; */
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
   height: 202px;
+  &:before {
+    position: relative;
+    border-top: 1px solid #efefef;
+    width: 9999px;
+    right: 4500px;
+  }
   .site-search input {
     height: 34px;
     width: 351px;
     border-color: #c7cacd;
-    font-family:"Open Sans Regular";
+    font-family:"Open Sans";
     font-size: 14px;
     color: #565656;
     margin-left: 0;
@@ -214,6 +222,7 @@
     border-top: 20px solid transparent;
     box-sizing: content-box;
     margin-top: -57px;
+    padding-top: 25px;
     &:before {
       display: block;
       content: "";
@@ -247,7 +256,7 @@
         padding-bottom: 8px;
       }
     }
-    &:nth-child(2) ul.dropdown-menu li:nth-child(2) {
+    ul.dropdown-menu li:nth-child(2) {
       box-shadow: none;
     }
     a:hover,
@@ -259,6 +268,9 @@
     &.active {
       background: none;
       box-shadow: $link-hover-color 0px 2px 0px 0px;
+      &:hover {
+        box-shadow: 0;
+      }
     }
     &:hover {
       background-color: #f5f6f7;
@@ -268,6 +280,14 @@
     }
     & ul.dropdown-menu li {
       margin-top: 10px;
+      /* background-color: #f5f6f7; */
+      &.active {
+        background: none;
+        box-shadow: $link-hover-color 0px 2px 0px 0px;
+        &:hover {
+          box-shadow: none;
+        }
+      }
     }
     & ul.dropdown-menu li a {
       font-size: 15px ;
@@ -278,6 +298,13 @@
       padding-left: 0;
       margin-left: 27px;
       margin-right: 27px;
+      margin-bottom: -2px;
+      &:hover {
+        margin-bottom: 0px;
+      }
+      &:focus {
+        background: none;
+      }
     }
   }
   input[type="text"]:focus {
@@ -320,7 +347,7 @@
 
 @media (min-width: $hd-top + 1) {
   body {
-    background-color: #FFF;
+    background-color: #fcfcfc;
   }
   .account-masthead {
     .container {
@@ -335,7 +362,12 @@
     margin: 0 auto;
   }
   .container-header {
-    margin-bottom: 111px;
+    margin-bottom: 126px;
+    .container {
+      width: 100%!important;
+      padding-right: 0!important;
+      padding-left: 0!important;
+    }
   }
   .navbar.navbar-static-top.masthead {
     .container {
@@ -354,8 +386,11 @@
         .dwga-search {
           padding-right: 0px;
           .site-search .field {
-            left: -18px;
+            left: -21px;
           }
+        }
+        .dwga-logo {
+          padding-left: 0;
         }
       }
       .nav-collapse {
@@ -363,9 +398,12 @@
         nav.navigation ul.nav {
           li:first-child {
             margin-left: 20px;
-            a {
+            /* a {
               margin-left: 0;
             }
+            a:first-child {
+              margin-left: 27px;
+            } */
           }
         }
       }
@@ -375,7 +413,7 @@
 
 @media (min-width: $wide-top + 1) and (max-width: $hd-top) {
   body {
-    background-color: #FFF;
+    background-color: #fcfcfc;
   }
   header.account-masthead.container-header {
     width: 1020px;
@@ -393,14 +431,19 @@
     padding-right: 20px;
     padding-left: 20px;
     margin: 0 auto;
-    margin-bottom: 111px;
+    margin-bottom: 126px;
+    .container {
+      width: 100%!important;
+      padding-right: 0!important;
+      padding-left: 0!important;
+    }
     hgroup {
       .dwga-logo {
         padding-left: 0;
       }
       .dwga-search {
         .site-search .field {
-          left: -225px;
+          left: -5px;
           button[type="submit"] {
             top: 12px;
             right: -20px;
@@ -414,11 +457,39 @@
       }
     }
   }
+  .masthead .navigation {
+    margin-left: -8px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: $wide-top) {
+  .dwga-logo {
+    padding-left: 40px;
+  }
+  .masthead .site-search .field {
+    input {
+      width: 226px;
+    }
+    button[type="submit"] {
+      width: 22%;
+    }
+  }
+  .masthead hgroup {
+    h1 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .container-header .container .dwga-search .site-search .field {
+    right: 60px;
+  }
 }
 
 @media (min-width: $tablet-top + 1) and (max-width: $wide-top) {
    body {
-    background-color: #FFF;
+    background-color: #fcfcfc;
   }
   .navbar-static-top .container {
     width: 860px;
@@ -441,18 +512,15 @@
   .masthead .navigation ul.nav li:hover ul.dropdown-menu  {
     top: 111px;
   }
-  .masthead .navigation ul.nav li:hover ul.dropdown-menu  {
-    top: 54px;
-  }
+  /* .masthead .navigation ul.nav li:hover ul.dropdown-menu  {
+    top: 111px;
+  } */
   .container-header {
     width: 860px;
     padding-right: 20px;
     padding-left: 20px;
     margin: 0 auto;
-    margin-bottom: 111px;
-  }
-  .dwga-logo {
-    padding-left: 20px;
+    margin-bottom: 131px;
   }
   .masthead {
     height: 276px;
@@ -460,7 +528,7 @@
       margin-left: 0;
     }
     .site-search input {
-      width: 340px;
+      width: 226px;
       padding-left: 15px;
       letter-spacing: 0.9px;
     }
@@ -470,13 +538,13 @@
       hgroup {
         .dwga-search {
           padding-right: 0px;
-          .site-search .field {
-            left: -100px;
-          }
         }
       }
     }
   }
+  /* .container-header .container hgroup .dwga-search .site-search .field {
+    left: -5px!important;
+  } */
 }
 
 
@@ -495,6 +563,10 @@
   }
   .masthead hgroup .dwga-title h3 {
     margin-left: 8px;
+    font-size: 27px;
+  }
+  .masthead .nav-collapse.in.collapse, .collapse {
+    margin-top: 64px;
   }
 }
 
@@ -518,7 +590,7 @@
     padding-right: 0;
     background: #69737c;
     .nav-collapse ul.nav.nav-secondary {
-      background-color: #FFF;
+      background-color: #fcfcfc;
       display: block;
       border-top: 15px solid #69737c;
       box-sizing: border-box;
@@ -531,7 +603,7 @@
         padding-top: 4px;
       }
       li:hover, li a:hover {
-        background-color: #FFF;
+        background-color: #fcfcfc;
         cursor: pointer;
       }
       li a {
@@ -596,10 +668,10 @@
         background-color: #69737c;
       }
       &.in.collapse li.active {
-        background-color: #fff;
+        background-color: #fcfcfc;
       }
       li, li:hover {
-        background-color: #FFF;
+        background-color: #fcfcfc;
       }
       li {
         margin-top: 0px;
@@ -645,7 +717,7 @@
   }
 
   .masthead hgroup h1 {
-    margin-top: -56px;
+    margin-top: 5px;
     margin-left: -5px;
     letter-spacing: 0px;
     background: none;
@@ -704,6 +776,8 @@
     height: 49px;
     width: 48px;
     border-radius: 0;
+    background-color: #69737c;
+    box-shadow: 0 2px 0 #44505b;
   }
 
   .dwga-search .site-search .field button .icon-search:before {
@@ -729,9 +803,11 @@
       }
     }
   }
-  /* .container-header .navbar .nav-collapse nav ul.nav li a.btndropdesctop {
-    display: none;
-  } */
+  #dwga-header-container button.btn.btn-navbar {
+    height: 47px;
+    padding-bottom: 5px;
+    padding-top: 33px;
+  }
 
   .account-masthead.container-header {
     display: none;
@@ -744,11 +820,14 @@
     font-size: 16px;
   }
   .masthead hgroup h1 {
-    margin-top: 0px;
+    margin-top: 5px;
+    margin-left: -19px;
   }
   .masthead hgroup h3 {
     font-size: 8px;
-    margin-left: 8px;
+    margin-top: 6px;
+    margin-left: -6px;
+    letter-spacing: 0.1px;
   }
   .account-masthead {
     .account.not-authed {
@@ -762,6 +841,12 @@
     &.in.collapse ul.nav li ul.dropdown-menu {
       display: none;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .masthead hgroup h1 {
+    margin-top: -52px;
   }
 }
 

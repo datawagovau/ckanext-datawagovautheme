@@ -282,9 +282,11 @@ ul.nav {
 .account-masthead {
   height: 39px;
   background: none;
-  background-color: #fff; }
+  background-color: #fcfcfc; }
   .account-masthead .account {
     margin-top: 10px;
+    left: 20px;
+    position: relative;
     /* The "bubble" containing the number of new notifications. */
     /* Transparent separator between links */ }
     .account-masthead .account .notifications a, .account-masthead .account .notifications .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account .notifications #publisher-tree > ul > li {
@@ -402,7 +404,7 @@ ul.nav {
     font-size: 19px; }
 
 .masthead {
-  border-top: 1px solid #efefef;
+  /* border-top: 1px solid #efefef; */
   border-bottom: 1px solid #efefef;
   background: none;
   background-color: #FCFCFC;
@@ -410,11 +412,16 @@ ul.nav {
   /* Float the navbar left */
   /* data.wa.gov.au floats left, here it looks better floating right */
   /* Alignment of navigation */ }
+  .masthead:before {
+    position: relative;
+    border-top: 1px solid #efefef;
+    width: 9999px;
+    right: 4500px; }
   .masthead .site-search input {
     height: 34px;
     width: 351px;
     border-color: #c7cacd;
-    font-family: "Open Sans Regular";
+    font-family: "Open Sans";
     font-size: 14px;
     color: #565656;
     margin-left: 0;
@@ -451,7 +458,8 @@ ul.nav {
     border-radius: 0;
     border-top: 20px solid transparent;
     box-sizing: content-box;
-    margin-top: -57px; }
+    margin-top: -57px;
+    padding-top: 25px; }
     .masthead .navigation ul.nav li ul.dropdown-menu:before {
       display: block;
       content: "";
@@ -478,7 +486,7 @@ ul.nav {
     box-shadow: #69737c 0px 2px 0px 0px; }
     .masthead .navigation ul.nav li:nth-child(2) a.btndropdesctop, .masthead .navigation ul.nav li:nth-child(2) .datawa-organization-list #publisher-tree > ul > li.btndropdesctop, .datawa-organization-list .masthead .navigation ul.nav li:nth-child(2) #publisher-tree > ul > li.btndropdesctop {
       padding-bottom: 8px; }
-  .masthead .navigation ul.nav li:nth-child(2) ul.dropdown-menu li:nth-child(2) {
+  .masthead .navigation ul.nav li ul.dropdown-menu li:nth-child(2) {
     box-shadow: none; }
   .masthead .navigation ul.nav li a:hover, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li:hover, .masthead .navigation ul.nav li.active a, .masthead .navigation ul.nav li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li.active #publisher-tree > ul > li {
     background: none;
@@ -487,13 +495,21 @@ ul.nav {
   .masthead .navigation ul.nav li.active {
     background: none;
     box-shadow: #69737c 0px 2px 0px 0px; }
+    .masthead .navigation ul.nav li.active:hover {
+      box-shadow: 0; }
   .masthead .navigation ul.nav li:hover {
     background-color: #f5f6f7;
     box-shadow: none;
     border-bottom: 2px solid #69737c;
     color: #69737c; }
   .masthead .navigation ul.nav li ul.dropdown-menu li {
-    margin-top: 10px; }
+    margin-top: 10px;
+    /* background-color: #f5f6f7; */ }
+    .masthead .navigation ul.nav li ul.dropdown-menu li.active {
+      background: none;
+      box-shadow: #69737c 0px 2px 0px 0px; }
+      .masthead .navigation ul.nav li ul.dropdown-menu li.active:hover {
+        box-shadow: none; }
   .masthead .navigation ul.nav li ul.dropdown-menu li a, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li {
     font-size: 15px;
     color: #69737c;
@@ -502,7 +518,12 @@ ul.nav {
     padding-right: 0;
     padding-left: 0;
     margin-left: 27px;
-    margin-right: 27px; }
+    margin-right: 27px;
+    margin-bottom: -2px; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li a:hover, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li:hover {
+      margin-bottom: 0px; }
+    .masthead .navigation ul.nav li ul.dropdown-menu li a:focus, .masthead .navigation ul.nav li ul.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .masthead .navigation ul.nav li ul.dropdown-menu li #publisher-tree > ul > li:focus {
+      background: none; }
   .masthead input[type="text"]:focus {
     -webkit-box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.7); }
@@ -529,7 +550,7 @@ ul.nav {
 
 @media (min-width: 1500px) {
   body {
-    background-color: #FFF; }
+    background-color: #fcfcfc; }
 
   .account-masthead .container {
     width: 100%; }
@@ -542,7 +563,11 @@ ul.nav {
     margin: 0 auto; }
 
   .container-header {
-    margin-bottom: 111px; }
+    margin-bottom: 126px; }
+    .container-header .container {
+      width: 100% !important;
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
 
   .navbar.navbar-static-top.masthead .container hgroup h1 {
     font-size: 35px;
@@ -556,16 +581,22 @@ ul.nav {
   .navbar.navbar-static-top.masthead .container hgroup .dwga-search {
     padding-right: 0px; }
     .navbar.navbar-static-top.masthead .container hgroup .dwga-search .site-search .field {
-      left: -18px; }
+      left: -21px; }
+  .navbar.navbar-static-top.masthead .container hgroup .dwga-logo {
+    padding-left: 0; }
   .navbar.navbar-static-top.masthead .container .nav-collapse {
     padding-top: 14px; }
     .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child {
-      margin-left: 20px; }
-      .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child a, .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .navbar.navbar-static-top.masthead .container .nav-collapse nav.navigation ul.nav li:first-child #publisher-tree > ul > li {
-        margin-left: 0; } }
+      margin-left: 20px;
+      /* a {
+        margin-left: 0;
+      }
+      a:first-child {
+        margin-left: 27px;
+      } */ } }
 @media (min-width: 1280px) and (max-width: 1499px) {
   body {
-    background-color: #FFF; }
+    background-color: #fcfcfc; }
 
   header.account-masthead.container-header {
     width: 1020px;
@@ -581,20 +612,43 @@ ul.nav {
     padding-right: 20px;
     padding-left: 20px;
     margin: 0 auto;
-    margin-bottom: 111px; }
+    margin-bottom: 126px; }
+    .container-header .container {
+      width: 100% !important;
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
     .container-header hgroup .dwga-logo {
       padding-left: 0; }
     .container-header hgroup .dwga-search .site-search .field {
-      left: -225px; }
+      left: -5px; }
       .container-header hgroup .dwga-search .site-search .field button[type="submit"] {
         top: 12px;
         right: -20px; }
       .container-header hgroup .dwga-search .site-search .field input {
         width: 310px;
-        margin-top: -1px; } }
+        margin-top: -1px; }
+
+  .masthead .navigation {
+    margin-left: -8px; } }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .dwga-logo {
+    padding-left: 40px; }
+
+  .masthead .site-search .field input {
+    width: 226px; }
+  .masthead .site-search .field button[type="submit"] {
+    width: 22%; }
+
+  .masthead hgroup h1 {
+    font-size: 30px; }
+  .masthead hgroup h3 {
+    font-size: 22px; }
+
+  .container-header .container .dwga-search .site-search .field {
+    right: 60px; } }
 @media (min-width: 980px) and (max-width: 1279px) {
   body {
-    background-color: #FFF; }
+    background-color: #fcfcfc; }
 
   .navbar-static-top .container {
     width: 860px;
@@ -615,32 +669,31 @@ ul.nav {
   .masthead .navigation ul.nav li:hover ul.dropdown-menu {
     top: 111px; }
 
-  .masthead .navigation ul.nav li:hover ul.dropdown-menu {
-    top: 54px; }
-
+  /* .masthead .navigation ul.nav li:hover ul.dropdown-menu  {
+    top: 111px;
+  } */
   .container-header {
     width: 860px;
     padding-right: 20px;
     padding-left: 20px;
     margin: 0 auto;
-    margin-bottom: 111px; }
-
-  .dwga-logo {
-    padding-left: 20px; }
+    margin-bottom: 131px; }
 
   .masthead {
     height: 276px; }
     .masthead .navigation ul.nav li a, .masthead .navigation ul.nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .navigation ul.nav li #publisher-tree > ul > li {
       margin-left: 0; }
     .masthead .site-search input {
-      width: 340px;
+      width: 226px;
       padding-left: 15px;
       letter-spacing: 0.9px; }
 
   .navbar.navbar-static-top.masthead .container hgroup .dwga-search {
     padding-right: 0px; }
-    .navbar.navbar-static-top.masthead .container hgroup .dwga-search .site-search .field {
-      left: -100px; } }
+
+  /* .container-header .container hgroup .dwga-search .site-search .field {
+    left: -5px!important;
+  } */ }
 @media (max-width: 979px) and (min-width: 768px) {
   .container-header .navbar .nav-collapse nav ul.nav li a.btndropresponsive, .container-header .navbar .nav-collapse nav ul.nav li .datawa-organization-list #publisher-tree > ul > li.btndropresponsive, .datawa-organization-list .container-header .navbar .nav-collapse nav ul.nav li #publisher-tree > ul > li.btndropresponsive {
     display: block; }
@@ -654,7 +707,11 @@ ul.nav {
     margin-left: auto; }
 
   .masthead hgroup .dwga-title h3 {
-    margin-left: 8px; } }
+    margin-left: 8px;
+    font-size: 27px; }
+
+  .masthead .nav-collapse.in.collapse, .collapse {
+    margin-top: 64px; } }
 @media screen and (max-width: 979px) {
   .container-header .navbar .nav-collapse nav ul.nav li a.btndropresponsive, .container-header .navbar .nav-collapse nav ul.nav li .datawa-organization-list #publisher-tree > ul > li.btndropresponsive, .datawa-organization-list .container-header .navbar .nav-collapse nav ul.nav li #publisher-tree > ul > li.btndropresponsive {
     display: block; }
@@ -673,7 +730,7 @@ ul.nav {
     padding-right: 0;
     background: #69737c; }
     .masthead .container .nav-collapse ul.nav.nav-secondary {
-      background-color: #FFF;
+      background-color: #fcfcfc;
       display: block;
       border-top: 15px solid #69737c;
       box-sizing: border-box;
@@ -685,7 +742,7 @@ ul.nav {
         margin-left: 44px;
         padding-top: 4px; }
       .masthead .container .nav-collapse ul.nav.nav-secondary li:hover, .masthead .container .nav-collapse ul.nav.nav-secondary li a:hover, .masthead .container .nav-collapse ul.nav.nav-secondary li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .container .nav-collapse ul.nav.nav-secondary li #publisher-tree > ul > li:hover {
-        background-color: #FFF;
+        background-color: #fcfcfc;
         cursor: pointer; }
       .masthead .container .nav-collapse ul.nav.nav-secondary li a, .masthead .container .nav-collapse ul.nav.nav-secondary li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead .container .nav-collapse ul.nav.nav-secondary li #publisher-tree > ul > li {
         font-size: 15px;
@@ -737,9 +794,9 @@ ul.nav {
       .masthead .navigation ul.nav li ul.nav.dropdown-menu.collapse li.active {
         background-color: #69737c; }
       .masthead .navigation ul.nav li ul.nav.dropdown-menu.in.collapse li.active {
-        background-color: #fff; }
+        background-color: #fcfcfc; }
       .masthead .navigation ul.nav li ul.nav.dropdown-menu li, .masthead .navigation ul.nav li ul.nav.dropdown-menu li:hover {
-        background-color: #FFF; }
+        background-color: #fcfcfc; }
       .masthead .navigation ul.nav li ul.nav.dropdown-menu li {
         margin-top: 0px;
         padding-left: 15px; }
@@ -777,7 +834,7 @@ ul.nav {
     right: 47px; }
 
   .masthead hgroup h1 {
-    margin-top: -56px;
+    margin-top: 5px;
     margin-left: -5px;
     letter-spacing: 0px;
     background: none;
@@ -828,7 +885,9 @@ ul.nav {
     margin-top: 20px;
     height: 49px;
     width: 48px;
-    border-radius: 0; }
+    border-radius: 0;
+    background-color: #69737c;
+    box-shadow: 0 2px 0 #44505b; }
 
   .dwga-search .site-search .field button .icon-search:before {
     margin-left: 4px;
@@ -845,9 +904,11 @@ ul.nav {
     .container-header .navbar .nav-collapse nav ul.nav li a.btndropdesctop, .container-header .navbar .nav-collapse nav ul.nav li .datawa-organization-list #publisher-tree > ul > li.btndropdesctop, .datawa-organization-list .container-header .navbar .nav-collapse nav ul.nav li #publisher-tree > ul > li.btndropdesctop {
       display: none; }
 
-  /* .container-header .navbar .nav-collapse nav ul.nav li a.btndropdesctop {
-    display: none;
-  } */
+  #dwga-header-container button.btn.btn-navbar {
+    height: 47px;
+    padding-bottom: 5px;
+    padding-top: 33px; }
+
   .account-masthead.container-header {
     display: none; }
 
@@ -859,11 +920,14 @@ ul.nav {
     font-size: 16px; }
 
   .masthead hgroup h1 {
-    margin-top: 0px; }
+    margin-top: 5px;
+    margin-left: -19px; }
 
   .masthead hgroup h3 {
     font-size: 8px;
-    margin-left: 8px; }
+    margin-top: 6px;
+    margin-left: -6px;
+    letter-spacing: 0.1px; }
 
   .account-masthead .account.not-authed {
     margin-right: 15px; }
@@ -872,6 +936,9 @@ ul.nav {
     margin-bottom: 0; }
   .container-header .masthead .container .nav-collapse.in.collapse ul.nav li ul.dropdown-menu {
     display: none; } }
+@media (max-width: 320px) {
+  .masthead hgroup h1 {
+    margin-top: -52px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
@@ -1285,7 +1352,8 @@ and "Search Your Data" boxes line up. */
   padding-bottom: 0px; }
 
 .homepage .module-search {
-  padding: 0px; }
+  padding: 0px;
+  margin: 0; }
 
 /* Bottom half of front page for featured orgs/groups */
 .homepage [role="main"] {
