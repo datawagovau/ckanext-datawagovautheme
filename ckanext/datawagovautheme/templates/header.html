@@ -81,12 +81,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    
+
     <hgroup class="row dwga-header-row"><!-- Force  navbar into new row -->
 
       {% block header_logo %}
 				<div class="dwga-logo dwga-inlineblock">
-  				<a class="logo pull-left" href="{{ h.url('home') }}"><img 
+  				<a class="logo pull-left" href="{{ h.url('home') }}"><img
 						src="{{ 'Logo_n.png' }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
 				</div>
     		<div class="dwga-title dwga-inlineblock">
@@ -98,7 +98,7 @@
 
       {% block header_site_search %}
 			<div class="dwga-search dwga-inlineblock">
-        <form class="site-search simple-input" 
+        <form class="site-search simple-input"
 					action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
@@ -118,17 +118,16 @@
           <ul class="nav">
             <li><a href="http://data.wa.gov.au">Home</a></li>
             <li>
-              <a href="/" class="btndropdesctop">Data</a>
-              <a data-toggle = "collapse" data-target=".dropdown-menu" class="btndropresponsive">Data</a>
-              <ul class="nav dropdown-menu">
+              <a data-toggle="collapse" data-target="#hader-dropdown" class="header-parent-menu">Data</a>
+              <ul class="nav dropdown-menu collapse header-child-menu" id="#hader-dropdown">
                 {% block header_site_navigation_tabs %}
-                {{ h.build_nav_main(
-                  ('home', _('Data Home')),
-                  ('search', _('Datasets')),
-                  ('organizations_index', _('Organizations')),
-                  ('group_index', _('Groups')),
-                  ('about', _('About'))
-                ) }}
+                  {{ h.build_nav_main(
+                    ('home', _('Data Home')),
+                    ('search', _('Datasets')),
+                    ('organizations_index', _('Organizations')),
+                    ('group_index', _('Groups')),
+                    ('about', _('About'))
+                  ) }}
                 {% endblock %}
                 <li><a href="http://map.beta.data.wa.gov.au/">WA Map</a></li>
               </ul>
@@ -142,14 +141,26 @@
           </ul>
         </nav>
       {% endblock %}
-      <ul class="nav nav-secondary">
+  {#     <ul class="nav nav-secondary">
         <li><a href="http://data.wa.gov.au/site-map/site-map-listing">Site map</a><li>
         <li><a href="http://data.wa.gov.au/accessibility">Accessibility</a></li>
         <li><a href="http://data.wa.gov.au/contact-us">Contact us</a></li>
-      </ul>
+      </ul> #}
     </div><!-- .nav-collapse collapse pull-left -->
 
   </div>
 </header>
+<ul class="nav header-secondary-menu">
+  {% block header_site_secondary_tabs %}
+    {{ h.build_nav_main(
+      ('home', _('Data Home')),
+      ('search', _('Datasets')),
+      ('organizations_index', _('Organizations')),
+      ('group_index', _('Groups')),
+      ('about', _('About'))
+    ) }}
+  {% endblock %}
+  <li><a href="http://map.beta.data.wa.gov.au/">WA Map</a></li>
+</ul>
 </div>
 {% endblock %}
