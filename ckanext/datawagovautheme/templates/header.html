@@ -90,7 +90,7 @@
 						src="{{ 'Logo_n.png' }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
 				</div>
     		<div class="dwga-title dwga-inlineblock">
-          <h1><a href="{{ 'data.wa.gov.au' }}">{{ 'data.wa.gov.au' }}</a></h1>
+          <h1><a href="{{ 'http://data.wa.gov.au' }}">{{ 'data.wa.gov.au' }}</a></h1>
 					<h3>Providing access to WA government data</h3>
           <!--h1><small>{{ g.site_description }}</small></h1-->
 	  		</div>
@@ -120,7 +120,7 @@
             <li>
               <a href="/" class="btndropdesctop">Data</a>
               <a data-toggle = "collapse" data-target=".dropdown-menu" class="btndropresponsive">Data</a>
-              <ul class="nav dropdown-menu">
+              <ul class="nav dropdown-menu collapse">
                 {% block header_site_navigation_tabs %}
                 {{ h.build_nav_main(
                   ('home', _('Data Home')),
