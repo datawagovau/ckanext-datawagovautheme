@@ -876,7 +876,8 @@ ul.nav {
       .masthead .navigation ul.nav li ul.nav.dropdown-menu.collapse {
         height: 0; }
       .masthead .navigation ul.nav li ul.nav.dropdown-menu li, .masthead .navigation ul.nav li ul.nav.dropdown-menu li:hover {
-        background-color: #fcfcfc; }
+        background-color: #fcfcfc;
+        margin-bottom: -2px; }
       .masthead .navigation ul.nav li ul.nav.dropdown-menu li {
         margin-top: 0px;
         padding-left: 15px; }
@@ -887,6 +888,9 @@ ul.nav {
       background: none; }
     .masthead .navigation ul.nav li ul.dropdown-menu li:last-child {
       padding-bottom: 0px; }
+
+  .masthead .navigation ul.nav li:hover {
+    border-bottom: 0; }
 
   .simple-input .field {
     padding: 20px 15px 20px 15px;
@@ -1055,8 +1059,13 @@ ul.nav {
       border-left: 20px solid #69737c; }
       .masthead .navigation ul.nav li ul.nav.dropdown-menu li {
         padding-left: 15px; }
+      .masthead .navigation ul.nav li ul.nav.dropdown-menu li a:hover, .masthead .navigation ul.nav li ul.nav.dropdown-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead .navigation ul.nav li ul.nav.dropdown-menu li #publisher-tree > ul > li:hover {
+        margin-bottom: -2px; }
     .masthead .navigation ul.nav li.collapse {
       height: 0; }
+
+  .masthead .navigation ul.nav li:hover {
+    border-bottom: 0; }
 
   .masthead .navigation ul.nav li ul.nav.dropdown-menu.collapse {
     height: 0; }
@@ -1175,6 +1184,9 @@ ul.nav {
     font-family: "Open Sans";
     font-weight: 600;
     letter-spacing: -0.6px; } }
+@media (max-width: 400px) {
+  .masthead hgroup h1 {
+    margin-top: -54px; } }
 @media (max-width: 385px) {
   [role="main"] {
     z-index: -1;
