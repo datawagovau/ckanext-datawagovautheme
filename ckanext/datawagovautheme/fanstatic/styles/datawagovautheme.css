@@ -1398,7 +1398,8 @@ body, html {
 @media (min-width: 1500px) {
   #content,
   .homepage [role="main"] .container {
-    padding-left: 48px; } }
+    padding-left: 48px;
+    padding-right: 105px; } }
 @-moz-document url-prefix() {
   .form-select.control-order-by {
     position: relative; }
