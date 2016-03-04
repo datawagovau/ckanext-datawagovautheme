@@ -412,11 +412,12 @@ ul.nav {
     .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
       color: #69737c;
       text-decoration: none; }
+  .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+    margin: 18px 0 10px 28px; }
   .masthead #dwga-header-container .dwga-title h3 {
     display: inline-block;
-    font-size: 28px; }
-  .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
-    margin: 15px 0 15px 20px; }
+    font-size: 28px;
+    margin-top: 5px; }
   @media (max-width: 979px) and (min-width: 768px) {
     .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
       margin-top: 8px;
@@ -453,6 +454,10 @@ ul.nav {
           width: 100%; }
           .masthead #dwga-header-container .dwga-search form.site-search #field-sitewide-search {
             width: 100%; } }
+    @media (max-width: 1099px) and (min-width: 980px) {
+      .masthead #dwga-header-container .dwga-search {
+        top: 4px;
+        margin-bottom: 31px; } }
     .masthead #dwga-header-container .dwga-search .site-search {
       width: 394px;
       height: 44px;
@@ -495,11 +500,11 @@ ul.nav {
           color: #fff; }
         .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
           font-size: 28px; }
-      @media (max-width: 1024px) {
+      @media (max-width: 1099px) {
         .masthead #dwga-header-container .dwga-search .site-search {
-          width: 218px; }
+          width: 273px; }
           .masthead #dwga-header-container .dwga-search .site-search .field input {
-            width: 210px; }
+            width: 240px; }
           .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
             width: 55px; } }
 
@@ -535,7 +540,7 @@ ul.nav {
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       font-size: 15px;
-      padding: 9px 25.8px 8px; }
+      padding: 9px 27px 8px; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover, .container-header .secondary-menu-navbar .header-secondary-menu li a.active, .nav-collapse .navigation .nav li a.active, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li.active, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li.active, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.active, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.active {
         border-bottom: 2px solid #69737c; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
@@ -567,8 +572,8 @@ ul.nav {
   .container-header .masthead .container,
   .container-header .secondary-menu-navbar .container,
   .container-header .navbar-static-top .container {
-    width: 1060px; } }
-@media (max-width: 1499px) and (min-width: 1100px) {
+    width: 1100px; } }
+@media (max-width: 1279px) and (min-width: 1100px) {
   .account-masthead .container,
   .container-header .masthead .container,
   .container-header .secondary-menu-navbar .container,
@@ -586,14 +591,14 @@ ul.nav {
 
 @media (min-width: 1500px) {
   .account-masthead .container {
-    padding-right: 8px; } }
+    padding-right: 1px; } }
 @media (max-width: 1279px) and (min-width: 980px) {
   .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li,
   .nav-collapse .navigation .nav li a,
   .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li,
   .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
-    padding-left: 19.7px;
-    padding-right: 19.7px; } }
+    padding-left: 19.6px;
+    padding-right: 19.6px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
@@ -1053,7 +1058,7 @@ body, html {
 @media (min-width: 1500px) {
   #content,
   .homepage [role="main"] .container {
-    padding-left: 48px;
+    padding-left: 38px;
     padding-right: 105px; } }
 @-moz-document url-prefix() {
   .form-select.control-order-by {
@@ -1131,7 +1136,7 @@ body, html {
   .container {
     width: 917px; }
     .container#content, .container.homepage [role="main"] .container {
-      padding-right: 21px; }
+      padding-right: 38px; }
 
   .site-footer .container {
     width: 1020px; }
@@ -1153,7 +1158,7 @@ body, html {
   .container {
     width: 762px; }
     .container#content, .container.homepage [role="main"] .container {
-      padding-right: 6px; }
+      padding-right: 10px; }
 
   .site-footer .container {
     width: 860px; }

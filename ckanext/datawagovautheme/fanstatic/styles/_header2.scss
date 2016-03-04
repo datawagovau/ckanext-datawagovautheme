@@ -23,7 +23,7 @@
           &.hide-mobile{
             display: none;
           }
-          
+
         }
         &:hover{
           a{
@@ -95,7 +95,7 @@
             }
             &.active a{
               background: #fff;
-            } 
+            }
           }
         }
         .nav-secondary{
@@ -189,13 +189,15 @@
           text-decoration: none;
         }
       }
+      h1, h3{
+        margin: 18px 0 10px 28px;;
+      }
       h3{
         display: inline-block;
         font-size: 28px;
+        margin-top: 5px;
       }
-      h1, h3{
-        margin: 15px 0 15px 20px;;
-      }
+
       @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
         h1, h3{
 
@@ -242,6 +244,10 @@
           }
         }
       }
+      @media (max-width: $desktop-top) and (min-width: $tablet-top + 1px){
+        top: 4px;
+        margin-bottom: 31px;
+      }
       .site-search{
         width: 394px;
         height: 44px;
@@ -280,11 +286,11 @@
             }
           }
         }
-        @media (max-width: 1024px) {
-          width: 218px;
+        @media (max-width: $desktop-top) {
+          width: 273px;
           .field{
             input{
-              width: 210px;
+              width: 240px;
             }
             .btn-search{
               width: 55px;
@@ -337,7 +343,7 @@
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       font-size: 15px;
-      padding: 9px 25.8px 8px;
+      padding: 9px 27px 8px;
       &:hover, &.active{
         border-bottom: 2px solid $h-color;
       }
@@ -386,9 +392,9 @@
       box-sizing: border-box;
     }
     @media(max-width: $hd-top) and (min-width: $wide-top + 1px){
-      width: 1060px;
+      width: 1100px;
     }
-    @media(max-width: $hd-top) and (min-width: $desktop-top + 1px){
+    @media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
       width: 1060px;
     }
     @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px){
@@ -402,7 +408,7 @@
 @media(min-width: $hd-top + 1px){
   .account-masthead{
     .container{
-      padding-right: 8px;
+      padding-right: 1px;
     }
   }
 }
@@ -411,8 +417,8 @@
   .nav-collapse .navigation .nav{
     li{
       a{
-        padding-left: 19.7px;
-        padding-right: 19.7px;
+        padding-left: 19.6px;
+        padding-right: 19.6px;
       }
     }
   }

@@ -109,7 +109,7 @@ body, html{
 @media(min-width: $hd-top + 1px){
   #content,
   .homepage [role="main"] .container{
-    padding-left: 48px;
+    padding-left: 38px;
     padding-right: 105px;
   }
 }
@@ -211,7 +211,7 @@ body, html{
     width: 917px;
     &#content,
     &.homepage [role="main"] .container{
-      padding-right: 21px;
+      padding-right: 38px;
     }
   }
   .site-footer .container{
@@ -240,7 +240,7 @@ body, html{
     width: 762px;
     &#content,
     &.homepage [role="main"] .container{
-      padding-right: 6px;
+      padding-right: 10px;
     }
   }
   .site-footer .container{
