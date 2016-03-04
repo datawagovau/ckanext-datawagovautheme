@@ -57,9 +57,9 @@
               {% if h.check_access('user_create') %}
                 <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
-              <li><a class="sub">Site map</a></li>
-              <li><a class="sub">Accessibility</a></li>
-              <li><a class="sub">Contact us</a></li>
+              <li class="hide-mobile"><a class="sub">Site map</a></li>
+              <li class="hide-mobile"><a class="sub">Accessibility</a></li>
+              <li class="hide-mobile"><a class="sub">Contact us</a></li>
               {% endblock %}
             </ul>
           </nav>
@@ -81,12 +81,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    
+
     <hgroup class="row dwga-header-row"><!-- Force  navbar into new row -->
 
       {% block header_logo %}
 				<div class="dwga-logo dwga-inlineblock">
-  				<a class="logo pull-left" href="{{ h.url('home') }}"><img 
+  				<a class="logo pull-left" href="{{ h.url('home') }}"><img
 						src="{{ 'Logo_n.png' }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
 				</div>
     		<div class="dwga-title dwga-inlineblock">
@@ -98,7 +98,7 @@
 
       {% block header_site_search %}
 			<div class="dwga-search dwga-inlineblock">
-        <form class="site-search simple-input" 
+        <form class="site-search simple-input"
 					action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
@@ -118,17 +118,16 @@
           <ul class="nav">
             <li><a href="http://data.wa.gov.au">Home</a></li>
             <li>
-              <a href="/" class="btndropdesctop">Data</a>
-              <a data-toggle = "collapse" data-target=".dropdown-menu" class="btndropresponsive">Data</a>
-              <ul class="nav dropdown-menu collapse">
+              <a href="#header-dropdown" data-toggle="collapse"  class="header-parent-menu active collapsed">Data</a>
+              <ul class="nav header-child-menu collapse" id="header-dropdown">
                 {% block header_site_navigation_tabs %}
-                {{ h.build_nav_main(
-                  ('home', _('Data Home')),
-                  ('search', _('Datasets')),
-                  ('organizations_index', _('Organizations')),
-                  ('group_index', _('Groups')),
-                  ('about', _('About'))
-                ) }}
+                  {{ h.build_nav_main(
+                    ('home', _('Data Home')),
+                    ('search', _('Datasets')),
+                    ('organizations_index', _('Organizations')),
+                    ('group_index', _('Groups')),
+                    ('about', _('About'))
+                  ) }}
                 {% endblock %}
                 <li><a href="http://map.beta.data.wa.gov.au/">WA Map</a></li>
               </ul>
@@ -142,7 +141,7 @@
           </ul>
         </nav>
       {% endblock %}
-      <ul class="nav nav-secondary">
+      <ul class="nav nav-secondary hide-desktop">
         <li><a href="http://data.wa.gov.au/site-map/site-map-listing">Site map</a><li>
         <li><a href="http://data.wa.gov.au/accessibility">Accessibility</a></li>
         <li><a href="http://data.wa.gov.au/contact-us">Contact us</a></li>
@@ -151,5 +150,21 @@
 
   </div>
 </header>
+<div class="navbar-static-top secondary-menu-navbar hide-mobile">
+  <div class="container">
+    <ul class="nav header-secondary-menu">
+      {% block header_site_secondary_tabs %}
+        {{ h.build_nav_main(
+          ('home', _('Data Home')),
+          ('search', _('Datasets')),
+          ('organizations_index', _('Organizations')),
+          ('group_index', _('Groups')),
+          ('about', _('About'))
+        ) }}
+      {% endblock %}
+      <li><a href="http://map.beta.data.wa.gov.au/">WA Map</a></li>
+    </ul>
+  </div>
+</div>
 </div>
 {% endblock %}
