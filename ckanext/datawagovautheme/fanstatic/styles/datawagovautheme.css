@@ -291,6 +291,9 @@ ul.nav {
     padding-bottom: 12px; }
     .account-masthead .account ul li {
       border: none; }
+      @media (max-width: 979px) {
+        .account-masthead .account ul li.hide-mobile {
+          display: none; } }
       .account-masthead .account ul li:hover a, .account-masthead .account ul li:hover .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li:hover #publisher-tree > ul > li {
         background: none;
         color: #565656;
@@ -309,77 +312,221 @@ ul.nav {
   background: #fcfcfc;
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #efefef; }
-  .masthead #dwga-header-container {
-    height: 204px; }
-    .masthead #dwga-header-container .dwga-logo {
-      width: 102px;
-      height: 102px;
-      margin-left: 20px;
-      margin-top: 8px;
-      float: left;
-      background: url("/Logo_n.png") 50% 50% no-repeat; }
-      .masthead #dwga-header-container .dwga-logo:hover {
-        background: url("/Logo_r.png") 50% 50% no-repeat; }
-      .masthead #dwga-header-container .dwga-logo .logo {
+  @media (max-width: 979px) {
+    .masthead .section {
+      float: none; } }
+  .masthead #dwga-header-container .dwga-header-row {
+    position: relative; }
+  @media (min-width: 980px) {
+    .masthead #dwga-header-container {
+      height: 204px; }
+      .masthead #dwga-header-container .hide-desktop {
         display: none; }
-    .masthead #dwga-header-container .dwga-title {
-      max-width: 50%; }
-      .masthead #dwga-header-container .dwga-title h1 {
-        float: none;
-        font-size: 35px;
-        font-weight: 600;
-        line-height: 1.25em; }
-        .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
+      .masthead #dwga-header-container .nav-collapse {
+        float: none; } }
+  @media (max-width: 979px) {
+    .masthead #dwga-header-container .in.collapse {
+      margin-left: -20px;
+      margin-right: -20px;
+      background: #69737c;
+      border-bottom: 1px solid #efefef; }
+      .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu {
+        margin: 0;
+        background: #f5f6f7;
+        margin-left: 20px; }
+        .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li a, .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li #publisher-tree > ul > li {
+          padding-left: 40px;
           color: #69737c;
-          text-decoration: none; }
-      .masthead #dwga-header-container .dwga-title h3 {
-        display: inline-block;
-        font-size: 28px; }
-      .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
-        margin: 15px 0 15px 20px; }
-    .masthead #dwga-header-container .dwga-search {
-      float: right;
-      margin-top: 10px;
-      margin-right: 20px; }
-      .masthead #dwga-header-container .dwga-search .site-search {
-        width: 337px;
-        height: 44px;
-        float: right;
-        margin: 0; }
-        .masthead #dwga-header-container .dwga-search .site-search .field input {
-          box-sizing: border-box;
-          border: 1px solid #c7cacd;
-          border-radius: 0px;
-          height: 42px;
-          width: 320px;
-          padding: 0 5px;
-          margin: 0;
-          font-family: "Open Sans", sans-serif;
-          font-size: 14px;
-          color: #565656; }
-        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
-          background: #95c677;
-          border-bottom: 2px solid #7bb855;
-          display: block;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          margin: 0;
-          height: auto;
-          width: 100px; }
-          .masthead #dwga-header-container .dwga-search .site-search .field .btn-search:hover {
-            background: #87be65; }
-          .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
-            color: #fff; }
-          .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
-            font-size: 28px; }
-    .masthead #dwga-header-container .navigation .nav li {
-      display: inline-block; }
-      .masthead #dwga-header-container .navigation .nav li a, .masthead #dwga-header-container .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .navigation .nav li #publisher-tree > ul > li {
-        color: #69737c; }
-    .masthead #dwga-header-container .navigation .header-child-menu {
+          margin-left: 0;
+          box-shadow: none; }
+        .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li.active a, .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li.active #publisher-tree > ul > li {
+          background: #fff; }
+      .masthead #dwga-header-container .in.collapse .nav-secondary {
+        background: #fefefe;
+        margin-bottom: -2px; }
+        .masthead #dwga-header-container .in.collapse .nav-secondary li a, .masthead #dwga-header-container .in.collapse .nav-secondary li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav-secondary li #publisher-tree > ul > li {
+          font-weight: 400;
+          color: #69737c; }
+      .masthead #dwga-header-container .in.collapse .nav li a, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li {
+        font-size: 15px;
+        padding: 3px 20px;
+        text-shadow: none;
+        font-weight: 600;
+        font-family: "Open Sans", sans-serif;
+        margin-left: 20px; }
+        .masthead #dwga-header-container .in.collapse .nav li a:hover, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li:hover, .masthead #dwga-header-container .in.collapse .nav li a:focus, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li:focus {
+          background: none; }
+        .masthead #dwga-header-container .in.collapse .nav li a.header-parent-menu, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li.header-parent-menu, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li.header-parent-menu {
+          background: #f5f6f7;
+          border-radius: 0;
+          color: #69737c; }
+          .masthead #dwga-header-container .in.collapse .nav li a.header-parent-menu.collapsed, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li.header-parent-menu.collapsed, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li.header-parent-menu.collapsed {
+            color: #fff;
+            background: transparent; } }
+  .masthead #dwga-header-container .btn-navbar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    border-radius: 0;
+    background: #69737c;
+    width: 48px;
+    height: 47px;
+    border-bottom: 2px solid #44505b; }
+    .masthead #dwga-header-container .btn-navbar .icon-bar {
+      margin-left: auto;
+      margin-right: auto;
+      height: 3px;
+      box-shadow: none; }
+  .masthead #dwga-header-container .dwga-logo {
+    width: 102px;
+    height: 102px;
+    margin-left: 20px;
+    margin-top: 8px;
+    float: left;
+    background: url("/Logo_n.png") 50% 50% no-repeat; }
+    @media (max-width: 979px) {
+      .masthead #dwga-header-container .dwga-logo {
+        width: 80px;
+        height: 78px;
+        margin: 6px 0 24px; } }
+    .masthead #dwga-header-container .dwga-logo:hover {
+      background: url("/Logo_r.png") 50% 50% no-repeat; }
+    .masthead #dwga-header-container .dwga-logo .logo {
       display: none; }
+  .masthead #dwga-header-container .dwga-title {
+    max-width: 50%; }
+    .masthead #dwga-header-container .dwga-title h1 {
+      float: none;
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 1.25em; }
+      .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
+        color: #69737c;
+        text-decoration: none; }
+    .masthead #dwga-header-container .dwga-title h3 {
+      display: inline-block;
+      font-size: 28px; }
+    .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+      margin: 15px 0 15px 20px; }
+    @media (max-width: 979px) {
+      .masthead #dwga-header-container .dwga-title h1 {
+        font-size: 16px;
+        margin-bottom: 22px; }
+      .masthead #dwga-header-container .dwga-title h3 {
+        font-size: 8px; } }
+  .masthead #dwga-header-container .dwga-search {
+    /* float: right; */
+    top: 10px;
+    position: absolute;
+    right: 20px; }
+    @media (max-width: 979px) {
+      .masthead #dwga-header-container .dwga-search {
+        position: relative;
+        float: none;
+        display: block;
+        width: 100%;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -10px;
+        background: #69737c;
+        padding: 20px; }
+        .masthead #dwga-header-container .dwga-search form.site-search {
+          display: block;
+          float: none;
+          width: 100%; }
+          .masthead #dwga-header-container .dwga-search form.site-search #field-sitewide-search {
+            width: 100%; } }
+    .masthead #dwga-header-container .dwga-search .site-search {
+      width: 394px;
+      height: 44px;
+      float: right;
+      margin: 0; }
+      .masthead #dwga-header-container .dwga-search .site-search .field input {
+        box-sizing: border-box;
+        border: 1px solid #c7cacd;
+        border-radius: 0px;
+        height: 42px;
+        width: 380px;
+        padding: 0 5px;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #565656; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input::-webkit-input-placeholder {
+          color: #565656; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input::-moz-placeholder {
+          color: #565656;
+          opacity: 1; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input:-moz-placeholder {
+          color: #565656;
+          opacity: 1; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input:-ms-input-placeholder {
+          color: #565656; }
+      .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
+        background: #95c677;
+        border-bottom: 2px solid #7bb855;
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        height: auto;
+        width: 100px; }
+        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search:hover {
+          background: #87be65; }
+        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
+          color: #fff; }
+        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
+          font-size: 28px; }
 
+.container-header .secondary-menu-navbar {
+  background: #f5f6f7;
+  margin-top: -1px;
+  border-bottom: 1px solid #efefef; }
+  .container-header .secondary-menu-navbar .header-secondary-menu {
+    height: 121px;
+    margin-bottom: 0;
+    display: table-cell;
+    vertical-align: middle; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li {
+      padding-bottom: 0;
+      display: inline-block; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li {
+        border-bottom: 2px solid #69737c; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
+        text-decoration: none; }
+
+@media (min-width: 980px) {
+  html body .hide-desktop {
+    display: none; }
+
+  .container-header .secondary-menu-navbar .header-secondary-menu li, .nav-collapse .navigation .nav li {
+    display: inline-block;
+    padding-bottom: 18px; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li a, .nav-collapse .navigation .nav li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+      border-bottom: 2px solid transparent;
+      color: #69737c;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 9px 25.8px 8px; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover, .container-header .secondary-menu-navbar .header-secondary-menu li a.active, .nav-collapse .navigation .nav li a.active, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li.active, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li.active, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.active, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.active {
+        border-bottom: 2px solid #69737c; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
+        background: #f5f6f7; }
+
+  .nav-collapse {
+    float: none; }
+    .nav-collapse .navigation {
+      margin-right: 0; }
+      .nav-collapse .navigation .nav {
+        margin-right: 0; }
+      .nav-collapse .navigation .header-child-menu {
+        display: none; } }
+@media (max-width: 979px) {
+  .hide-mobile {
+    display: none; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
