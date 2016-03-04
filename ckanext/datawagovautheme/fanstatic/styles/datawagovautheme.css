@@ -423,6 +423,8 @@ ul.nav {
       margin-top: 8px;
       margin-bottom: 6px; } }
   @media (max-width: 767px) {
+    .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+      margin-left: 10px; }
     .masthead #dwga-header-container .dwga-title h1 {
       font-size: 16px;
       margin-bottom: 22px; }
