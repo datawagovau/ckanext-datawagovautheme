@@ -284,6 +284,13 @@ ul.nav {
 
 .account-masthead {
   background: #FEFEFE; }
+  .account-masthead .container {
+    box-sizing: border-box; }
+    @media (max-width: 979px) {
+      .account-masthead .container {
+        width: auto;
+        padding-right: 20px;
+        padding-left: 20px; } }
   .account-masthead .account {
     height: 39px;
     box-sizing: border-box;
@@ -365,6 +372,7 @@ ul.nav {
             background: transparent; } }
   .masthead #dwga-header-container .btn-navbar {
     position: absolute;
+    z-index: 1;
     right: 20px;
     top: 20px;
     margin: 0;
@@ -381,45 +389,53 @@ ul.nav {
   .masthead #dwga-header-container .dwga-logo {
     width: 102px;
     height: 102px;
-    margin-left: 20px;
+    /*  left: 20px; */
     margin-top: 8px;
     float: left;
-    background: url("/Logo_n.png") 50% 50% no-repeat; }
+    background: url("/Logo_n.png") 50% 50% no-repeat;
+    background-size: contain; }
     @media (max-width: 979px) {
       .masthead #dwga-header-container .dwga-logo {
         width: 80px;
         height: 78px;
         margin: 6px 0 24px; } }
     .masthead #dwga-header-container .dwga-logo:hover {
-      background: url("/Logo_r.png") 50% 50% no-repeat; }
+      background: url("/Logo_r.png") 50% 50% no-repeat;
+      background-size: contain; }
     .masthead #dwga-header-container .dwga-logo .logo {
       display: none; }
-  .masthead #dwga-header-container .dwga-title {
-    max-width: 50%; }
-    .masthead #dwga-header-container .dwga-title h1 {
-      float: none;
-      font-size: 35px;
-      font-weight: 600;
-      line-height: 1.25em; }
-      .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
-        color: #69737c;
-        text-decoration: none; }
-    .masthead #dwga-header-container .dwga-title h3 {
-      display: inline-block;
-      font-size: 28px; }
+  .masthead #dwga-header-container .dwga-title h1 {
+    float: none;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.25em; }
+    .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
+      color: #69737c;
+      text-decoration: none; }
+  .masthead #dwga-header-container .dwga-title h3 {
+    display: inline-block;
+    font-size: 28px; }
+  .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+    margin: 15px 0 15px 20px; }
+  @media (max-width: 979px) and (min-width: 768px) {
     .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
-      margin: 15px 0 15px 20px; }
-    @media (max-width: 979px) {
-      .masthead #dwga-header-container .dwga-title h1 {
-        font-size: 16px;
-        margin-bottom: 22px; }
-      .masthead #dwga-header-container .dwga-title h3 {
-        font-size: 8px; } }
+      margin-top: 8px;
+      margin-bottom: 6px; } }
+  @media (max-width: 767px) {
+    .masthead #dwga-header-container .dwga-title h1 {
+      font-size: 16px;
+      margin-bottom: 22px; }
+    .masthead #dwga-header-container .dwga-title h3 {
+      font-size: 8px; } }
   .masthead #dwga-header-container .dwga-search {
     /* float: right; */
     top: 10px;
     position: absolute;
-    right: 20px; }
+    right: 0; }
+    @media (max-width: 1099px) {
+      .masthead #dwga-header-container .dwga-search {
+        position: relative;
+        float: right; } }
     @media (max-width: 979px) {
       .masthead #dwga-header-container .dwga-search {
         position: relative;
@@ -479,6 +495,13 @@ ul.nav {
           color: #fff; }
         .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
           font-size: 28px; }
+      @media (max-width: 1024px) {
+        .masthead #dwga-header-container .dwga-search .site-search {
+          width: 218px; }
+          .masthead #dwga-header-container .dwga-search .site-search .field input {
+            width: 210px; }
+          .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
+            width: 55px; } }
 
 .container-header .secondary-menu-navbar {
   background: #f5f6f7;
@@ -494,6 +517,8 @@ ul.nav {
       display: inline-block; }
       .container-header .secondary-menu-navbar .header-secondary-menu li.active a, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li {
         border-bottom: 2px solid #69737c; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:focus, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:focus {
+        background: transparent; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
         text-decoration: none; }
 
@@ -526,7 +551,49 @@ ul.nav {
         display: none; } }
 @media (max-width: 979px) {
   .hide-mobile {
-    display: none; } }
+    display: none; }
+
+  .nav-collapse .nav {
+    margin-bottom: 20px; } }
+@media (min-width: 1500px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 1280px;
+    box-sizing: border-box; } }
+@media (max-width: 1499px) and (min-width: 1280px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 1060px; } }
+@media (max-width: 1499px) and (min-width: 1100px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 1060px; } }
+@media (max-width: 1099px) and (min-width: 980px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 900px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; } }
+
+@media (min-width: 1500px) {
+  .account-masthead .container {
+    padding-right: 8px; } }
+@media (max-width: 1279px) and (min-width: 980px) {
+  .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li,
+  .nav-collapse .navigation .nav li a,
+  .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li,
+  .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+    padding-left: 19.7px;
+    padding-right: 19.7px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */

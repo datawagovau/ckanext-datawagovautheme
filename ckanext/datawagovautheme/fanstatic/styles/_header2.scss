@@ -1,5 +1,13 @@
 
 .account-masthead{
+  .container{
+    box-sizing: border-box;
+    @media(max-width: $tablet-top){
+      width: auto;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
   background: #FEFEFE;
   .account{
     height: 39px;
@@ -128,6 +136,7 @@
     }
     .btn-navbar{
       position: absolute;
+      z-index: 1;
       right: 20px;
       top: 20px;
       margin: 0;
@@ -147,7 +156,7 @@
       width: 102px;
       height: 102px;
       margin: {
-        left: 20px;
+       /*  left: 20px; */
         top: 8px;
       }
       @media(max-width: $tablet-top){
@@ -157,15 +166,17 @@
       }
       float: left;
       background: url("/Logo_n.png") 50% 50% no-repeat;
+      background-size: contain;
       &:hover{
         background: url("/Logo_r.png") 50% 50% no-repeat;
+        background-size: contain;
       }
       .logo{
         display: none;
       }
     }
     .dwga-title{
-      max-width: 50%;
+      // max-width: 50%;
       h1{
         float: none;
         font: {
@@ -185,7 +196,15 @@
       h1, h3{
         margin: 15px 0 15px 20px;;
       }
-      @media(max-width: $tablet-top){
+      @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
+        h1, h3{
+
+          margin-top: 8px;
+
+          margin-bottom: 6px;
+        }
+      }
+      @media(max-width: $mobile-top){
         h1{
           font-size: 16px;
           margin-bottom: 22px;
@@ -199,7 +218,11 @@
       /* float: right; */
       top: 10px;
       position: absolute;
-      right: 20px;
+      right: 0;
+      @media(max-width: $desktop-top){
+        position: relative;
+        float: right;
+      }
       @media(max-width: $tablet-top){
         position: relative;
         float: none;
@@ -257,6 +280,17 @@
             }
           }
         }
+        @media (max-width: 1024px) {
+          width: 218px;
+          .field{
+            input{
+              width: 210px;
+            }
+            .btn-search{
+              width: 55px;
+            }
+          }
+        }
       }
     }
   }
@@ -277,6 +311,9 @@
         display: inline-block;
         &.active a{
           border-bottom: 2px solid $h-color;
+        }
+        a:focus{
+          background: transparent;
         }
         a{
           text-decoration: none;
@@ -330,5 +367,53 @@
 @media(max-width: $tablet-top){
   .hide-mobile{
     display: none;
+  }
+  .nav-collapse{
+    .nav{
+      margin-bottom: 20px
+    }
+  }
+}
+
+
+.account-masthead,
+.container-header .masthead,
+.container-header .secondary-menu-navbar,
+.container-header .navbar-static-top{
+  .container{
+    @media(min-width: $hd-top + 1px){
+      width: 1280px;
+      box-sizing: border-box;
+    }
+    @media(max-width: $hd-top) and (min-width: $wide-top + 1px){
+      width: 1060px;
+    }
+    @media(max-width: $hd-top) and (min-width: $desktop-top + 1px){
+      width: 1060px;
+    }
+    @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px){
+      width: 900px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
+}
+@media(min-width: $hd-top + 1px){
+  .account-masthead{
+    .container{
+      padding-right: 8px;
+    }
+  }
+}
+@media(max-width: $wide-top) and (min-width: $tablet-top + 1px){
+  .container-header .secondary-menu-navbar .header-secondary-menu ,
+  .nav-collapse .navigation .nav{
+    li{
+      a{
+        padding-left: 19.7px;
+        padding-right: 19.7px;
+      }
+    }
   }
 }
