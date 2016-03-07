@@ -330,7 +330,8 @@ ul.nav {
       .masthead #dwga-header-container .hide-desktop {
         display: none; }
       .masthead #dwga-header-container .nav-collapse {
-        float: none; } }
+        float: none;
+        padding-top: 28px; } }
   @media (max-width: 979px) {
     .masthead #dwga-header-container .in.collapse {
       margin-left: -20px;
@@ -411,7 +412,8 @@ ul.nav {
     line-height: 1.25em; }
     .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
       color: #69737c;
-      text-decoration: none; }
+      text-decoration: none;
+      letter-spacing: 0; }
   .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
     margin: 18px 0 10px 28px; }
   .masthead #dwga-header-container .dwga-title h3 {

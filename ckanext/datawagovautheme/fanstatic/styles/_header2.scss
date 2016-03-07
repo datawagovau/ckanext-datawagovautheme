@@ -74,6 +74,7 @@
       }
       .nav-collapse{
         float: none;
+        padding-top: 28px;
       }
     }
     @media(max-width: $tablet-top){
@@ -187,6 +188,7 @@
         a{
           color: $h-color;
           text-decoration: none;
+          letter-spacing: 0;
         }
       }
       h1, h3{
