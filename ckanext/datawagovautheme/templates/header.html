@@ -78,12 +78,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    
+
     <hgroup class="row dwga-header-row"><!-- Force  navbar into new row -->
 
       {% block header_logo %}
 				<div class="dwga-logo dwga-inlineblock">
-  				<a class="logo pull-left" href="{{ h.url('home') }}"><img 
+  				<a class="logo pull-left" href="{{ h.url('home') }}"><img
 						src="{{ g.site_logo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
 				</div>
     		<div class="dwga-title dwga-inlineblock">
@@ -94,7 +94,7 @@
 
       {% block header_site_search %}
 			<div class="dwga-search dwga-inlineblock">
-        <form class="site-search simple-input" 
+        <form class="site-search simple-input"
 					action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
@@ -117,6 +117,7 @@
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
                 ('group_index', _('Groups')),
+                ('ckanext_showcase_index', _('Showcases')),
                 ('about', _('About'))
               ) }}
             {% endblock %}

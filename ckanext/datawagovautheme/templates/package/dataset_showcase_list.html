@@ -1,0 +1,8 @@
+{% ckan_extends %}
+{% block showcase_list %}
+    {% if c.showcase_list %}
+      {% snippet "showcase/snippets/showcase_list.html", packages=c.showcase_list, pkg_id=c.pkg_dict.name, show_remove=h.check_access('ckanext_showcase_update') %}
+    {% else %}
+      <p class="empty">{{ _('There are no showcases that feature this dataset yet — get in touch with us at <a href="mailto:{0}">{0}</a> to submit one!'.format('opendata@landgate.wa.gov.au'))|safe }}</p>
+    {% endif %}
+{% endblock %}
