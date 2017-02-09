@@ -1103,7 +1103,10 @@ body, html {
 
 @media (min-width: 980px) {
   .form-select.control-group.control-order-by {
-    margin-top: 13px; } }
+    margin-top: 13px; }
+
+  .module-resource .module-content {
+    margin: 30px 0; } }
 @media (max-width: 979px) {
   .search-form .control-order-by select {
     width: 100%; }
@@ -1253,7 +1256,10 @@ body, html {
     display: none; }
 
   .secondary.span3 {
-    float: left; } }
+    float: left; }
+
+  .module-resource .actions {
+    top: 10px; } }
 @media (max-width: 768px) {
   .add-member-form .row-fluid .control-group {
     float: none;
@@ -1263,6 +1269,18 @@ body, html {
     float: none;
     margin-top: 0;
     text-align: left;
-    width: 100%; } }
+    width: 100%; }
+
+  .module-resource .actions {
+    top: 10px;
+    float: right;
+    right: 0; }
+    .module-resource .actions ul {
+      padding-left: 0;
+      margin-left: 0; }
+  .module-resource h1 {
+    display: inline-block; }
+  .module-resource [role="main"] ul {
+    padding-left: 0; } }
 
 /*# sourceMappingURL=datawagovautheme.css.map */
