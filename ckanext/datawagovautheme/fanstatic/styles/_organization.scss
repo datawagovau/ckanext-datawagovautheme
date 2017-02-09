@@ -49,6 +49,14 @@
         }
       }
     }
+    .hierarchy-tree-top {
+      h2.parent-organization {
+        margin: 0;
+        margin-left: 55px;
+        display: inline-block;
+        line-height: 1;
+      }
+    }
   }
   & + .pagination{
     display: none;
