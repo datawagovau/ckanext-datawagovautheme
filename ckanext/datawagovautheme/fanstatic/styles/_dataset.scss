@@ -76,6 +76,16 @@ ul.dataset-list{
   .media-grid.masonry {
       margin: 0;
   }
+  .dataset-title {
+    margin-top: 0px;
+  }
+  .dataset-private {
+    margin-top: 14px;
+    margin-right: 10px;
+  }
+  .label-private {
+    background-color: #333333;
+  }
 }
 .tags .tag-list{
   margin-left: 0;

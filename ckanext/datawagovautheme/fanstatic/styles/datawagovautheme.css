@@ -912,6 +912,13 @@ ul.dataset-list {
     text-shadow: none; }
 .module-content .media-grid.masonry {
   margin: 0; }
+.module-content .dataset-title {
+  margin-top: 0px; }
+.module-content .dataset-private {
+  margin-top: 14px;
+  margin-right: 10px; }
+.module-content .label-private {
+  background-color: #333333; }
 
 .tags .tag-list {
   margin-left: 0; }
@@ -1144,7 +1151,10 @@ body, html {
 
 @media (min-width: 980px) {
   .form-select.control-group.control-order-by {
-    margin-top: 13px; } }
+    margin-top: 13px; }
+
+  .module-resource .module-content {
+    margin: 30px 0; } }
 @media (max-width: 979px) {
   .search-form .control-order-by select {
     width: 100%; }
@@ -1294,7 +1304,10 @@ body, html {
     display: none; }
 
   .secondary.span3 {
-    float: left; } }
+    float: left; }
+
+  .module-resource .actions {
+    top: 10px; } }
 @media (max-width: 768px) {
   .add-member-form .row-fluid .control-group {
     float: none;
@@ -1304,6 +1317,18 @@ body, html {
     float: none;
     margin-top: 0;
     text-align: left;
-    width: 100%; } }
+    width: 100%; }
+
+  .module-resource .actions {
+    top: 10px;
+    float: right;
+    right: 0; }
+    .module-resource .actions ul {
+      padding-left: 0;
+      margin-left: 0; }
+  .module-resource h1 {
+    display: inline-block; }
+  .module-resource [role="main"] ul {
+    padding-left: 0; } }
 
 /*# sourceMappingURL=datawagovautheme.css.map */
