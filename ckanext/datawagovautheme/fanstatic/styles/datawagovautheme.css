@@ -864,6 +864,13 @@ ul.dataset-list {
     text-shadow: none; }
 .module-content .media-grid.masonry {
   margin: 0; }
+.module-content .dataset-title {
+  margin-top: 0px; }
+.module-content .dataset-private {
+  margin-top: 14px;
+  margin-right: 10px; }
+.module-content .label-private {
+  background-color: #333333; }
 
 .tags .tag-list {
   margin-left: 0; }
