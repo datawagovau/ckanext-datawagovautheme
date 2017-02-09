@@ -164,7 +164,8 @@ small {
   color: #69737c;
   line-height: 1.59375em; }
 .search-form .control-order-by label, .search-form .control-order-by select {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  width: 165px; }
 .search-form .search-input.search-giant {
   position: relative; }
   .search-form .search-input.search-giant input {
@@ -798,6 +799,11 @@ ul.nav {
       line-height: 1.59375em;
       list-style: disc;
       margin-left: 55px; }
+.datawa-organization-list #publisher-tree .hierarchy-tree-top h2.parent-organization {
+  margin: 0;
+  margin-left: 55px;
+  display: inline-block;
+  line-height: 1; }
 .datawa-organization-list + .pagination {
   display: none; }
 
@@ -1107,6 +1113,8 @@ body, html {
 
   .span9 {
     width: 800px; }
+    .span9 .primary {
+      width: 602px; }
 
   .span3 {
     width: 250px; }
@@ -1128,6 +1136,8 @@ body, html {
 
   .span9 {
     width: 680px; }
+    .span9 .primary {
+      width: 482px; }
 
   .span3 {
     width: 230px; }
@@ -1235,5 +1245,15 @@ body, html {
 
   .secondary.span3 {
     float: left; } }
+@media (max-width: 768px) {
+  .add-member-form .row-fluid .control-group {
+    float: none;
+    width: 100%; }
+
+  .add-member-or {
+    float: none;
+    margin-top: 0;
+    text-align: left;
+    width: 100%; } }
 
 /*# sourceMappingURL=datawagovautheme.css.map */
