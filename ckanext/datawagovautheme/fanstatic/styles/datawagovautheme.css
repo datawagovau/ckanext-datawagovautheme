@@ -799,7 +799,7 @@ ul.nav {
       line-height: 1.59375em;
       list-style: disc;
       margin-left: 55px; }
-.datawa-organization-list #publisher-tree .hierarchy-tree-top h2.parent-organization {
+.datawa-organization-list #publisher-tree h2.parent-organization {
   margin: 0;
   margin-left: 55px;
   display: inline-block;
