@@ -71,6 +71,13 @@ and "Search Your Data" boxes line up. */
   }  
 }
 
+.tag-list.well {
+  li {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
 body, html{
   overflow-x: hidden;
 }

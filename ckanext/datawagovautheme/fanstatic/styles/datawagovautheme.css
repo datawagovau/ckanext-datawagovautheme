@@ -62,8 +62,7 @@ a, .group-list .module-heading h3 a, .datawa-organization-list #publisher-tree >
     color: #1e527c; }
 
 [role="main"] ul {
-  padding-left: 15px;
-  margin-left: 15px; }
+  padding-left: 15px; }
   [role="main"] ul[class] {
     padding-left: 0; }
   [role="main"] ul li {
@@ -1093,6 +1092,10 @@ and "Search Your Data" boxes line up. */
 .media-grid .media-item {
   word-break: break-word;
   word-wrap: break-word; }
+
+.tag-list.well li {
+  margin-right: 0;
+  margin-left: 5px; }
 
 body, html {
   overflow-x: hidden; }
