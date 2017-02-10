@@ -461,7 +461,8 @@ ul.nav {
       font-size: 16px;
       margin-bottom: 22px; }
     .masthead #dwga-header-container .dwga-title h3 {
-      font-size: 8px; } }
+      font-size: 8px;
+      color: #FEFEFE; } }
   @media (min-width: 320px) and (max-width: 359px) {
     .masthead #dwga-header-container .dwga-title h1 {
       font-size: 1.25em;
