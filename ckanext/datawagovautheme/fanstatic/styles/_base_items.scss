@@ -121,3 +121,17 @@ input[type="color"],
 small{
   font-size: 13px;
 }
+
+.wrapper-datawa {
+    .btn {
+        padding-top: 8px;
+        padding-bottom: 7px;
+        text-decoration: none;
+        border-radius: 0;
+        border-bottom: 3px solid $btn-dropshadow;
+    }
+    .btn-group > .btn {
+        border: 0;
+        border-radius: 0;
+    }
+}
