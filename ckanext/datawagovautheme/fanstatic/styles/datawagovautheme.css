@@ -1128,7 +1128,10 @@ body, html {
   #content,
   .homepage [role="main"] .container {
     padding-left: 38px;
-    padding-right: 105px; } }
+    padding-right: 105px; }
+
+  .media-grid .media-item {
+    width: 26.87%; } }
 @-moz-document url-prefix() {
   .form-select.control-order-by {
     position: relative; }
@@ -1165,6 +1168,9 @@ body, html {
 
   .module:last-child {
     margin-bottom: 20px; } }
+@media (max-width: 1499px) and (min-width: 1100px) {
+  .media-grid .media-item {
+    width: 25.74%; } }
 @media (min-width: 1500px) {
   .container {
     width: 1086px;
@@ -1253,7 +1259,10 @@ body, html {
   .site-footer .select2-container.lang-container {
     width: 190px !important; }
   .site-footer .attribution > a, .site-footer .group-list .module-heading h3 .attribution > a, .group-list .module-heading h3 .site-footer .attribution > a, .site-footer .datawa-organization-list #publisher-tree > ul.attribution > li, .datawa-organization-list .site-footer #publisher-tree > ul.attribution > li {
-    margin-right: 9px; } }
+    margin-right: 9px; }
+
+  .media-grid .media-item {
+    width: 40.41%; } }
 @media (max-width: 979px) and (min-width: 768px) {
   .homepage .span6 {
     float: none;
@@ -1288,7 +1297,10 @@ body, html {
 
   #content {
     padding-left: 54px;
-    padding-right: 60px; } }
+    padding-right: 60px; }
+
+  .media-grid .media-item {
+    width: 25.5%; } }
 @media (max-width: 979px) {
   [role="main"] {
     margin-left: -20px;
@@ -1310,7 +1322,7 @@ body, html {
 
   .module-resource .actions {
     top: 10px; } }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .add-member-form .row-fluid .control-group {
     float: none;
     width: 100%; }
@@ -1331,6 +1343,21 @@ body, html {
   .module-resource h1 {
     display: inline-block; }
   .module-resource [role="main"] ul {
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .media-grid .media-item {
+    width: 34%; }
+    .media-grid .media-item img {
+      width: 100%; } }
+@media (max-width: 767px) and (min-width: 500px) {
+  .media-grid .media-item {
+    width: 40%; }
+    .media-grid .media-item img {
+      width: 100%; } }
+@media (max-width: 360px) and (min-width: 320px) {
+  .media-grid .media-item {
+    width: 77%; }
+    .media-grid .media-item img {
+      width: 100%; } }
 
 /*# sourceMappingURL=datawagovautheme.css.map */
