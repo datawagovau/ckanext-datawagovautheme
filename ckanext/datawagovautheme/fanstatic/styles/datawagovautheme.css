@@ -695,6 +695,8 @@ ul.nav {
     margin: 0; }
   .site-footer .row {
     margin-left: 0; }
+  .site-footer .footer-powered-section .datacats-footer-logo-a {
+    display: none; }
   @media (max-width: 1499px) {
     .site-footer {
       border-left: 20px solid #fff;
