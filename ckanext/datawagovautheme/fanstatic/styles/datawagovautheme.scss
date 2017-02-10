@@ -112,6 +112,11 @@ body, html{
     padding-left: 38px;
     padding-right: 105px;
   }
+  .media-grid {
+    .media-item {
+      width: 26.87%;
+    }  
+  }
 }
 @-moz-document url-prefix() {
   .form-select.control-order-by{
@@ -163,6 +168,13 @@ body, html{
   .module:last-child{
     margin-bottom: 20px;
   }
+}
+@media(max-width: $hd-top) and (min-width: $desktop-top + 1px){
+  .media-grid {
+    .media-item {
+      width: 25.74%;
+    }  
+  }  
 }
 @media(min-width: $hd-top + 1px){
   .container{
@@ -277,6 +289,11 @@ body, html{
       margin-right: 9px;
     }
   }
+  .media-grid {
+    .media-item {
+      width: 40.41%;
+    }  
+  } 
 }
 @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
   .homepage {
@@ -318,6 +335,11 @@ body, html{
     padding-left: 54px;
     padding-right: 60px;
   }
+  .media-grid {
+    .media-item {
+      width: 25.5%;
+    }  
+  } 
 }
 @media(max-width: $tablet-top){
   [role="main"]{
@@ -345,7 +367,7 @@ body, html{
   }
 }
 
-@media(max-width: $mobile-top + 1px){
+@media(max-width: $mobile-top){
   .add-member-form .row-fluid .control-group {
     float: none;
     width: 100%;
@@ -373,4 +395,34 @@ body, html{
       padding-left: 0;
     }    
   }
+  .media-grid {
+    .media-item {
+      width: 34%;
+      img {
+        width: 100%;
+      }
+    }  
+  } 
+}
+
+@media(max-width:$mobile-top) and (min-width: $mobile500){
+  .media-grid {
+    .media-item {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }  
+  } 
+}
+
+@media(max-width: $mobile360) and (min-width: $mobile-min){
+  .media-grid {
+    .media-item {
+      width: 77%;
+      img {
+        width: 100%;
+      }
+    }  
+  } 
 }
