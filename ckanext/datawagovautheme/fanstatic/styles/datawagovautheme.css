@@ -998,6 +998,10 @@ ul.dataset-list {
     border-top: 1px solid #efefef;
     background: #fff; }
 
+.wrapper-datawa .nav-tabs-plain #canonical {
+  background-image: none;
+  background-color: green; }
+
 @media (max-width: 979px) {
   .js [role=main] .secondary .filters {
     display: none;

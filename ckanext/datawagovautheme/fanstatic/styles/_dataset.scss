@@ -205,6 +205,22 @@ ul.dataset-list{
   }
 }
 
+.wrapper-datawa {
+    .module-resource {
+        .actions {
+            ul {
+
+            }
+        }
+    }
+    .nav-tabs-plain {
+        #canonical {
+            background-image: none;
+            background-color: green;
+        }
+    }
+}
+
 @media (max-width: $tablet-top){
   .js{
      [role=main] .secondary .filters {
