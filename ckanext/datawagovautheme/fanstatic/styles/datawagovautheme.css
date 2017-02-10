@@ -871,7 +871,7 @@ ul.dataset-list {
 
 .context-info h1.heading {
   hyphens: none;
-  word-break: inherit; }
+  word-break: break-word; }
 
 @media (max-width: 768px) {
   .page-header .content_action {
