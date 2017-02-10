@@ -1092,6 +1092,10 @@ and "Search Your Data" boxes line up. */
 .box {
   border: none; }
 
+.media-grid .media-item {
+  word-break: break-word;
+  word-wrap: break-word; }
+
 body, html {
   overflow-x: hidden; }
 

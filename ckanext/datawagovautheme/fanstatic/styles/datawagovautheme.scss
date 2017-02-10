@@ -64,6 +64,13 @@ and "Search Your Data" boxes line up. */
   border:none;
 }
 
+.media-grid {
+  .media-item {
+    word-break: break-word;
+    word-wrap: break-word;
+  }  
+}
+
 body, html{
   overflow-x: hidden;
 }
@@ -106,6 +113,7 @@ body, html{
     width: 270px;
   }
 }
+
 @media(min-width: $hd-top + 1px){
   #content,
   .homepage [role="main"] .container{
@@ -366,7 +374,6 @@ body, html{
     }
   }
 }
-
 @media(max-width: $mobile-top){
   .add-member-form .row-fluid .control-group {
     float: none;
@@ -404,7 +411,6 @@ body, html{
     }  
   } 
 }
-
 @media(max-width:$mobile-top) and (min-width: $mobile500){
   .media-grid {
     .media-item {
@@ -415,7 +421,6 @@ body, html{
     }  
   } 
 }
-
 @media(max-width: $mobile360) and (min-width: $mobile-min){
   .media-grid {
     .media-item {
