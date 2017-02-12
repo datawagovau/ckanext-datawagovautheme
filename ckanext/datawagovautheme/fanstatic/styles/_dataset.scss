@@ -137,14 +137,15 @@ ul.dataset-list{
       a{
         border-radius: 0;
         padding: 10px 32px;
-        border-bottom-color: #7eba59;
         font-size: $body-fz;
+        background-color: $btn-datawa-color;
       }
       &.open{
         a{
-          background: $btn-primary-hover;
+          background: $btn-datawa-color;
         }
         ul{
+          margin-left: 0;
           border-radius: 0;
           li{
             list-style: none;
@@ -153,8 +154,8 @@ ul.dataset-list{
               color: $a-color;
               text-decoration: none;
               &:hover{
-                color: $a-hover-color;
-                text-decoration: underline;
+                background: $btn-datawa-color;
+                color: $a-dropdown-color;
               }
             }
           }
