@@ -128,6 +128,7 @@ small{
     padding-bottom: 7px;
     text-decoration: none;
     border-radius: 0;
+    border-bottom: 3px solid $h-color;
   }
   .btn-group > .btn {
     border: 0;
@@ -154,6 +155,9 @@ small{
   }
   .btn-mini {
     border-bottom: 3px solid $h-color;
+  }
+  .btn-danger {
+    border-bottom: 3px solid $btn-danger-dropshadow;
   }
   .dropdown.btn-group {
     background-color: $btn-datawa-color-hover;
