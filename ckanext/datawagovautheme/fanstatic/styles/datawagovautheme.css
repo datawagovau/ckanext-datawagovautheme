@@ -96,6 +96,73 @@ input[type="color"]:focus,
 small {
   font-size: 13px; }
 
+.wrapper-datawa .btn {
+  padding-top: 8px;
+  padding-bottom: 7px;
+  text-decoration: none;
+  border-radius: 0; }
+.wrapper-datawa .btn-group > .btn {
+  border: 0;
+  border-radius: 0; }
+.wrapper-datawa .btn-success,
+.wrapper-datawa .btn-primary {
+  background-color: #5aa12f;
+  border-bottom: 3px solid #4c9022; }
+  .wrapper-datawa .btn-success:hover,
+  .wrapper-datawa .btn-primary:hover {
+    background-color: #529728; }
+.wrapper-datawa .btn-warning {
+  background-color: #f5f6f7;
+  background-image: none;
+  color: #69737c;
+  text-shadow: none;
+  border-bottom: 3px solid #c7cacd; }
+  .wrapper-datawa .btn-warning:hover {
+    background-color: #e7e9ec;
+    color: #69737c; }
+.wrapper-datawa .btn-mini {
+  border-bottom: 3px solid #69737c; }
+.wrapper-datawa .dropdown.btn-group {
+  background-color: #529728; }
+  .wrapper-datawa .dropdown.btn-group .btn-primary {
+    background-color: #529728;
+    border-bottom: 3px solid #4c9022; }
+.wrapper-datawa .image-upload .btn {
+  border-bottom: 3px solid #69737c; }
+.wrapper-datawa .image-upload .btn-remove-url {
+  border-bottom: 3px solid #89221d;
+  text-decoration: none;
+  border-radius: 0; }
+.wrapper-datawa .dataset-resource-form .form-actions .btn {
+  border-bottom: 3px solid #69737c; }
+.wrapper-datawa .dataset-resource-form .form-actions .btn-primary {
+  border-bottom: 3px solid #4c9022; }
+.wrapper-datawa .dataset-resource-form .form-actions .btn-danger {
+  border-bottom: 3px solid #89221d; }
+.wrapper-datawa .module .pagination ul li a, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li {
+  margin-right: 10px;
+  background-color: #fff;
+  border-color: #4c9022;
+  color: #20399d;
+  padding: 6px 11px 5px; }
+  .wrapper-datawa .module .pagination ul li a:hover, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li:hover {
+    text-decoration: none;
+    background-color: #5aa12f;
+    color: #fff; }
+.wrapper-datawa .module .pagination ul li:last-child a, .wrapper-datawa .module .pagination ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:last-child #publisher-tree > ul > li, .wrapper-datawa .module .pagination ul li:first-child a, .wrapper-datawa .module .pagination ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:first-child #publisher-tree > ul > li {
+  border-width: 1px; }
+.wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
+  background-color: #5aa12f; }
+
+.btn-danger {
+  background-color: #bb362f;
+  border-bottom: 3px solid #89221d;
+  text-decoration: none;
+  border-radius: 0; }
+  .btn-danger:hover {
+    background-image: none;
+    background-color: #a11f18; }
+
 .module-heading {
   font-size: 16px;
   background: #fbfbfc;
@@ -271,6 +338,8 @@ ul.nav {
   padding: 5px 22px; }
   .content_action .btn:hover {
     background: #e7e9ec; }
+  .content_action .btn i {
+    color: #69737c; }
   .content_action .btn i {
     color: #69737c; }
 
@@ -955,11 +1024,12 @@ ul.dataset-list {
 .resources .resource-item .dropdown a, .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown #publisher-tree > ul > li {
   border-radius: 0;
   padding: 10px 32px;
-  border-bottom-color: #7eba59;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #5aa12f; }
 .resources .resource-item .dropdown.open a, .resources .resource-item .dropdown.open .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown.open #publisher-tree > ul > li {
-  background: #87be65; }
+  background: #5aa12f; }
 .resources .resource-item .dropdown.open ul {
+  margin-left: 0;
   border-radius: 0; }
   .resources .resource-item .dropdown.open ul li {
     list-style: none; }
@@ -968,8 +1038,8 @@ ul.dataset-list {
       color: #20399d;
       text-decoration: none; }
       .resources .resource-item .dropdown.open ul li a:hover, .resources .resource-item .dropdown.open ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .resources .resource-item .dropdown.open ul li #publisher-tree > ul > li:hover {
-        color: #1e527c;
-        text-decoration: underline; }
+        background: #5aa12f;
+        color: #fff; }
 .resources .resource-item .dropdown .icon-share-alt:before {
   content: '';
   background: url("/drop-arrow-icon.png") 50% 50% no-repeat;
