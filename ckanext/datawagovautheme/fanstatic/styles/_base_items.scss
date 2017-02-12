@@ -147,7 +147,7 @@ small{
     background-image: none;
     color: $h-color;
     text-shadow: none;
-    border-bottom: 3px solid $btn-grey-border;
+    border-bottom: 3px solid $h-color;
     &:hover {
       background-color: $btn-default-hover;
       color: $h-color;
