@@ -100,7 +100,8 @@ small {
   padding-top: 8px;
   padding-bottom: 7px;
   text-decoration: none;
-  border-radius: 0; }
+  border-radius: 0;
+  border-bottom: 3px solid #69737c; }
 .wrapper-datawa .btn-group > .btn {
   border: 0;
   border-radius: 0; }
@@ -122,6 +123,8 @@ small {
     color: #69737c; }
 .wrapper-datawa .btn-mini {
   border-bottom: 3px solid #69737c; }
+.wrapper-datawa .btn-danger {
+  border-bottom: 3px solid #89221d; }
 .wrapper-datawa .dropdown.btn-group {
   background-color: #529728; }
   .wrapper-datawa .dropdown.btn-group .btn-primary {
