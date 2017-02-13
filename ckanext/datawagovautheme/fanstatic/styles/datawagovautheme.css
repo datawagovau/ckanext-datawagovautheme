@@ -813,14 +813,14 @@ ul.nav {
   colgroup col:first-child {
     width: 43%; }
   colgroup col:nth-child(2) {
-    width: 30%; }
+    width: 31%; }
   colgroup col:nth-child(3) {
-    width: 37%; } }
+    width: 36%; } }
 @media (min-width: 480px) {
   colgroup col:first-child {
-    width: 45%; }
+    width: 55%; }
   colgroup col:nth-child(2) {
-    width: 30%; }
+    width: 25%; }
   colgroup col:nth-child(3) {
     width: 20%; } }
 
