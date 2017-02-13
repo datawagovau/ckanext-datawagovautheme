@@ -39,10 +39,10 @@ colgroup {
         col:first-child {
             width: 43%;
         }
-        col:nth-child(2) {
+        col + col {
             width: 31%;
         }
-        col:nth-child(3) {
+        col + col + col {
             width: 36%;
         }
     }
@@ -50,10 +50,10 @@ colgroup {
         col:first-child {
             width: 55%;
         }
-        col:nth-child(2) {
+        col + col {
             width: 25%;
         }
-        col:nth-child(3) {
+        col + col + col {
             width: 20%;
         }
     }
