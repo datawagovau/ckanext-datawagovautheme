@@ -71,6 +71,18 @@ and "Search Your Data" boxes line up. */
   }  
 }
 
+.module-resource {
+  .actions {
+    top: 4px;
+  }
+}
+
+.context-info .image {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #DDD;
+  margin-bottom: 15px;
+}
+
 .tag-list.well {
   li {
     margin-right: 0;
@@ -398,7 +410,6 @@ body, html{
       float: right;
       right: 0;
       margin-top: 10px;
-      margin-bottom: 15px;
       ul {
         padding-left: 0;
         margin-left: 0;
@@ -406,6 +417,7 @@ body, html{
     }
     h1 {
       display: inline-block;
+      margin-top: 15px;
     }
     [role="main"] ul {
       padding-left: 0;
