@@ -128,7 +128,10 @@ small{
     padding-bottom: 7px;
     text-decoration: none;
     border-radius: 0;
-    border-bottom: 3px solid $h-color;
+    border: 0;
+    border-bottom: 3px solid $btn-default-border;
+    color: $h-color;
+    font-size: 16px;
   }
   .btn-group > .btn {
     border: 0;
@@ -136,6 +139,7 @@ small{
   }
   .btn-success,
   .btn-primary {
+    color: $fff;
     background-color: $btn-datawa-color;
     border-bottom: 3px solid $btn-dropshadow;
     &:hover {
@@ -147,28 +151,35 @@ small{
     background-image: none;
     color: $h-color;
     text-shadow: none;
-    border-bottom: 3px solid $h-color;
+    border-bottom: 3px solid $btn-default-border;
     &:hover {
       background-color: $btn-default-hover;
       color: $h-color;
     }
   }
   .btn-mini {
-    border-bottom: 3px solid $h-color;
+    color: $h-color;
+    border-bottom: 3px solid $btn-default-border;
   }
   .btn-danger {
+    color: $fff;
     border-bottom: 3px solid $btn-danger-dropshadow;
   }
   .dropdown.btn-group {
-    background-color: $btn-datawa-color-hover;
-    .btn-primary {
-      background-color: $btn-datawa-color-hover;
+    .btn.btn-primary {
+      background-color: $btn-datawa-color;
       border-bottom: 3px solid $btn-dropshadow;
+      &:hover {
+          background-color: $btn-datawa-color-hover;
+      }
+      .caret {
+          border-top-color: $fff;
+      }
     }
   }
   .image-upload {
     .btn {
-      border-bottom: 3px solid $h-color;
+      border-bottom: 3px solid $btn-default-border;
     }
     .btn-remove-url {
       border-bottom: 3px solid $btn-danger-dropshadow;
@@ -179,7 +190,7 @@ small{
   .dataset-resource-form {
     .form-actions {
       .btn {
-        border-bottom: 3px solid $h-color;
+        border-bottom: 3px solid $btn-default-border;
       }
       .btn-primary {
         border-bottom: 3px solid $btn-dropshadow;
@@ -190,6 +201,29 @@ small{
     }
   }
   .module {
+    .module-content{
+      .btn {
+        padding-top: 8px;
+        padding-bottom: 7px;
+        .caret {
+            border-top-color: $h-color;
+        }
+      }
+    }
+    &.module-resource {
+        .btn {
+            color: $h-color;
+        }
+        .resource-url-analytics {
+            color: $fff;
+        }
+        .nav-tabs-plain {
+            min-height: 49px;
+            li {
+                margin-top: 10px;
+            }
+        }
+    }
     .pagination {
       ul {
         li {
@@ -216,13 +250,84 @@ small{
               background-color: $btn-datawa-color;
             }
           }
+          &:disabled {
+            a {
+              &:hover {
+               color: $fff;
+              }
+            }
+          }
         }
       }
     }
   }
+  .page-header {
+      .content_action {
+          margin-top: -10px;
+          margin-right: 0px;
+          .btn {
+              padding: 8px 22px 7px;
+              color: $h-color;
+              border-bottom-width: 3px;
+          }
+      }
+  }
 }
 
+.wrapper {
+    .module {
+        .module-content {
+            .page_primary_action,
+            .form-actions {
+                .btn {
+                    border: 0;
+                    padding-bottom: 7px;
+                    padding-top: 8px;
+                    font-size: 16px;
+                    border-bottom: 3px solid $btn-dropshadow;
+                }
+            }
+            .form-actions {
+                .btn {
+                    color: $h-color;
+                    text-decoration: none;
+                    border-bottom: 3px solid $btn-default-border;
+                    border-radius: 0;
+                    background-color: $btn-color-grey;
+                    background-image: none;
+                    &:hover {
+                        background-color: $btn-default-hover;
+                    }
+                }
+                .btn-primary {
+                    color: $fff;
+                    background-color: $btn-datawa-color;
+                    border-bottom: 3px solid $btn-dropshadow;
+                    &:hover {
+                        background-color: $btn-datawa-color-hover;
+                    }
+                }
+            }
+            .controls {
+                .slug-preview {
+                    .btn-mini {
+                        border-radius: 0;
+                        border: 0;
+                        color: $h-color;
+                        background-color: $btn-color-grey;
+                        border-bottom: 3px solid $btn-default-border;
+                        background-image: none;
+                        &:hover {
+                            background-color: $btn-default-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 .btn-danger {
+  color: $fff;
   background-color: $btn-danger-color;
   border-bottom: 3px solid $btn-danger-dropshadow;
   text-decoration: none;
