@@ -152,6 +152,9 @@ small {
   border-bottom: 3px solid #4c9022; }
 .wrapper-datawa .dataset-resource-form .form-actions .btn-danger {
   border-bottom: 3px solid #89221d; }
+.wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url {
+  padding-top: 0;
+  padding-bottom: 0; }
 .wrapper-datawa .module .module-content .btn {
   padding-top: 8px;
   padding-bottom: 7px; }
@@ -184,6 +187,7 @@ small {
 .wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
   border-color: #4c9022; }
   .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
+    text-decoration: none;
     color: #fff; }
 .wrapper-datawa .page-header .content_action {
   margin-top: -10px;

@@ -202,6 +202,14 @@ small{
         border-bottom: 3px solid $btn-danger-dropshadow;
       }
     }
+    .image-upload {
+        .controls {
+            .btn-danger.btn-remove-url {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
   }
   .module {
     .module-content{
@@ -260,6 +268,7 @@ small{
             a {
               border-color: $pagination-border;
               &:hover {
+                  text-decoration: none;
                color: $fff;
               }
             }
