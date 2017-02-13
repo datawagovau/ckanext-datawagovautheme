@@ -33,3 +33,28 @@
     word-break: normal;
   }
 }
+
+colgroup {
+    @media (min-width: $mobile-min) and (max-width: $mobile480 - 1px) {
+        col:first-child {
+            width: 43%;
+        }
+        col:nth-child(2) {
+            width: 30%;
+        }
+        col:nth-child(3) {
+            width: 37%;
+        }
+    }
+    @media (min-width: $mobile480) {
+        col:first-child {
+            width: 45%;
+        }
+        col:nth-child(2) {
+            width: 30%;
+        }
+        col:nth-child(3) {
+            width: 20%;
+        }
+    }
+}
