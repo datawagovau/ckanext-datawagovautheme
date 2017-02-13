@@ -206,6 +206,9 @@ small{
             .btn-danger.btn-remove-url {
                 padding-top: 0;
                 padding-bottom: 0;
+                &:hover {
+                    color: $fff;
+                }
             }
         }
     }
@@ -221,6 +224,12 @@ small{
         .caret {
             border-top-color: $h-color;
         }
+      }
+      #followee-filter {
+          .btn {
+              padding-top: 6px;
+              padding-bottom: 5px;
+          }
       }
     }
     &.module-resource {

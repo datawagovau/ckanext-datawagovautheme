@@ -154,6 +154,8 @@ small {
 .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url {
   padding-top: 0;
   padding-bottom: 0; }
+  .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url:hover {
+    color: #fff; }
 .wrapper-datawa .module .module-content .btn {
   padding-top: 8px;
   padding-bottom: 7px; }
@@ -161,6 +163,9 @@ small {
     color: #69737c !important; }
   .wrapper-datawa .module .module-content .btn .caret {
     border-top-color: #69737c; }
+.wrapper-datawa .module .module-content #followee-filter .btn {
+  padding-top: 6px;
+  padding-bottom: 5px; }
 .wrapper-datawa .module.module-resource .btn {
   color: #69737c; }
 .wrapper-datawa .module.module-resource .resource-url-analytics {
