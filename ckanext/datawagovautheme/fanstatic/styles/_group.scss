@@ -40,18 +40,18 @@ colgroup {
             width: 43%;
         }
         col:nth-child(2) {
-            width: 30%;
+            width: 31%;
         }
         col:nth-child(3) {
-            width: 37%;
+            width: 36%;
         }
     }
     @media (min-width: $mobile480) {
         col:first-child {
-            width: 45%;
+            width: 55%;
         }
         col:nth-child(2) {
-            width: 30%;
+            width: 25%;
         }
         col:nth-child(3) {
             width: 20%;
