@@ -957,6 +957,21 @@ ul.nav {
   -ms-word-break: normal;
   word-break: normal; }
 
+@media (min-width: 320px) and (max-width: 479px) {
+  colgroup col:first-child {
+    width: 43%; }
+  colgroup col:nth-child(2) {
+    width: 30%; }
+  colgroup col:nth-child(3) {
+    width: 37%; } }
+@media (min-width: 480px) {
+  colgroup col:first-child {
+    width: 45%; }
+  colgroup col:nth-child(2) {
+    width: 30%; }
+  colgroup col:nth-child(3) {
+    width: 20%; } }
+
 .datawa-organization-list #publisher-tree > ul {
   margin: 0;
   padding-left: 0; }
