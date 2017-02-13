@@ -103,9 +103,9 @@ small {
   border: 0;
   border-bottom: 3px solid #cccfd1;
   color: #69737c;
-  font-size: 16px; }
+  font-size: 16px;
+  background-image: none; }
 .wrapper-datawa .btn-group > .btn {
-  border: 0;
   border-radius: 0; }
 .wrapper-datawa .btn-success,
 .wrapper-datawa .btn-primary {
@@ -139,6 +139,8 @@ small {
     border-top-color: #fff; }
 .wrapper-datawa .image-upload .btn {
   border-bottom: 3px solid #cccfd1; }
+  .wrapper-datawa .image-upload .btn:hover {
+    color: #69737c; }
 .wrapper-datawa .image-upload .btn-remove-url {
   border-bottom: 3px solid #89221d;
   text-decoration: none;
@@ -152,6 +154,8 @@ small {
 .wrapper-datawa .module .module-content .btn {
   padding-top: 8px;
   padding-bottom: 7px; }
+  .wrapper-datawa .module .module-content .btn.hover {
+    color: #69737c !important; }
   .wrapper-datawa .module .module-content .btn .caret {
     border-top-color: #69737c; }
 .wrapper-datawa .module.module-resource .btn {
@@ -176,8 +180,10 @@ small {
   border-width: 1px; }
 .wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
   background-color: #5aa12f; }
-.wrapper-datawa .module .pagination ul li:disabled a:hover, .wrapper-datawa .module .pagination ul li:disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li:disabled #publisher-tree > ul > li:hover {
-  color: #fff; }
+.wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
+  border-color: #4c9022; }
+  .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
+    color: #fff; }
 .wrapper-datawa .page-header .content_action {
   margin-top: -10px;
   margin-right: 0px; }

@@ -131,9 +131,9 @@ small{
     border-bottom: 3px solid $btn-default-border;
     color: $h-color;
     font-size: 16px;
+    background-image: none;
   }
   .btn-group > .btn {
-    border: 0;
     border-radius: 0;
   }
   .btn-success,
@@ -179,6 +179,9 @@ small{
   .image-upload {
     .btn {
       border-bottom: 3px solid $btn-default-border;
+      &:hover {
+          color: $h-color;
+      }
     }
     .btn-remove-url {
       border-bottom: 3px solid $btn-danger-dropshadow;
@@ -204,6 +207,9 @@ small{
       .btn {
         padding-top: 8px;
         padding-bottom: 7px;
+        &.hover {
+            color: $h-color!important;
+        }
         .caret {
             border-top-color: $h-color;
         }
@@ -249,8 +255,9 @@ small{
               background-color: $btn-datawa-color;
             }
           }
-          &:disabled {
+          &.disabled {
             a {
+              border-color: $pagination-border;
               &:hover {
                color: $fff;
               }
