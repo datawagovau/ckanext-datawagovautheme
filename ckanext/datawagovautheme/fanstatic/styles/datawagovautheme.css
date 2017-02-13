@@ -1267,7 +1267,9 @@ body, html {
   .module-resource .actions {
     top: 10px;
     float: right;
-    right: 0; }
+    right: 0;
+    margin-top: 10px;
+    margin-bottom: 15px; }
     .module-resource .actions ul {
       padding-left: 0;
       margin-left: 0; }
