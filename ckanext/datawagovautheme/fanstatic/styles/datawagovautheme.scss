@@ -68,7 +68,7 @@ and "Search Your Data" boxes line up. */
   .media-item {
     word-break: break-word;
     word-wrap: break-word;
-  }  
+  }
 }
 
 body, html{
@@ -123,7 +123,7 @@ body, html{
   .media-grid {
     .media-item {
       width: 26.87%;
-    }  
+    }
   }
 }
 @-moz-document url-prefix() {
@@ -161,7 +161,7 @@ body, html{
   .module-resource {
     .module-content {
       margin: 30px 0;
-    }   
+    }
   }
 }
 @media(max-width: $tablet-top){
@@ -181,8 +181,8 @@ body, html{
   .media-grid {
     .media-item {
       width: 25.74%;
-    }  
-  }  
+    }
+  }
 }
 @media(min-width: $hd-top + 1px){
   .container{
@@ -300,8 +300,8 @@ body, html{
   .media-grid {
     .media-item {
       width: 40.41%;
-    }  
-  } 
+    }
+  }
 }
 @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
   .homepage {
@@ -346,14 +346,14 @@ body, html{
   .media-grid {
     .media-item {
       width: 25.5%;
-    }  
-  } 
+    }
+  }
 }
 @media(max-width: $tablet-top){
   [role="main"]{
     margin-left: -20px;
     margin-right: -20px;
-    padding: 0 20px;
+    padding: 20px 20px 0;
   }
   .primary.span9{
     padding-top: 20px;
@@ -402,7 +402,7 @@ body, html{
     }
     [role="main"] ul {
       padding-left: 0;
-    }    
+    }
   }
   .media-grid {
     .media-item {
@@ -410,8 +410,8 @@ body, html{
       img {
         width: 100%;
       }
-    }  
-  } 
+    }
+  }
 }
 @media(max-width:$mobile-top) and (min-width: $mobile500){
   .media-grid {
@@ -420,8 +420,8 @@ body, html{
       img {
         width: 100%;
       }
-    }  
-  } 
+    }
+  }
 }
 @media(max-width: $mobile360) and (min-width: $mobile-min){
   .media-grid {
@@ -430,6 +430,6 @@ body, html{
       img {
         width: 100%;
       }
-    }  
-  } 
+    }
+  }
 }
