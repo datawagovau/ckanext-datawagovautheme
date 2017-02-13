@@ -64,6 +64,32 @@ and "Search Your Data" boxes line up. */
   border:none;
 }
 
+.media-grid {
+  .media-item {
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}
+
+.module-resource {
+  .actions {
+    top: 4px;
+  }
+}
+
+.context-info .image {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #DDD;
+  margin-bottom: 15px;
+}
+
+.tag-list.well {
+  li {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
 body, html{
   overflow-x: hidden;
 }
@@ -106,11 +132,17 @@ body, html{
     width: 270px;
   }
 }
+
 @media(min-width: $hd-top + 1px){
   #content,
   .homepage [role="main"] .container{
     padding-left: 38px;
     padding-right: 105px;
+  }
+  .media-grid {
+    .media-item {
+      width: 26.87%;
+    }
   }
 }
 @-moz-document url-prefix() {
@@ -148,7 +180,7 @@ body, html{
   .module-resource {
     .module-content {
       margin: 30px 0;
-    }   
+    }
   }
 }
 @media(max-width: $tablet-top){
@@ -162,6 +194,13 @@ body, html{
   }
   .module:last-child{
     margin-bottom: 20px;
+  }
+}
+@media(max-width: $hd-top) and (min-width: $desktop-top + 1px){
+  .media-grid {
+    .media-item {
+      width: 25.74%;
+    }
   }
 }
 @media(min-width: $hd-top + 1px){
@@ -277,6 +316,11 @@ body, html{
       margin-right: 9px;
     }
   }
+  .media-grid {
+    .media-item {
+      width: 40.41%;
+    }
+  }
 }
 @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px){
   .homepage {
@@ -318,12 +362,17 @@ body, html{
     padding-left: 54px;
     padding-right: 60px;
   }
+  .media-grid {
+    .media-item {
+      width: 25.5%;
+    }
+  }
 }
 @media(max-width: $tablet-top){
   [role="main"]{
     margin-left: -20px;
     margin-right: -20px;
-    padding: 0 20px;
+    padding: 20px 20px 0;
   }
   .primary.span9{
     padding-top: 20px;
@@ -344,8 +393,7 @@ body, html{
     }
   }
 }
-
-@media(max-width: $mobile-top + 1px){
+@media(max-width: $mobile-top){
   .add-member-form .row-fluid .control-group {
     float: none;
     width: 100%;
@@ -361,6 +409,7 @@ body, html{
       top: 10px;
       float: right;
       right: 0;
+      margin-top: 10px;
       ul {
         padding-left: 0;
         margin-left: 0;
@@ -368,9 +417,38 @@ body, html{
     }
     h1 {
       display: inline-block;
+      margin-top: 15px;
     }
     [role="main"] ul {
       padding-left: 0;
-    }    
+    }
+  }
+  .media-grid {
+    .media-item {
+      width: 34%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media(max-width:$mobile-top) and (min-width: $mobile500){
+  .media-grid {
+    .media-item {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media(max-width: $mobile360) and (min-width: $mobile-min){
+  .media-grid {
+    .media-item {
+      width: 77%;
+      img {
+        width: 100%;
+      }
+    }
   }
 }

@@ -1,8 +1,8 @@
 @mixin landgate-primary{
-  background: $btn-primary-color;
-  border-bottom: 2px solid $btn-primary-border;
+  background: $btn-datawa-color;
+  border-bottom: 3px solid $btn-dropshadow;
   &:hover{
-    background: $btn-primary-hover;
+    background: $btn-datawa-color-hover;
   }
   i{
     color: #fff;

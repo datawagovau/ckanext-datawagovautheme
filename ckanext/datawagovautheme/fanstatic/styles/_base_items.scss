@@ -76,7 +76,6 @@ a{
 [role="main"]{
   ul{
     padding-left: 15px;
-    margin-left: 15px;
     &[class]{
       padding-left: 0;
     }
@@ -120,4 +119,245 @@ input[type="color"],
 
 small{
   font-size: 13px;
+}
+
+.wrapper-datawa {
+  .btn {
+    padding-top: 8px;
+    padding-bottom: 7px;
+    text-decoration: none;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 3px solid $btn-default-border;
+    color: $h-color;
+    font-size: 16px;
+    background-image: none;
+  }
+  .btn-group > .btn {
+    border-radius: 0;
+  }
+  .btn-success,
+  .btn-primary {
+    color: $fff;
+    background-color: $btn-datawa-color;
+    border-bottom: 3px solid $btn-dropshadow;
+    &:hover {
+      background-color: $btn-datawa-color-hover;
+    }
+  }
+  .btn-warning {
+    background-color: $btn-color-grey;
+    background-image: none;
+    color: $h-color;
+    text-shadow: none;
+    border-bottom: 3px solid $btn-default-border;
+    &:hover {
+      background-color: $btn-default-hover;
+      color: $h-color;
+    }
+  }
+  .btn-mini {
+    color: $h-color;
+    border-bottom: 3px solid $btn-default-border;
+  }
+  .btn-danger {
+    color: $fff;
+    border-bottom: 3px solid $btn-danger-dropshadow;
+  }
+  .dropdown.btn-group {
+    .btn.btn-primary {
+      background-color: $btn-datawa-color;
+      border-bottom: 3px solid $btn-dropshadow;
+      &:hover {
+          background-color: $btn-datawa-color-hover;
+      }
+      .caret {
+          border-top-color: $fff;
+      }
+    }
+  }
+  .image-upload {
+    .btn {
+      border-bottom: 3px solid $btn-default-border;
+      &:hover {
+          color: $h-color;
+      }
+    }
+    .btn-remove-url {
+      border-bottom: 3px solid $btn-danger-dropshadow;
+      text-decoration: none;
+      border-radius: 0;
+    }
+  }
+  .dataset-resource-form {
+    .form-actions {
+      .btn {
+        border-bottom: 3px solid $btn-default-border;
+      }
+      .btn-primary {
+        border-bottom: 3px solid $btn-dropshadow;
+      }
+      .btn-danger {
+        border-bottom: 3px solid $btn-danger-dropshadow;
+      }
+    }
+    .image-upload {
+        .controls {
+            .btn-danger.btn-remove-url {
+                padding-top: 0;
+                padding-bottom: 0;
+                &:hover {
+                    color: $fff;
+                }
+            }
+        }
+    }
+  }
+  .module {
+    .module-content{
+      .btn {
+        padding-top: 8px;
+        padding-bottom: 7px;
+        &.hover {
+            color: $h-color!important;
+        }
+        .caret {
+            border-top-color: $h-color;
+        }
+      }
+      #followee-filter {
+          .btn {
+              padding-top: 6px;
+              padding-bottom: 5px;
+          }
+      }
+    }
+    &.module-resource {
+        .btn {
+            color: $h-color;
+        }
+        .resource-url-analytics {
+            color: $fff;
+        }
+        .nav-tabs-plain {
+            min-height: 49px;
+            li {
+                margin-top: 10px;
+            }
+        }
+    }
+    .pagination {
+      ul {
+        li {
+          a {
+            margin-right: 10px;
+            background-color: $fff;
+            border-color: $pagination-border;
+            color: $a-color;
+            padding: 6px 11px 5px;
+            &:hover {
+              text-decoration: none;
+              background-color: $btn-datawa-color;
+              color: $fff;
+            }
+          }
+          &:last-child,
+          &:first-child {
+            a {
+              border-width: 1px;
+            }
+          }
+          &.active {
+            a {
+              background-color: $btn-datawa-color;
+            }
+          }
+          &.disabled {
+            a {
+              border-color: $pagination-border;
+              &:hover {
+                  text-decoration: none;
+               color: $fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-header {
+      .content_action {
+          margin-top: -10px;
+          margin-right: 0px;
+          .btn {
+              padding: 8px 22px 7px;
+              color: $h-color;
+              border-bottom-width: 3px;
+          }
+      }
+  }
+}
+
+.wrapper {
+    .module {
+        .module-content {
+            .page_primary_action,
+            .form-actions {
+                .btn {
+                    border: 0;
+                    padding-bottom: 7px;
+                    padding-top: 8px;
+                    font-size: 16px;
+                    border-bottom: 3px solid $btn-dropshadow;
+                }
+            }
+            .form-actions {
+                .btn {
+                    color: $h-color;
+                    text-decoration: none;
+                    border-bottom: 3px solid $btn-default-border;
+                    border-radius: 0;
+                    background-color: $btn-color-grey;
+                    background-image: none;
+                    &:hover {
+                        background-color: $btn-default-hover;
+                    }
+                }
+                .btn-primary {
+                    color: $fff;
+                    background-color: $btn-datawa-color;
+                    border-bottom: 3px solid $btn-dropshadow;
+                    &:hover {
+                        background-color: $btn-datawa-color-hover;
+                    }
+                }
+            }
+            .controls {
+                .slug-preview {
+                    .btn-mini {
+                        border-radius: 0;
+                        border: 0;
+                        color: $h-color;
+                        background-color: $btn-color-grey;
+                        border-bottom: 3px solid $btn-default-border;
+                        background-image: none;
+                        &:hover {
+                            background-color: $btn-default-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.btn-danger {
+  color: $fff;
+  background-color: $btn-danger-color;
+  border-bottom: 3px solid $btn-danger-dropshadow;
+  text-decoration: none;
+  border-radius: 0;
+  &:hover {
+    background-image: none;
+    background-color:$btn-danger-color-hover;
+  }
 }
