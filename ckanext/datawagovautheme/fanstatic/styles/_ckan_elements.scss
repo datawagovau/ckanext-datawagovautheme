@@ -236,6 +236,9 @@ ul.nav{
     text-decoration: none;
     border-radius: 0;
     padding: 5px 22px;
+    i {
+      color: $h-color;
+    }
   }
 }
 
