@@ -62,7 +62,7 @@ a, .group-list .module-heading h3 a, .datawa-organization-list #publisher-tree >
     color: #20399d; }
 
 [role="main"] ul {
-  padding-left: 15px; }
+  margin-left: 15px; }
   [role="main"] ul[class] {
     padding-left: 0; }
   [role="main"] ul li {
@@ -100,16 +100,12 @@ small {
   padding-bottom: 7px;
   text-decoration: none;
   border-radius: 0;
-  border: 0;
-  border-bottom: 3px solid #cccfd1;
-  color: #69737c;
-  font-size: 16px;
-  background-image: none; }
+  border-bottom: 3px solid #69737c; }
 .wrapper-datawa .btn-group > .btn {
+  border: 0;
   border-radius: 0; }
 .wrapper-datawa .btn-success,
 .wrapper-datawa .btn-primary {
-  color: #fff;
   background-color: #5aa12f;
   border-bottom: 3px solid #4c9022; }
   .wrapper-datawa .btn-success:hover,
@@ -120,61 +116,31 @@ small {
   background-image: none;
   color: #69737c;
   text-shadow: none;
-  border-bottom: 3px solid #cccfd1; }
+  border-bottom: 3px solid #69737c; }
   .wrapper-datawa .btn-warning:hover {
     background-color: #e7e9ec;
     color: #69737c; }
 .wrapper-datawa .btn-mini {
-  color: #69737c;
-  border-bottom: 3px solid #cccfd1; }
+  border-bottom: 3px solid #69737c; }
 .wrapper-datawa .btn-danger {
-  color: #fff;
   border-bottom: 3px solid #89221d; }
-.wrapper-datawa .dropdown.btn-group .btn.btn-primary {
-  background-color: #5aa12f;
-  border-bottom: 3px solid #4c9022; }
-  .wrapper-datawa .dropdown.btn-group .btn.btn-primary:hover {
-    background-color: #529728; }
-  .wrapper-datawa .dropdown.btn-group .btn.btn-primary .caret {
-    border-top-color: #fff; }
+.wrapper-datawa .dropdown.btn-group {
+  background-color: #529728; }
+  .wrapper-datawa .dropdown.btn-group .btn-primary {
+    background-color: #529728;
+    border-bottom: 3px solid #4c9022; }
 .wrapper-datawa .image-upload .btn {
-  border-bottom: 3px solid #cccfd1; }
-  .wrapper-datawa .image-upload .btn:hover {
-    color: #69737c; }
+  border-bottom: 3px solid #69737c; }
 .wrapper-datawa .image-upload .btn-remove-url {
   border-bottom: 3px solid #89221d;
   text-decoration: none;
   border-radius: 0; }
 .wrapper-datawa .dataset-resource-form .form-actions .btn {
-  border-bottom: 3px solid #cccfd1; }
+  border-bottom: 3px solid #69737c; }
 .wrapper-datawa .dataset-resource-form .form-actions .btn-primary {
   border-bottom: 3px solid #4c9022; }
 .wrapper-datawa .dataset-resource-form .form-actions .btn-danger {
   border-bottom: 3px solid #89221d; }
-.wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url {
-  padding-top: 0;
-  padding-bottom: 0; }
-  .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url:hover {
-    color: #fff; }
-.wrapper-datawa .module .module-content .btn {
-  padding-top: 8px;
-  padding-bottom: 7px; }
-  .wrapper-datawa .module .module-content .btn.hover {
-    color: #69737c !important; }
-  .wrapper-datawa .module .module-content .btn .caret {
-    border-top-color: #69737c; }
-.wrapper-datawa .module .module-content #followee-filter .btn {
-  padding-top: 6px;
-  padding-bottom: 5px; }
-.wrapper-datawa .module.module-resource .btn {
-  color: #69737c; }
-.wrapper-datawa .module.module-resource .resource-url-analytics,
-.wrapper-datawa .module.module-resource .btn-success {
-  color: #fff; }
-.wrapper-datawa .module.module-resource .nav-tabs-plain {
-  min-height: 49px; }
-  .wrapper-datawa .module.module-resource .nav-tabs-plain li {
-    margin-top: 10px; }
 .wrapper-datawa .module .pagination ul li a, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li {
   margin-right: 10px;
   background-color: #fff;
@@ -189,55 +155,8 @@ small {
   border-width: 1px; }
 .wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
   background-color: #5aa12f; }
-.wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
-  border-color: #4c9022;
-  color: #20399d;
-  background-color: #fff; }
-  .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
-    text-decoration: none;
-    background-color: #fff; }
-.wrapper-datawa .page-header .content_action {
-  margin-top: -10px;
-  margin-right: 0px; }
-  .wrapper-datawa .page-header .content_action .btn {
-    padding: 8px 22px 7px;
-    color: #69737c;
-    border-bottom-width: 3px; }
-
-.wrapper .module .module-content .page_primary_action .btn,
-.wrapper .module .module-content .form-actions .btn {
-  border: 0;
-  padding-bottom: 7px;
-  padding-top: 8px;
-  font-size: 16px;
-  border-bottom: 3px solid #4c9022; }
-.wrapper .module .module-content .form-actions .btn {
-  color: #69737c;
-  text-decoration: none;
-  border-bottom: 3px solid #cccfd1;
-  border-radius: 0;
-  background-color: #f5f6f7;
-  background-image: none; }
-  .wrapper .module .module-content .form-actions .btn:hover {
-    background-color: #e7e9ec; }
-.wrapper .module .module-content .form-actions .btn-primary {
-  color: #fff;
-  background-color: #5aa12f;
-  border-bottom: 3px solid #4c9022; }
-  .wrapper .module .module-content .form-actions .btn-primary:hover {
-    background-color: #529728; }
-.wrapper .module .module-content .controls .slug-preview .btn-mini {
-  border-radius: 0;
-  border: 0;
-  color: #69737c;
-  background-color: #f5f6f7;
-  border-bottom: 3px solid #cccfd1;
-  background-image: none; }
-  .wrapper .module .module-content .controls .slug-preview .btn-mini:hover {
-    background-color: #e7e9ec; }
 
 .btn-danger {
-  color: #fff;
   background-color: #bb362f;
   border-bottom: 3px solid #89221d;
   text-decoration: none;
@@ -1272,6 +1191,9 @@ and "Search Your Data" boxes line up. */
   padding-bottom: 20px;
   border-bottom: 1px dotted #DDD;
   margin-bottom: 15px; }
+
+.dataset-item .dataset-resources {
+  margin-left: 0; }
 
 .tag-list.well li {
   margin-right: 0;
