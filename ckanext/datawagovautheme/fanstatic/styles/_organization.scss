@@ -19,15 +19,20 @@
           height: 37px;
           display: inline-block;
           content: "";
-          background: $btn-primary-color url("/plus.png") 50% 50% no-repeat;
-          border-bottom: 2px solid $btn-primary-border;
+          background: $btn-datawa-color url("/plus.png") 50% 50% no-repeat;
+          border-bottom: 3px solid $btn-dropshadow;
           cursor: pointer;
           position: absolute;
           top: 18px;
         }
+        &:hover {
+            &:before {
+                background-color: $btn-datawa-color-hover;
+            }
+        }
         &.open:before{
           background: $btn-default-color url("/minus.png") 50% 50% no-repeat;
-          border-bottom: 2px solid $btn-default-border;
+          border-bottom: 3px solid $btn-default-border;
         }
         & > a{
           margin-left: 55px;
