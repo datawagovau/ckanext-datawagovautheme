@@ -958,18 +958,18 @@ ul.nav {
   word-break: normal; }
 
 @media (min-width: 320px) and (max-width: 479px) {
-  colgroup col:first-child {
+  .group-org-members .col-user {
     width: 43%; }
-  colgroup col + col {
+  .group-org-members .col-role {
     width: 31%; }
-  colgroup col + col + col {
+  .group-org-members .col-actions {
     width: 36%; } }
 @media (min-width: 480px) {
-  colgroup col:first-child {
+  .group-org-members .col-user {
     width: 55%; }
-  colgroup col + col {
+  .group-org-members .col-role {
     width: 25%; }
-  colgroup col + col + col {
+  .group-org-members .col-actions {
     width: 20%; } }
 
 .datawa-organization-list #publisher-tree > ul {
