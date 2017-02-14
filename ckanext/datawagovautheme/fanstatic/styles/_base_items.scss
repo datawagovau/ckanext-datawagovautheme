@@ -237,7 +237,8 @@ small{
         .btn {
             color: $h-color;
         }
-        .resource-url-analytics {
+        .resource-url-analytics,
+        .btn-success {
             color: $fff;
         }
         .nav-tabs-plain {
@@ -276,9 +277,11 @@ small{
           &.disabled {
             a {
               border-color: $pagination-border;
+              color: $a-color;
+              background-color: $fff;
               &:hover {
                   text-decoration: none;
-               color: $fff;
+                  background-color: $fff;
               }
             }
           }

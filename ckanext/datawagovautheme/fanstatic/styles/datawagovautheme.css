@@ -169,7 +169,8 @@ small {
   padding-bottom: 5px; }
 .wrapper-datawa .module.module-resource .btn {
   color: #69737c; }
-.wrapper-datawa .module.module-resource .resource-url-analytics {
+.wrapper-datawa .module.module-resource .resource-url-analytics,
+.wrapper-datawa .module.module-resource .btn-success {
   color: #fff; }
 .wrapper-datawa .module.module-resource .nav-tabs-plain {
   min-height: 49px; }
@@ -190,10 +191,12 @@ small {
 .wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
   background-color: #5aa12f; }
 .wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
-  border-color: #4c9022; }
+  border-color: #4c9022;
+  color: #20399d;
+  background-color: #fff; }
   .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
     text-decoration: none;
-    color: #fff; }
+    background-color: #fff; }
 .wrapper-datawa .page-header .content_action {
   margin-top: -10px;
   margin-right: 0px; }
@@ -976,14 +979,16 @@ ul.nav {
       height: 37px;
       display: inline-block;
       content: "";
-      background: #95c677 url("/plus.png") 50% 50% no-repeat;
-      border-bottom: 2px solid #7bb855;
+      background: #5aa12f url("/plus.png") 50% 50% no-repeat;
+      border-bottom: 3px solid #4c9022;
       cursor: pointer;
       position: absolute;
       top: 18px; }
+    .datawa-organization-list #publisher-tree > ul > li:hover:before {
+      background-color: #529728; }
     .datawa-organization-list #publisher-tree > ul > li.open:before {
       background: #e7e9ec url("/minus.png") 50% 50% no-repeat;
-      border-bottom: 2px solid #cccfd1; }
+      border-bottom: 3px solid #cccfd1; }
     .datawa-organization-list #publisher-tree > ul > li > a {
       margin-left: 55px;
       display: inline-block; }
