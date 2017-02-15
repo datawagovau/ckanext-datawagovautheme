@@ -64,6 +64,18 @@ and "Search Your Data" boxes line up. */
   border:none;
 }
 
+/* Spatial images */
+
+.leaflet-draw-toolbar a {
+        background-image: url('/img/spritesheet.png');
+        background-repeat: no-repeat;
+}
+
+.leaflet-retina .leaflet-draw-toolbar a {
+        background-image: url('/img/spritesheet-2x.png');
+        background-size: 270px 30px;
+}
+
 .media-grid {
   .media-item {
     word-break: break-word;
