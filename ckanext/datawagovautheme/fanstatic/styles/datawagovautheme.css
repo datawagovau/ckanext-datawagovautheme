@@ -1246,6 +1246,15 @@ and "Search Your Data" boxes line up. */
 .box {
   border: none; }
 
+/* Spatial images */
+.leaflet-draw-toolbar a, .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-draw-toolbar a, .leaflet-draw-toolbar .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .leaflet-draw-toolbar #publisher-tree > ul > li {
+  background-image: url("/img/spritesheet.png");
+  background-repeat: no-repeat; }
+
+.leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .leaflet-retina .leaflet-draw-toolbar #publisher-tree > ul > li {
+  background-image: url("/img/spritesheet-2x.png");
+  background-size: 270px 30px; }
+
 .media-grid .media-item {
   word-break: break-word;
   word-wrap: break-word; }
