@@ -33,28 +33,3 @@
     word-break: normal;
   }
 }
-
-.group-org-members {
-    @media (min-width: $mobile-min) and (max-width: $mobile480 - 1px) {
-        .col-user {
-            width: 43%;
-        }
-        .col-role {
-            width: 31%;
-        }
-        .col-actions {
-            width: 36%;
-        }
-    }
-    @media (min-width: $mobile480) {
-        .col-user {
-            width: 55%;
-        }
-        .col-role {
-            width: 25%;
-        }
-        .col-actions {
-            width: 20%;
-        }
-    }
-}
