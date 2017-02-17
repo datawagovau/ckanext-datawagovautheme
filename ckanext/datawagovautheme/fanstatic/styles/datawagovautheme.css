@@ -1073,7 +1073,8 @@ ul.dataset-list {
   margin-top: 14px;
   margin-right: 10px; }
 .module-content .label-private {
-  background-color: #333333; }
+  background-color: #333333;
+  font-family: Arial, sans-serif; }
 
 .tags .tag-list {
   margin-left: 0; }
