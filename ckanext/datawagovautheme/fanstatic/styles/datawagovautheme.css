@@ -95,114 +95,116 @@ input[type="color"]:focus,
 small {
   font-size: 13px; }
 
-.wrapper-datawa .btn {
-  padding-top: 8px;
-  padding-bottom: 7px;
-  text-decoration: none;
-  border-radius: 0;
-  border: 0;
-  border-bottom: 3px solid #cccfd1;
-  color: #69737c;
-  font-size: 16px;
-  background-image: none; }
-.wrapper-datawa .btn-group > .btn {
-  border-radius: 0; }
-.wrapper-datawa .btn-success,
-.wrapper-datawa .btn-primary {
-  color: #fff;
-  background-color: #5aa12f;
-  border-bottom: 3px solid #4c9022; }
-  .wrapper-datawa .btn-success:hover,
-  .wrapper-datawa .btn-primary:hover {
-    background-color: #529728; }
-.wrapper-datawa .btn-warning {
-  background-color: #f5f6f7;
-  background-image: none;
-  color: #69737c;
-  text-shadow: none;
-  border-bottom: 3px solid #cccfd1; }
-  .wrapper-datawa .btn-warning:hover {
-    background-color: #e7e9ec;
-    color: #69737c; }
-.wrapper-datawa .btn-mini {
-  color: #69737c;
-  border-bottom: 3px solid #cccfd1; }
-.wrapper-datawa .btn-danger {
-  color: #fff;
-  border-bottom: 3px solid #89221d; }
-.wrapper-datawa .dropdown.btn-group .btn.btn-primary {
-  background-color: #5aa12f;
-  border-bottom: 3px solid #4c9022; }
-  .wrapper-datawa .dropdown.btn-group .btn.btn-primary:hover {
-    background-color: #529728; }
-  .wrapper-datawa .dropdown.btn-group .btn.btn-primary .caret {
-    border-top-color: #fff; }
-.wrapper-datawa .image-upload .btn {
-  border-bottom: 3px solid #cccfd1; }
-  .wrapper-datawa .image-upload .btn:hover {
-    color: #69737c; }
-.wrapper-datawa .image-upload .btn-remove-url {
-  border-bottom: 3px solid #89221d;
-  text-decoration: none;
-  border-radius: 0; }
-.wrapper-datawa .dataset-resource-form .form-actions .btn {
-  border-bottom: 3px solid #cccfd1; }
-.wrapper-datawa .dataset-resource-form .form-actions .btn-primary {
-  border-bottom: 3px solid #4c9022; }
-.wrapper-datawa .dataset-resource-form .form-actions .btn-danger {
-  border-bottom: 3px solid #89221d; }
-.wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url {
-  padding-top: 0;
-  padding-bottom: 0; }
-  .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url:hover {
-    color: #fff; }
-.wrapper-datawa .module .module-content .btn {
-  padding-top: 8px;
-  padding-bottom: 7px; }
-  .wrapper-datawa .module .module-content .btn.hover {
-    color: #69737c !important; }
-  .wrapper-datawa .module .module-content .btn .caret {
-    border-top-color: #69737c; }
-.wrapper-datawa .module .module-content #followee-filter .btn {
-  padding-top: 6px;
-  padding-bottom: 5px; }
-.wrapper-datawa .module.module-resource .btn {
-  color: #69737c; }
-.wrapper-datawa .module.module-resource .resource-url-analytics,
-.wrapper-datawa .module.module-resource .btn-success {
-  color: #fff; }
-.wrapper-datawa .module.module-resource .nav-tabs-plain {
-  min-height: 49px; }
-  .wrapper-datawa .module.module-resource .nav-tabs-plain li {
-    margin-top: 10px; }
-.wrapper-datawa .module .pagination ul li a, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li {
-  margin-right: 10px;
-  background-color: #fff;
-  border-color: #4c9022;
-  color: #20399d;
-  padding: 6px 11px 5px; }
-  .wrapper-datawa .module .pagination ul li a:hover, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li:hover {
+.wrapper-datawa {
+  position: relative; }
+  .wrapper-datawa .btn {
+    padding-top: 8px;
+    padding-bottom: 7px;
     text-decoration: none;
-    background-color: #5aa12f;
-    color: #fff; }
-.wrapper-datawa .module .pagination ul li:last-child a, .wrapper-datawa .module .pagination ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:last-child #publisher-tree > ul > li, .wrapper-datawa .module .pagination ul li:first-child a, .wrapper-datawa .module .pagination ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:first-child #publisher-tree > ul > li {
-  border-width: 1px; }
-.wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
-  background-color: #5aa12f; }
-.wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
-  border-color: #4c9022;
-  color: #20399d;
-  background-color: #fff; }
-  .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
-    text-decoration: none;
-    background-color: #fff; }
-.wrapper-datawa .page-header .content_action {
-  margin-top: -10px;
-  margin-right: 0px; }
-  .wrapper-datawa .page-header .content_action .btn {
-    padding: 8px 22px 7px;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 3px solid #cccfd1;
     color: #69737c;
-    border-bottom-width: 3px; }
+    font-size: 16px;
+    background-image: none; }
+  .wrapper-datawa .btn-group > .btn {
+    border-radius: 0; }
+  .wrapper-datawa .btn-success,
+  .wrapper-datawa .btn-primary {
+    color: #fff;
+    background-color: #5aa12f;
+    border-bottom: 3px solid #4c9022; }
+    .wrapper-datawa .btn-success:hover,
+    .wrapper-datawa .btn-primary:hover {
+      background-color: #529728; }
+  .wrapper-datawa .btn-warning {
+    background-color: #f5f6f7;
+    background-image: none;
+    color: #69737c;
+    text-shadow: none;
+    border-bottom: 3px solid #cccfd1; }
+    .wrapper-datawa .btn-warning:hover {
+      background-color: #e7e9ec;
+      color: #69737c; }
+  .wrapper-datawa .btn-mini {
+    color: #69737c;
+    border-bottom: 3px solid #cccfd1; }
+  .wrapper-datawa .btn-danger {
+    color: #fff;
+    border-bottom: 3px solid #89221d; }
+  .wrapper-datawa .dropdown.btn-group .btn.btn-primary {
+    background-color: #5aa12f;
+    border-bottom: 3px solid #4c9022; }
+    .wrapper-datawa .dropdown.btn-group .btn.btn-primary:hover {
+      background-color: #529728; }
+    .wrapper-datawa .dropdown.btn-group .btn.btn-primary .caret {
+      border-top-color: #fff; }
+  .wrapper-datawa .image-upload .btn {
+    border-bottom: 3px solid #cccfd1; }
+    .wrapper-datawa .image-upload .btn:hover {
+      color: #69737c; }
+  .wrapper-datawa .image-upload .btn-remove-url {
+    border-bottom: 3px solid #89221d;
+    text-decoration: none;
+    border-radius: 0; }
+  .wrapper-datawa .dataset-resource-form .form-actions .btn {
+    border-bottom: 3px solid #cccfd1; }
+  .wrapper-datawa .dataset-resource-form .form-actions .btn-primary {
+    border-bottom: 3px solid #4c9022; }
+  .wrapper-datawa .dataset-resource-form .form-actions .btn-danger {
+    border-bottom: 3px solid #89221d; }
+  .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url:hover {
+      color: #fff; }
+  .wrapper-datawa .module .module-content .btn {
+    padding-top: 8px;
+    padding-bottom: 7px; }
+    .wrapper-datawa .module .module-content .btn.hover {
+      color: #69737c !important; }
+    .wrapper-datawa .module .module-content .btn .caret {
+      border-top-color: #69737c; }
+  .wrapper-datawa .module .module-content #followee-filter .btn {
+    padding-top: 6px;
+    padding-bottom: 5px; }
+  .wrapper-datawa .module.module-resource .btn {
+    color: #69737c; }
+  .wrapper-datawa .module.module-resource .resource-url-analytics,
+  .wrapper-datawa .module.module-resource .btn-success {
+    color: #fff; }
+  .wrapper-datawa .module.module-resource .nav-tabs-plain {
+    min-height: 49px; }
+    .wrapper-datawa .module.module-resource .nav-tabs-plain li {
+      margin-top: 10px; }
+  .wrapper-datawa .module .pagination ul li a, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li {
+    margin-right: 10px;
+    background-color: #fff;
+    border-color: #4c9022;
+    color: #20399d;
+    padding: 6px 11px 5px; }
+    .wrapper-datawa .module .pagination ul li a:hover, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li:hover {
+      text-decoration: none;
+      background-color: #5aa12f;
+      color: #fff; }
+  .wrapper-datawa .module .pagination ul li:last-child a, .wrapper-datawa .module .pagination ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:last-child #publisher-tree > ul > li, .wrapper-datawa .module .pagination ul li:first-child a, .wrapper-datawa .module .pagination ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:first-child #publisher-tree > ul > li {
+    border-width: 1px; }
+  .wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
+    background-color: #5aa12f; }
+  .wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
+    border-color: #4c9022;
+    color: #20399d;
+    background-color: #fff; }
+    .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
+      text-decoration: none;
+      background-color: #fff; }
+  .wrapper-datawa .page-header .content_action {
+    margin-top: -10px;
+    margin-right: 0px; }
+    .wrapper-datawa .page-header .content_action .btn {
+      padding: 8px 22px 7px;
+      color: #69737c;
+      border-bottom-width: 3px; }
 
 .wrapper .module .module-content .page_primary_action .btn,
 .wrapper .module .module-content .form-actions .btn {
@@ -1273,6 +1275,21 @@ and "Search Your Data" boxes line up. */
 .tag-list.well li {
   margin-right: 0;
   margin-left: 5px; }
+
+.dataset-map-expanded .wrapper-datawa {
+  margin-top: 383px; }
+.dataset-map-expanded #dataset-map {
+  width: 100%; }
+.dataset-map-expanded #dataset-map-edit-buttons a, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  color: #333333;
+  font-size: 14px;
+  background-image: none; }
 
 body, html {
   overflow-x: hidden; }

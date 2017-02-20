@@ -106,6 +106,28 @@ and "Search Your Data" boxes line up. */
   }
 }
 
+.dataset-map-expanded {
+  .wrapper-datawa {
+      margin-top: 383px;
+  }
+  #dataset-map {
+    width: 100%;
+  }
+  #dataset-map-edit-buttons {
+    a {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      color: #333333;
+      font-size: 14px;
+      background-image: none;
+    }
+  }
+}
+
 body, html{
   overflow-x: hidden;
 }
