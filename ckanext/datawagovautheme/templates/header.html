@@ -119,8 +119,8 @@
           <ul class="nav">
             <li><a href="http://data.wa.gov.au">Home</a></li>
             <li>
-              <a href="#" data-toggle="collapse"  class="header-parent-menu data-activated">Data</a>
-              <ul class="nav header-child-menu" id="header-dropdown">
+              <a href="#header-dropdown" data-toggle="collapse"  class="header-parent-menu data-activated active collapsed">Data</a>
+              <ul class="nav header-child-menu collapse" id="header-dropdown">
                 {% block header_site_navigation_tabs %}
                   {{ h.build_nav_main(
                     ('home', _('Data Home')),

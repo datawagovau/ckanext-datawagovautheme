@@ -136,6 +136,7 @@
           margin: 0;
           background: #f5f6f7;
           margin-left: 20px;
+          height: auto !important;
           li{
             a{
               padding-left: 40px;
@@ -354,7 +355,7 @@
             color: $font-color;
           }
           .btn-search{
-            @include landgate-primary;
+            background: #084a78;
             display: block;
             top: 0;
             bottom: 0;
@@ -362,8 +363,12 @@
             margin: 0;
             height: auto;
             width: 100px;
+            color: #fff;
             i{
               font-size: 28px;
+            }
+            &:hover {
+              background: #003155;
             }
           }
         }
@@ -402,7 +407,7 @@
             display: block;
             content: '';
             position: absolute;
-            bottom: -24px;
+            bottom: -23px;
             left: 0;
             right: 65%;
             height: 5px;
@@ -416,7 +421,7 @@
             display: block;
             content: '';
             position: absolute;
-            bottom: -24px;
+            bottom: -23px;
             left: 0;
             right: 0;
             height: 5px;
@@ -431,7 +436,7 @@
             display: block;
             content: '';
             position: absolute;
-            bottom: -24px;
+            bottom: -23px;
             left: 0;
             right: 0;
             height: 5px;
@@ -445,7 +450,7 @@
             display: block;
             content: '';
             position: absolute;
-            bottom: -24px;
+            bottom: -23px;
             left: 0;
             right: 0;
             height: 5px;
@@ -474,11 +479,11 @@
           background-color: #003155;
         }
         &:before {
-          border-right-width: 10px;
+          border-right-width: 8px;
           border-top-color: #003155;
         }
         &:after {
-          border-left-width: 10px;
+          border-left-width: 8px;
           border-top-color: #003155;
         }
         background-color: #003155;
@@ -517,7 +522,10 @@
       //   border-bottom: 2px solid $h-color;
       // }
       &:hover{
-        background: transparent;
+        &:before, &:after{
+          border-top-color: #003155;
+        }
+        background: #003155;
       }
 
     }
@@ -535,9 +543,11 @@
             padding: 9px 27px 2px;
             &:hover {
               color: #084a78;
+              background: transparent;
             }
           }
           a.data-activated {
+            color: #084a78;
           &:before {
             display: block;
             content: '';
@@ -550,8 +560,8 @@
             border-top-color: transparent;
             border-left-width: 0;
             border-right-width: 0;
-            z-index: 1;
-            border-right-width: 10px;
+            z-index: 0;
+            border-right-width: 8px;
           }
           &:after {
             display: block;
@@ -566,7 +576,7 @@
             border-left-width: 0;
             border-right-width: 0;
             z-index: 0;
-            border-left-width: 10px;
+            border-left-width: 8px;
           }
           }
         }
@@ -606,9 +616,9 @@
       width: 1060px;
     }
     @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px){
-      width: 900px;
-      padding-left: 20px;
-      padding-right: 20px;
+      width: 960px;
+      // padding-left: 20px;
+      // padding-right: 20px;
       box-sizing: border-box;
     }
   }
@@ -620,13 +630,28 @@
     }
   }
 }
+
 @media(max-width: $wide-top) and (min-width: $tablet-top + 1px){
-  .container-header .secondary-menu-navbar .header-secondary-menu ,
-  .nav-collapse .navigation .nav{
+  .container-header .secondary-menu-navbar .header-secondary-menu {
     li{
       a{
-        padding-left: 19.6px;
-        padding-right: 19.6px;
+        padding-left: 29.6px;
+        padding-right: 29.6px;
+      }
+    }
+  }
+  .nav-collapse .navigation .nav li a {
+    padding-left: 19.6px;
+    padding-right: 19.6px;    
+  }
+}
+
+@media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
+  .container-header .secondary-menu-navbar .header-secondary-menu {
+    li{
+      a{
+        padding-left: 37.6px;
+        padding-right: 37.6px;
       }
     }
   }
