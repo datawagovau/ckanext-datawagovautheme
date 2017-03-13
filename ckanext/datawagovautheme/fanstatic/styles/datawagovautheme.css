@@ -510,12 +510,15 @@ ul.nav {
     position: relative; }
   @media (min-width: 980px) {
     .masthead #dwga-header-container {
-      height: 204px; }
+      height: 130px; }
       .masthead #dwga-header-container .hide-desktop {
         display: none; }
       .masthead #dwga-header-container .nav-collapse {
         float: none;
-        padding-top: 28px; } }
+        padding-top: 0;
+        position: absolute;
+        right: 10%;
+        bottom: 12px; } }
   @media (max-width: 979px) {
     .masthead #dwga-header-container .in.collapse {
       margin-left: -20px;
@@ -525,7 +528,8 @@ ul.nav {
       .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu {
         margin: 0;
         background: #f5f6f7;
-        margin-left: 20px; }
+        margin-left: 20px;
+        height: auto !important; }
         .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li a, .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li #publisher-tree > ul > li {
           padding-left: 40px;
           color: #69737c;
@@ -693,21 +697,19 @@ ul.nav {
         .masthead #dwga-header-container .dwga-search .site-search .field input:-ms-input-placeholder {
           color: #565656; }
       .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
-        background: #5aa12f;
-        border-bottom: 3px solid #4c9022;
+        background: #084a78;
         display: block;
         top: 0;
         bottom: 0;
         right: 0;
         margin: 0;
         height: auto;
-        width: 100px; }
-        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search:hover {
-          background: #529728; }
-        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
-          color: #fff; }
+        width: 100px;
+        color: #fff; }
         .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
           font-size: 28px; }
+        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search:hover {
+          background: #003155; }
       @media (max-width: 1099px) {
         .masthead #dwga-header-container .dwga-search .site-search {
           width: 273px; }
@@ -717,42 +719,107 @@ ul.nav {
             width: 55px; } }
 
 .container-header .secondary-menu-navbar {
-  background: #f5f6f7;
-  margin-top: -1px;
-  border-bottom: 1px solid #efefef; }
+  background: #084a78;
+  margin-top: -1px; }
   .container-header .secondary-menu-navbar .header-secondary-menu {
-    height: 121px;
-    margin-bottom: 0;
-    display: table-cell;
-    vertical-align: middle; }
+    font-size: 0;
+    margin-bottom: -6px; }
     .container-header .secondary-menu-navbar .header-secondary-menu li {
       padding-bottom: 0;
-      display: inline-block; }
-      .container-header .secondary-menu-navbar .header-secondary-menu li.active a, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li {
-        border-bottom: 2px solid #69737c; }
+      display: inline-block;
+      position: relative; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li:before {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 65%;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 1; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 0; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:before {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 1; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 1; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:before {
+        right: 50%; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:after {
+        left: 50%; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a:focus, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:focus {
         background: transparent; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
         text-decoration: none; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li.active a, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li {
+      background-color: #003155; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li:hover {
+        background-color: #003155; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a:before, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li:before {
+        border-right-width: 8px;
+        border-top-color: #003155; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a:after, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li:after {
+        border-left-width: 8px;
+        border-top-color: #003155; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li:first-child:before {
+      left: -999999px; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li:last-child:before {
+      right: -999999px; }
 
 @media (min-width: 980px) {
   html body .hide-desktop {
     display: none; }
 
   .container-header .secondary-menu-navbar .header-secondary-menu li, .nav-collapse .navigation .nav li {
-    display: inline-block;
-    padding-bottom: 18px; }
+    display: inline-block; }
     .container-header .secondary-menu-navbar .header-secondary-menu li a, .nav-collapse .navigation .nav li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
       border-bottom: 2px solid transparent;
-      color: #69737c;
+      color: #fff;
       font-family: "Open Sans", sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
-      padding: 9px 27px 8px; }
-      .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover, .container-header .secondary-menu-navbar .header-secondary-menu li a.active, .nav-collapse .navigation .nav li a.active, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li.active, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li.active, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.active, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.active {
-        border-bottom: 2px solid #69737c; }
+      padding: 14px 35px 2px; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
-        background: #f5f6f7; }
+        background: #003155; }
+        .container-header .secondary-menu-navbar .header-secondary-menu li a:hover:before, .nav-collapse .navigation .nav li a:hover:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover:before, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover:before, .container-header .secondary-menu-navbar .header-secondary-menu li a:hover:after, .nav-collapse .navigation .nav li a:hover:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover:after, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover:after, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover:after {
+          border-top-color: #003155; }
 
   .nav-collapse {
     float: none; }
@@ -760,6 +827,42 @@ ul.nav {
       margin-right: 0; }
       .nav-collapse .navigation .nav {
         margin-right: 0; }
+        .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+          color: #69737c;
+          padding: 9px 27px 2px; }
+          .nav-collapse .navigation .nav li a:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
+            color: #084a78;
+            background: transparent; }
+        .nav-collapse .navigation .nav li a.data-activated, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.data-activated, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.data-activated {
+          color: #084a78; }
+          .nav-collapse .navigation .nav li a.data-activated:before, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.data-activated:before, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.data-activated:before {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -27px;
+            left: 50%;
+            right: 25%;
+            height: 5px;
+            border: 10px #084a78 solid;
+            border-top-color: transparent;
+            border-left-width: 0;
+            border-right-width: 0;
+            z-index: 0;
+            border-right-width: 8px; }
+          .nav-collapse .navigation .nav li a.data-activated:after, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.data-activated:after, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.data-activated:after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -27px;
+            left: 75%;
+            right: 0;
+            height: 5px;
+            border: 10px #084a78 solid;
+            border-top-color: transparent;
+            border-left-width: 0;
+            border-right-width: 0;
+            z-index: 0;
+            border-left-width: 8px; }
       .nav-collapse .navigation .header-child-menu {
         display: none; } }
 @media (max-width: 979px) {
@@ -792,21 +895,24 @@ ul.nav {
   .container-header .masthead .container,
   .container-header .secondary-menu-navbar .container,
   .container-header .navbar-static-top .container {
-    width: 900px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 960px;
     box-sizing: border-box; } }
 
 @media (min-width: 1500px) {
   .account-masthead .container {
     padding-right: 1px; } }
 @media (max-width: 1279px) and (min-width: 980px) {
-  .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li,
-  .nav-collapse .navigation .nav li a,
-  .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li,
-  .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+  .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
+    padding-left: 29.6px;
+    padding-right: 29.6px; }
+
+  .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
     padding-left: 19.6px;
     padding-right: 19.6px; } }
+@media (max-width: 1279px) and (min-width: 1100px) {
+  .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
+    padding-left: 37.6px;
+    padding-right: 37.6px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
