@@ -7,14 +7,15 @@ $fff: #fff;
 $btn-primary-color: #95c677;
 $btn-primary-hover: #87be65;
 $btn-primary-border: #7bb855;
-$btn-datawa-color: #5aa12f;
-$btn-datawa-color-hover: #529728;
+$btn-datawa-color: #084a78;
+$btn-datawa-color-hover: #003155;
 
 
 $btn-default-color: #e7e9ec;
 $btn-default-hover: #e7e9ec;
 $btn-default-border: #cccfd1;
-$btn-dropshadow: #4c9022;
+$btn-dropshadow: #033960;
+$btn-dropshadow-hover: #002542;
 $btn-danger-color: #bb362f;
 $btn-danger-color-hover: #a11f18;
 $btn-danger-dropshadow: #89221d;
@@ -27,7 +28,9 @@ $a-hover-color: #20399d;
 $a-dropdown-color: $fff;
 
 
-$pagination-border: #4c9022;
+$pagination-background-color: $fff;
+$pagination-background-color-hover: $btn-datawa-color;
+$pagination-border: #c7cacd;
 
 
 $hd-top: 1499px;
