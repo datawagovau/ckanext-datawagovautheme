@@ -517,8 +517,11 @@ ul.nav {
         float: none;
         padding-top: 0;
         position: absolute;
-        right: 10%;
+        right: 6%;
         bottom: 12px; } }
+  @media (min-width: 1500px) {
+    .masthead #dwga-header-container .nav-collapse {
+      right: 10%; } }
   @media (max-width: 979px) {
     .masthead #dwga-header-container .in.collapse {
       margin-left: -20px;
@@ -813,9 +816,9 @@ ul.nav {
       border-bottom: 2px solid transparent;
       color: #fff;
       font-family: "Open Sans", sans-serif;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 15px;
-      padding: 14px 35px 2px; }
+      padding: 14px 32px 2px; }
       .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
         background: #003155; }
         .container-header .secondary-menu-navbar .header-secondary-menu li a:hover:before, .nav-collapse .navigation .nav li a:hover:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover:before, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover:before, .container-header .secondary-menu-navbar .header-secondary-menu li a:hover:after, .nav-collapse .navigation .nav li a:hover:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover:after, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover:after, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover:after {
@@ -829,7 +832,7 @@ ul.nav {
         margin-right: 0; }
         .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
           color: #69737c;
-          padding: 9px 27px 2px; }
+          padding: 9px 15px 2px; }
           .nav-collapse .navigation .nav li a:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
             color: #084a78;
             background: transparent; }
@@ -876,20 +879,20 @@ ul.nav {
   .container-header .masthead .container,
   .container-header .secondary-menu-navbar .container,
   .container-header .navbar-static-top .container {
-    width: 1280px;
+    width: 1192px;
     box-sizing: border-box; } }
 @media (max-width: 1499px) and (min-width: 1280px) {
   .account-masthead .container,
   .container-header .masthead .container,
   .container-header .secondary-menu-navbar .container,
   .container-header .navbar-static-top .container {
-    width: 1100px; } }
+    width: 990px; } }
 @media (max-width: 1279px) and (min-width: 1100px) {
   .account-masthead .container,
   .container-header .masthead .container,
   .container-header .secondary-menu-navbar .container,
   .container-header .navbar-static-top .container {
-    width: 1060px; } }
+    width: 916px; } }
 @media (max-width: 1099px) and (min-width: 980px) {
   .account-masthead .container,
   .container-header .masthead .container,
@@ -897,6 +900,12 @@ ul.nav {
   .container-header .navbar-static-top .container {
     width: 960px;
     box-sizing: border-box; } }
+@media (min-width: 1500px) {
+  .account-masthead .container#dwga-header-container,
+  .container-header .masthead .container#dwga-header-container,
+  .container-header .secondary-menu-navbar .container#dwga-header-container,
+  .container-header .navbar-static-top .container#dwga-header-container {
+    padding-right: 86px; } }
 
 @media (min-width: 1500px) {
   .account-masthead .container {
@@ -909,10 +918,6 @@ ul.nav {
   .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
     padding-left: 19.6px;
     padding-right: 19.6px; } }
-@media (max-width: 1279px) and (min-width: 1100px) {
-  .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
-    padding-left: 37.6px;
-    padding-right: 37.6px; } }
 /* ====================================
    The footer at the bottom of the site
    ==================================== */
@@ -1415,7 +1420,7 @@ body, html {
   .navbar-fixed-bottom .container {
     width: 1280px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 25px;
     box-sizing: border-box; }
 
   #content,
@@ -1523,7 +1528,7 @@ body, html {
 @media (max-width: 1279px) and (min-width: 1100px) {
   .container {
     width: 917px; }
-    .container#content, .container.homepage [role="main"] .container {
+    .container.homepage [role="main"] .container {
       padding-right: 38px; }
 
   .site-footer .container {
