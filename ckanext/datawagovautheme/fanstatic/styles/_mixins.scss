@@ -3,6 +3,7 @@
   border-bottom: 3px solid $btn-dropshadow;
   &:hover{
     background: $btn-datawa-color-hover;
+    border-bottom-color: $btn-dropshadow-hover;
   }
   i{
     color: #fff;
