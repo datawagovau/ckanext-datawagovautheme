@@ -145,7 +145,7 @@ body, html{
   .navbar-fixed-bottom .container{
     width: 1280px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 25px;
     box-sizing: border-box;
   }
   .site-footer .container{
@@ -297,7 +297,7 @@ body, html{
 @media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
   .container{
     width: 917px;
-    &#content,
+    // &#content,
     &.homepage [role="main"] .container{
       padding-right: 38px;
     }

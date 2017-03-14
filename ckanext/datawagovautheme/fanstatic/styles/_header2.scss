@@ -122,8 +122,13 @@
         float: none;
         padding-top: 0;
         position: absolute;
-        right: 10%;
+        right: 6%;
         bottom: 12px;
+      }
+    }
+    @media(min-width: $hd-top + 1px){
+      .nav-collapse{
+        right: 10%;
       }
     }
     @media(max-width: $tablet-top){
@@ -515,9 +520,9 @@
       border-bottom: 2px solid transparent;
       color: #fff;
       font-family: "Open Sans", sans-serif;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 15px;
-      padding: 14px 35px 2px;
+      padding: 14px 32px 2px;
       // &:hover, &.active{
       //   border-bottom: 2px solid $h-color;
       // }
@@ -540,7 +545,7 @@
           @extend %header-navigation-item;
           a {
             color: #69737c;
-            padding: 9px 27px 2px;
+            padding: 9px 15px 2px;
             &:hover {
               color: #084a78;
               background: transparent;
@@ -606,20 +611,25 @@
 .container-header .navbar-static-top{
   .container{
     @media(min-width: $hd-top + 1px){
-      width: 1280px;
+      width: 1192px;
       box-sizing: border-box;
     }
     @media(max-width: $hd-top) and (min-width: $wide-top + 1px){
-      width: 1100px;
+      width: 990px;
     }
     @media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
-      width: 1060px;
+      width: 916px;
     }
     @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px){
       width: 960px;
       // padding-left: 20px;
       // padding-right: 20px;
       box-sizing: border-box;
+    }
+  }
+  .container#dwga-header-container {
+    @media(min-width: $hd-top + 1px){
+      padding-right: 86px;
     }
   }
 }
@@ -646,13 +656,13 @@
   }
 }
 
-@media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
-  .container-header .secondary-menu-navbar .header-secondary-menu {
-    li{
-      a{
-        padding-left: 37.6px;
-        padding-right: 37.6px;
-      }
-    }
-  }
-}
+// @media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
+//   .container-header .secondary-menu-navbar .header-secondary-menu {
+//     li{
+//       a{
+//         padding-left: 37.6px;
+//         padding-right: 37.6px;
+//       }
+//     }
+//   }
+// }
