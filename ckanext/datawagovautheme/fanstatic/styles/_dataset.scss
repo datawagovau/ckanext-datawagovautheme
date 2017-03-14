@@ -207,10 +207,74 @@ ul.dataset-list{
   }
 }
 
-.wrapper-datawa {
-    .module-resource {
+.datawa-datasets {
+    .toolbar {
+        border-bottom: 1px solid $btn-grey-border;
+        padding-bottom: 8px;
+        margin-bottom: 0;
+    }
+    .wrapper-datawa {
+        .span9,
+        .span3 {
+            padding-top: 10px;
+        }
+        .secondary.span3 {
+            background: $aside-span3-bg;
+        }
+        #dataset-map {
+            .module-heading {
+                border-bottom: 2px solid $facet-border;
+                padding-bottom: 4px;
+                background: $aside-span3-bg;
+            }
+            .spatial-filter-location,
+            .spatial-filter-clear {
+                display: inline-block;
+            }
+            .spatial-filter-location {
+                width: 80px;
+                text-transform: uppercase;
+                color: $facet-title-color-text;
+                font-weight: bold;
+            }
+            .spatial-filter-clear {
+                padding-top: 25px;
+                float: right;
+            }
+            .dataset-map {
+                margin-top: 10px;
+            }
+        }
+        .filters {
+            .module {
+                margin: 23px 0;
+            }
+            h2.module-heading {
+                border-top: 0;
+                text-transform: uppercase;
+                color: $facet-title-color-text;
+                background: $aside-span3-bg;
+                border-bottom: 2px solid $facet-border;
+            }
+            .nav-simple > li {
+                border-bottom-color: $facet-dotted-border-color;
+            }
+            .module-footer {
+                border-top: 1px dotted $facet-dotted-border-color;
+            }
+            .nav-facet {
+                background: $nav-facet-bg;
+                .nav-item > a {
+                    color: $nav-item-a-color;
+                    &:hover {
+                        color: $a-hover-color;
+                    }
+                }
+            }
+        }
     }
 }
+
 
 @media (max-width: $tablet-top){
   .js{

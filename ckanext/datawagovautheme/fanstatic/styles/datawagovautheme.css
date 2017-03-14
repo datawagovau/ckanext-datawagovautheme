@@ -1272,6 +1272,51 @@ ul.dataset-list {
     border-top: 1px solid #efefef;
     background: #fff; }
 
+.datawa-datasets .toolbar {
+  border-bottom: 1px solid #c7cacd;
+  padding-bottom: 8px;
+  margin-bottom: 0; }
+.datawa-datasets .wrapper-datawa .span9,
+.datawa-datasets .wrapper-datawa .span3 {
+  padding-top: 10px; }
+.datawa-datasets .wrapper-datawa .secondary.span3 {
+  background: #f4f7f8; }
+.datawa-datasets .wrapper-datawa #dataset-map .module-heading {
+  border-bottom: 2px solid #dfe1e2;
+  padding-bottom: 4px;
+  background: #f4f7f8; }
+.datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-location,
+.datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-clear {
+  display: inline-block; }
+.datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-location {
+  width: 80px;
+  text-transform: uppercase;
+  color: #202224;
+  font-weight: bold; }
+.datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-clear {
+  padding-top: 25px;
+  float: right; }
+.datawa-datasets .wrapper-datawa #dataset-map .dataset-map {
+  margin-top: 10px; }
+.datawa-datasets .wrapper-datawa .filters .module {
+  margin: 23px 0; }
+.datawa-datasets .wrapper-datawa .filters h2.module-heading {
+  border-top: 0;
+  text-transform: uppercase;
+  color: #202224;
+  background: #f4f7f8;
+  border-bottom: 2px solid #dfe1e2; }
+.datawa-datasets .wrapper-datawa .filters .nav-simple > li {
+  border-bottom-color: #d2d5d6; }
+.datawa-datasets .wrapper-datawa .filters .module-footer {
+  border-top: 1px dotted #d2d5d6; }
+.datawa-datasets .wrapper-datawa .filters .nav-facet {
+  background: #f3f6f7; }
+  .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item > a, .datawa-datasets .wrapper-datawa .filters .nav-facet .group-list .module-heading h3 .nav-item > a, .datawa-datasets .wrapper-datawa .filters .nav-facet .datawa-organization-list #publisher-tree > ul.nav-item > li, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet #publisher-tree > ul.nav-item > li {
+    color: #4b4e4f; }
+    .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item > a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .group-list .module-heading h3 .nav-item > a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .datawa-organization-list #publisher-tree > ul.nav-item > li:hover, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet #publisher-tree > ul.nav-item > li:hover {
+      color: #20399d; }
+
 @media (max-width: 979px) {
   .js [role=main] .secondary .filters {
     display: none;
