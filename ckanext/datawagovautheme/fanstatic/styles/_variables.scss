@@ -2,6 +2,9 @@ $font-color: #565656;
 $link-hover-color: #69737c;
 $h-color: #69737c;
 $fff: #fff;
+$grey-ea: #eaeaea;
+$grey-f3: #f3f3f3;
+$grey-e5: #e5e5e5;
 
 
 $btn-primary-color: #95c677;
@@ -30,8 +33,18 @@ $a-dropdown-color: $fff;
 
 $pagination-background-color: $fff;
 $pagination-background-color-hover: $btn-datawa-color;
-$pagination-border: #c7cacd;
+$pagination-border: $btn-grey-border;
 
+$facet-title-color-text: #202224;
+$facet-dotted-border-color: #d2d5d6;
+
+$aside-span3-bg: #f4f7f8;
+
+$facet-border: #dfe1e2;
+$nav-facet-bg: #f3f6f7;
+$nav-item-a-color: #4b4e4f;
+
+$dataset-tabs-bg: #e4e9ed;
 
 $hd-top: 1499px;
 $wide-top: 1279px;

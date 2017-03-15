@@ -7,6 +7,8 @@
   <li class="active">{{ h.nav_link(_('Datasets'), controller='package', action='search', highlight_actions = 'new index') }}</li>
 {% endblock %}
 
+{% block maintag %}<div role="main" class="datawa-datasets">{% endblock %}
+
 {% block primary_content %}
   <section class="module">
     <div class="module-content">
@@ -79,4 +81,3 @@
   <a class="close no-text hide-filters"><i class="icon-remove-sign"></i><span class="text">close</span></a>
 </div>
 {% endblock %}
-

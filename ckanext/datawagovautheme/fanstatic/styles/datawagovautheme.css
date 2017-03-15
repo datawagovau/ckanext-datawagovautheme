@@ -148,16 +148,16 @@ small {
     border-bottom: 3px solid #89221d;
     text-decoration: none;
     border-radius: 0; }
-  .wrapper-datawa .dataset-resource-form .form-actions .btn {
+  .wrapper-datawa .dataset-form .form-actions .btn {
     border-bottom: 3px solid #cccfd1; }
-  .wrapper-datawa .dataset-resource-form .form-actions .btn-primary {
+  .wrapper-datawa .dataset-form .form-actions .btn-primary {
     border-bottom: 3px solid #033960; }
-  .wrapper-datawa .dataset-resource-form .form-actions .btn-danger {
+  .wrapper-datawa .dataset-form .form-actions .btn-danger {
     border-bottom: 3px solid #89221d; }
-  .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url {
+  .wrapper-datawa .dataset-form .image-upload .controls .btn-danger.btn-remove-url {
     padding-top: 0;
     padding-bottom: 0; }
-    .wrapper-datawa .dataset-resource-form .image-upload .controls .btn-danger.btn-remove-url:hover {
+    .wrapper-datawa .dataset-form .image-upload .controls .btn-danger.btn-remove-url:hover {
       color: #fff; }
   .wrapper-datawa .module .module-content .btn {
     padding-top: 8px;
@@ -191,7 +191,8 @@ small {
   .wrapper-datawa .module .pagination ul li:last-child a, .wrapper-datawa .module .pagination ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:last-child #publisher-tree > ul > li, .wrapper-datawa .module .pagination ul li:first-child a, .wrapper-datawa .module .pagination ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:first-child #publisher-tree > ul > li {
     border-width: 1px; }
   .wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
-    background-color: #084a78; }
+    background-color: #084a78;
+    border-color: #084a78; }
   .wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
     border-color: #c7cacd;
     color: #20399d;
@@ -200,8 +201,8 @@ small {
       text-decoration: none;
       background-color: #fff; }
   .wrapper-datawa .page-header .content_action {
-    margin-top: -10px;
-    margin-right: 0px; }
+    margin-top: -5px;
+    margin-right: 10px; }
     .wrapper-datawa .page-header .content_action .btn {
       padding: 8px 22px 7px;
       color: #69737c;
@@ -352,7 +353,7 @@ ul.nav {
   margin-left: 0; }
 
 .nav-item.active a, .nav-item.active .group-list .module-heading h3 a, .group-list .module-heading h3 .nav-item.active a, .nav-item.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-item.active #publisher-tree > ul > li {
-  background: #20399d; }
+  background: #084a78; }
   .nav-item.active a:before, .nav-item.active .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .nav-item.active #publisher-tree > ul > li:before {
     background-image: url("/nav-active.png");
     background-repeat: no-repeat; }
@@ -1162,11 +1163,13 @@ ul.dataset-list {
   text-decoration: none; }
   .page-header .nav-tabs li a:hover, .page-header .nav-tabs li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li #publisher-tree > ul > li:hover {
     color: #20399d;
-    background: #f5f5f5; }
+    background: #f3f3f3;
+    border: 1px solid #e5e5e5; }
 .page-header .nav-tabs li.active a, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li, .page-header .nav-tabs li.active a:hover, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li:hover {
   color: #69737c; }
 .page-header .nav-tabs li.active a:hover, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li:hover {
-  background: #fff; }
+  background: #fff;
+  border-bottom-color: transparent; }
 
 .module-content .label.label-inverse {
   background: #f5f6f7;
@@ -1271,6 +1274,128 @@ ul.dataset-list {
     border-right: none;
     border-top: 1px solid #efefef;
     background: #fff; }
+
+.datawa-datasets {
+  padding-bottom: 0; }
+  .datawa-datasets .wrapper-datawa .secondary.span3 {
+    background: #f4f7f8; }
+    @media (min-width: 1099px) {
+      .datawa-datasets .wrapper-datawa .secondary.span3:before {
+        content: ' ';
+        display: block;
+        background: #f4f7f8;
+        position: absolute;
+        width: 9999px;
+        top: -1px;
+        bottom: 0;
+        left: -9999px; } }
+  .datawa-datasets .wrapper-datawa #dataset-map {
+    margin-bottom: 35px; }
+    .datawa-datasets .wrapper-datawa #dataset-map .module-heading {
+      border-bottom: 2px solid #dfe1e2;
+      padding-bottom: 4px;
+      background: #f4f7f8; }
+    .datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-location,
+    .datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-clear {
+      display: inline-block; }
+    .datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-location {
+      width: 80px;
+      text-transform: uppercase;
+      color: #202224;
+      font-weight: bold; }
+    .datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-clear {
+      padding-top: 25px;
+      float: right; }
+    .datawa-datasets .wrapper-datawa #dataset-map .dataset-map {
+      margin-top: 10px; }
+  .datawa-datasets .wrapper-datawa .filters .module {
+    margin: 23px 0; }
+  .datawa-datasets .wrapper-datawa .filters h2.module-heading {
+    border-top: 0;
+    text-transform: uppercase;
+    color: #202224;
+    font-weight: 600;
+    background: #f4f7f8;
+    border-bottom: 2px solid #dfe1e2; }
+  .datawa-datasets .wrapper-datawa .filters .nav-simple > li {
+    border-bottom-color: #d2d5d6; }
+  .datawa-datasets .wrapper-datawa .filters .module-footer {
+    border-top: 1px dotted #d2d5d6; }
+  .datawa-datasets .wrapper-datawa .filters .nav-facet {
+    background: #f3f6f7; }
+    .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item > a, .datawa-datasets .wrapper-datawa .filters .nav-facet .group-list .module-heading h3 .nav-item > a, .datawa-datasets .wrapper-datawa .filters .nav-facet .datawa-organization-list #publisher-tree > ul.nav-item > li, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet #publisher-tree > ul.nav-item > li {
+      color: #4b4e4f; }
+      .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item > a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .group-list .module-heading h3 .nav-item > a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .datawa-organization-list #publisher-tree > ul.nav-item > li:hover, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet #publisher-tree > ul.nav-item > li:hover {
+        color: #20399d;
+        background: #eaeaea; }
+    .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active a, .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active #publisher-tree > ul > li {
+      color: #fff; }
+      .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active #publisher-tree > ul > li:hover {
+        color: #20399d; }
+
+.datawa-datasets,
+.datawa-dataset-read {
+  overflow: hidden; }
+  .datawa-datasets .span9,
+  .datawa-datasets .span3,
+  .datawa-dataset-read .span9,
+  .datawa-dataset-read .span3 {
+    padding-top: 24px; }
+  .datawa-datasets .span3,
+  .datawa-dataset-read .span3 {
+    padding-top: 40px;
+    position: relative; }
+    @media (min-width: 979px) {
+      .datawa-datasets .span3:after,
+      .datawa-dataset-read .span3:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        height: 9999px;
+        top: 0;
+        bottom: 0px;
+        right: 0;
+        border-right: 1px solid #c7cacd; } }
+  .datawa-datasets .toolbar,
+  .datawa-dataset-read .toolbar {
+    border-bottom: 1px solid #c7cacd;
+    padding-bottom: 8px;
+    margin-bottom: 0; }
+    .datawa-datasets .toolbar:before,
+    .datawa-dataset-read .toolbar:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 9999px;
+      top: 0;
+      bottom: -1px;
+      left: -9999px;
+      border-bottom: 1px solid #c7cacd;
+      z-index: 10; }
+    .datawa-datasets .toolbar:after,
+    .datawa-dataset-read .toolbar:after {
+      border-bottom: 1px solid #c7cacd;
+      width: 9999px;
+      bottom: -9px;
+      position: relative; }
+
+.datawa-dataset-read .wrapper-datawa .span9 .page-header {
+  background: #e4e9ed;
+  padding-top: 13px;
+  margin-left: 0;
+  padding-left: 10px;
+  border-radius: 0px; }
+  @media (min-width: 768px) {
+    .datawa-dataset-read .wrapper-datawa .span9 .page-header {
+      border-bottom-color: transparent; }
+      .datawa-dataset-read .wrapper-datawa .span9 .page-header .nav-tabs {
+        border-color: transparent; }
+        .datawa-dataset-read .wrapper-datawa .span9 .page-header .nav-tabs > li > a {
+          padding-top: 10px;
+          padding-bottom: 10px; }
+        .datawa-dataset-read .wrapper-datawa .span9 .page-header .nav-tabs > li.active a, .datawa-dataset-read .wrapper-datawa .span9 .page-header .nav-tabs > li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .span9 .page-header .nav-tabs > li.active #publisher-tree > ul > li {
+          border-color: #e4e9ed;
+          border-bottom-color: transparent; } }
 
 @media (max-width: 979px) {
   .js [role=main] .secondary .filters {
@@ -1496,7 +1621,7 @@ body, html {
     width: 1280px; }
 
   .span9 {
-    width: 800px; }
+    width: 810px; }
     .span9 .primary {
       width: 602px; }
 
@@ -1519,7 +1644,7 @@ body, html {
     width: 1100px; }
 
   .span9 {
-    width: 680px; }
+    width: 690px; }
     .span9 .primary {
       width: 482px; }
 

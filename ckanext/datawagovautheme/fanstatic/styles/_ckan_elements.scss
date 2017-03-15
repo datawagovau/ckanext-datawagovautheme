@@ -135,7 +135,7 @@ ul.nav{
 .nav-item{
   &.active{
     a{
-      background: $a-hover-color;
+      background: $btn-datawa-color;
       &:before{
         background-image: url("/nav-active.png");
         background-repeat: no-repeat;
