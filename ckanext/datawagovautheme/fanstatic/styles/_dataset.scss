@@ -212,21 +212,6 @@ ul.dataset-list{
 .datawa-datasets {
     padding-bottom: 0;
     .wrapper-datawa {
-        .secondary.span3 {
-            background: $aside-span3-bg;
-            @media (min-width: $desktop-top) {
-                &:before {
-                    content: ' ';
-                    display: block;
-                    background: $aside-span3-bg;
-                    position: absolute;
-                    width: 9999px;
-                    top: -1px;
-                    bottom: 0;
-                    left: -9999px;
-                }
-            }
-        }
         #dataset-map {
             margin-bottom: 35px;
             .module-heading {
@@ -304,6 +289,17 @@ ul.dataset-list{
         padding-top: 40px;
         position: relative;
         @media (min-width: $tablet-top) {
+            background: $aside-span3-bg;
+            &:before {
+                content: ' ';
+                display: block;
+                background: $aside-span3-bg;
+                position: absolute;
+                width: 9999px;
+                top: -1px;
+                bottom: 0;
+                left: -9999px;
+            }
             &:after {
                 content: ' ';
                 display: block;
