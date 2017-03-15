@@ -49,7 +49,8 @@ ul.dataset-list{
         text-decoration: none;
         &:hover{
           color: $a-hover-color;
-          background: #f5f5f5;
+          background: $grey-f3;
+          border: 1px solid $grey-e5;
         }
       }
       &.active{
@@ -59,6 +60,7 @@ ul.dataset-list{
           }
           &:hover{
             background: #fff;
+            border-bottom-color: transparent;
           }
         }
       }
@@ -208,20 +210,25 @@ ul.dataset-list{
 }
 
 .datawa-datasets {
-    .toolbar {
-        border-bottom: 1px solid $btn-grey-border;
-        padding-bottom: 8px;
-        margin-bottom: 0;
-    }
+    padding-bottom: 0;
     .wrapper-datawa {
-        .span9,
-        .span3 {
-            padding-top: 10px;
-        }
         .secondary.span3 {
             background: $aside-span3-bg;
+            @media (min-width: $desktop-top) {
+                &:before {
+                    content: ' ';
+                    display: block;
+                    background: $aside-span3-bg;
+                    position: absolute;
+                    width: 9999px;
+                    top: -1px;
+                    bottom: 0;
+                    left: -9999px;
+                }
+            }
         }
         #dataset-map {
+            margin-bottom: 35px;
             .module-heading {
                 border-bottom: 2px solid $facet-border;
                 padding-bottom: 4px;
@@ -253,6 +260,7 @@ ul.dataset-list{
                 border-top: 0;
                 text-transform: uppercase;
                 color: $facet-title-color-text;
+                font-weight: 600;
                 background: $aside-span3-bg;
                 border-bottom: 2px solid $facet-border;
             }
@@ -268,13 +276,99 @@ ul.dataset-list{
                     color: $nav-item-a-color;
                     &:hover {
                         color: $a-hover-color;
+                        background: $grey-ea;
+                    }
+                }
+                .nav-item {
+                    &.active {
+                        a {
+                            color: $fff;
+                            &:hover {
+                                color: $a-hover-color;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
+.datawa-datasets,
+.datawa-dataset-read {
+    overflow: hidden;
+    .span9,
+    .span3 {
+        padding-top: 24px;
+    }
+    .span3 {
+        padding-top: 40px;
+        position: relative;
+        @media (min-width: $tablet-top) {
+            &:after {
+                content: ' ';
+                display: block;
+                position: absolute;
+                height: 9999px;
+                top: 0;
+                bottom: 0px;
+                right: 0;
+                border-right: 1px solid $btn-grey-border;
+            }
+        }
+    }
+    .toolbar {
+        border-bottom: 1px solid $btn-grey-border;
+        padding-bottom: 8px;
+        margin-bottom: 0;
+        &:before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 9999px;
+            top: 0;
+            bottom: -1px;
+            left: -9999px;
+            border-bottom: 1px solid $btn-grey-border;
+            z-index: 10;
+        }
+        &:after {
+            border-bottom: 1px solid $btn-grey-border;
+            width: 9999px;
+            bottom: -9px;
+            position: relative;
+        }
+    }
+}
 
+.datawa-dataset-read {
+    .wrapper-datawa {
+        .span9 {
+            .page-header {
+                background: $dataset-tabs-bg;
+                padding-top: 13px;
+                margin-left: 0;
+                padding-left: 10px;
+                border-radius: 0px;
+                @media (min-width: $mobile-top + 1px) {
+                    border-bottom-color: transparent;
+                    .nav-tabs {
+                        border-color: transparent;
+                        &> li > a {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                        &> li.active {
+                            a {
+                                border-color: $dataset-tabs-bg;
+                                border-bottom-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: $tablet-top){
   .js{

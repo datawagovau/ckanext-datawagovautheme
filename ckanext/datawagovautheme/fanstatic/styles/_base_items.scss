@@ -191,7 +191,7 @@ small{
       border-radius: 0;
     }
   }
-  .dataset-resource-form {
+  .dataset-form {
     .form-actions {
       .btn {
         border-bottom: 3px solid $btn-default-border;
@@ -273,6 +273,7 @@ small{
           &.active {
             a {
               background-color: $btn-datawa-color;
+              border-color: $btn-datawa-color;
             }
           }
           &.disabled {
@@ -292,8 +293,8 @@ small{
   }
   .page-header {
       .content_action {
-          margin-top: -10px;
-          margin-right: 0px;
+          margin-top: -5px;
+          margin-right: 10px;
           .btn {
               padding: 8px 22px 7px;
               color: $h-color;
