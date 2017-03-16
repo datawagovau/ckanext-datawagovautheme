@@ -218,36 +218,23 @@ ul.dataset-list{
                 border-bottom: 2px solid $facet-border;
                 padding-bottom: 4px;
                 background: $aside-span3-bg;
-            }
-            .spatial-filter-location,
-            .spatial-filter-clear {
-                display: inline-block;
+                a {
+                    position: relative;
+                    top: 25px;
+                    text-transform: capitalize;;
+                }
             }
             .spatial-filter-location {
+                display: inline-block;
                 width: 80px;
                 text-transform: uppercase;
                 color: $facet-title-color-text;
-                font-weight: bold;
-            }
-            .spatial-filter-clear {
-                padding-top: 25px;
-                float: right;
-            }
-            .dataset-map {
-                margin-top: 10px;
+                font-weight: 600;
             }
         }
         .filters {
             .module {
                 margin: 23px 0;
-            }
-            h2.module-heading {
-                border-top: 0;
-                text-transform: uppercase;
-                color: $facet-title-color-text;
-                font-weight: 600;
-                background: $aside-span3-bg;
-                border-bottom: 2px solid $facet-border;
             }
             .nav-simple > li {
                 border-bottom-color: $facet-dotted-border-color;
@@ -281,13 +268,34 @@ ul.dataset-list{
 .datawa-datasets,
 .datawa-dataset-read {
     overflow: hidden;
+    @media (min-width: $tablet-top + 1px) {
+        .wrapper-datawa {
+            background-image: url('/datawa_nav.png');
+            background-repeat: repeat-y;
+            background-position: -119px 0px;
+        }
+    }
+    @media (min-width: $desktop-top + 1px) {
+        .wrapper-datawa {
+            background-position: -79px 0px;
+        }
+        @media (min-width: $wide-top + 1px) {
+            .wrapper-datawa {
+                background-position: -69px 0px;
+            }
+        }
+    }
+    @media (min-width: $hd-top + 1px) {
+        .wrapper-datawa {
+            background-position: -49px 0px;
+        }
+    }
     .span9,
     .span3 {
         padding-top: 24px;
     }
     .span3 {
         padding-top: 40px;
-        position: relative;
         @media (min-width: $tablet-top) {
             background: $aside-span3-bg;
             &:before {
@@ -300,16 +308,14 @@ ul.dataset-list{
                 bottom: 0;
                 left: -9999px;
             }
-            &:after {
-                content: ' ';
-                display: block;
-                position: absolute;
-                height: 9999px;
-                top: 0;
-                bottom: 0px;
-                right: 0;
-                border-right: 1px solid $btn-grey-border;
-            }
+        }
+        h2.module-heading {
+            border-top: 0;
+            text-transform: uppercase;
+            color: $facet-title-color-text;
+            font-weight: 600;
+            background: $aside-span3-bg;
+            border-bottom: 2px solid $facet-border;
         }
     }
     .toolbar {
@@ -337,6 +343,7 @@ ul.dataset-list{
 }
 
 .datawa-dataset-read {
+    padding-bottom: 0;
     .wrapper-datawa {
         .span9 {
             .page-header {
@@ -359,6 +366,38 @@ ul.dataset-list{
                                 border-bottom-color: transparent;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    .datawa-dataset-read {
+        .wrapper-datawa {
+            .span3 {
+                .context-info {
+                    h1.heading {
+                        word-wrap: break-word;
+                        word-break: normal;;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dataset-map-expanded {
+    .datawa-datasets {
+        .wrapper-datawa {
+            #dataset-map {
+                h2.module-heading {
+                    .spatial-filter-location {
+                        width: auto;
+                    }
+                    a {
+                        top: 0px;
                     }
                 }
             }
