@@ -115,15 +115,22 @@ and "Search Your Data" boxes line up. */
   }
   #dataset-map-edit-buttons {
     a {
-      padding-top: 4px;
-      padding-bottom: 4px;
+      padding-top: 6px;
+      padding-bottom: 2px;
       text-decoration: none;
-      border-radius: 4px;
-      border: 1px solid #cccccc;
-      border-bottom: 1px solid #cccccc;
-      color: #333333;
+      /* border-radius: 4px; */
+      /* border: 1px solid #cccccc; */
+      border-bottom: 3px solid $btn-dropshadow;
+      color: #fff;
       font-size: 14px;
       background-image: none;
+      background: $btn-datawa-color;
+      box-shadow: none;
+      text-shadow: none;
+      &:hover {
+        background: $btn-datawa-color-hover;
+        border-bottom-color: $btn-dropshadow-hover;
+      }
     }
   }
 }

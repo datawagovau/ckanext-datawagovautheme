@@ -1524,15 +1524,21 @@ and "Search Your Data" boxes line up. */
 .dataset-map-expanded #dataset-map {
   width: 100%; }
 .dataset-map-expanded #dataset-map-edit-buttons a, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 6px;
+  padding-bottom: 2px;
   text-decoration: none;
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-  color: #333333;
+  /* border-radius: 4px; */
+  /* border: 1px solid #cccccc; */
+  border-bottom: 3px solid #033960;
+  color: #fff;
   font-size: 14px;
-  background-image: none; }
+  background-image: none;
+  background: #084a78;
+  box-shadow: none;
+  text-shadow: none; }
+  .dataset-map-expanded #dataset-map-edit-buttons a:hover, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li:hover {
+    background: #003155;
+    border-bottom-color: #002542; }
 
 body, html {
   overflow-x: hidden; }

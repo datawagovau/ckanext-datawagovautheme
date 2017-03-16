@@ -360,7 +360,7 @@
             color: $font-color;
           }
           .btn-search{
-            background: #084a78;
+            background: $btn-datawa-color;
             display: block;
             top: 0;
             bottom: 0;
@@ -373,7 +373,7 @@
               font-size: 28px;
             }
             &:hover {
-              background: #003155;
+              background: $btn-datawa-color-hover;
             }
           }
         }
@@ -394,7 +394,7 @@
 }
 .container-header{
   .secondary-menu-navbar{
-    background: #084a78;
+    background: $btn-datawa-color;
     margin-top: -1px;
     // border-bottom: 1px solid #efefef;
     .header-secondary-menu{
@@ -417,7 +417,7 @@
             right: 65%;
             height: 5px;
             border: 10px transparent solid;
-            border-top-color: #084a78;
+            border-top-color: $btn-datawa-color;
             border-left-width: 0;
             border-right-width: 0;
             z-index: 1;
@@ -431,7 +431,7 @@
             right: 0;
             height: 5px;
             border: 10px transparent solid;
-            border-top-color: #084a78;
+            border-top-color: $btn-datawa-color;
             border-left-width: 0;
             border-right-width: 0;
             z-index: 0;
@@ -446,7 +446,7 @@
             right: 0;
             height: 5px;
             border: 10px transparent solid;
-            border-top-color: #084a78;
+            border-top-color: $btn-datawa-color;
             border-left-width: 0;
             border-right-width: 0;
             z-index: 1;
@@ -460,7 +460,7 @@
             right: 0;
             height: 5px;
             border: 10px transparent solid;
-            border-top-color: #084a78;
+            border-top-color: $btn-datawa-color;
             border-left-width: 0;
             border-right-width: 0;
             z-index: 1;
@@ -481,17 +481,17 @@
       }
       li.active a {
         &:hover {
-          background-color: #003155;
+          background-color: $btn-datawa-color-hover;
         }
         &:before {
           border-right-width: 8px;
-          border-top-color: #003155;
+          border-top-color: $btn-datawa-color-hover;
         }
         &:after {
           border-left-width: 8px;
-          border-top-color: #003155;
+          border-top-color: $btn-datawa-color-hover;
         }
-        background-color: #003155;
+        background-color: $btn-datawa-color-hover;
       }
       li:first-child {
         &:before {
@@ -528,9 +528,9 @@
       // }
       &:hover{
         &:before, &:after{
-          border-top-color: #003155;
+          border-top-color: $btn-datawa-color-hover;
         }
-        background: #003155;
+        background: $btn-datawa-color-hover;
       }
 
     }
@@ -547,12 +547,12 @@
             color: #69737c;
             padding: 9px 15px 2px;
             &:hover {
-              color: #084a78;
+              color: $btn-datawa-color;
               background: transparent;
             }
           }
           a.data-activated {
-            color: #084a78;
+            color: $btn-datawa-color;
           &:before {
             display: block;
             content: '';
@@ -561,7 +561,7 @@
             left: 50%;
             right: 25%;
             height: 5px;
-            border: 10px #084a78 solid;
+            border: 10px $btn-datawa-color solid;
             border-top-color: transparent;
             border-left-width: 0;
             border-right-width: 0;
@@ -576,7 +576,7 @@
             left: 75%;
             right: 0;
             height: 5px;
-            border: 10px #084a78 solid;
+            border: 10px $btn-datawa-color solid;
             border-top-color: transparent;
             border-left-width: 0;
             border-right-width: 0;
