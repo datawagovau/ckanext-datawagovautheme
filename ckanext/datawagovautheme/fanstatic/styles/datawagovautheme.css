@@ -1607,6 +1607,9 @@ body, html {
 .datawa-user-login .wrapper-datawa .secondary.span3 {
   padding-bottom: 20px; }
 
+.datawa-user-read .wrapper-datawa .secondary.span3 {
+  padding-top: 30px; }
+
 @media (min-width: 1280px) {
   .container,
   .navbar-static-top .container,

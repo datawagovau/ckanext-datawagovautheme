@@ -330,6 +330,14 @@ body, html{
     }
 }
 
+.datawa-user-read {
+    .wrapper-datawa {
+        .secondary.span3 {
+            padding-top: 30px;
+        }
+    }
+}
+
 @media(min-width: $wide-top + 1px){
   .container,
   .navbar-static-top .container,
