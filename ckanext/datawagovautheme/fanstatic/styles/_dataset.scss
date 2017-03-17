@@ -267,110 +267,14 @@ ul.dataset-list{
 }
 .datawa-datasets,
 .datawa-dataset-read {
-    overflow: hidden;
-    @media (min-width: $tablet-top + 1px) {
-        .wrapper-datawa {
-            background-image: url('/datawa_nav.png');
-            background-repeat: repeat-y;
-            background-position: -119px 0px;
-        }
-    }
-    @media (min-width: $desktop-top + 1px) {
-        .wrapper-datawa {
-            background-position: -79px 0px;
-        }
-        @media (min-width: $wide-top + 1px) {
-            .wrapper-datawa {
-                background-position: -69px 0px;
-            }
-        }
-    }
-    @media (min-width: $hd-top + 1px) {
-        .wrapper-datawa {
-            background-position: -49px 0px;
-        }
-    }
     .span9,
     .span3 {
         padding-top: 24px;
-    }
-    .span3 {
-        padding-top: 40px;
-        @media (min-width: $tablet-top) {
-            background: $aside-span3-bg;
-            &:before {
-                content: ' ';
-                display: block;
-                background: $aside-span3-bg;
-                position: absolute;
-                width: 9999px;
-                top: -1px;
-                bottom: 0;
-                left: -9999px;
-            }
-        }
-        h2.module-heading {
-            border-top: 0;
-            text-transform: uppercase;
-            color: $facet-title-color-text;
-            font-weight: 600;
-            background: $aside-span3-bg;
-            border-bottom: 2px solid $facet-border;
-        }
-    }
-    .toolbar {
-        border-bottom: 1px solid $btn-grey-border;
-        padding-bottom: 8px;
-        margin-bottom: 0;
-        &:before {
-            content: ' ';
-            display: block;
-            position: absolute;
-            width: 9999px;
-            top: 0;
-            bottom: -1px;
-            left: -9999px;
-            border-bottom: 1px solid $btn-grey-border;
-            z-index: 10;
-        }
-        &:after {
-            border-bottom: 1px solid $btn-grey-border;
-            width: 9999px;
-            bottom: -9px;
-            position: relative;
-        }
     }
 }
 
 .datawa-dataset-read {
     padding-bottom: 0;
-    .wrapper-datawa {
-        .span9 {
-            .page-header {
-                background: $dataset-tabs-bg;
-                padding-top: 13px;
-                margin-left: 0;
-                padding-left: 10px;
-                border-radius: 0px;
-                @media (min-width: $mobile-top + 1px) {
-                    border-bottom-color: transparent;
-                    .nav-tabs {
-                        border-color: transparent;
-                        &> li > a {
-                            padding-top: 10px;
-                            padding-bottom: 10px;
-                        }
-                        &> li.active {
-                            a {
-                                border-color: $dataset-tabs-bg;
-                                border-bottom-color: transparent;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 @-moz-document url-prefix() {
