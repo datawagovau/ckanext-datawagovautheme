@@ -138,6 +138,198 @@ body, html{
   font-size: 17px;
   line-height: 1.3;
 }
+
+[role=main] {
+    padding-bottom: 0;
+}
+
+.datawa-dataset-read,
+.datawa-datasets,
+.datawa-orgs,
+.datawa-org-read,
+.datawa-about,
+.datawa-groups,
+.datawa-group-read {
+    padding-bottom: 0;
+}
+
+@media (min-width: $tablet-top + 1px) {
+    .wrapper-datawa {
+        background-image: url('/datawa_nav.png');
+        background-repeat: repeat-y;
+        background-position: -119px 0px;
+    }
+}
+@media (min-width: $desktop-top + 1px) {
+    .wrapper-datawa {
+        background-position: -79px 0px;
+    }
+    @media (min-width: $wide-top + 1px) {
+        .wrapper-datawa {
+            background-position: -69px 0px;
+        }
+    }
+}
+@media (min-width: $hd-top + 1px) {
+    .wrapper-datawa {
+        background-position: -49px 0px;
+    }
+}
+
+.toolbar {
+    border-bottom: 1px solid $btn-grey-border;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 9999px;
+        top: 0;
+        bottom: -1px;
+        left: -9999px;
+        border-bottom: 1px solid $btn-grey-border;
+        z-index: 10;
+    }
+    &:after {
+        border-bottom: 1px solid $btn-grey-border;
+        width: 9999px;
+        bottom: -9px;
+        position: relative;
+    }
+}
+
+.secondary.span3 {
+    padding-top: 20px;
+    @media (min-width: $tablet-top) {
+        background: $aside-span3-bg;
+        &:before {
+            content: ' ';
+            display: block;
+            background: $aside-span3-bg;
+            position: absolute;
+            width: 9999px;
+            top: -1px;
+            bottom: 0;
+            left: -9999px;
+        }
+    }
+    h2.module-heading {
+        border-top: 0;
+        text-transform: uppercase;
+        color: $facet-title-color-text;
+        font-weight: 600;
+        background: $aside-span3-bg;
+        border-bottom: 2px solid $facet-border;
+    }
+}
+
+.wrapper-datawa {
+    .span9 {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .page-header {
+        background: $dataset-tabs-bg;
+        padding-top: 13px;
+        margin-left: 0;
+        padding-left: 10px;
+        border-radius: 0px;
+        @media (min-width: $mobile-top + 1px) {
+            border-bottom-color: transparent;
+            .nav-tabs {
+                border-color: transparent;
+                &> li > a {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                &> li.active {
+                    a {
+                        border-color: $dataset-tabs-bg;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.datawa-datasets,
+.datawa-dataset-read {
+    .wrapper-datawa {
+        padding-top: 0;
+    }
+}
+
+.datawa-about,
+.datawa-dashboard {
+    .wrapper-datawa {
+        padding-top: 20px;
+        background-image: none;
+    }
+}
+
+.datawa-group-read,
+.datawa-org-read {
+    .wrapper-datawa {
+        .span9 {
+            .page-header {
+                margin-left: 0;
+            }
+        }
+        .span3 {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.datawa-admin {
+    padding-top: 0;
+    padding-bottom: 0;
+    .toolbar {
+        border-bottom: 0;
+        padding: 0;
+        &:after,
+        &:before {
+            display: none;
+        }
+    }
+    .wrapper-datawa {
+        min-height: 350px;
+        .span9 {
+            padding-top: 40px;
+        }
+        .secondary.span3 {
+            padding-top: 34px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.datawa-dashboard {
+    .wrapper-datawa {
+        padding-top: 30px;
+    }
+}
+
+.datawa-user-edit,
+.datawa-user-new,
+.datawa-user-login {
+    .wrapper-datawa {
+        .span9 {
+            padding-top: 20px;
+        }
+    }
+}
+
+.datawa-user-login {
+    .wrapper-datawa {
+        .secondary.span3 {
+            padding-bottom: 20px;
+        }
+    }
+}
+
 @media(min-width: $wide-top + 1px){
   .container,
   .navbar-static-top .container,
