@@ -1610,6 +1610,19 @@ body, html {
 .datawa-user-read .wrapper-datawa .secondary.span3 {
   padding-top: 30px; }
 
+@media (min-width: 979px) {
+  .datawa-resource-read .wrapper-datawa {
+    background: #f4f7f8;
+    background-image: none; }
+    .datawa-resource-read .wrapper-datawa .module-resource .module-content:first-child {
+      margin-top: 0;
+      padding-top: 30px; } }
+@media (min-width: 979px) {
+  .datawa-resource-read .secondary.span3 {
+    background: #f4f7f8; }
+    .datawa-resource-read .secondary.span3:before {
+      background: #FEFEFE; } }
+
 @media (min-width: 1280px) {
   .container,
   .navbar-static-top .container,

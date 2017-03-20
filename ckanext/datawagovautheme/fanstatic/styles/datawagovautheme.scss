@@ -338,6 +338,29 @@ body, html{
     }
 }
 
+.datawa-resource-read {
+    .wrapper-datawa {
+        @media (min-width: $tablet-top) {
+            background: $aside-span3-bg;
+            background-image: none;
+            .module-resource {
+                .module-content:first-child {
+                    margin-top: 0;
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+    .secondary.span3 {
+        @media (min-width: $tablet-top) {
+            background: $aside-span3-bg;
+            &:before {
+                background: $grey-fe;
+            }
+        }
+    }
+}
+
 @media(min-width: $wide-top + 1px){
   .container,
   .navbar-static-top .container,
