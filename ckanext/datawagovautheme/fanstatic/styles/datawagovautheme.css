@@ -1612,7 +1612,6 @@ body, html {
 
 @media (min-width: 979px) {
   .datawa-resource-read .wrapper-datawa {
-    background: #f4f7f8;
     background-image: none; }
     .datawa-resource-read .wrapper-datawa .module-resource .module-content:first-child {
       margin-top: 0;
