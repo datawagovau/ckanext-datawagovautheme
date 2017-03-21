@@ -348,6 +348,12 @@ body, html{
 .datawa-resource-read {
     .wrapper-datawa {
         @media (min-width: $tablet-top) {
+            .span3 {
+                border-right: 1px solid $btn-grey-border;
+                .license {
+                    margin-bottom: 50px;
+                }
+            }
             background-image: none;
             .module-resource {
                 .module-content:first-child {

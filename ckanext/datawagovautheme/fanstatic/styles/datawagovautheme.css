@@ -1619,6 +1619,10 @@ body, html {
 @media (min-width: 979px) {
   .datawa-resource-read .wrapper-datawa {
     background-image: none; }
+    .datawa-resource-read .wrapper-datawa .span3 {
+      border-right: 1px solid #c7cacd; }
+      .datawa-resource-read .wrapper-datawa .span3 .license {
+        margin-bottom: 50px; }
     .datawa-resource-read .wrapper-datawa .module-resource .module-content:first-child {
       margin-top: 0;
       padding-top: 30px; } }
