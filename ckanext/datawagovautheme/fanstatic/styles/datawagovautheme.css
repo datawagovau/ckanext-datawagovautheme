@@ -1454,7 +1454,17 @@ and "Search Your Data" boxes line up. */
   margin-top: 383px; }
 .dataset-map-expanded #dataset-map {
   width: 100%; }
-.dataset-map-expanded #dataset-map-edit-buttons a, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li {
+.dataset-map-expanded #dataset-map-edit-buttons a.btn.cancel, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.cancel, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.cancel {
+  padding-top: 6px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 3px solid #cccfd1;
+  color: #69737c;
+  font-size: 14px;
+  background-image: none; }
+.dataset-map-expanded #dataset-map-edit-buttons a.btn.apply, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply {
   padding-top: 6px;
   padding-bottom: 2px;
   text-decoration: none;
@@ -1467,9 +1477,11 @@ and "Search Your Data" boxes line up. */
   background: #084a78;
   box-shadow: none;
   text-shadow: none; }
-  .dataset-map-expanded #dataset-map-edit-buttons a:hover, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li:hover {
+  .dataset-map-expanded #dataset-map-edit-buttons a.btn.apply:hover, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply:hover, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply:hover {
     background: #003155;
     border-bottom-color: #002542; }
+.dataset-map-expanded #dataset-map-edit-buttons a.btn.apply.disabled, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply.disabled, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply.disabled {
+  opacity: 0.8; }
 
 body, html {
   overflow-x: hidden; }

@@ -114,7 +114,18 @@ and "Search Your Data" boxes line up. */
     width: 100%;
   }
   #dataset-map-edit-buttons {
-    a {
+    a.btn.cancel {
+      padding-top: 6px;
+      padding-bottom: 2px;
+      text-decoration: none;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 3px solid $btn-default-border;
+      color: $h-color;
+      font-size: 14px;
+      background-image: none;
+    }
+    a.btn.apply {
       padding-top: 6px;
       padding-bottom: 2px;
       text-decoration: none;
@@ -131,6 +142,9 @@ and "Search Your Data" boxes line up. */
         background: $btn-datawa-color-hover;
         border-bottom-color: $btn-dropshadow-hover;
       }
+    }
+    a.btn.apply.disabled {
+      opacity: 0.8;
     }
   }
 }
