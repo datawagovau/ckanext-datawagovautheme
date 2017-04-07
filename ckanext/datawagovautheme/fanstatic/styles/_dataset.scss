@@ -18,11 +18,18 @@
 ul.dataset-list{
   margin-left: 0;
 }
-.context-info{
+.context-info {
   h1.heading{
     hyphens: none;
     word-break: break-word;
   }
+}
+
+.wrapper-datawa {
+    h1.dataset-title {
+        hyphens: none;
+        word-break: break-word;
+    }
 }
 
 .page-header {
