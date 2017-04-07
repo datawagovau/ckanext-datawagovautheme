@@ -1146,6 +1146,10 @@ ul.dataset-list {
   hyphens: none;
   word-break: break-word; }
 
+.wrapper-datawa h1.dataset-title {
+  hyphens: none;
+  word-break: break-word; }
+
 @media (max-width: 768px) {
   .page-header .content_action {
     float: none;
