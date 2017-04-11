@@ -63,8 +63,14 @@
     margin-left: 0;
   }
   @media(max-width: $hd-top){
+      border: {
+          bottom: 20px solid #fff;
+      }
+  }
+  @media(max-width: $tablet-top){
     border:{
-      bottom: 20px solid #fff;
+      left: 20px solid #fff;
+      right: 20px solid #fff;
     }
   }
   @media(max-width: $mobile-top){
