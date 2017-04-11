@@ -1400,6 +1400,42 @@ ul.dataset-list {
     top: 14px;
     right: 17px;
     opacity: 0.6; } }
+.datawa-showcase-edit .ckanext-showcase-edit-wrapper {
+  margin-top: 30px;
+  border: 0;
+  box-shadow: none; }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action {
+    margin-right: 10px; }
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action a.btn, .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action .datawa-organization-list #publisher-tree > ul > li.btn, .datawa-organization-list .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action #publisher-tree > ul > li.btn {
+      padding: 8px 22px; }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-remove-url {
+    border-radius: 0;
+    border: 0; }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-remove-url,
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-danger {
+    color: #fff;
+    background: #bb362f;
+    border-bottom: 3px solid #89221d; }
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-remove-url:hover,
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-danger:hover {
+      background: #a11f18; }
+  @media (max-width: 767px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .form-actions button {
+      float: right; } }
+  @media (max-width: 979px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content .show-filters.btn {
+      display: none; } }
+  @media (max-width: 767px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper {
+      padding-right: 20px; }
+      .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .nav-tabs li {
+        margin-right: 10px; } }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .ckanext_showcase_pagination_footer {
+    padding-bottom: 10px; }
+@media (max-width: 1099px) and (min-width: 980px) {
+  .datawa-showcase-edit .container {
+    width: 940px; } }
+
 /* ===========================================
    The content in the middle of the front page
    =========================================== */
@@ -1589,9 +1625,11 @@ body, html {
     background: #f4f7f8;
     border-bottom: 2px solid #dfe1e2; }
 
+.datawa-showcase-edit .span9,
 .wrapper-datawa .span9 {
   padding-top: 30px;
   padding-bottom: 20px; }
+.datawa-showcase-edit .page-header,
 .wrapper-datawa .page-header {
   background: #e4e9ed;
   padding-top: 13px;
@@ -1599,14 +1637,20 @@ body, html {
   padding-left: 10px;
   border-radius: 0px; }
   @media (min-width: 768px) {
+    .datawa-showcase-edit .page-header,
     .wrapper-datawa .page-header {
       border-bottom-color: transparent; }
+      .datawa-showcase-edit .page-header .nav-tabs,
       .wrapper-datawa .page-header .nav-tabs {
         border-color: transparent; }
+        .datawa-showcase-edit .page-header .nav-tabs > li > a,
         .wrapper-datawa .page-header .nav-tabs > li > a {
           padding-top: 10px;
           padding-bottom: 10px; }
-        .wrapper-datawa .page-header .nav-tabs > li.active a, .wrapper-datawa .page-header .nav-tabs > li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .page-header .nav-tabs > li.active #publisher-tree > ul > li {
+        .datawa-showcase-edit .page-header .nav-tabs > li.active a, .datawa-showcase-edit .page-header .nav-tabs > li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-showcase-edit .page-header .nav-tabs > li.active #publisher-tree > ul > li,
+        .wrapper-datawa .page-header .nav-tabs > li.active a,
+        .wrapper-datawa .page-header .nav-tabs > li.active .datawa-organization-list #publisher-tree > ul > li,
+        .datawa-organization-list .wrapper-datawa .page-header .nav-tabs > li.active #publisher-tree > ul > li {
           border-color: #e4e9ed;
           border-bottom-color: transparent; } }
 

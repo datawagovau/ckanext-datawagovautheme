@@ -8,6 +8,7 @@
 @import 'group';
 @import 'organization';
 @import 'dataset';
+@import 'showcase';
 
 
 
@@ -245,6 +246,7 @@ body, html{
     }
 }
 
+.datawa-showcase-edit,
 .wrapper-datawa {
     .span9 {
         padding-top: 30px;

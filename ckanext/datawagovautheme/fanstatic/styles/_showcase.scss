@@ -1,0 +1,63 @@
+.datawa-showcase-edit {
+    .ckanext-showcase-edit-wrapper {
+        margin-top: 30px;
+        border: 0;
+        box-shadow: none;
+        .page-header {
+            .content_action {
+                margin-right: 10px;
+                a.btn {
+                    padding: 8px 22px;
+                }
+            }
+        }
+        .module-content {
+            #dataset-edit {
+                .btn-remove-url {
+                    border-radius: 0;
+                    border: 0;
+                }
+                .btn-remove-url,
+                .btn-danger {
+                    color: $fff;
+                    background: $btn-danger-color;
+                    border-bottom: 3px solid $btn-danger-dropshadow;
+                    &:hover {
+                        background: $btn-danger-color-hover;
+                    }
+                }
+                @media(max-width: $mobile-top) {
+                    .form-actions {
+                        button {
+                            float: right;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $tablet-top) {
+                .show-filters.btn {
+                    display: none;
+                }
+            }
+        }
+        @media(max-width: $mobile-top) {
+            padding-right: 20px;
+            .page-header {
+                .nav-tabs {
+                    li {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+        }
+        .ckanext_showcase_pagination_footer {
+            padding-bottom: 10px;
+        }
+    }
+    @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px) {
+        .container {
+            width: 940px;
+        }
+    }
+}
