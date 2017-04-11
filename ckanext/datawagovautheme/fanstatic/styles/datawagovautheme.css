@@ -965,8 +965,10 @@ ul.nav {
     margin: 0; }
   .site-footer .row {
     margin-left: 0; }
-  @media (max-width: 1499px) {
+  @media (max-width: 979px) {
     .site-footer {
+      border-left: 20px solid #fff;
+      border-right: 20px solid #fff;
       border-bottom: 20px solid #fff; } }
   @media (max-width: 767px) {
     .site-footer {

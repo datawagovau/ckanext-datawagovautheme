@@ -62,8 +62,10 @@
   .row{
     margin-left: 0;
   }
-  @media(max-width: $hd-top){
+  @media(max-width: $tablet-top){
     border:{
+      left: 20px solid #fff;
+      right: 20px solid #fff;
       bottom: 20px solid #fff;
     }
   }
