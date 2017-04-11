@@ -1325,14 +1325,16 @@ ul.dataset-list {
 
 .datawa-dataset-read {
   padding-bottom: 0; }
-  .datawa-dataset-read .wrapper-datawa .additional-info thead th {
-    background: #e9edf0;
-    text-transform: uppercase; }
-    .datawa-dataset-read .wrapper-datawa .additional-info thead th:first-child {
-      padding-left: 10px; }
-  .datawa-dataset-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:first-child,
-  .datawa-dataset-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:last-child {
-    border-radius: 0; }
+  .datawa-dataset-read .wrapper-datawa .additional-info {
+    margin-top: 30px; }
+    .datawa-dataset-read .wrapper-datawa .additional-info thead th {
+      background: #e9edf0;
+      text-transform: uppercase; }
+      .datawa-dataset-read .wrapper-datawa .additional-info thead th:first-child {
+        padding-left: 10px; }
+    .datawa-dataset-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:first-child,
+    .datawa-dataset-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:last-child {
+      border-radius: 0; }
 
 @-moz-document url-prefix() {
   .datawa-dataset-read .wrapper-datawa .span3 .context-info h1.heading {
