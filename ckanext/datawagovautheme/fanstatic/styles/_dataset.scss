@@ -282,6 +282,27 @@ ul.dataset-list{
 
 .datawa-dataset-read {
     padding-bottom: 0;
+    .wrapper-datawa {
+        .additional-info {
+            thead {
+                th {
+                    background: $ad-info-bg;
+                    text-transform: uppercase;
+                    &:first-child {
+                        padding-left: 10px;
+                    }
+                }
+            }
+            .table-bordered {
+                thead:first-child {
+                    tr:first-child > th:first-child,
+                    tr:first-child > th:last-child {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @-moz-document url-prefix() {
