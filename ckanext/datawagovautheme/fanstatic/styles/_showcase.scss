@@ -54,6 +54,21 @@
         .ckanext_showcase_pagination_footer {
             padding-bottom: 10px;
         }
+        @media(max-width: $wide-top) and (min-width: $desktop-top + 1px) {
+            .span12 {
+                width: 917px;
+            }
+        }
+        @media(max-width: $hd-top) and (min-width: $wide-top + 1px) {
+            .span12 {
+                width: 948px;
+            }
+        }
+        @media(min-width: $hd-top + 1px) {
+            .span12 {
+                width: 1086px;
+            }
+        }
     }
     @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px) {
         .container {
