@@ -69,10 +69,42 @@
                 width: 1086px;
             }
         }
+        @media(min-width: $wide-top + 1px) {
+            .span12 {
+                .container {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px) {
+        .container#content {
+            width: 724px;
+            padding-right: 0;
+            padding-left: 0;
+            .ckanext-showcase-edit-wrapper {
+                .span12 {
+                    .container {
+                        width: 724px;
+                    }
+                }
+            }
+        }
     }
     @media(max-width: $desktop-top) and (min-width: $tablet-top + 1px) {
-        .container {
-            width: 940px;
+        .container#content {
+            width: 960px;
+            padding-right: 20px;
+            padding-left: 20px;
+            .ckanext-showcase-edit-wrapper {
+                .span12 {
+                    width: 960px;
+                    .container {
+                        width: 960px;
+                    }
+                }
+            }
         }
+
     }
 }
