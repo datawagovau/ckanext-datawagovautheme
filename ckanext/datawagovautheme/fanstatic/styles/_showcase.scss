@@ -76,6 +76,11 @@
                 }
             }
         }
+        @media(width: $mobile-top + 1px) {
+            .span12 {
+                padding-right: 20px;
+            }
+        }
     }
     @media(max-width: $tablet-top) and (min-width: $mobile-top + 1px) {
         .container#content {
