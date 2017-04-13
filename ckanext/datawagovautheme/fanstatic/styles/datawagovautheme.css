@@ -1444,6 +1444,9 @@ ul.dataset-list {
   @media (min-width: 1280px) {
     .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 .container {
       padding-left: 0; } }
+  @media (width: 768px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 {
+      padding-right: 20px; } }
 @media (max-width: 979px) and (min-width: 768px) {
   .datawa-showcase-edit .container#content {
     width: 724px;
