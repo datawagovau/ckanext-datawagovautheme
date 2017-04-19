@@ -4,8 +4,13 @@
     font-size: $h3-fz;
     a{
       color: $a-color;
+      text-decoration: none;
       &:hover{
         color: $a-hover-color;
+      }
+      &:hover,
+      &:focus {
+          text-decoration: underline;
       }
     }
   }
@@ -269,7 +274,17 @@ ul.dataset-list{
                     }
                 }
             }
+            .read-more {
+                text-decoration: none;
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
         }
+    }
+    .api-info-section {
+        @include langate-link-decoration;
     }
 }
 .datawa-datasets,
@@ -339,6 +354,20 @@ ul.dataset-list{
         }
     }
 }
+
+.datawa-dataset-read {
+    .wrapper-datawa {
+        .resources .resource-item .dropdown a,
+        .follow_button a {
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 
 @media (max-width: $tablet-top){
   .js{

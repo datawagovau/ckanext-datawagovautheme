@@ -33,3 +33,11 @@
     word-break: normal;
   }
 }
+
+.datawa-group-read {
+    .wrapper-datawa {
+        .module-footer {
+            @include langate-link-decoration;
+        }
+    }
+}

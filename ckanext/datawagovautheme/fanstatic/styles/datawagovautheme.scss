@@ -388,6 +388,17 @@ body, html{
         }
     }
 }
+.wrapper-datawa {
+    .context-info p,
+    .resource-item,
+    .additional-info .dataset-details,
+    #dataset-edit .form-actions p.action-info,
+    .span3 .module-content p,
+    .activity {
+        @include langate-link-decoration;
+    }
+}
+
 
 @media(min-width: $wide-top + 1px){
   .container,
