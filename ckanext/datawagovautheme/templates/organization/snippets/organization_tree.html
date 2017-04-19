@@ -14,10 +14,6 @@ Example:
 
 #}
 
-
-{% resource 'hierarchy/hierarchy_theme.css' %}
-{% resource 'hierarchy/jquery.hierarchy.js' %}
-
 <ul class="hierarchy-tree-top">
   {% for node in top_nodes recursive %}
       {% set longname = h.group_tree_get_longname(node.name) %}
