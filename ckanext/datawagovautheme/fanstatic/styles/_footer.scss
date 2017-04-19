@@ -23,7 +23,7 @@
     margin-bottom: 11px;
     li{
       display: inline;
-      text-decoration: underline;
+      text-decoration: none;
       &:after{
         content: '';
         border-right: 1px solid $font-color;
@@ -40,6 +40,7 @@
           left: 0;
         }
       }
+      @include langate-link-decoration;
     }
   }
   .footer-wa-link-wrapper{

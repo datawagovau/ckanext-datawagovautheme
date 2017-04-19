@@ -941,7 +941,7 @@ ul.nav {
     margin-bottom: 11px; }
     .site-footer .inline-links li {
       display: inline;
-      text-decoration: underline; }
+      text-decoration: none; }
       .site-footer .inline-links li:after {
         content: '';
         border-right: 1px solid #565656;
@@ -952,6 +952,10 @@ ul.nav {
         border-right: none;
         margin-right: 0;
         margin-left: 0; }
+      .site-footer .inline-links li a, .site-footer .inline-links li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .site-footer .inline-links li #publisher-tree > ul > li {
+        text-decoration: none; }
+        .site-footer .inline-links li a:hover, .site-footer .inline-links li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .site-footer .inline-links li #publisher-tree > ul > li:hover, .site-footer .inline-links li a:focus, .site-footer .inline-links li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .site-footer .inline-links li #publisher-tree > ul > li:focus {
+          text-decoration: underline; }
   .site-footer .footer-wa-link-wrapper {
     position: relative; }
   .site-footer .footer-wa-link {
@@ -1049,6 +1053,10 @@ ul.nav {
   font-size: 28px; }
 .homepage .search-form {
   padding: 0; }
+.homepage .span6 .box a, .homepage .span6 .box .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .homepage .span6 .box #publisher-tree > ul > li {
+  text-decoration: none; }
+  .homepage .span6 .box a:hover, .homepage .span6 .box .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .homepage .span6 .box #publisher-tree > ul > li:hover, .homepage .span6 .box a:focus, .homepage .span6 .box .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .homepage .span6 .box #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
 
 .custom-group-list .module-image {
   width: 190px;
@@ -1078,6 +1086,11 @@ ul.nav {
   line-height: 1.59375em;
   -ms-word-break: normal;
   word-break: normal; }
+
+.datawa-group-read .wrapper-datawa .module-footer a, .datawa-group-read .wrapper-datawa .module-footer .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-group-read .wrapper-datawa .module-footer #publisher-tree > ul > li {
+  text-decoration: none; }
+  .datawa-group-read .wrapper-datawa .module-footer a:hover, .datawa-group-read .wrapper-datawa .module-footer .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-group-read .wrapper-datawa .module-footer #publisher-tree > ul > li:hover, .datawa-group-read .wrapper-datawa .module-footer a:focus, .datawa-group-read .wrapper-datawa .module-footer .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-group-read .wrapper-datawa .module-footer #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
 
 .datawa-organization-list #publisher-tree > ul {
   margin: 0;
@@ -1127,17 +1140,56 @@ ul.nav {
   margin-left: 55px;
   display: inline-block;
   line-height: 1; }
+.datawa-organization-list #publisher-tree .hierarchy-tree li a, .datawa-organization-list #publisher-tree .hierarchy-tree li #publisher-tree > ul > li {
+  text-decoration: none; }
+  .datawa-organization-list #publisher-tree .hierarchy-tree li a:hover, .datawa-organization-list #publisher-tree .hierarchy-tree li #publisher-tree > ul > li:hover, .datawa-organization-list #publisher-tree .hierarchy-tree li a:focus, .datawa-organization-list #publisher-tree .hierarchy-tree li #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
 .datawa-organization-list + .pagination {
   display: none; }
+
+.wrapper-datawa #member-table .media a, .wrapper-datawa #member-table .media .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa #member-table .media #publisher-tree > ul > li,
+#publisher-tree .hierarchy-tree li.open a,
+#publisher-tree .hierarchy-tree li.open .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list #publisher-tree .hierarchy-tree li.open #publisher-tree > ul > li,
+.datawa-org-read .wrapper-datawa .context-info p a,
+.datawa-org-read .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .datawa-org-read .wrapper-datawa .context-info p #publisher-tree > ul > li,
+.datawa-org-read .wrapper-datawa .activity a,
+.datawa-org-read .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li {
+  text-decoration: none; }
+  .wrapper-datawa #member-table .media a:hover, .wrapper-datawa #member-table .media .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa #member-table .media #publisher-tree > ul > li:hover, .wrapper-datawa #member-table .media a:focus, .wrapper-datawa #member-table .media .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .wrapper-datawa #member-table .media #publisher-tree > ul > li:focus,
+  #publisher-tree .hierarchy-tree li.open a:hover,
+  #publisher-tree .hierarchy-tree li.open .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list #publisher-tree .hierarchy-tree li.open #publisher-tree > ul > li:hover,
+  #publisher-tree .hierarchy-tree li.open a:focus,
+  #publisher-tree .hierarchy-tree li.open .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list #publisher-tree .hierarchy-tree li.open #publisher-tree > ul > li:focus,
+  .datawa-org-read .wrapper-datawa .context-info p a:hover,
+  .datawa-org-read .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .context-info p #publisher-tree > ul > li:hover,
+  .datawa-org-read .wrapper-datawa .context-info p a:focus,
+  .datawa-org-read .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .context-info p #publisher-tree > ul > li:focus,
+  .datawa-org-read .wrapper-datawa .activity a:hover,
+  .datawa-org-read .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li:hover,
+  .datawa-org-read .wrapper-datawa .activity a:focus,
+  .datawa-org-read .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
 
 .dataset-item {
   border-bottom: 1px dotted #efefef; }
   .dataset-item .dataset-heading {
     font-size: 22px; }
     .dataset-item .dataset-heading a, .dataset-item .dataset-heading .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-heading a, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li {
-      color: #20399d; }
+      color: #20399d;
+      text-decoration: none; }
       .dataset-item .dataset-heading a:hover, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:hover {
         color: #20399d; }
+      .dataset-item .dataset-heading a:hover, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:hover, .dataset-item .dataset-heading a:focus, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:focus {
+        text-decoration: underline; }
   .dataset-item .dataset-resources a, .dataset-item .dataset-resources .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-resources a, .dataset-item .dataset-resources .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-resources #publisher-tree > ul > li {
     text-decoration: none; }
 
@@ -1316,6 +1368,14 @@ ul.dataset-list {
       color: #fff; }
       .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active #publisher-tree > ul > li:hover {
         color: #20399d; }
+  .datawa-datasets .wrapper-datawa .filters .read-more {
+    text-decoration: none; }
+    .datawa-datasets .wrapper-datawa .filters .read-more:hover, .datawa-datasets .wrapper-datawa .filters .read-more:focus {
+      text-decoration: underline; }
+  .datawa-datasets .api-info-section a, .datawa-datasets .api-info-section .group-list .module-heading h3 a, .group-list .module-heading h3 .datawa-datasets .api-info-section a, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li {
+    text-decoration: none; }
+    .datawa-datasets .api-info-section a:hover, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li:hover, .datawa-datasets .api-info-section a:focus, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li:focus {
+      text-decoration: underline; }
 
 .datawa-datasets .span9,
 .datawa-datasets .span3,
@@ -1356,6 +1416,20 @@ ul.dataset-list {
   width: auto; }
 .dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading a, .dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading #publisher-tree > ul > li {
   top: 0px; }
+
+.datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown a, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown #publisher-tree > ul > li,
+.datawa-dataset-read .wrapper-datawa .follow_button a,
+.datawa-dataset-read .wrapper-datawa .follow_button .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .datawa-dataset-read .wrapper-datawa .follow_button #publisher-tree > ul > li {
+  text-decoration: none; }
+  .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown a:hover, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown #publisher-tree > ul > li:hover, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown a:focus, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown #publisher-tree > ul > li:focus,
+  .datawa-dataset-read .wrapper-datawa .follow_button a:hover,
+  .datawa-dataset-read .wrapper-datawa .follow_button .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .datawa-dataset-read .wrapper-datawa .follow_button #publisher-tree > ul > li:hover,
+  .datawa-dataset-read .wrapper-datawa .follow_button a:focus,
+  .datawa-dataset-read .wrapper-datawa .follow_button .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .datawa-dataset-read .wrapper-datawa .follow_button #publisher-tree > ul > li:focus {
+    text-decoration: none; }
 
 @media (max-width: 979px) {
   .js [role=main] .secondary .filters {
@@ -1743,6 +1817,60 @@ body, html {
     background: #f4f7f8; }
     .datawa-resource-read .secondary.span3:before {
       background: #FEFEFE; } }
+
+.wrapper-datawa .context-info p a, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li,
+.wrapper-datawa .resource-item a,
+.wrapper-datawa .resource-item .group-list .module-heading h3 a,
+.group-list .module-heading h3 .wrapper-datawa .resource-item a,
+.wrapper-datawa .resource-item .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .resource-item #publisher-tree > ul > li,
+.wrapper-datawa .additional-info .dataset-details a,
+.wrapper-datawa .additional-info .dataset-details .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .additional-info .dataset-details #publisher-tree > ul > li,
+.wrapper-datawa #dataset-edit .form-actions p.action-info a,
+.wrapper-datawa #dataset-edit .form-actions p.action-info .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa #dataset-edit .form-actions p.action-info #publisher-tree > ul > li,
+.wrapper-datawa .span3 .module-content p a,
+.wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li,
+.wrapper-datawa .activity a,
+.wrapper-datawa .activity .group-list .module-heading h3 a,
+.group-list .module-heading h3 .wrapper-datawa .activity a,
+.wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li {
+  text-decoration: none; }
+  .wrapper-datawa .context-info p a:hover, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li:hover, .wrapper-datawa .context-info p a:focus, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li:focus,
+  .wrapper-datawa .resource-item a:hover,
+  .wrapper-datawa .resource-item .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .resource-item #publisher-tree > ul > li:hover,
+  .wrapper-datawa .resource-item a:focus,
+  .wrapper-datawa .resource-item .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .resource-item #publisher-tree > ul > li:focus,
+  .wrapper-datawa .additional-info .dataset-details a:hover,
+  .wrapper-datawa .additional-info .dataset-details .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .additional-info .dataset-details #publisher-tree > ul > li:hover,
+  .wrapper-datawa .additional-info .dataset-details a:focus,
+  .wrapper-datawa .additional-info .dataset-details .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .additional-info .dataset-details #publisher-tree > ul > li:focus,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info a:hover,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa #dataset-edit .form-actions p.action-info #publisher-tree > ul > li:hover,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info a:focus,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa #dataset-edit .form-actions p.action-info #publisher-tree > ul > li:focus,
+  .wrapper-datawa .span3 .module-content p a:hover,
+  .wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li:hover,
+  .wrapper-datawa .span3 .module-content p a:focus,
+  .wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li:focus,
+  .wrapper-datawa .activity a:hover,
+  .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li:hover,
+  .wrapper-datawa .activity a:focus,
+  .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
 
 @media (min-width: 1280px) {
   .container,

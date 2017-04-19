@@ -40,4 +40,9 @@
   .search-form{
     padding: 0;
   }
+  .span6 {
+      .box {
+          @include langate-link-decoration;
+      }
+  }
 }
