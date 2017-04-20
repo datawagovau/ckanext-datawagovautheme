@@ -1203,6 +1203,19 @@ ul.dataset-list {
 .wrapper-datawa h1.dataset-title {
   hyphens: none;
   word-break: break-word; }
+.wrapper-datawa #dataset-map .module-heading a, .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li,
+.wrapper-datawa #dataset-map #dataset-map-attribution div a,
+.wrapper-datawa #dataset-map #dataset-map-attribution div .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa #dataset-map #dataset-map-attribution div #publisher-tree > ul > li {
+  text-decoration: none; }
+  .wrapper-datawa #dataset-map .module-heading a:hover, .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li:hover, .wrapper-datawa #dataset-map .module-heading a:focus, .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li:focus,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div a:hover,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa #dataset-map #dataset-map-attribution div #publisher-tree > ul > li:hover,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div a:focus,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa #dataset-map #dataset-map-attribution div #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
 
 @media (max-width: 768px) {
   .page-header .content_action {
@@ -1833,6 +1846,9 @@ body, html {
 .wrapper-datawa .span3 .module-content p a,
 .wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li,
 .datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li,
+.wrapper-datawa .media-grid.masonry .media-heading a,
+.wrapper-datawa .media-grid.masonry .media-heading .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .media-grid.masonry .media-heading #publisher-tree > ul > li,
 .wrapper-datawa .activity a,
 .wrapper-datawa .activity .group-list .module-heading h3 a,
 .group-list .module-heading h3 .wrapper-datawa .activity a,
@@ -1864,6 +1880,12 @@ body, html {
   .wrapper-datawa .span3 .module-content p a:focus,
   .wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li:focus,
   .datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li:focus,
+  .wrapper-datawa .media-grid.masonry .media-heading a:hover,
+  .wrapper-datawa .media-grid.masonry .media-heading .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .media-grid.masonry .media-heading #publisher-tree > ul > li:hover,
+  .wrapper-datawa .media-grid.masonry .media-heading a:focus,
+  .wrapper-datawa .media-grid.masonry .media-heading .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .media-grid.masonry .media-heading #publisher-tree > ul > li:focus,
   .wrapper-datawa .activity a:hover,
   .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:hover,
   .datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li:hover,

@@ -35,6 +35,12 @@ ul.dataset-list{
         hyphens: none;
         word-break: break-word;
     }
+    #dataset-map {
+        .module-heading,
+        #dataset-map-attribution div {
+            @include langate-link-decoration;
+        }
+    }
 }
 
 .page-header {
