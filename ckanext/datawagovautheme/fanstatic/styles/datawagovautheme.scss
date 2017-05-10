@@ -400,6 +400,9 @@ body, html{
     }
 }
 
+.container .flash-messages .alert {
+  margin-top: 20px;
+}
 
 @media(min-width: $wide-top + 1px){
   .container,

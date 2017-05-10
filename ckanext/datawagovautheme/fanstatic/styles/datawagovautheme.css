@@ -1894,6 +1894,9 @@ body, html {
   .datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li:focus {
     text-decoration: underline; }
 
+.container .flash-messages .alert {
+  margin-top: 20px; }
+
 @media (min-width: 1280px) {
   .container,
   .navbar-static-top .container,
