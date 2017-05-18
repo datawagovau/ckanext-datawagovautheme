@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='ckanext-datawagovautheme',
-    version='2.0.0',
+    version='2.0.1',
     description='',
     license='AGPL3',
     author='data.wa.gov.au team',
