@@ -1,0 +1,23 @@
+/*
+Errno::ENOENT: No such file or directory @ rb_sysopen - datawagovautheme.scss
+
+Backtrace:
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:482:in `read'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:482:in `update_stylesheet'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:293:in `watch'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/plugin.rb:109:in `method_missing'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:383:in `watch_or_update'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
+/home/user/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
+/home/user/.rvm/gems/ruby-2.2.1/bin/sass:23:in `load'
+/home/user/.rvm/gems/ruby-2.2.1/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - datawagovautheme.scss"; }

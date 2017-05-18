@@ -1,0 +1,43 @@
+.custom-group-list{
+  .module-image{
+    width: 190px;
+    height: 113px;
+    @media(max-width: $mobile-top){
+      width: 100px;
+      height: 60px;
+    }
+    margin-right: 18px;
+    @media(max-width: $tablet-top){
+      margin-right: 12px;
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .module{
+    margin: 15px 0;
+    .module-heading{
+      background: #f5f5f5;
+      padding: 18px;
+      @media(max-width: $tablet-top){
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+  .media-heading{
+    font-size: $h3-fz;
+    line-height: $body-lh;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+}
+
+.datawa-group-read {
+    .wrapper-datawa {
+        .module-footer {
+            @include langate-link-decoration;
+        }
+    }
+}
