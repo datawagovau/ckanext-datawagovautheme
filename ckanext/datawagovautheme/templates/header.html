@@ -58,9 +58,9 @@
               {% if h.check_access('user_create') %}
                 <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
-              <li class="hide-mobile"><a class="sub">Site map</a></li>
-              <li class="hide-mobile"><a class="sub">Accessibility</a></li>
-              <li class="hide-mobile"><a class="sub">Contact us</a></li>
+              <li class="hide-mobile"><a class="sub" href="http://data.wa.gov.au/site-map/site-map-listing">Site map</a></li>
+              <li class="hide-mobile"><a class="sub" href="http://data.wa.gov.au/accessibility">Accessibility</a></li>
+              <li class="hide-mobile"><a class="sub" href="http://data.wa.gov.au/contact-us">Contact us</a></li>
               {% endblock %}
             </ul>
           </nav>
