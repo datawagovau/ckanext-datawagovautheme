@@ -1,0 +1,2160 @@
+@font-face {
+  font-family: 'Arial';
+  src: url("/fonts/arial/arial0.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/arial/arial0.eot?#iefix") format("embedded-opentype"), url("/fonts/arial/arial0.woff2") format("woff2"), url("/fonts/arial/arial0.woff") format("woff"), url("/fonts/arial/arial0.ttf") format("truetype"), url("/fonts/arial/arial0.svg") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ArialBold';
+  src: url("/fonts/arial/arialbd0.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/arial/arialbd0.eot?#iefix") format("embedded-opentype"), url("/fonts/arial/arialbd0.woff2") format("woff2"), url("/fonts/arial/arialbd0.woff") format("woff"), url("/fonts/arial/arialbd0.ttf") format("truetype"), url("/fonts/arial/arialbd0.svg") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal; }
+* {
+  -webkit-hyphens: none; }
+
+body {
+  background: #eff1f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #565656;
+  line-height: 1.59375em; }
+
+label, input, button, select, textarea {
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  color: #69737c;
+  font-weight: 600;
+  line-height: 1.25em; }
+
+h5, h5 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 22px; }
+
+h4 {
+  font-size: 18px; }
+
+h5 {
+  font-size: 12px; }
+
+h6 {
+  font-size: 12px;
+  font-style: italic; }
+
+a, .group-list .module-heading h3 a, .datawa-organization-list #publisher-tree > ul > li {
+  color: #20399d;
+  text-decoration: underline; }
+  a:hover, .group-list .module-heading h3 a:hover, .datawa-organization-list #publisher-tree > ul > li:hover {
+    color: #20399d; }
+
+[role="main"] ul {
+  margin-left: 15px; }
+  [role="main"] ul[class] {
+    padding-left: 0; }
+  [role="main"] ul li {
+    line-height: 1.59375em; }
+    [role="main"] ul li ul li {
+      list-style: square; }
+
+.search-form input {
+  border-radius: 0; }
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #95c677;
+  box-shadow: inset 0 1px 1px #95c677, 0 0 8px #95c677; }
+
+small {
+  font-size: 13px; }
+
+.wrapper-datawa {
+  position: relative; }
+  .wrapper-datawa .btn {
+    padding-top: 8px;
+    padding-bottom: 7px;
+    text-decoration: none;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 3px solid #cccfd1;
+    color: #69737c;
+    font-size: 16px;
+    background-image: none; }
+  .wrapper-datawa .btn-group > .btn {
+    border-radius: 0; }
+  .wrapper-datawa .btn-success,
+  .wrapper-datawa .btn-primary {
+    color: #fff;
+    background-color: #084a78;
+    border-bottom: 3px solid #033960; }
+    .wrapper-datawa .btn-success:hover,
+    .wrapper-datawa .btn-primary:hover {
+      background-color: #003155;
+      border-bottom-color: #002542; }
+  .wrapper-datawa .btn-warning {
+    background-color: #f5f6f7;
+    background-image: none;
+    color: #69737c;
+    text-shadow: none;
+    border-bottom: 3px solid #cccfd1; }
+    .wrapper-datawa .btn-warning:hover {
+      background-color: #e7e9ec;
+      color: #69737c; }
+  .wrapper-datawa .btn-mini {
+    color: #69737c;
+    border-bottom: 3px solid #cccfd1; }
+  .wrapper-datawa .btn-danger {
+    color: #fff;
+    border-bottom: 3px solid #89221d; }
+  .wrapper-datawa .dropdown.btn-group .btn.btn-primary {
+    background-color: #084a78;
+    border-bottom: 3px solid #033960; }
+    .wrapper-datawa .dropdown.btn-group .btn.btn-primary:hover {
+      background-color: #003155; }
+    .wrapper-datawa .dropdown.btn-group .btn.btn-primary .caret {
+      border-top-color: #fff; }
+  .wrapper-datawa .image-upload .btn {
+    border-bottom: 3px solid #cccfd1; }
+    .wrapper-datawa .image-upload .btn:hover {
+      color: #69737c; }
+  .wrapper-datawa .image-upload .btn-remove-url {
+    border-bottom: 3px solid #89221d;
+    text-decoration: none;
+    border-radius: 0; }
+  .wrapper-datawa .dataset-form .form-actions .btn {
+    border-bottom: 3px solid #cccfd1; }
+  .wrapper-datawa .dataset-form .form-actions .btn-primary {
+    border-bottom: 3px solid #033960; }
+  .wrapper-datawa .dataset-form .form-actions .btn-danger {
+    border-bottom: 3px solid #89221d; }
+  .wrapper-datawa .dataset-form .image-upload .controls .btn-danger.btn-remove-url {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .wrapper-datawa .dataset-form .image-upload .controls .btn-danger.btn-remove-url:hover {
+      color: #fff; }
+  .wrapper-datawa .module .module-content .btn {
+    padding-top: 8px;
+    padding-bottom: 7px; }
+    .wrapper-datawa .module .module-content .btn.hover {
+      color: #69737c !important; }
+    .wrapper-datawa .module .module-content .btn .caret {
+      border-top-color: #69737c; }
+  .wrapper-datawa .module .module-content #followee-filter .btn {
+    padding-top: 6px;
+    padding-bottom: 5px; }
+  .wrapper-datawa .module.module-resource .btn {
+    color: #69737c; }
+  .wrapper-datawa .module.module-resource .resource-url-analytics,
+  .wrapper-datawa .module.module-resource .btn-success {
+    color: #fff; }
+  .wrapper-datawa .module.module-resource .nav-tabs-plain {
+    min-height: 49px; }
+    .wrapper-datawa .module.module-resource .nav-tabs-plain li {
+      margin-top: 10px; }
+  .wrapper-datawa .module .pagination ul li a, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li {
+    margin-right: 10px;
+    background-color: #fff;
+    border-color: #c7cacd;
+    color: #20399d;
+    padding: 6px 11px 5px; }
+    .wrapper-datawa .module .pagination ul li a:hover, .wrapper-datawa .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li #publisher-tree > ul > li:hover {
+      text-decoration: none;
+      background-color: #084a78;
+      color: #fff; }
+  .wrapper-datawa .module .pagination ul li:last-child a, .wrapper-datawa .module .pagination ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:last-child #publisher-tree > ul > li, .wrapper-datawa .module .pagination ul li:first-child a, .wrapper-datawa .module .pagination ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li:first-child #publisher-tree > ul > li {
+    border-width: 1px; }
+  .wrapper-datawa .module .pagination ul li.active a, .wrapper-datawa .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.active #publisher-tree > ul > li {
+    background-color: #084a78;
+    border-color: #084a78; }
+  .wrapper-datawa .module .pagination ul li.disabled a, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li {
+    border-color: #c7cacd;
+    color: #20399d;
+    background-color: #fff; }
+    .wrapper-datawa .module .pagination ul li.disabled a:hover, .wrapper-datawa .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .module .pagination ul li.disabled #publisher-tree > ul > li:hover {
+      text-decoration: none;
+      background-color: #fff; }
+  .wrapper-datawa .page-header .content_action {
+    margin-top: -5px;
+    margin-right: 10px; }
+    .wrapper-datawa .page-header .content_action .btn {
+      padding: 8px 22px 7px;
+      color: #69737c;
+      border-bottom-width: 3px; }
+
+.wrapper .module .module-content .page_primary_action .btn,
+.wrapper .module .module-content .form-actions .btn {
+  border: 0;
+  padding-bottom: 7px;
+  padding-top: 8px;
+  font-size: 16px;
+  border-bottom: 3px solid #033960; }
+.wrapper .module .module-content .form-actions .btn {
+  color: #69737c;
+  text-decoration: none;
+  border-bottom: 3px solid #cccfd1;
+  border-radius: 0;
+  background-color: #f5f6f7;
+  background-image: none; }
+  .wrapper .module .module-content .form-actions .btn:hover {
+    background-color: #e7e9ec; }
+.wrapper .module .module-content .form-actions .btn-primary {
+  color: #fff;
+  background-color: #084a78;
+  border-bottom: 3px solid #033960; }
+  .wrapper .module .module-content .form-actions .btn-primary:hover {
+    background-color: #003155; }
+.wrapper .module .module-content .controls .slug-preview .btn-mini {
+  border-radius: 0;
+  border: 0;
+  color: #69737c;
+  background-color: #f5f6f7;
+  border-bottom: 3px solid #cccfd1;
+  background-image: none; }
+  .wrapper .module .module-content .controls .slug-preview .btn-mini:hover {
+    background-color: #e7e9ec; }
+
+.btn-danger {
+  color: #fff;
+  background-color: #bb362f;
+  border-bottom: 3px solid #89221d;
+  text-decoration: none;
+  border-radius: 0; }
+  .btn-danger:hover {
+    background-image: none;
+    background-color: #a11f18; }
+
+.module-heading {
+  font-size: 16px;
+  background: #fbfbfc;
+  line-height: 1.59375em;
+  border-bottom: 1px solid #eee; }
+  .module-heading a, .group-list .module-heading h3 a, .module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module-heading #publisher-tree > ul > li {
+    font-size: 22px; }
+  .module-heading p a, .group-list .module-heading p h3 a, .group-list .module-heading h3 p a, .module-heading p .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module-heading p #publisher-tree > ul > li {
+    font-size: 16px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-wrap: break-word; }
+  .module-heading > i {
+    display: none; }
+  .module-heading .action {
+    font-size: 16px;
+    color: #20399d;
+    font-weight: 300;
+    line-height: 1.59375em; }
+    .module-heading .action:hover {
+      color: #20399d; }
+
+.module-content:first-child {
+  padding-top: 0; }
+
+.pill {
+  background: #20399d; }
+  .pill a.remove:hover, .pill .datawa-organization-list #publisher-tree > ul > li.remove:hover, .datawa-organization-list .pill #publisher-tree > ul > li.remove:hover {
+    color: #fff; }
+
+.toolbar .breadcrumb li:after {
+  font-size: 14px; }
+.toolbar .breadcrumb a, .toolbar .breadcrumb .group-list .module-heading h3 a, .group-list .module-heading h3 .toolbar .breadcrumb a, .toolbar .breadcrumb .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .toolbar .breadcrumb #publisher-tree > ul > li {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
+  color: #20399d; }
+  .toolbar .breadcrumb a:hover, .toolbar .breadcrumb .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .toolbar .breadcrumb #publisher-tree > ul > li:hover {
+    text-decoration: underline;
+    color: #20399d; }
+.toolbar .breadcrumb .active a, .toolbar .breadcrumb .active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .toolbar .breadcrumb .active #publisher-tree > ul > li {
+  color: #69737c; }
+  .toolbar .breadcrumb .active a:hover, .toolbar .breadcrumb .active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .toolbar .breadcrumb .active #publisher-tree > ul > li:hover {
+    text-decoration: none; }
+.toolbar .breadcrumb .icon-home:before {
+  content: "";
+  background: url("/house.png") 50% 50% no-repeat;
+  display: inline-block;
+  width: 19px;
+  height: 20px; }
+
+.btn-primary, .btn-primary:focus, .btn-success, .btn-success:focus {
+  border: none;
+  background: #084a78;
+  border-bottom: 3px solid #033960;
+  text-decoration: none;
+  border-radius: 0;
+  text-shadow: none; }
+  .btn-primary:hover, .btn-primary:focus:hover, .btn-success:hover, .btn-success:focus:hover {
+    background: #003155;
+    border-bottom-color: #002542; }
+  .btn-primary i, .btn-primary:focus i, .btn-success i, .btn-success:focus i {
+    color: #fff; }
+
+.search-form h2 {
+  font-size: 28px;
+  color: #69737c;
+  line-height: 1.59375em; }
+.search-form .control-order-by label, .search-form .control-order-by select {
+  vertical-align: baseline;
+  width: 165px; }
+.search-form .search-input.search-giant {
+  position: relative; }
+  .search-form .search-input.search-giant input {
+    border: 1px solid #c7cacd; }
+  .search-form .search-input.search-giant button {
+    background: #084a78;
+    border-bottom: 3px solid #033960;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    height: auto;
+    width: 100px; }
+    .search-form .search-input.search-giant button:hover {
+      background: #003155;
+      border-bottom-color: #002542; }
+    .search-form .search-input.search-giant button i {
+      color: #fff; }
+
+a.tag, .group-list .module-heading h3 a.tag, .datawa-organization-list #publisher-tree > ul > li.tag {
+  color: #565656;
+  text-decoration: none; }
+  a.tag:hover, .group-list .module-heading h3 a.tag:hover, .datawa-organization-list #publisher-tree > ul > li.tag:hover {
+    color: #fff;
+    background: #20399d;
+    border: 1px solid #0d3454;
+    box-shadow: none; }
+
+ul.nav {
+  margin-left: 0; }
+
+.nav-item.active a, .nav-item.active .group-list .module-heading h3 a, .group-list .module-heading h3 .nav-item.active a, .nav-item.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-item.active #publisher-tree > ul > li {
+  background: #084a78; }
+  .nav-item.active a:before, .nav-item.active .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .nav-item.active #publisher-tree > ul > li:before {
+    background-image: url("/nav-active.png");
+    background-repeat: no-repeat; }
+  .nav-item.active a:hover:before, .nav-item.active .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .nav-item.active #publisher-tree > ul > li:hover:before {
+    display: none; }
+.nav-item > a, .group-list .module-heading h3 .nav-item > a, .datawa-organization-list #publisher-tree > ul.nav-item > li {
+  color: #565656; }
+  .nav .nav-item > a:hover, .nav .group-list .module-heading h3 .nav-item > a:hover, .nav .datawa-organization-list #publisher-tree > ul.nav-item > li:hover, .datawa-organization-list .nav #publisher-tree > ul.nav-item > li:hover {
+    text-decoration: underline;
+    color: #20399d;
+    background: #f5f5f5; }
+
+.nav-aside li.active a, .nav-aside li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-aside li.active #publisher-tree > ul > li {
+  background: #20399d; }
+  .nav-aside li.active a:before, .nav-aside li.active .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .nav-aside li.active #publisher-tree > ul > li:before {
+    background-image: url("/nav-active.png");
+    background-repeat: no-repeat; }
+  .nav-aside li.active a:hover:before, .nav-aside li.active .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .nav-aside li.active #publisher-tree > ul > li:hover:before {
+    display: none; }
+
+.module div.api-info-section {
+  padding-bottom: 20px; }
+.module .read-more {
+  font-size: 16px;
+  color: #20399d;
+  font-weight: 300; }
+  .module .read-more:hover {
+    color: #20399d; }
+.module .pagination {
+  padding-top: 25px; }
+  .module .pagination ul li.disabled a, .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.disabled #publisher-tree > ul > li,
+  .module .pagination ul li a,
+  .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li,
+  .datawa-organization-list .module .pagination ul li #publisher-tree > ul > li {
+    border: 1px solid #e8e8e8;
+    background: #f5f5f5;
+    color: #20399d; }
+    .module .pagination ul li.disabled a:hover, .module .pagination ul li.disabled .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .module .pagination ul li.disabled #publisher-tree > ul > li:hover,
+    .module .pagination ul li a:hover,
+    .module .pagination ul li .datawa-organization-list #publisher-tree > ul > li:hover,
+    .datawa-organization-list .module .pagination ul li #publisher-tree > ul > li:hover {
+      color: #20399d;
+      text-decoration: underline; }
+  .module .pagination ul li.active a, .module .pagination ul li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module .pagination ul li.active #publisher-tree > ul > li {
+    border: 1px solid #c7cacd;
+    color: #fff;
+    background: #95c677;
+    pointer-events: none; }
+
+.module-content {
+  padding-left: 0;
+  padding-right: 0; }
+
+.module-narrow .nav-item a, .module-narrow .nav-item .group-list .module-heading h3 a, .group-list .module-heading h3 .module-narrow .nav-item a, .module-narrow .nav-item .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module-narrow .nav-item #publisher-tree > ul > li {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  text-decoration: none; }
+.module-narrow .module-footer, .module-narrow .module-heading {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.content_action .btn {
+  border: none;
+  background: #e7e9ec;
+  border-bottom: 2px solid #cccfd1;
+  background: #f5f6f7;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 0;
+  padding: 5px 22px; }
+  .content_action .btn:hover {
+    background: #e7e9ec; }
+  .content_action .btn i {
+    color: #69737c; }
+  .content_action .btn i {
+    color: #69737c; }
+
+.api-info-section {
+  line-height: 1; }
+
+.page-header {
+  background: #fff; }
+
+.dwga-inlineblock {
+  display: inline-block; }
+
+.account-masthead {
+  background: #FEFEFE; }
+  .account-masthead .container {
+    box-sizing: border-box; }
+    @media (max-width: 979px) {
+      .account-masthead .container {
+        width: auto; } }
+  .account-masthead .account {
+    height: 39px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px; }
+    @media (min-width: 320px) and (max-width: 359px) {
+      .account-masthead .account ul {
+        margin-left: -8px;
+        margin-right: -8px; }
+        .account-masthead .account ul li:first-child a, .account-masthead .account ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li:first-child #publisher-tree > ul > li {
+          padding-left: 9px; } }
+    @media (min-width: 360px) and (max-width: 374px) {
+      .account-masthead .account ul {
+        width: 100%; }
+        .account-masthead .account ul li:first-child a, .account-masthead .account ul li:first-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li:first-child #publisher-tree > ul > li {
+          padding-left: 8px; }
+        .account-masthead .account ul li:last-child a, .account-masthead .account ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li:last-child #publisher-tree > ul > li {
+          padding-right: 0px; } }
+    @media (min-width: 375px) and (max-width: 767px) {
+      .account-masthead .account ul li:last-child a, .account-masthead .account ul li:last-child .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li:last-child #publisher-tree > ul > li {
+        padding-right: 0px; } }
+    .account-masthead .account ul li {
+      border: none; }
+      @media (max-width: 979px) {
+        .account-masthead .account ul li.hide-mobile {
+          display: none; } }
+      .account-masthead .account ul li:hover a, .account-masthead .account ul li:hover .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li:hover #publisher-tree > ul > li {
+        background: none;
+        color: #565656;
+        text-decoration: underline; }
+      .account-masthead .account ul li a, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li {
+        padding-left: 8px;
+        padding-right: 8px;
+        text-decoration: none;
+        font-size: 0.9em;
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        line-height: 15px;
+        color: #565656; }
+        .account-masthead .account ul li a .mobile-500, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li .mobile-500, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li .mobile-500 {
+          display: none; }
+        .account-masthead .account ul li a .mobile-320-499, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li .mobile-320-499, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li .mobile-320-499 {
+          display: inline; }
+        @media (min-width: 320px) and (max-width: 359px) {
+          .account-masthead .account ul li a, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li {
+            padding-right: 6px; } }
+        @media (min-width: 360px) and (max-width: 375px) {
+          .account-masthead .account ul li a, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li {
+            padding-right: 8px; } }
+        @media (min-width: 500px) {
+          .account-masthead .account ul li a .mobile-500, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li .mobile-500, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li .mobile-500 {
+            display: inline; }
+          .account-masthead .account ul li a .mobile-320-499, .account-masthead .account ul li .datawa-organization-list #publisher-tree > ul > li .mobile-320-499, .datawa-organization-list .account-masthead .account ul li #publisher-tree > ul > li .mobile-320-499 {
+            display: none; } }
+
+.masthead {
+  background: #fcfcfc;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef; }
+  @media (max-width: 979px) {
+    .masthead .section {
+      float: none; } }
+  .masthead #dwga-header-container .dwga-header-row {
+    position: relative; }
+  @media (min-width: 980px) {
+    .masthead #dwga-header-container {
+      height: 130px; }
+      .masthead #dwga-header-container .hide-desktop {
+        display: none; }
+      .masthead #dwga-header-container .nav-collapse {
+        float: none;
+        padding-top: 0;
+        position: absolute;
+        right: 6%;
+        bottom: 12px; } }
+  @media (min-width: 1500px) {
+    .masthead #dwga-header-container .nav-collapse {
+      right: 10%; } }
+  @media (max-width: 979px) {
+    .masthead #dwga-header-container .in.collapse {
+      margin-left: -20px;
+      margin-right: -20px;
+      background: #69737c;
+      border-bottom: 1px solid #efefef; }
+      .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu {
+        margin: 0;
+        background: #f5f6f7;
+        margin-left: 20px;
+        height: auto !important; }
+        .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li a, .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li #publisher-tree > ul > li {
+          padding-left: 40px;
+          color: #69737c;
+          margin-left: 0;
+          box-shadow: none; }
+        .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li.active a, .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse #header-dropdown.header-child-menu li.active #publisher-tree > ul > li {
+          background: #fff; }
+      .masthead #dwga-header-container .in.collapse .nav-secondary {
+        background: #fefefe;
+        margin-bottom: -2px; }
+        .masthead #dwga-header-container .in.collapse .nav-secondary li a, .masthead #dwga-header-container .in.collapse .nav-secondary li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav-secondary li #publisher-tree > ul > li {
+          font-weight: 400;
+          color: #69737c; }
+      .masthead #dwga-header-container .in.collapse .nav li a, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li {
+        font-size: 15px;
+        padding: 3px 20px;
+        text-shadow: none;
+        font-weight: 600;
+        font-family: "Open Sans", sans-serif;
+        margin-left: 20px; }
+        .masthead #dwga-header-container .in.collapse .nav li a:hover, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li:hover, .masthead #dwga-header-container .in.collapse .nav li a:focus, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li:focus {
+          background: none; }
+        .masthead #dwga-header-container .in.collapse .nav li a.header-parent-menu, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li.header-parent-menu, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li.header-parent-menu {
+          background: #f5f6f7;
+          border-radius: 0;
+          color: #69737c; }
+          .masthead #dwga-header-container .in.collapse .nav li a.header-parent-menu.collapsed, .masthead #dwga-header-container .in.collapse .nav li .datawa-organization-list #publisher-tree > ul > li.header-parent-menu.collapsed, .datawa-organization-list .masthead #dwga-header-container .in.collapse .nav li #publisher-tree > ul > li.header-parent-menu.collapsed {
+            color: #fff;
+            background: transparent; } }
+  .masthead #dwga-header-container .btn-navbar {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    border-radius: 0;
+    background: #69737c;
+    width: 48px;
+    height: 47px;
+    border-bottom: 2px solid #44505b; }
+    .masthead #dwga-header-container .btn-navbar .icon-bar {
+      margin-left: auto;
+      margin-right: auto;
+      height: 3px;
+      box-shadow: none; }
+  .masthead #dwga-header-container .dwga-logo {
+    width: 102px;
+    height: 102px;
+    /*  left: 20px; */
+    margin-top: 8px;
+    float: left;
+    background: url("/Logo_n.png") 50% 50% no-repeat;
+    background-size: contain; }
+    @media (max-width: 979px) {
+      .masthead #dwga-header-container .dwga-logo {
+        width: 80px;
+        height: 78px;
+        margin: 6px 0 24px; } }
+    .masthead #dwga-header-container .dwga-logo:hover {
+      background: url("/Logo_r.png") 50% 50% no-repeat;
+      background-size: contain; }
+    .masthead #dwga-header-container .dwga-logo .logo {
+      display: none; }
+  .masthead #dwga-header-container .dwga-title h1 {
+    float: none;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.25em; }
+    .masthead #dwga-header-container .dwga-title h1 a, .masthead #dwga-header-container .dwga-title h1 .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .masthead #dwga-header-container .dwga-title h1 #publisher-tree > ul > li {
+      color: #69737c;
+      text-decoration: none;
+      letter-spacing: 0; }
+  .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+    margin: 18px 0 10px 28px; }
+  .masthead #dwga-header-container .dwga-title h3 {
+    display: inline-block;
+    font-size: 28px;
+    margin-top: 5px; }
+  @media (max-width: 979px) and (min-width: 768px) {
+    .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+      margin-top: 8px;
+      margin-bottom: 6px; } }
+  @media (max-width: 767px) {
+    .masthead #dwga-header-container .dwga-title h1, .masthead #dwga-header-container .dwga-title h3 {
+      margin-left: 10px; }
+    .masthead #dwga-header-container .dwga-title h1 {
+      font-size: 16px;
+      margin-bottom: 22px; }
+    .masthead #dwga-header-container .dwga-title h3 {
+      font-size: 8px;
+      color: #FEFEFE; } }
+  @media (min-width: 320px) and (max-width: 359px) {
+    .masthead #dwga-header-container .dwga-title h1 {
+      font-size: 1.25em;
+      margin-left: 0;
+      position: relative;
+      top: 10px; } }
+  @media (min-width: 360px) and (max-width: 375px) {
+    .masthead #dwga-header-container .dwga-title h1 {
+      font-size: 1.5em;
+      position: relative;
+      top: 10px;
+      margin-bottom: 18px; } }
+  @media (min-width: 375px) and (max-width: 767px) {
+    .masthead #dwga-header-container .dwga-title h1 {
+      margin-bottom: 14px;
+      margin-left: 5px;
+      font-size: 1.7em; }
+    .masthead #dwga-header-container .dwga-title h3 {
+      font-size: 12px; } }
+  .masthead #dwga-header-container .dwga-search {
+    /* float: right; */
+    top: 10px;
+    position: absolute;
+    right: 0; }
+    @media (max-width: 1099px) {
+      .masthead #dwga-header-container .dwga-search {
+        position: relative;
+        float: right; } }
+    @media (max-width: 979px) {
+      .masthead #dwga-header-container .dwga-search {
+        position: relative;
+        float: none;
+        display: block;
+        width: 100%;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -10px;
+        background: #69737c;
+        padding: 20px; }
+        .masthead #dwga-header-container .dwga-search form.site-search {
+          display: block;
+          float: none;
+          width: 100%; }
+          .masthead #dwga-header-container .dwga-search form.site-search #field-sitewide-search {
+            width: 100%; } }
+    @media (max-width: 1099px) and (min-width: 980px) {
+      .masthead #dwga-header-container .dwga-search {
+        top: 4px;
+        margin-bottom: 31px; } }
+    .masthead #dwga-header-container .dwga-search .site-search {
+      width: 394px;
+      height: 44px;
+      float: right;
+      margin: 0; }
+      .masthead #dwga-header-container .dwga-search .site-search .field input {
+        box-sizing: border-box;
+        border: 1px solid #c7cacd;
+        border-radius: 0px;
+        height: 42px;
+        width: 380px;
+        padding: 0 5px;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: #565656; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input::-webkit-input-placeholder {
+          color: #565656; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input::-moz-placeholder {
+          color: #565656;
+          opacity: 1; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input:-moz-placeholder {
+          color: #565656;
+          opacity: 1; }
+        .masthead #dwga-header-container .dwga-search .site-search .field input:-ms-input-placeholder {
+          color: #565656; }
+      .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
+        background: #084a78;
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        height: auto;
+        width: 100px;
+        color: #fff; }
+        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search i {
+          font-size: 28px; }
+        .masthead #dwga-header-container .dwga-search .site-search .field .btn-search:hover {
+          background: #003155; }
+      @media (max-width: 1099px) {
+        .masthead #dwga-header-container .dwga-search .site-search {
+          width: 273px; }
+          .masthead #dwga-header-container .dwga-search .site-search .field input {
+            width: 240px; }
+          .masthead #dwga-header-container .dwga-search .site-search .field .btn-search {
+            width: 55px; } }
+
+.container-header .secondary-menu-navbar {
+  background: #084a78;
+  margin-top: -1px; }
+  .container-header .secondary-menu-navbar .header-secondary-menu {
+    font-size: 0;
+    margin-bottom: -6px; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li {
+      padding-bottom: 0;
+      display: inline-block;
+      position: relative; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li:before {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 65%;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 1; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 0; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:before {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 1; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border: 10px transparent solid;
+        border-top-color: #084a78;
+        border-left-width: 0;
+        border-right-width: 0;
+        z-index: 1; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:before {
+        right: 50%; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:after {
+        left: 50%; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:focus, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:focus {
+        background: transparent; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
+        text-decoration: none; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li.active a, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li {
+      background-color: #003155; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li:hover {
+        background-color: #003155; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a:before, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li:before {
+        border-right-width: 8px;
+        border-top-color: #003155; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li.active a:after, .container-header .secondary-menu-navbar .header-secondary-menu li.active .datawa-organization-list #publisher-tree > ul > li:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li.active #publisher-tree > ul > li:after {
+        border-left-width: 8px;
+        border-top-color: #003155; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li:first-child:before {
+      left: -999999px; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li:last-child:before {
+      right: -999999px; }
+
+@media (min-width: 980px) {
+  html body .hide-desktop {
+    display: none; }
+
+  .container-header .secondary-menu-navbar .header-secondary-menu li, .nav-collapse .navigation .nav li {
+    display: inline-block; }
+    .container-header .secondary-menu-navbar .header-secondary-menu li a, .nav-collapse .navigation .nav li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+      border-bottom: 2px solid transparent;
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 32px 2px; }
+      .container-header .secondary-menu-navbar .header-secondary-menu li a:hover, .nav-collapse .navigation .nav li a:hover, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
+        background: #003155; }
+        .container-header .secondary-menu-navbar .header-secondary-menu li a:hover:before, .nav-collapse .navigation .nav li a:hover:before, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover:before, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover:before, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover:before, .container-header .secondary-menu-navbar .header-secondary-menu li a:hover:after, .nav-collapse .navigation .nav li a:hover:after, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li:hover:after, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li:hover:after, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover:after, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover:after {
+          border-top-color: #003155; }
+
+  .nav-collapse {
+    float: none; }
+    .nav-collapse .navigation {
+      margin-right: 0; }
+      .nav-collapse .navigation .nav {
+        margin-right: 0; }
+        .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+          color: #69737c;
+          padding: 9px 15px 2px; }
+          .nav-collapse .navigation .nav li a:hover, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li:hover {
+            color: #084a78;
+            background: transparent; }
+        .nav-collapse .navigation .nav li a.data-activated, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.data-activated, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.data-activated {
+          color: #084a78; }
+          .nav-collapse .navigation .nav li a.data-activated:before, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.data-activated:before, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.data-activated:before {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -27px;
+            left: 50%;
+            right: 25%;
+            height: 5px;
+            border: 10px #084a78 solid;
+            border-top-color: transparent;
+            border-left-width: 0;
+            border-right-width: 0;
+            z-index: 0;
+            border-right-width: 8px; }
+          .nav-collapse .navigation .nav li a.data-activated:after, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li.data-activated:after, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li.data-activated:after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -27px;
+            left: 75%;
+            right: 0;
+            height: 5px;
+            border: 10px #084a78 solid;
+            border-top-color: transparent;
+            border-left-width: 0;
+            border-right-width: 0;
+            z-index: 0;
+            border-left-width: 8px; }
+      .nav-collapse .navigation .header-child-menu {
+        display: none; } }
+@media (max-width: 979px) {
+  .hide-mobile {
+    display: none; }
+
+  .nav-collapse .nav {
+    margin-bottom: 20px; } }
+@media (min-width: 1500px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 1192px;
+    box-sizing: border-box; } }
+@media (max-width: 1499px) and (min-width: 1280px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 990px; } }
+@media (max-width: 1279px) and (min-width: 1100px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 916px; } }
+@media (max-width: 1099px) and (min-width: 980px) {
+  .account-masthead .container,
+  .container-header .masthead .container,
+  .container-header .secondary-menu-navbar .container,
+  .container-header .navbar-static-top .container {
+    width: 960px;
+    box-sizing: border-box; } }
+@media (min-width: 1500px) {
+  .account-masthead .container#dwga-header-container,
+  .container-header .masthead .container#dwga-header-container,
+  .container-header .secondary-menu-navbar .container#dwga-header-container,
+  .container-header .navbar-static-top .container#dwga-header-container {
+    padding-right: 86px; } }
+
+@media (min-width: 1500px) {
+  .account-masthead .container {
+    padding-right: 1px; } }
+@media (max-width: 1279px) and (min-width: 980px) {
+  .container-header .secondary-menu-navbar .header-secondary-menu li a, .container-header .secondary-menu-navbar .header-secondary-menu li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .container-header .secondary-menu-navbar .header-secondary-menu li #publisher-tree > ul > li {
+    padding-left: 29.6px;
+    padding-right: 29.6px; }
+
+  .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+    padding-left: 19.6px;
+    padding-right: 19.6px; } }
+/* ====================================
+   The footer at the bottom of the site
+   ==================================== */
+.site-footer {
+  background: #eff1f2;
+  padding-top: 33px; }
+  .site-footer, .site-footer label, .site-footer small, .site-footer a, .site-footer .group-list .module-heading h3 a, .group-list .module-heading h3 .site-footer a, .site-footer .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .site-footer #publisher-tree > ul > li {
+    color: #565656;
+    font-size: 15px; }
+  .site-footer > .container .row {
+    margin-bottom: 22px; }
+  .site-footer .attribution {
+    margin-left: 0; }
+    .site-footer .attribution > a, .site-footer .group-list .module-heading h3 .attribution > a, .group-list .module-heading h3 .site-footer .attribution > a, .site-footer .datawa-organization-list #publisher-tree > ul.attribution > li, .datawa-organization-list .site-footer #publisher-tree > ul.attribution > li {
+      margin-right: 20px; }
+  .site-footer .inline-links {
+    margin-bottom: 11px; }
+    .site-footer .inline-links li {
+      display: inline;
+      text-decoration: none; }
+      .site-footer .inline-links li:after {
+        content: '';
+        border-right: 1px solid #565656;
+        text-decoration: none;
+        margin-right: 5px;
+        margin-left: 10px; }
+      .site-footer .inline-links li:last-child:after {
+        border-right: none;
+        margin-right: 0;
+        margin-left: 0; }
+      .site-footer .inline-links li a, .site-footer .inline-links li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .site-footer .inline-links li #publisher-tree > ul > li {
+        text-decoration: none; }
+        .site-footer .inline-links li a:hover, .site-footer .inline-links li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .site-footer .inline-links li #publisher-tree > ul > li:hover, .site-footer .inline-links li a:focus, .site-footer .inline-links li .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .site-footer .inline-links li #publisher-tree > ul > li:focus {
+          text-decoration: underline; }
+  .site-footer .footer-wa-link-wrapper {
+    position: relative; }
+  .site-footer .footer-wa-link {
+    position: absolute;
+    left: 0;
+    font-size: 25px;
+    text-decoration: none;
+    color: #44505b;
+    margin-top: 8px; }
+  .site-footer .without-margin {
+    margin: 0; }
+  .site-footer .row {
+    margin-left: 0; }
+  @media (max-width: 1499px) {
+    .site-footer {
+      border-bottom: 20px solid #fff; } }
+  @media (max-width: 979px) {
+    .site-footer {
+      border-left: 20px solid #fff;
+      border-right: 20px solid #fff; } }
+  @media (max-width: 767px) {
+    .site-footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-top: 24px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .site-footer .footer-links,
+      .site-footer .attribution,
+      .site-footer .footer-wa-link-wrapper,
+      .site-footer .secondary-footer-links,
+      .site-footer .without-margin {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: auto;
+        margin-bottom: 30px; }
+      .site-footer .footer-links {
+        width: auto; }
+      .site-footer .attribution {
+        text-align: center;
+        max-width: 320px; }
+        .site-footer .attribution label,
+        .site-footer .attribution p {
+          text-align: left; }
+        .site-footer .attribution label {
+          display: block; }
+      .site-footer .footer-wa-link {
+        position: static; }
+      .site-footer .lang-select > * {
+        float: none; }
+      .site-footer .lang-select .lang-container {
+        text-align: center; }
+      .site-footer > .container .row {
+        margin-bottom: 14px; }
+      .site-footer .footer-wa-link {
+        margin-left: 0; }
+      .site-footer .paragraph-copyright {
+        margin-top: 43px; } }
+
+@media (min-width: 1280px) {
+  .site-footer .footer-powered-section {
+    margin-left: 20px; }
+  .site-footer .attribution {
+    width: auto;
+    max-width: 220px;
+    margin-left: 20px; }
+    .site-footer .attribution label {
+      display: block; }
+    .site-footer .attribution .lang-select .lang-container {
+      float: none; } }
+.homepage .media-heading {
+  word-break: inherit;
+  hyphens: manual; }
+.homepage .stats ul {
+  padding-left: 0; }
+  @media (max-width: 500px) {
+    .homepage .stats ul li {
+      width: 50%; }
+      .homepage .stats ul li:nth-child(2n - 1) {
+        clear: both; } }
+  @media (min-width: 980px) and (max-width: 1099px) {
+    .homepage .stats ul li {
+      width: 50%; }
+      .homepage .stats ul li:nth-child(2n - 1) {
+        clear: both; } }
+  .homepage .stats ul li a, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li {
+    font-size: 16px; }
+    .homepage .stats ul li a:hover, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li:hover {
+      text-decoration: underline; }
+    .homepage .stats ul li a b, .homepage .stats ul li .datawa-organization-list #publisher-tree > ul > li b, .datawa-organization-list .homepage .stats ul li #publisher-tree > ul > li b {
+      font-size: 28px;
+      line-height: 1.59375em; }
+.homepage .module-heading a, .homepage .group-list .module-heading h3 a, .group-list .homepage .module-heading h3 a, .homepage .module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .homepage .module-heading #publisher-tree > ul > li {
+  font-size: 28px; }
+.homepage .search-form {
+  padding: 0; }
+.homepage .span6 .box a, .homepage .span6 .box .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .homepage .span6 .box #publisher-tree > ul > li {
+  text-decoration: none; }
+  .homepage .span6 .box a:hover, .homepage .span6 .box .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .homepage .span6 .box #publisher-tree > ul > li:hover, .homepage .span6 .box a:focus, .homepage .span6 .box .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .homepage .span6 .box #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
+
+.custom-group-list .module-image {
+  width: 190px;
+  height: 113px;
+  margin-right: 18px; }
+  @media (max-width: 767px) {
+    .custom-group-list .module-image {
+      width: 100px;
+      height: 60px; } }
+  @media (max-width: 979px) {
+    .custom-group-list .module-image {
+      margin-right: 12px; } }
+  .custom-group-list .module-image img {
+    max-width: 100%;
+    max-height: 100%; }
+.custom-group-list .module {
+  margin: 15px 0; }
+  .custom-group-list .module .module-heading {
+    background: #f5f5f5;
+    padding: 18px; }
+    @media (max-width: 979px) {
+      .custom-group-list .module .module-heading {
+        padding-left: 15px;
+        padding-right: 15px; } }
+.custom-group-list .media-heading {
+  font-size: 22px;
+  line-height: 1.59375em;
+  -ms-word-break: normal;
+  word-break: normal; }
+
+.datawa-group-read .wrapper-datawa .module-footer a, .datawa-group-read .wrapper-datawa .module-footer .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-group-read .wrapper-datawa .module-footer #publisher-tree > ul > li {
+  text-decoration: none; }
+  .datawa-group-read .wrapper-datawa .module-footer a:hover, .datawa-group-read .wrapper-datawa .module-footer .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-group-read .wrapper-datawa .module-footer #publisher-tree > ul > li:hover, .datawa-group-read .wrapper-datawa .module-footer a:focus, .datawa-group-read .wrapper-datawa .module-footer .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-group-read .wrapper-datawa .module-footer #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
+
+.datawa-organization-list #publisher-tree > ul {
+  margin: 0;
+  padding-left: 0; }
+  .datawa-organization-list #publisher-tree > ul > li {
+    position: relative;
+    text-decoration: none;
+    font-size: 28px;
+    padding: 23.5px;
+    margin-bottom: 20px;
+    line-height: 1;
+    background: #f5f5f5;
+    list-style: none;
+    word-break: break-word; }
+    .datawa-organization-list #publisher-tree > ul > li:before {
+      width: 39px;
+      height: 37px;
+      display: inline-block;
+      content: "";
+      background: #084a78 url("/plus.png") 50% 50% no-repeat;
+      border-bottom: 3px solid #033960;
+      cursor: pointer;
+      position: absolute;
+      top: 18px; }
+    .datawa-organization-list #publisher-tree > ul > li:hover:before {
+      background-color: #003155;
+      border-bottom-color: #002542; }
+    .datawa-organization-list #publisher-tree > ul > li.open:before {
+      background: #e7e9ec url("/minus.png") 50% 50% no-repeat;
+      border-bottom: 3px solid #cccfd1; }
+    .datawa-organization-list #publisher-tree > ul > li > a {
+      margin-left: 55px;
+      display: inline-block; }
+    .datawa-organization-list #publisher-tree > ul > li > ul {
+      padding-left: 0;
+      display: none; }
+    .datawa-organization-list #publisher-tree > ul > li.open > ul {
+      display: block;
+      margin-top: 20px; }
+    .datawa-organization-list #publisher-tree > ul > li > ul > li {
+      font-size: 16px;
+      line-height: 1.59375em;
+      list-style: disc;
+      margin-left: 55px; }
+.datawa-organization-list #publisher-tree h2.parent-organization {
+  margin: 0;
+  margin-left: 55px;
+  display: inline-block;
+  line-height: 1; }
+.datawa-organization-list #publisher-tree .hierarchy-tree li a, .datawa-organization-list #publisher-tree .hierarchy-tree li #publisher-tree > ul > li {
+  text-decoration: none; }
+  .datawa-organization-list #publisher-tree .hierarchy-tree li a:hover, .datawa-organization-list #publisher-tree .hierarchy-tree li #publisher-tree > ul > li:hover, .datawa-organization-list #publisher-tree .hierarchy-tree li a:focus, .datawa-organization-list #publisher-tree .hierarchy-tree li #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
+.datawa-organization-list + .pagination {
+  display: none; }
+
+.wrapper-datawa #member-table .media a, .wrapper-datawa #member-table .media .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa #member-table .media #publisher-tree > ul > li,
+#publisher-tree .hierarchy-tree li.open a,
+#publisher-tree .hierarchy-tree li.open .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list #publisher-tree .hierarchy-tree li.open #publisher-tree > ul > li,
+.datawa-org-read .wrapper-datawa .context-info p a,
+.datawa-org-read .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .datawa-org-read .wrapper-datawa .context-info p #publisher-tree > ul > li,
+.datawa-org-read .wrapper-datawa .activity a,
+.datawa-org-read .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li {
+  text-decoration: none; }
+  .wrapper-datawa #member-table .media a:hover, .wrapper-datawa #member-table .media .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa #member-table .media #publisher-tree > ul > li:hover, .wrapper-datawa #member-table .media a:focus, .wrapper-datawa #member-table .media .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .wrapper-datawa #member-table .media #publisher-tree > ul > li:focus,
+  #publisher-tree .hierarchy-tree li.open a:hover,
+  #publisher-tree .hierarchy-tree li.open .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list #publisher-tree .hierarchy-tree li.open #publisher-tree > ul > li:hover,
+  #publisher-tree .hierarchy-tree li.open a:focus,
+  #publisher-tree .hierarchy-tree li.open .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list #publisher-tree .hierarchy-tree li.open #publisher-tree > ul > li:focus,
+  .datawa-org-read .wrapper-datawa .context-info p a:hover,
+  .datawa-org-read .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .context-info p #publisher-tree > ul > li:hover,
+  .datawa-org-read .wrapper-datawa .context-info p a:focus,
+  .datawa-org-read .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .context-info p #publisher-tree > ul > li:focus,
+  .datawa-org-read .wrapper-datawa .activity a:hover,
+  .datawa-org-read .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li:hover,
+  .datawa-org-read .wrapper-datawa .activity a:focus,
+  .datawa-org-read .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
+
+.dataset-item {
+  border-bottom: 1px dotted #efefef; }
+  .dataset-item .dataset-heading {
+    font-size: 22px; }
+    .dataset-item .dataset-heading a, .dataset-item .dataset-heading .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-heading a, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li {
+      color: #20399d;
+      text-decoration: none; }
+      .dataset-item .dataset-heading a:hover, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:hover {
+        color: #20399d; }
+      .dataset-item .dataset-heading a:hover, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:hover, .dataset-item .dataset-heading a:focus, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li:focus {
+        text-decoration: underline; }
+  .dataset-item .dataset-resources a, .dataset-item .dataset-resources .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-resources a, .dataset-item .dataset-resources .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-resources #publisher-tree > ul > li {
+    text-decoration: none; }
+
+ul.dataset-list {
+  margin-left: 0; }
+
+.context-info h1.heading {
+  hyphens: none;
+  word-break: break-word; }
+
+.wrapper-datawa h1.dataset-title {
+  hyphens: none;
+  word-break: break-word; }
+.wrapper-datawa #dataset-map .module-heading a, .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li,
+.wrapper-datawa #dataset-map #dataset-map-attribution div a,
+.wrapper-datawa #dataset-map #dataset-map-attribution div .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa #dataset-map #dataset-map-attribution div #publisher-tree > ul > li {
+  text-decoration: none; }
+  .wrapper-datawa #dataset-map .module-heading a:hover, .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li:hover, .wrapper-datawa #dataset-map .module-heading a:focus, .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li:focus,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div a:hover,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa #dataset-map #dataset-map-attribution div #publisher-tree > ul > li:hover,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div a:focus,
+  .wrapper-datawa #dataset-map #dataset-map-attribution div .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa #dataset-map #dataset-map-attribution div #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .page-header .content_action {
+    float: none;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 2px; }
+  .page-header .nav-tabs {
+    margin: 0;
+    float: none; }
+    .page-header .nav-tabs a, .page-header .nav-tabs .group-list .module-heading h3 a, .group-list .module-heading h3 .page-header .nav-tabs a, .page-header .nav-tabs .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs #publisher-tree > ul > li {
+      border: 1px solid #ddd; } }
+.page-header .nav-tabs li a, .page-header .nav-tabs li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs li #publisher-tree > ul > li {
+  color: #20399d;
+  border-radius: 0;
+  text-decoration: none; }
+  .page-header .nav-tabs li a:hover, .page-header .nav-tabs li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li #publisher-tree > ul > li:hover {
+    color: #20399d;
+    background: #f3f3f3;
+    border: 1px solid #e5e5e5; }
+.page-header .nav-tabs li.active a, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li, .page-header .nav-tabs li.active a:hover, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li:hover {
+  color: #69737c; }
+.page-header .nav-tabs li.active a:hover, .page-header .nav-tabs li.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .page-header .nav-tabs li.active #publisher-tree > ul > li:hover {
+  background: #fff;
+  border-bottom-color: transparent; }
+
+.module-content .label.label-inverse {
+  background: #f5f6f7;
+  border-bottom: 2px solid #c7cacd;
+  font-size: 16px;
+  border-radius: 0;
+  padding: 11px 32px; }
+  .module-content .label.label-inverse img {
+    vertical-align: bottom; }
+  .module-content .label.label-inverse:hover {
+    background: #e7e9ec; }
+  .module-content .label.label-inverse a, .module-content .label.label-inverse .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .module-content .label.label-inverse #publisher-tree > ul > li {
+    text-decoration: none;
+    color: #69737c !important;
+    text-shadow: none; }
+.module-content .media-grid.masonry {
+  margin: 0; }
+.module-content .dataset-title {
+  margin-top: 0px; }
+.module-content .dataset-private {
+  margin-top: 14px;
+  margin-right: 10px; }
+.module-content .label-private {
+  background-color: #333333;
+  font-family: Arial, sans-serif; }
+
+.tags .tag-list {
+  margin-left: 0; }
+
+.resources .resource-list {
+  margin-left: 0; }
+@media (max-width: 979px) {
+  .resources .resource-item {
+    padding-bottom: 60px; } }
+.resources .resource-item .heading {
+  color: #20399d;
+  font-size: 16px; }
+  .resources .resource-item .heading:hover, .resources .resource-item .heading:active {
+    color: #20399d; }
+.resources .resource-item .description {
+  font-size: 14px; }
+@media (max-width: 979px) {
+  .resources .resource-item .dropdown {
+    top: 65px;
+    left: 0; }
+    .resources .resource-item .dropdown > a, .resources .resource-item .group-list .module-heading h3 .dropdown > a, .resources .resource-item .datawa-organization-list #publisher-tree > ul.dropdown > li, .datawa-organization-list .resources .resource-item #publisher-tree > ul.dropdown > li {
+      position: absolute;
+      right: 0;
+      left: 0; }
+    .resources .resource-item .dropdown.open .dropdown-menu {
+      margin: 0;
+      top: 42px;
+      width: 100%;
+      box-sizing: border-box; } }
+@media (max-width: 768px) {
+  .resources .resource-item .dropdown {
+    display: block; } }
+.resources .resource-item .dropdown a, .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown #publisher-tree > ul > li {
+  border-radius: 0;
+  padding: 10px 32px;
+  font-size: 16px;
+  background-color: #084a78; }
+.resources .resource-item .dropdown.open a, .resources .resource-item .dropdown.open .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown.open #publisher-tree > ul > li {
+  background: #084a78; }
+.resources .resource-item .dropdown.open ul {
+  margin-left: 0;
+  border-radius: 0; }
+  .resources .resource-item .dropdown.open ul li {
+    list-style: none; }
+    .resources .resource-item .dropdown.open ul li a, .resources .resource-item .dropdown.open ul li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .resources .resource-item .dropdown.open ul li #publisher-tree > ul > li {
+      background: #fff;
+      color: #20399d;
+      text-decoration: none; }
+      .resources .resource-item .dropdown.open ul li a:hover, .resources .resource-item .dropdown.open ul li .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .resources .resource-item .dropdown.open ul li #publisher-tree > ul > li:hover {
+        background: #084a78;
+        color: #fff; }
+.resources .resource-item .dropdown .icon-share-alt:before {
+  content: '';
+  background: url("/drop-arrow-icon.png") 50% 50% no-repeat;
+  width: 19px;
+  height: 11px; }
+
+.additional-info .table, .additional-info .table-striped {
+  border-left: none;
+  border-right: none;
+  border-radius: none;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef; }
+  .additional-info .table thead th, .additional-info .table thead td, .additional-info .table-striped thead th, .additional-info .table-striped thead td {
+    width: 100%; }
+    .additional-info .table thead th:first-child, .additional-info .table thead td:first-child, .additional-info .table-striped thead th:first-child, .additional-info .table-striped thead td:first-child {
+      width: 190px; }
+      @media (max-width: 979px) {
+        .additional-info .table thead th:first-child, .additional-info .table thead td:first-child, .additional-info .table-striped thead th:first-child, .additional-info .table-striped thead td:first-child {
+          width: 100px; } }
+  .additional-info .table th, .additional-info .table td,
+  .additional-info .table tbody tr td, .additional-info .table tbody tr th, .additional-info .table-striped th, .additional-info .table-striped td,
+  .additional-info .table-striped tbody tr td, .additional-info .table-striped tbody tr th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #efefef;
+    background: #fff; }
+
+.datawa-datasets {
+  padding-bottom: 0; }
+  .datawa-datasets .wrapper-datawa #dataset-map {
+    margin-bottom: 35px; }
+    .datawa-datasets .wrapper-datawa #dataset-map .module-heading {
+      border-bottom: 2px solid #dfe1e2;
+      padding-bottom: 4px;
+      background: #f4f7f8; }
+      .datawa-datasets .wrapper-datawa #dataset-map .module-heading a, .datawa-datasets .wrapper-datawa #dataset-map .module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-datasets .wrapper-datawa #dataset-map .module-heading #publisher-tree > ul > li {
+        position: relative;
+        top: 25px;
+        text-transform: capitalize; }
+    .datawa-datasets .wrapper-datawa #dataset-map .spatial-filter-location {
+      display: inline-block;
+      width: 80px;
+      text-transform: uppercase;
+      color: #202224;
+      font-weight: 600; }
+  .datawa-datasets .wrapper-datawa .filters .module {
+    margin: 23px 0; }
+  .datawa-datasets .wrapper-datawa .filters .nav-simple > li {
+    border-bottom-color: #d2d5d6; }
+  .datawa-datasets .wrapper-datawa .filters .module-footer {
+    border-top: 1px dotted #d2d5d6; }
+  .datawa-datasets .wrapper-datawa .filters .nav-facet {
+    background: #f3f6f7; }
+    .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item > a, .datawa-datasets .wrapper-datawa .filters .nav-facet .group-list .module-heading h3 .nav-item > a, .datawa-datasets .wrapper-datawa .filters .nav-facet .datawa-organization-list #publisher-tree > ul.nav-item > li, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet #publisher-tree > ul.nav-item > li {
+      color: #4b4e4f; }
+      .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item > a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .group-list .module-heading h3 .nav-item > a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .datawa-organization-list #publisher-tree > ul.nav-item > li:hover, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet #publisher-tree > ul.nav-item > li:hover {
+        color: #20399d;
+        background: #eaeaea; }
+    .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active a, .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active #publisher-tree > ul > li {
+      color: #fff; }
+      .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active a:hover, .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-datasets .wrapper-datawa .filters .nav-facet .nav-item.active #publisher-tree > ul > li:hover {
+        color: #20399d; }
+  .datawa-datasets .wrapper-datawa .filters .read-more {
+    text-decoration: none; }
+    .datawa-datasets .wrapper-datawa .filters .read-more:hover, .datawa-datasets .wrapper-datawa .filters .read-more:focus {
+      text-decoration: underline; }
+  .datawa-datasets .api-info-section a, .datawa-datasets .api-info-section .group-list .module-heading h3 a, .group-list .module-heading h3 .datawa-datasets .api-info-section a, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li {
+    text-decoration: none; }
+    .datawa-datasets .api-info-section a:hover, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li:hover, .datawa-datasets .api-info-section a:focus, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li:focus {
+      text-decoration: underline; }
+
+.datawa-datasets .span9,
+.datawa-datasets .span3,
+.datawa-dataset-read .span9,
+.datawa-dataset-read .span3 {
+  padding-top: 24px; }
+
+.datawa-org-read,
+.datawa-group-read,
+.datawa-dataset-read {
+  padding-bottom: 0; }
+  .datawa-org-read .wrapper-datawa .additional-info,
+  .datawa-group-read .wrapper-datawa .additional-info,
+  .datawa-dataset-read .wrapper-datawa .additional-info {
+    margin-top: 30px; }
+    .datawa-org-read .wrapper-datawa .additional-info thead th,
+    .datawa-group-read .wrapper-datawa .additional-info thead th,
+    .datawa-dataset-read .wrapper-datawa .additional-info thead th {
+      background: #e9edf0;
+      text-transform: uppercase; }
+      .datawa-org-read .wrapper-datawa .additional-info thead th:first-child,
+      .datawa-group-read .wrapper-datawa .additional-info thead th:first-child,
+      .datawa-dataset-read .wrapper-datawa .additional-info thead th:first-child {
+        padding-left: 10px; }
+    .datawa-org-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:first-child,
+    .datawa-org-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:last-child,
+    .datawa-group-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:first-child,
+    .datawa-group-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:last-child,
+    .datawa-dataset-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:first-child,
+    .datawa-dataset-read .wrapper-datawa .additional-info .table-bordered thead:first-child tr:first-child > th:last-child {
+      border-radius: 0; }
+
+@-moz-document url-prefix() {
+  .datawa-dataset-read .wrapper-datawa .span3 .context-info h1.heading {
+    word-wrap: break-word;
+    word-break: normal; } }
+.dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading .spatial-filter-location {
+  width: auto; }
+.dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading a, .dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-map-expanded .datawa-datasets .wrapper-datawa #dataset-map h2.module-heading #publisher-tree > ul > li {
+  top: 0px; }
+
+.datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown a, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown #publisher-tree > ul > li,
+.datawa-dataset-read .wrapper-datawa .follow_button a,
+.datawa-dataset-read .wrapper-datawa .follow_button .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .datawa-dataset-read .wrapper-datawa .follow_button #publisher-tree > ul > li {
+  text-decoration: none; }
+  .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown a:hover, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown #publisher-tree > ul > li:hover, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown a:focus, .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-dataset-read .wrapper-datawa .resources .resource-item .dropdown #publisher-tree > ul > li:focus,
+  .datawa-dataset-read .wrapper-datawa .follow_button a:hover,
+  .datawa-dataset-read .wrapper-datawa .follow_button .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .datawa-dataset-read .wrapper-datawa .follow_button #publisher-tree > ul > li:hover,
+  .datawa-dataset-read .wrapper-datawa .follow_button a:focus,
+  .datawa-dataset-read .wrapper-datawa .follow_button .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .datawa-dataset-read .wrapper-datawa .follow_button #publisher-tree > ul > li:focus {
+    text-decoration: none; }
+
+@media (max-width: 979px) {
+  .js [role=main] .secondary .filters {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 10px;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .js .show-filters.btn {
+    border: none;
+    background: #084a78;
+    border-bottom: 3px solid #033960;
+    border-radius: 0;
+    text-shadow: none;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 12px 10px;
+    font-size: 16px; }
+    .js .show-filters.btn:hover {
+      background: #003155;
+      border-bottom-color: #002542; }
+    .js .show-filters.btn i {
+      color: #fff; }
+  .js body.filters-modal .secondary .filters .hide-filters {
+    text-decoration: none; }
+    .js body.filters-modal .secondary .filters .hide-filters i {
+      font-size: 28px; }
+  .js body.filters-modal .secondary .filters {
+    display: block; }
+    .js body.filters-modal .secondary .filters > div {
+      background: #fff; }
+  .js body.filters-modal .secondary .filters .hide-filters {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    opacity: 0.6; } }
+.datawa-showcase-edit .ckanext-showcase-edit-wrapper {
+  margin-top: 30px;
+  border: 0;
+  box-shadow: none; }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action {
+    margin-right: 10px; }
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action a.btn, .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action .datawa-organization-list #publisher-tree > ul > li.btn, .datawa-organization-list .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .content_action #publisher-tree > ul > li.btn {
+      padding: 8px 22px; }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-remove-url {
+    border-radius: 0;
+    border: 0; }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-remove-url,
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-danger {
+    color: #fff;
+    background: #bb362f;
+    border-bottom: 3px solid #89221d; }
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-remove-url:hover,
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .btn-danger:hover {
+      background: #a11f18; }
+  @media (max-width: 767px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content #dataset-edit .form-actions button {
+      float: right; } }
+  @media (max-width: 979px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .module-content .show-filters.btn {
+      display: none; } }
+  @media (max-width: 767px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper {
+      padding-right: 20px; }
+      .datawa-showcase-edit .ckanext-showcase-edit-wrapper .page-header .nav-tabs li {
+        margin-right: 10px; } }
+  .datawa-showcase-edit .ckanext-showcase-edit-wrapper .ckanext_showcase_pagination_footer {
+    padding-bottom: 10px; }
+  @media (max-width: 1279px) and (min-width: 1100px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 {
+      width: 917px; } }
+  @media (max-width: 1499px) and (min-width: 1280px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 {
+      width: 948px; } }
+  @media (min-width: 1500px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 {
+      width: 1086px; } }
+  @media (min-width: 1280px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 .container {
+      padding-left: 0; } }
+  @media (width: 768px) {
+    .datawa-showcase-edit .ckanext-showcase-edit-wrapper .span12 {
+      padding-right: 20px; } }
+@media (max-width: 979px) and (min-width: 768px) {
+  .datawa-showcase-edit .container#content {
+    width: 724px;
+    padding-right: 0;
+    padding-left: 0; }
+    .datawa-showcase-edit .container#content .ckanext-showcase-edit-wrapper .span12 .container {
+      width: 724px; } }
+@media (max-width: 1099px) and (min-width: 980px) {
+  .datawa-showcase-edit .container#content {
+    width: 960px;
+    padding-right: 20px;
+    padding-left: 20px; }
+    .datawa-showcase-edit .container#content .ckanext-showcase-edit-wrapper .span12 {
+      width: 960px; }
+      .datawa-showcase-edit .container#content .ckanext-showcase-edit-wrapper .span12 .container {
+        width: 960px; } }
+
+/* ===========================================
+   The content in the middle of the front page
+   =========================================== */
+/* Hide featured section */
+.featured {
+  visibility: hidden;
+  height: 0px; }
+
+/* The background outside of the hero pane */
+.hero, [role=main] {
+  background: #FEFEFE; }
+
+/* Remove the "box shadow" effect around various boxes on the page. */
+.box {
+  box-shadow: none; }
+
+/* Remove the borders around the "Welcome to CKAN" and "Search Your Data"
+boxes. */
+.hero .box {
+  border: none; }
+
+/* Change the colors of the "Search Your Data" box. */
+.homepage .module-search .module-content {
+  color: #69737c;
+  background-color: white; }
+
+/* Change the background color of the "Popular Tags" box. */
+.homepage .module-search .tags {
+  color: #69737c;
+  background-color: #FCFCFC; }
+  .homepage .module-search .tags h3 {
+    font-size: 16px; }
+
+/* Remove some padding. This makes the bottom edges of the "Welcome to CKAN"
+and "Search Your Data" boxes line up. */
+.module-content:last-child {
+  padding-bottom: 0px; }
+
+.homepage .module-search {
+  padding: 0px;
+  margin: 0; }
+
+/* Bottom half of front page for featured orgs/groups */
+.homepage [role="main"] {
+  min-height: 100px; }
+
+/* The box around featured orgs/groups */
+.box {
+  border: none; }
+
+/* Spatial images */
+.leaflet-draw-toolbar a, .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-draw-toolbar a, .leaflet-draw-toolbar .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .leaflet-draw-toolbar #publisher-tree > ul > li {
+  background-image: url("/img/spritesheet.png");
+  background-repeat: no-repeat; }
+
+.leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .group-list .module-heading h3 a, .group-list .module-heading h3 .leaflet-retina .leaflet-draw-toolbar a, .leaflet-retina .leaflet-draw-toolbar .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .leaflet-retina .leaflet-draw-toolbar #publisher-tree > ul > li {
+  background-image: url("/img/spritesheet-2x.png");
+  background-size: 270px 30px; }
+
+.media-grid .media-item {
+  word-break: break-word;
+  word-wrap: break-word; }
+
+.module-resource .actions {
+  top: 4px; }
+
+.context-info .image {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #DDD;
+  margin-bottom: 15px; }
+
+.dataset-item .dataset-resources {
+  margin-left: 0; }
+
+.tag-list.well li {
+  margin-right: 0;
+  margin-left: 5px; }
+
+.dataset-map-expanded .wrapper-datawa {
+  margin-top: 383px; }
+.dataset-map-expanded #dataset-map {
+  width: 100%; }
+.dataset-map-expanded #dataset-map-edit-buttons a.btn.cancel, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.cancel, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.cancel {
+  padding-top: 6px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 3px solid #cccfd1;
+  color: #69737c;
+  font-size: 14px;
+  background-image: none; }
+.dataset-map-expanded #dataset-map-edit-buttons a.btn.apply, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply {
+  padding-top: 6px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  /* border-radius: 4px; */
+  /* border: 1px solid #cccccc; */
+  border-bottom: 3px solid #033960;
+  color: #fff;
+  font-size: 14px;
+  background-image: none;
+  background: #084a78;
+  box-shadow: none;
+  text-shadow: none; }
+  .dataset-map-expanded #dataset-map-edit-buttons a.btn.apply:hover, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply:hover, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply:hover {
+    background: #003155;
+    border-bottom-color: #002542; }
+.dataset-map-expanded #dataset-map-edit-buttons a.btn.apply.disabled, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply.disabled, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply.disabled {
+  opacity: 0.8; }
+
+body, html {
+  overflow-x: hidden; }
+
+.row {
+  margin-left: 0; }
+
+.paragraph-copyright {
+  font-size: 17px;
+  line-height: 1.3; }
+
+[role=main] {
+  padding-bottom: 0; }
+
+.datawa-dataset-read,
+.datawa-datasets,
+.datawa-orgs,
+.datawa-org-read,
+.datawa-about,
+.datawa-groups,
+.datawa-group-read {
+  padding-bottom: 0; }
+
+@media (min-width: 980px) {
+  .wrapper-datawa {
+    background-image: url("/datawa_nav.png");
+    background-repeat: repeat-y;
+    background-position: -119px 0px; } }
+@media (min-width: 1100px) {
+  .wrapper-datawa {
+    background-position: -79px 0px; } }
+@media (min-width: 1100px) and (min-width: 1280px) {
+  .wrapper-datawa {
+    background-position: -69px 0px; } }
+@media (min-width: 1500px) {
+  .wrapper-datawa {
+    background-position: -49px 0px; } }
+.toolbar {
+  border-bottom: 1px solid #c7cacd;
+  padding-bottom: 8px;
+  margin-bottom: 0; }
+  .toolbar:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 9999px;
+    top: 0;
+    bottom: -1px;
+    left: -9999px;
+    border-bottom: 1px solid #c7cacd;
+    z-index: 10; }
+  .toolbar:after {
+    border-bottom: 1px solid #c7cacd;
+    width: 9999px;
+    bottom: -9px;
+    position: relative; }
+
+.secondary.span3 {
+  padding-top: 20px; }
+  @media (min-width: 979px) {
+    .secondary.span3 {
+      background: #f4f7f8; }
+      .secondary.span3:before {
+        content: ' ';
+        display: block;
+        background: #f4f7f8;
+        position: absolute;
+        width: 9999px;
+        top: -1px;
+        bottom: 0;
+        left: -9999px; } }
+  .secondary.span3 h2.module-heading {
+    border-top: 0;
+    text-transform: uppercase;
+    color: #202224;
+    font-weight: 600;
+    background: #f4f7f8;
+    border-bottom: 2px solid #dfe1e2; }
+
+.datawa-showcase-edit .span9,
+.wrapper-datawa .span9 {
+  padding-top: 30px;
+  padding-bottom: 20px; }
+.datawa-showcase-edit .page-header,
+.wrapper-datawa .page-header {
+  background: #e4e9ed;
+  padding-top: 13px;
+  margin-left: 0;
+  padding-left: 10px;
+  border-radius: 0px; }
+  @media (min-width: 768px) {
+    .datawa-showcase-edit .page-header,
+    .wrapper-datawa .page-header {
+      border-bottom-color: transparent; }
+      .datawa-showcase-edit .page-header .nav-tabs,
+      .wrapper-datawa .page-header .nav-tabs {
+        border-color: transparent; }
+        .datawa-showcase-edit .page-header .nav-tabs > li > a,
+        .wrapper-datawa .page-header .nav-tabs > li > a {
+          padding-top: 10px;
+          padding-bottom: 10px; }
+        .datawa-showcase-edit .page-header .nav-tabs > li.active a, .datawa-showcase-edit .page-header .nav-tabs > li.active .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .datawa-showcase-edit .page-header .nav-tabs > li.active #publisher-tree > ul > li,
+        .wrapper-datawa .page-header .nav-tabs > li.active a,
+        .wrapper-datawa .page-header .nav-tabs > li.active .datawa-organization-list #publisher-tree > ul > li,
+        .datawa-organization-list .wrapper-datawa .page-header .nav-tabs > li.active #publisher-tree > ul > li {
+          border-color: #e4e9ed;
+          border-bottom-color: transparent; } }
+
+.datawa-datasets .wrapper-datawa,
+.datawa-dataset-read .wrapper-datawa {
+  padding-top: 0; }
+
+.datawa-about .wrapper-datawa,
+.datawa-dashboard .wrapper-datawa {
+  padding-top: 20px;
+  background-image: none; }
+
+.datawa-group-read .wrapper-datawa .span9 .page-header,
+.datawa-org-read .wrapper-datawa .span9 .page-header {
+  margin-left: 0; }
+.datawa-group-read .wrapper-datawa .span3,
+.datawa-org-read .wrapper-datawa .span3 {
+  padding-bottom: 20px; }
+
+.datawa-admin {
+  padding-top: 0;
+  padding-bottom: 0; }
+  .datawa-admin .toolbar {
+    border-bottom: 0;
+    padding: 0; }
+    .datawa-admin .toolbar:after, .datawa-admin .toolbar:before {
+      display: none; }
+  .datawa-admin .wrapper-datawa {
+    min-height: 350px; }
+    .datawa-admin .wrapper-datawa .span9 {
+      padding-top: 40px; }
+    .datawa-admin .wrapper-datawa .secondary.span3 {
+      padding-top: 34px;
+      padding-bottom: 20px; }
+
+.datawa-dashboard .wrapper-datawa {
+  padding-top: 30px; }
+
+.datawa-user-edit .wrapper-datawa .span9,
+.datawa-user-new .wrapper-datawa .span9,
+.datawa-user-login .wrapper-datawa .span9 {
+  padding-top: 20px; }
+
+.datawa-user-login .wrapper-datawa .secondary.span3 {
+  padding-bottom: 20px; }
+
+.datawa-user-read .wrapper-datawa .secondary.span3 {
+  padding-top: 30px; }
+
+@media (min-width: 979px) {
+  .datawa-resource-read .wrapper-datawa {
+    background-image: none; }
+    .datawa-resource-read .wrapper-datawa .span3 {
+      border-right: 1px solid #c7cacd; }
+      .datawa-resource-read .wrapper-datawa .span3 .license {
+        margin-bottom: 50px; }
+    .datawa-resource-read .wrapper-datawa .module-resource .module-content:first-child {
+      margin-top: 0;
+      padding-top: 30px; } }
+@media (min-width: 979px) {
+  .datawa-resource-read .secondary.span3 {
+    background: #f4f7f8; }
+    .datawa-resource-read .secondary.span3:before {
+      background: #FEFEFE; } }
+
+.wrapper-datawa .context-info p a, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li,
+.wrapper-datawa .resource-item a,
+.wrapper-datawa .resource-item .group-list .module-heading h3 a,
+.group-list .module-heading h3 .wrapper-datawa .resource-item a,
+.wrapper-datawa .resource-item .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .resource-item #publisher-tree > ul > li,
+.wrapper-datawa .additional-info .dataset-details a,
+.wrapper-datawa .additional-info .dataset-details .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .additional-info .dataset-details #publisher-tree > ul > li,
+.wrapper-datawa #dataset-edit .form-actions p.action-info a,
+.wrapper-datawa #dataset-edit .form-actions p.action-info .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa #dataset-edit .form-actions p.action-info #publisher-tree > ul > li,
+.wrapper-datawa .span3 .module-content p a,
+.wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li,
+.wrapper-datawa .media-grid.masonry .media-heading a,
+.wrapper-datawa .media-grid.masonry .media-heading .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .media-grid.masonry .media-heading #publisher-tree > ul > li,
+.wrapper-datawa .activity a,
+.wrapper-datawa .activity .group-list .module-heading h3 a,
+.group-list .module-heading h3 .wrapper-datawa .activity a,
+.wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li,
+.datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li {
+  text-decoration: none; }
+  .wrapper-datawa .context-info p a:hover, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li:hover, .wrapper-datawa .context-info p a:focus, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li:focus,
+  .wrapper-datawa .resource-item a:hover,
+  .wrapper-datawa .resource-item .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .resource-item #publisher-tree > ul > li:hover,
+  .wrapper-datawa .resource-item a:focus,
+  .wrapper-datawa .resource-item .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .resource-item #publisher-tree > ul > li:focus,
+  .wrapper-datawa .additional-info .dataset-details a:hover,
+  .wrapper-datawa .additional-info .dataset-details .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .additional-info .dataset-details #publisher-tree > ul > li:hover,
+  .wrapper-datawa .additional-info .dataset-details a:focus,
+  .wrapper-datawa .additional-info .dataset-details .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .additional-info .dataset-details #publisher-tree > ul > li:focus,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info a:hover,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa #dataset-edit .form-actions p.action-info #publisher-tree > ul > li:hover,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info a:focus,
+  .wrapper-datawa #dataset-edit .form-actions p.action-info .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa #dataset-edit .form-actions p.action-info #publisher-tree > ul > li:focus,
+  .wrapper-datawa .span3 .module-content p a:hover,
+  .wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li:hover,
+  .wrapper-datawa .span3 .module-content p a:focus,
+  .wrapper-datawa .span3 .module-content p .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .span3 .module-content p #publisher-tree > ul > li:focus,
+  .wrapper-datawa .media-grid.masonry .media-heading a:hover,
+  .wrapper-datawa .media-grid.masonry .media-heading .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .media-grid.masonry .media-heading #publisher-tree > ul > li:hover,
+  .wrapper-datawa .media-grid.masonry .media-heading a:focus,
+  .wrapper-datawa .media-grid.masonry .media-heading .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .media-grid.masonry .media-heading #publisher-tree > ul > li:focus,
+  .wrapper-datawa .activity a:hover,
+  .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:hover,
+  .datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li:hover,
+  .wrapper-datawa .activity a:focus,
+  .wrapper-datawa .activity .datawa-organization-list #publisher-tree > ul > li:focus,
+  .datawa-organization-list .wrapper-datawa .activity #publisher-tree > ul > li:focus {
+    text-decoration: underline; }
+
+.container .flash-messages .alert {
+  margin-top: 20px; }
+
+@media (min-width: 1280px) {
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 1280px;
+    padding-left: 20px;
+    padding-right: 25px;
+    box-sizing: border-box; }
+
+  #content,
+  .homepage [role="main"] .container {
+    padding-left: 78px;
+    padding-right: 85px; }
+
+  .homepage .span6 {
+    margin: 0; }
+    .homepage .span6:first-child {
+      margin-right: 20px; }
+
+  .span3 {
+    width: 270px; } }
+@media (min-width: 1500px) {
+  #content,
+  .homepage [role="main"] .container {
+    padding-left: 38px;
+    padding-right: 105px; }
+
+  .media-grid .media-item {
+    width: 26.87%; } }
+@-moz-document url-prefix() {
+  .form-select.control-order-by {
+    position: relative; }
+    .form-select.control-order-by #field-order-by {
+      -moz-appearance: none; }
+    .form-select.control-order-by:after {
+      pointer-events: none;
+      content: "\f107";
+      background: #fff;
+      display: inline-block;
+      font-family: "FontAwesome";
+      line-height: 16px;
+      pointer-events: none;
+      position: absolute;
+      right: 7px;
+      top: 7px; }
+      @media (max-width: 979px) {
+        .form-select.control-order-by:after {
+          top: 33px; } } }
+.span9 div.module-content {
+  padding-left: 0; }
+
+@media (min-width: 980px) {
+  .form-select.control-group.control-order-by {
+    margin-top: 13px; }
+
+  .module-resource .module-content {
+    margin: 30px 0; } }
+@media (max-width: 979px) {
+  .search-form .control-order-by select {
+    width: 100%; }
+  .search-form .filter-list {
+    margin-bottom: 20px; }
+
+  .module:last-child {
+    margin-bottom: 20px; } }
+@media (max-width: 1499px) and (min-width: 1100px) {
+  .media-grid .media-item {
+    width: 25.74%; } }
+@media (min-width: 1500px) {
+  .container {
+    width: 1086px;
+    box-sizing: content-box; }
+
+  .site-footer .container {
+    width: 1280px; }
+
+  .span9 {
+    width: 810px; }
+    .span9 .primary {
+      width: 602px; }
+
+  .span3 {
+    width: 250px; }
+
+  .span6 {
+    width: 533px; }
+    .span6:first-child {
+      margin-left: 0; }
+
+  .site-footer .attribution:first-child {
+    margin-left: 91px; } }
+@media (max-width: 1499px) and (min-width: 1280px) {
+  .container {
+    width: 948px;
+    box-sizing: content-box; }
+
+  .site-footer .container {
+    width: 1100px; }
+
+  .span9 {
+    width: 690px; }
+    .span9 .primary {
+      width: 482px; }
+
+  .span3 {
+    width: 230px; }
+
+  .span6 {
+    width: 464px; }
+    .span6:first-child {
+      margin-left: 0; } }
+@media (max-width: 1279px) and (min-width: 1100px) {
+  .container {
+    width: 917px; }
+    .container.homepage [role="main"] .container {
+      padding-right: 38px; }
+
+  .site-footer .container {
+    width: 1020px; }
+
+  .span9 {
+    width: 670px; }
+
+  .span3 {
+    width: 220px; }
+
+  .span6 {
+    width: 448px; }
+    .span6:first-child {
+      margin-left: 0; }
+
+  .site-footer .attribution:first-child {
+    margin-left: 8px; } }
+@media (max-width: 1099px) and (min-width: 980px) {
+  .container {
+    width: 762px; }
+    .container#content, .container.homepage [role="main"] .container {
+      padding-right: 10px; }
+
+  .site-footer .container {
+    width: 860px; }
+
+  .span9 {
+    width: 560px; }
+
+  .span3 {
+    width: 180px; }
+
+  .span6 {
+    width: 370px; }
+    .span6:first-child {
+      margin-left: 0; }
+
+  .site-footer .select2-container.lang-container {
+    width: 190px !important; }
+  .site-footer .attribution > a, .site-footer .group-list .module-heading h3 .attribution > a, .group-list .module-heading h3 .site-footer .attribution > a, .site-footer .datawa-organization-list #publisher-tree > ul.attribution > li, .datawa-organization-list .site-footer #publisher-tree > ul.attribution > li {
+    margin-right: 9px; }
+
+  .media-grid .media-item {
+    width: 40.41%; } }
+@media (max-width: 979px) and (min-width: 768px) {
+  .homepage .span6 {
+    float: none;
+    width: auto;
+    margin-left: 0; }
+  .homepage .hidden-phone {
+    display: none; }
+
+  .primary.span9 {
+    width: 100%; }
+
+  .secondary.span3 {
+    width: 100%; }
+
+  .container {
+    width: 660px; }
+
+  .span6 {
+    width: 330px; }
+
+  .span9 .page-header {
+    margin-left: 0; }
+
+  .tablet-text-right {
+    text-align: right; }
+
+  .attribution {
+    width: 220px;
+    float: right; }
+    .attribution:first-child {
+      margin-bottom: 20px; }
+
+  #content {
+    padding-left: 54px;
+    padding-right: 60px; }
+
+  .media-grid .media-item {
+    width: 25.5%; } }
+@media (max-width: 979px) {
+  [role="main"] {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px 20px 0; }
+
+  .primary.span9 {
+    padding-top: 20px;
+    background-color: #fff; }
+
+  .module-content {
+    padding: 0; }
+
+  .toolbar {
+    display: none; }
+
+  .secondary.span3 {
+    float: left; }
+
+  .module-resource .actions {
+    top: 10px; } }
+@media (max-width: 767px) {
+  .add-member-form .row-fluid .control-group {
+    float: none;
+    width: 100%; }
+
+  .add-member-or {
+    float: none;
+    margin-top: 0;
+    text-align: left;
+    width: 100%; }
+
+  .module-resource .actions {
+    top: 10px;
+    float: right;
+    right: 0;
+    margin-top: -10px; }
+    .module-resource .actions ul {
+      padding-left: 0;
+      margin-left: 0; }
+  .module-resource h1 {
+    display: inline-block;
+    margin-top: 15px; }
+  .module-resource [role="main"] ul {
+    padding-left: 0; }
+
+  .media-grid .media-item {
+    width: 34%; }
+    .media-grid .media-item img {
+      width: 100%; } }
+@media (max-width: 767px) and (min-width: 500px) {
+  .media-grid .media-item {
+    width: 40%; }
+    .media-grid .media-item img {
+      width: 100%; } }
+@media (max-width: 360px) and (min-width: 320px) {
+  .media-grid .media-item {
+    width: 77%; }
+    .media-grid .media-item img {
+      width: 100%; } }
+
+/*# sourceMappingURL=datawagovautheme.css.map */

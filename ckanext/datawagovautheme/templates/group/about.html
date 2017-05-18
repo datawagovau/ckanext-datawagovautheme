@@ -1,0 +1,7 @@
+{% ckan_extends %}
+
+{% block group_extras %}
+    <section class="additional-info">
+        {% snippet 'snippets/additional_info.html', extras = h.sorted_extras(c.group_dict.extras) %}
+    </section>
+{% endblock %}
