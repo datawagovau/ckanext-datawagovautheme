@@ -165,6 +165,7 @@
 		{"value":"Science", "label":"Science"},
 		{"value":"Security", "label":"Security"},
 		{"value":"Sport and Recreation", "label":"Sport and Recreation"},
+        {"value":"Statistical Services", "label":"Statistical Services"},
 		{"value":"Structure Plans", "label":"Structure Plans"},
 		{"value":"Tourism", "label":"Tourism"},
 		{"value":"Trade", "label":"Trade"},
