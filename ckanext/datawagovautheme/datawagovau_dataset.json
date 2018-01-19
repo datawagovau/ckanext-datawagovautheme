@@ -48,8 +48,7 @@
 	           "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
             "form_snippet": "license.html",
             "help_text": "Licenses for <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a> (Licensing Creative Commons is endorsed by WA Government and the recommended default under the Open Data Policy)",
-            "help_inline": true,
-            "required": true
+            "help_inline": true
         },
         {
             "field_name": "owner_org",
@@ -261,7 +260,6 @@
             "label": "Temporal coverage from",
             "help_text": "The span of time from the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.",
             "help_inline": true,
-            "required": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
         },
@@ -270,7 +268,6 @@
             "label": "Temporal coverage to",
             "help_text": "The span of time to which the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.",
             "help_inline": true,
-            "required": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
         },
@@ -279,7 +276,6 @@
             "label": "Access Level",
             "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for more information.",
             "help_inline": true,
-            "required": true,
             "form_include_blank_choice": true,
             "preset": "select",
             "choices": [
@@ -299,7 +295,6 @@
             "field_name": "data_access_statement",
             "label": "Data Access Statement",
             "form_snippet": "markdown.html",
-            "required": true,
             "help_text": "If the dataset is not “Public Anonymous” access, this may be used to link users to additional information about how they may be able to obtain access."
         },
         {
