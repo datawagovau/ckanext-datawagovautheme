@@ -29,6 +29,32 @@
             "help_text": "Descriptive information about the dataset. Can also include further information or caveats pertaining to the data."
         },
         {
+            "field_name":"access_level",
+            "label": "Access Level",
+            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for more information.",
+            "help_inline": true,
+            "form_include_blank_choice": true,
+            "preset": "select",
+            "choices": [
+                {"value":"public_anonymous", "label":"Public Anonymous"},
+                {"value":"secured_public", "label":"Secured Public"},
+                {"value":"restricted_public", "label":"Restricted Public"},
+                {"value":"non_public", "label":"Non-public"}
+            ]
+        },
+        {
+            "field_name": "data_access_statement",
+            "label": "Data Access Statement",
+            "form_snippet": "markdown.html",
+            "help_text": "If the dataset is not “Public Anonymous” access, this may be used to link users to additional information about how they may be able to obtain access."
+        },
+        {
+            "field_name": "access_url",
+            "label": "Access URL",
+            "help_inline": true,
+            "help_text": "Brief statement describing the access arrangements. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for tips."
+        },
+        {
             "field_name": "tag_string",
             "label": "Tags",
 	    "display_property": "dcat:Dataset/dct:keyword",
@@ -256,6 +282,12 @@
             ]
         },
         {
+            "field_name": "projection_and_datum",
+            "label": "Projection and Datum",
+            "help_inline": true,
+            "help_text": "For geospatial data only."
+        },
+        {
             "field_name": "data_temporal_extent_begin",
             "label": "Temporal coverage from",
             "help_text": "The span of time from the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.",
@@ -270,38 +302,6 @@
             "help_inline": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
-        },
-        {
-            "field_name":"access_level",
-            "label": "Access Level",
-            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for more information.",
-            "help_inline": true,
-            "form_include_blank_choice": true,
-            "preset": "select",
-            "choices": [
-                {"value":"public_anonymous", "label":"Public Anonymous"},
-                {"value":"secured_public", "label":"Secured Public"},
-                {"value":"restricted_public", "label":"Restricted Public"},
-                {"value":"non_public", "label":"Non-public"}
-            ]
-        },
-        {
-            "field_name": "access_url",
-            "label": "Access URL",
-            "help_inline": true,
-            "help_text": "Brief statement describing the access arrangements. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for tips."
-        },
-        {
-            "field_name": "data_access_statement",
-            "label": "Data Access Statement",
-            "form_snippet": "markdown.html",
-            "help_text": "If the dataset is not “Public Anonymous” access, this may be used to link users to additional information about how they may be able to obtain access."
-        },
-        {
-            "field_name": "projection_and_datum",
-            "label": "Projection and Datum",
-            "help_inline": true,
-            "help_text": "For geospatial data only."
         },
         {
             "field_name": "spatial",

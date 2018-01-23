@@ -1691,13 +1691,21 @@ body, html {
     background-position: -119px 0px; } }
 @media (min-width: 1100px) {
   .wrapper-datawa {
-    background-position: -79px 0px; } }
+    background-position: -79px 0px; }
+    .wrapper-datawa #dataset-edit .info-block.info-inline {
+      width: 36%;
+      padding-left: 10px;
+      padding-top: 0; } }
 @media (min-width: 1100px) and (min-width: 1280px) {
   .wrapper-datawa {
     background-position: -69px 0px; } }
 @media (min-width: 1500px) {
   .wrapper-datawa {
-    background-position: -49px 0px; } }
+    background-position: -49px 0px; }
+    .wrapper-datawa #dataset-edit .info-block.info-inline {
+      width: 48%;
+      padding-left: 10px;
+      padding-top: 0; } }
 .toolbar {
   border-bottom: 1px solid #c7cacd;
   padding-bottom: 8px;
