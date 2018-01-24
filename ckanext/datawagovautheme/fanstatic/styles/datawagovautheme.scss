@@ -185,6 +185,13 @@ body, html{
 @media (min-width: $desktop-top + 1px) {
     .wrapper-datawa {
         background-position: -79px 0px;
+        #dataset-edit {
+          .info-block.info-inline {
+            width: 36%;
+            padding-left: 10px;
+            padding-top: 0;
+          }
+        }
     }
     @media (min-width: $wide-top + 1px) {
         .wrapper-datawa {
@@ -195,7 +202,15 @@ body, html{
 @media (min-width: $hd-top + 1px) {
     .wrapper-datawa {
         background-position: -49px 0px;
+        #dataset-edit {
+          .info-block.info-inline {
+            width: 48%;
+            padding-left: 10px;
+            padding-top: 0;
+          }
+        }
     }
+
 }
 
 .toolbar {
