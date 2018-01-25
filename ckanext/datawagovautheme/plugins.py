@@ -35,11 +35,21 @@ class CustomTheme(SingletonPlugin):
     implements(IConfigurer)
     implements(ITemplateHelpers)
 
+    # IConfigurer
     def update_config(self, config):
         toolkit.add_template_directory(config, "templates")
         toolkit.add_public_directory(config, "static")
         toolkit.add_resource('fanstatic', 'datawagovautheme')
 
+    def update_config_schema(self, schema):
+        ignore_missing = toolkit.get_validator('ignore_missing')
+        schema.update({
+            'ckanext.datawa.slip_harvester_token': [ignore_missing, unicode],
+        })
+
+        return schema
+
+    # ITemplateHelpers
     def get_helpers(self):
         return {
             'get_current_year': get_current_year
