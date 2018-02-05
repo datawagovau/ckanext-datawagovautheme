@@ -28,20 +28,7 @@
             "form_placeholder": "eg. Some useful notes about the data",
             "help_text": "Descriptive information about the dataset. Can also include further information or caveats pertaining to the data."
         },
-        {
-            "field_name":"access_level",
-            "label": "Access Level",
-            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for more information.",
-            "help_inline": true,
-            "form_include_blank_choice": true,
-            "preset": "select",
-            "choices": [
-                {"value":"public_anonymous", "label":"Public Anonymous"},
-                {"value":"secured_public", "label":"Secured Public"},
-                {"value":"restricted_public", "label":"Restricted Public"},
-                {"value":"non_public", "label":"Non-public"}
-            ]
-        },
+
         {
             "field_name": "data_access_statement",
             "label": "Data Access Statement",
@@ -99,17 +86,19 @@
             "display_property": "dcat:Dataset/dcat:landingPage",
 	    "display_snippet": "link.html"
         },
-	{
-          "field_name":"data_access_level",
-          "label": "Data Access Level",
-          "preset": "select",
-	  "required": true,
-          "choices": [
-	    {"value": "Public Anonymous", "label": "Public Anonymous"},
-	    {"value": "Public Secured", "label": "Public Secured"},
-	    {"value": "Public Restricted", "label": "Public Restricted"},
-	    {"value": "Non-public", "label": "Non-public"}
-          ]
+        {
+            "field_name":"access_level",
+            "label": "Access Level",
+            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/115009696088-When-do-I-need-to-register-to-access-data-\">Data Toolkit</a> for more information.",
+            "help_inline": true,
+            "form_include_blank_choice": true,
+            "preset": "select",
+            "choices": [
+                {"value":"public_anonymous", "label":"Public Anonymous"},
+                {"value":"secured_public", "label":"Public Secured"},
+                {"value":"restricted_public", "label":"Public Restricted"},
+                {"value":"non_public", "label":"Non-public"}
+            ]
         },
 
         {
