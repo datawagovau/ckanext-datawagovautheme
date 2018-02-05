@@ -99,24 +99,19 @@
             "display_property": "dcat:Dataset/dcat:landingPage",
 	    "display_snippet": "link.html"
         },
-        {
-            "field_name": "doi",
-            "label": "DOI",
-            "help_text": "The Digital Object Identifier assigned to your dataset (if you have created one). More information about the DOI system is <a target=\"_blank\" href=\"http://www.doi.org/\">available here</a>, and is more typically used in scientific disciplines and publishing. If you're unsure, leave this blank.",
-            "help_inline": true,
-            "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
-            "display_property": "dc:identifier",
-	    "display_snippet": "link.html"
+	{
+          "field_name":"data_access_level",
+          "label": "Data Access Level",
+          "preset": "select",
+	  "required": true,
+          "choices": [
+	    {"value": "Public Anonymous", "label": "Public Anonymous"},
+	    {"value": "Public Secured", "label": "Public Secured"},
+	    {"value": "Public Restricted", "label": "Public Restricted"},
+	    {"value": "Non-public", "label": "Non-public"}
+          ]
         },
-        {
-            "field_name": "citation",
-            "label": "Citation",
-            "help_text": "The citation that users of the dataset should use in publications, articles, et cetera. If you're unsure, leave this blank.",
-            "help_inline": true,
-            "form_placeholder": "Author AB (year): Publication",
-            "display_property": "citation",
-            "display_snippet": "text.html"
-        },
+
         {
             "field_name": "author",
             "label": "Author",
@@ -239,15 +234,6 @@
             ]
         },
         {
-            "field_name": "language",
-            "label": "Language",
-            "help_text": "The language in which the dataset is published. The default is English.",
-            "help_inline": true,
-            "form_placeholder": "English",
-            "display_property": "language",
-            "display_snippet": "text.html"
-        },
-        {
             "field_name": "published_on",
             "label": "Published on",
             "help_text": "The date on which this dataset was, or shall be, published.",
@@ -282,12 +268,6 @@
             ]
         },
         {
-            "field_name": "projection_and_datum",
-            "label": "Projection and Datum",
-            "help_inline": true,
-            "help_text": "For geospatial data only."
-        },
-        {
             "field_name": "data_temporal_extent_begin",
             "label": "Temporal coverage from",
             "help_text": "The span of time from the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.",
@@ -302,6 +282,32 @@
             "help_inline": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
+        },
+	{
+            "field_name": "doi",
+            "label": "Digital Object Identifier",
+            "help_text": "The Digital Object Identifier assigned to your dataset (if you have created one). More information about the DOI system is <a target=\"_blank\" href=\"http://www.doi.org/\">available here</a>, and is more typically used in scientific disciplines and publishing. If you're unsure, leave this blank.",
+            "help_inline": true,
+            "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
+            "display_property": "dc:identifier",
+	    "display_snippet": "link.html"
+        },
+        {
+            "field_name": "citation",
+            "label": "Citation",
+            "help_text": "The citation that users of the dataset should use in publications, articles, et cetera. If you're unsure, leave this blank.",
+            "help_inline": true,
+            "form_placeholder": "Author AB (year): Publication",
+            "display_property": "citation",
+            "display_snippet": "text.html"
+        },
+
+
+        {
+            "field_name": "projection_and_datum",
+            "label": "Geospatial Source Projection",
+            "help_inline": true,
+            "help_text": "Geographic coordinate system and datum specification. For geospatial data only."
         },
         {
             "field_name": "spatial",
