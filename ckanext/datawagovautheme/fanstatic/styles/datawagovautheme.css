@@ -1487,8 +1487,6 @@ ul.dataset-list {
     top: 14px;
     right: 17px;
     opacity: 0.6; } }
-.form-horizontal .info-block a, .form-horizontal .info-block .group-list .module-heading h3 a, .group-list .module-heading h3 .form-horizontal .info-block a, .form-horizontal .info-block .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .form-horizontal .info-block #publisher-tree > ul > li {
-  text-decoration: none; }
 .form-horizontal .control-group .select2-container {
   width: 320px !important; }
 
