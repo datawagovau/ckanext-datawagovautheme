@@ -426,3 +426,16 @@ ul.dataset-list{
     }
   }
 }
+
+.form-horizontal {
+    .info-block {
+	a {
+
+	}
+    }
+    .control-group {
+	.select2-container {
+	    width: 320px! important;
+	}
+    }
+}

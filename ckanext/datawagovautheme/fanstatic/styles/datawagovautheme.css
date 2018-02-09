@@ -1487,6 +1487,9 @@ ul.dataset-list {
     top: 14px;
     right: 17px;
     opacity: 0.6; } }
+.form-horizontal .control-group .select2-container {
+  width: 320px !important; }
+
 .datawa-showcase-edit .ckanext-showcase-edit-wrapper {
   margin-top: 30px;
   border: 0;
