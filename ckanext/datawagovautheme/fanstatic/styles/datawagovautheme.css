@@ -1489,6 +1489,8 @@ ul.dataset-list {
     opacity: 0.6; } }
 .form-horizontal .control-group .select2-container {
   width: 320px !important; }
+.form-horizontal .control-group .controls a, .form-horizontal .control-group .controls .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .form-horizontal .control-group .controls #publisher-tree > ul > li {
+  font-size: 1em; }
 
 .datawa-showcase-edit .ckanext-showcase-edit-wrapper {
   margin-top: 30px;
