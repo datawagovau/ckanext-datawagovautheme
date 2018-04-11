@@ -36,10 +36,10 @@
             "form_include_blank_choice": true,
             "preset": "select",
             "choices": [
-                {"value":"public_anonymous", "label":"Public Anonymous"},
-                {"value":"secured_public", "label":"Public Secured"},
-                {"value":"restricted_public", "label":"Public Restricted"},
-                {"value":"non_public", "label":"Non-public"}
+                {"value":"public_anonymous", "label":"Open - Free and publicly available"},
+                {"value":"secured_public", "label":"Open - Free and login required"},
+                {"value":"restricted_public", "label":"Closed - Subject to approval or payment"},
+                {"value":"non_public", "label":"Restricted - Government use only"}
             ]
         },
         {
