@@ -25,7 +25,34 @@
             "label": "Description",
 	    "display_property": "dcat:Dataset/dct:description",
             "form_snippet": "markdown.html",
-            "form_placeholder": "eg. Some useful notes about the data"
+            "form_placeholder": "eg. Some useful notes about the data",
+            "help_text": "Descriptive information about the dataset. Can also include further information or caveats pertaining to the data."
+        },
+        {
+            "field_name":"access_level",
+            "label": "Access Level",
+            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for more information.",
+            "help_inline": true,
+            "form_include_blank_choice": true,
+            "preset": "select",
+            "choices": [
+                {"value":"public_anonymous", "label":"Open - Free and publicly available"},
+                {"value":"secured_public", "label":"Open - Free and login required"},
+                {"value":"restricted_public", "label":"Closed - Subject to approval or payment"},
+                {"value":"non_public", "label":"Restricted - Government use only"}
+            ]
+        },
+        {
+            "field_name": "data_access_statement",
+            "label": "Data Access Statement",
+            "form_snippet": "markdown.html",
+            "help_text": "Brief statement describing the access arrangements. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for tips."
+        },
+        {
+            "field_name": "access_url",
+            "label": "Access URL",
+            "help_inline": true,
+            "help_text": "If the dataset is not “Public Anonymous” access, this may be used to link users to additional information about how they may be able to obtain access."
         },
         {
             "field_name": "tag_string",
@@ -37,25 +64,29 @@
                 "data-module": "autocomplete",
                 "data-module-tags": "",
                 "data-module-source": "/api/2/util/tag/autocomplete?incomplete=?"
-            }
+            },
+            "help_text": "Some tags (or keywords) that describe your data.",
+            "help_inline": true
         },
         {
             "field_name": "license_id",
             "label": "License",
-	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
-            "form_snippet": "license.html"
+	           "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
+            "form_snippet": "license.html",
+            "help_text": "Licenses for <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a> (Licensing Creative Commons is endorsed by WA Government and the recommended default under the Open Data Policy)",
+            "help_inline": true
         },
         {
             "field_name": "owner_org",
             "label": "Organization",
-	    "display_property": "dct:publisher",
+            "display_property": "dct:publisher",
             "validators": "owner_org_validator unicode",
             "form_snippet": "organization.html"
         },
         {
             "field_name": "data_portal",
             "label": "Data Portal",
-            "help_text": "Dataset URL on original data catalogue (set automatically if harvested)",
+            "help_text": "Another website or resource that users may go to to discover more context and information about the dataset (e.g. The relevant page on your agency's website). If that does not apply, leave it blank.",
             "help_inline": true,
             "display_property": "dcat:Dataset/dcat:landingPage",
 	    "display_snippet": "link.html"
@@ -63,33 +94,15 @@
         {
             "field_name": "data_homepage",
             "label": "Data Homepage",
-            "help_text": "URL of access point and detailed metadata of attached data resources",
+            "help_text": "For datasets that exist in another catalogue this will be the access point for detailed catalogue-specific information about the dataset. If you're unsure, leave this blank.",
             "help_inline": true,
             "display_property": "dcat:Dataset/dcat:landingPage",
 	    "display_snippet": "link.html"
         },
         {
-            "field_name": "doi",
-            "label": "DOI",
-            "help_text": "Digital Object Identifier",
-            "help_inline": true,
-            "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
-            "display_property": "dc:identifier",
-	    "display_snippet": "link.html"
-        },
-        {
-            "field_name": "citation",
-            "label": "Citation",
-            "help_text": "Comprehensive attribution of authors and their affiliation",
-            "help_inline": true,
-            "form_placeholder": "Author AB (year): Publication",
-            "display_property": "citation",
-            "display_snippet": "text.html"
-        },
-        {
             "field_name": "author",
             "label": "Author",
-            "help_text": "The author (dataset custodian) is responsible for the content of attached data resources",
+            "help_text": "The name and email address of the person who is primarily dataset for creating and maintaining the data.",
             "help_inline": true,
             "form_placeholder": "Joe Bloggs",
             "display_property": "dc:creator",
@@ -106,7 +119,7 @@
         {
             "field_name": "maintainer",
             "label": "Maintainer",
-            "help_text": "The metadata maintainer updates this page on behalf of the author",
+            "help_text": "The name and email address of the person who is responsible for maintaining the dataset on <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a>.",
             "help_inline": true,
             "form_placeholder": "Joe Bloggs",
             "display_property": "dc:contributor",
@@ -123,7 +136,7 @@
         {
             "field_name":"theme",
             "label": "Theme",
-            "help_text": "The government jurisdiction defined business function to which the resource relates",
+            "help_text": "The <a target=\"_blank\" href=\"http://agift.naa.gov.au/\">AGIFT</a> top level government function to which the dataset relates.",
             "help_inline": true,
 	    "display_property": "agls:function",
             "preset": "select",
@@ -208,18 +221,9 @@
             ]
         },
         {
-            "field_name": "language",
-            "label": "Language",
-            "help_text": "The primary language of this dataset",
-            "help_inline": true,
-            "form_placeholder": "English",
-            "display_property": "language",
-            "display_snippet": "text.html"
-        },
-        {
             "field_name": "published_on",
             "label": "Published on",
-            "help_text": "The date on which this dataset was or shall be published",
+            "help_text": "The date on which this dataset was, or shall be, published.",
             "help_inline": true,
 	    "display_property": "dcat:Dataset/dct:issued",
             "preset": "date"
@@ -227,7 +231,7 @@
         {
             "field_name": "last_updated_on",
             "label": "Data last updated on",
-            "help_text": "Last modification of the content of data resources",
+            "help_text": "The date on which the data on <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a> itself was last updated.",
             "help_inline": true,
 	    "display_property": "dcat:Dataset/dct:modified",
             "preset": "date"
@@ -235,7 +239,7 @@
         {
             "field_name":"update_frequency",
             "label": "Update Frequency",
-            "help_text": "How often will the data resources be updated?",
+            "help_text": "How often the dataset is updated. Eg: Daily, Weekly, Never.",
             "help_inline": true,
 	    "display_property": "dcat:Dataset/dct:accrualPeriodocity",
             "preset": "select",
@@ -253,7 +257,7 @@
         {
             "field_name": "data_temporal_extent_begin",
             "label": "Temporal coverage from",
-            "help_text": "Earliest record in data resources",
+            "help_text": "The span of time from the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.",
             "help_inline": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
@@ -261,10 +265,36 @@
         {
             "field_name": "data_temporal_extent_end",
             "label": "Temporal coverage to",
-            "help_text": "Latest record in data resources",
+            "help_text": "The span of time to which the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.",
             "help_inline": true,
             "preset": "date",
             "display_property": "dcat:Dataset/dct:temporal"
+        },
+	{
+            "field_name": "doi",
+            "label": "Digital Object Identifier",
+            "help_text": "The Digital Object Identifier assigned to your dataset (if you have created one). More information about the DOI system is <a target=\"_blank\" href=\"http://www.doi.org/\">available here</a>, and is more typically used in scientific disciplines and publishing. If you're unsure, leave this blank.",
+            "help_inline": true,
+            "form_placeholder": "http://dx.doi.org/xxxx/yyyy",
+            "display_property": "dc:identifier",
+	    "display_snippet": "link.html"
+        },
+        {
+            "field_name": "citation",
+            "label": "Citation",
+            "help_text": "The citation that users of the dataset should use in publications, articles, et cetera. If you're unsure, leave this blank.",
+            "help_inline": true,
+            "form_placeholder": "Author AB (year): Publication",
+            "display_property": "citation",
+            "display_snippet": "text.html"
+        },
+
+
+        {
+            "field_name": "projection_and_datum",
+            "label": "Geospatial Source Projection",
+            "help_inline": true,
+            "help_text": "Geographic coordinate system and datum specification. For geospatial data only."
         },
         {
             "field_name": "spatial",
