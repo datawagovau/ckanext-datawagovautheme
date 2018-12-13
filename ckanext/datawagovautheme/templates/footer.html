@@ -19,13 +19,13 @@
       </div>
      <div class="col-md-6 col-sm-6 col-xs-12 pull-right without-margin footer-powered-section">
        <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12 attribution">
+          <div class="col-md-offset-3 col-md-3 col-sm-6 col-xs-12 attribution">
             {% block footer_attribution %}
               <p>{% trans %}<strong>Powered by</strong>{% endtrans %}</p>
               <a href="http://ckan.org"><img class="datawa-ckan-footer-logo" src="{{ h.url_for_static('ckan-blk.png') }}"/></a>
             {% endblock %}
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 attribution">
+          <div class="col-md-6 col-sm-6 col-xs-12 attribution">
             {% block footer_lang %}
               {% snippet "snippets/language_selector.html" %}
             {% endblock %}
