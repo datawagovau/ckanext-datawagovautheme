@@ -363,31 +363,35 @@ body, html{
 }
 
 .datawa-resource-read {
-    .wrapper-datawa {
-        @media (min-width: $tablet-top) {
-            .span3 {
-                border-right: 1px solid $btn-grey-border;
-                .license {
-                    margin-bottom: 50px;
-                }
-            }
-            background-image: none;
-            .module-resource {
-                .module-content:first-child {
-                    margin-top: 0;
-                    padding-top: 30px;
-                }
-            }
-        }
+  .wrapper-datawa {
+    display: block;
+    .secondary.col-sm-3:before {
+      content: none;
     }
-    .secondary.span3 {
-        @media (min-width: $tablet-top) {
-            background: $aside-span3-bg;
-            &:before {
-                background: $grey-fe;
-            }
+    @media (min-width: $tablet-top) {
+      .col-md-3 {
+        border-right: 1px solid $btn-grey-border;
+        .license {
+          margin-bottom: 50px;
         }
+      }
+      background-image: none;
+      .module-resource {
+        .module-content:first-child {
+          margin-top: 0;
+          padding-top: 30px;
+        }
+      }
     }
+  }
+  .secondary.col-md-3 {
+    @media (min-width: $tablet-top) {
+      background: $aside-span3-bg;
+      &:before {
+        background: $grey-fe;
+      }
+    }
+  }
 }
 .wrapper-datawa {
     .context-info p,

@@ -1700,20 +1700,24 @@ body, html {
 .datawa-user-read .wrapper-datawa .secondary.span3 {
   padding-top: 30px; }
 
+.datawa-resource-read .wrapper-datawa {
+  display: block; }
+  .datawa-resource-read .wrapper-datawa .secondary.col-sm-3:before {
+    content: none; }
+  @media (min-width: 979px) {
+    .datawa-resource-read .wrapper-datawa {
+      background-image: none; }
+      .datawa-resource-read .wrapper-datawa .col-md-3 {
+        border-right: 1px solid #c7cacd; }
+        .datawa-resource-read .wrapper-datawa .col-md-3 .license {
+          margin-bottom: 50px; }
+      .datawa-resource-read .wrapper-datawa .module-resource .module-content:first-child {
+        margin-top: 0;
+        padding-top: 30px; } }
 @media (min-width: 979px) {
-  .datawa-resource-read .wrapper-datawa {
-    background-image: none; }
-    .datawa-resource-read .wrapper-datawa .span3 {
-      border-right: 1px solid #c7cacd; }
-      .datawa-resource-read .wrapper-datawa .span3 .license {
-        margin-bottom: 50px; }
-    .datawa-resource-read .wrapper-datawa .module-resource .module-content:first-child {
-      margin-top: 0;
-      padding-top: 30px; } }
-@media (min-width: 979px) {
-  .datawa-resource-read .secondary.span3 {
+  .datawa-resource-read .secondary.col-md-3 {
     background: #f4f7f8; }
-    .datawa-resource-read .secondary.span3:before {
+    .datawa-resource-read .secondary.col-md-3:before {
       background: #FEFEFE; } }
 
 .wrapper-datawa .context-info p a, .wrapper-datawa .context-info p .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .wrapper-datawa .context-info p #publisher-tree > ul > li,
