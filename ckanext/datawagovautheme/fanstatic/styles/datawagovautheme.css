@@ -1274,6 +1274,11 @@ ul.dataset-list {
     text-decoration: none; }
     .datawa-datasets .api-info-section a:hover, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li:hover, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li:hover, .datawa-datasets .api-info-section a:focus, .datawa-datasets .api-info-section .datawa-organization-list #publisher-tree > ul > li:focus, .datawa-organization-list .datawa-datasets .api-info-section #publisher-tree > ul > li:focus {
       text-decoration: underline; }
+  .datawa-datasets .media-grid .media-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto; }
 
 .datawa-datasets .span9,
 .datawa-datasets .span3,
