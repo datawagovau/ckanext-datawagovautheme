@@ -1,8 +1,8 @@
 
 from ckan.plugins import (toolkit, IConfigurer, SingletonPlugin,
-                          ITemplateHelpers, implements)
+                          ITemplateHelpers, implements, IPackageController)
 import datetime
-from ckan.common import _
+from ckan.common import _, c
 from ckan.model.license import LicenseRegister, DefaultLicense
 
 
@@ -34,6 +34,17 @@ LicenseRegister._create_license_list = updated_licenses
 class CustomTheme(SingletonPlugin):
     implements(IConfigurer)
     implements(ITemplateHelpers)
+    implements(IPackageController, inherit=True)
+
+    # IPackageController
+
+    def before_search(self, search_params):
+        # fix for ckanext-hierarchy required by migration to 2.8
+        try:
+            c.fields
+        except AttributeError:
+            c.fields = []
+        return search_params
 
     # IConfigurer
     def update_config(self, config):

@@ -46,6 +46,7 @@
             "field_name": "data_access_statement",
             "label": "Data Access Statement",
             "form_snippet": "markdown.html",
+            "display_snippet": "datawa_markdown.html",
             "help_text": "Brief statement describing the access arrangements. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for tips."
         },
         {
