@@ -29,7 +29,7 @@
   @extend a;
 }
 .module-content:first-child{
-  padding-top: 0;
+  padding-top: 20px;
 }
 .pill{
   background: $a-hover-color;
@@ -64,13 +64,10 @@
         }
       }
     }
-    .icon-home{
-      &:before{
-        content: "";
-        background: url("/house.png") 50% 50% no-repeat;
-        display: inline-block;
-        width: 19px;
-        height: 20px;
+    .home {
+      i {
+        font-size: 20px;
+        color: #69737c;
       }
     }
   }
@@ -85,38 +82,6 @@
     text-shadow: none;
   }
 }
-
-.search-form{
-  h2{
-    font-size: $h2-fz;
-    color: $h-color;
-    line-height: $body-lh;
-  }
-  .control-order-by {
-    label, select{
-      vertical-align: baseline;
-      width: 165px;
-    }
-  }
-  .search-input{
-    &.search-giant{
-      position: relative;
-      input{
-        border: 1px solid #c7cacd;
-      }
-      button{
-        @include landgate-primary;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        margin: 0;
-        height: auto;
-        width: 100px;
-      }
-    }
-  }
-}
-
 
 a.tag{
   color: #565656;
@@ -211,6 +176,44 @@ ul.nav{
 .module-content{
   padding-left: 0;
   padding-right: 0;
+  .search-form{
+    h2{
+      font-size: $h2-fz;
+      color: $h-color;
+      line-height: $body-lh;
+    }
+    .control-order-by {
+      label, select{
+        vertical-align: baseline;
+        width: 165px;
+      }
+    }
+    .search-input{
+      &.search-giant{
+        position: relative;
+        input{
+          border: 1px solid #c7cacd;
+        }
+      }
+    }
+    .input-group-btn {
+      padding: 0;
+      button.btn {
+        @include landgate-primary;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        height: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        width: 100px;
+        i {
+          font-size: 28px;
+        }
+      }
+    }
+  }
 }
 .module-narrow{
   .nav-item{
