@@ -1,0 +1,48 @@
+.homepage {
+  .media-heading{
+    word-break: inherit;
+    hyphens: manual;
+  }
+
+  .stats {
+
+    ul {
+      padding-left: 0;
+      li {
+        @media(max-width: 500px){
+          &:nth-child(2n - 1){
+            clear: both;
+          }
+          width: 50%;
+        }
+        @media(min-width: $tablet-top + 1px) and (max-width: $desktop-top){
+          &:nth-child(2n - 1){
+            clear: both;
+          }
+          width: 50%;
+        }
+        a {
+          font-size: $body-fz;
+          &:hover{
+            text-decoration: underline;
+          }
+          b{
+            font-size: $h2-fz;
+            line-height: $body-lh;
+          }
+        }
+      }
+    }
+  }
+  .module-heading a{
+    font-size: $h2-fz;
+  }
+  .search-form{
+    padding: 0;
+  }
+  .span6 {
+      .box {
+          @include langate-link-decoration;
+      }
+  }
+}

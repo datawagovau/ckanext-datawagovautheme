@@ -1,4 +1,7 @@
 {% extends "page.html" %}
+{% set group_type = group_type|default('organization') %}
+
+{% block maintag %}<div role="main" class="datawa-org-read">{% endblock %}
 
 {% block subtitle %}{{ c.group_dict.display_name }} - {{ _('Organizations') }}{% endblock %}
 

@@ -2,6 +2,8 @@
 
 {% block subtitle %}{{ pkg.title or pkg.name }} - {{ super() }}{% endblock %}
 
+{% block maintag %}<div role="main" class="datawa-dataset-read">{% endblock %}
+
 {% block head_extras -%}
   {{ super() }}
   {% set description = h.markdown_extract(pkg.notes, extract_length=200)|forceescape %}

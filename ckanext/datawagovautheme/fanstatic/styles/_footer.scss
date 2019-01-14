@@ -1,0 +1,128 @@
+/* ====================================
+   The footer at the bottom of the site
+   ==================================== */
+
+
+.site-footer{
+  background: #eff1f2;
+  padding-top: 33px;
+  &, label, small, a{
+    color: $font-color;
+    font-size: 15px;
+  }
+  & > .container .row{
+    margin-bottom: 22px;
+  }
+  .inline-links{
+    padding-left: 0;
+    margin-bottom: 11px;
+    li{
+      display: inline;
+      text-decoration: none;
+      &:after{
+        content: '';
+        border-right: 1px solid $font-color;
+        text-decoration: none;
+        margin: {
+          right: 5px;
+          left: 10px;
+        }
+      }
+      &:last-child:after{
+        border-right: none;
+        margin: {
+          right: 0;
+          left: 0;
+        }
+      }
+      @include langate-link-decoration;
+    }
+  }
+  .footer-wa-link-wrapper{
+    position: relative;
+  }
+  .footer-wa-link{
+    position: absolute;
+    left: 0;
+    font-size: 25px;
+    text-decoration: none;
+    color: #44505b;
+    margin: {
+      top: 8px;
+    }
+  }
+  .without-margin{
+    margin: 0;
+  }
+  .lang-select{
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  @media(max-width: $mobile-top){
+    margin:{
+      left: -20px;
+      right: -20px;
+    }
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .footer-links,
+    .footer-wa-link-wrapper,
+    .secondary-footer-links,
+    .without-margin{
+      display: block;
+      text-align: center;
+      float: none;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    .footer-links{
+      width: auto;
+    }
+     .attribution{
+      text-align: center;
+      p {
+        margin-bottom: 5px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+     .footer-wa-link{
+      position: static;
+    }
+    .lang-select{
+      padding-top: 25px;
+      & > *{
+        float: none;
+      }
+      .lang-container{
+        text-align: center;
+      }
+    }
+    & > .container .row{
+      margin-bottom: 14px;
+    }
+    .footer-wa-link{
+      margin-left: 0;
+    }
+    .paragraph-copyright{
+      margin-top: 43px;
+    }
+  }
+}
+
+@media(min-width: 1280px){
+  .site-footer{
+    .attribution{
+      label{
+        display: block;
+      }
+      .lang-select .lang-container{
+        float: none;
+      }
+    }
+  }
+}

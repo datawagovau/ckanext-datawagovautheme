@@ -1,0 +1,19 @@
+<section id="dataset-map" class="module module-narrow module-shallow">
+  <h2 class="module-heading">
+    <i class="icon-medium icon-globe"></i>
+    <div class="spatial-filter-location">{{ _('Filter by location') }}</div>
+    <a href="{{ h.remove_url_param(['ext_bbox','ext_prev_extent', 'ext_location']) }}"
+      class="action clear-map">{{ _('Clear') }}</a>
+  </h2>
+  {% set map_config = h.get_common_map_config() %}
+  <div class="dataset-map" data-module="spatial-query"
+    data-default_extent="{{ default_extent }}"
+    data-module-map_config="{{ h.dump_json(map_config) }}">
+    <div id="dataset-map-container"></div>
+  </div>
+  <div id="dataset-map-attribution">
+    {% snippet "spatial/snippets/map_attribution.html", map_config=map_config %}
+  </div>
+</section>
+
+{% resource 'ckanext-spatial/spatial_query' %}
