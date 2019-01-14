@@ -74,13 +74,16 @@ a{
 }
 
 [role="main"]{
+  padding-bottom: 0;
+  .primary {
+    padding-bottom: 20px;
+  }
   ul{
     margin-left: 15px;
     &[class]{
       padding-left: 0;
     }
     li{
-      // list-style: circle;
       line-height: $body-lh;
       ul li{
         list-style: square
