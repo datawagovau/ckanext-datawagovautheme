@@ -13,13 +13,8 @@
   & > .container .row{
     margin-bottom: 22px;
   }
-  .attribution{
-    margin-left: 0;
-    & > a{
-      margin-right: 20px;
-    }
-  }
   .inline-links{
+    padding-left: 0;
     margin-bottom: 11px;
     li{
       display: inline;
@@ -59,21 +54,11 @@
   .without-margin{
     margin: 0;
   }
+  .lang-select{
+    max-width: 300px;
+    margin: 0 auto;
+  }
 
-  .row{
-    margin-left: 0;
-  }
-  @media(max-width: $hd-top){
-      border: {
-          bottom: 20px solid #fff;
-      }
-  }
-  @media(max-width: $tablet-top){
-    border:{
-      left: 20px solid #fff;
-      right: 20px solid #fff;
-    }
-  }
   @media(max-width: $mobile-top){
     margin:{
       left: -20px;
@@ -83,7 +68,6 @@
     padding-left: 20px;
     padding-right: 20px;
     .footer-links,
-    .attribution,
     .footer-wa-link-wrapper,
     .secondary-footer-links,
     .without-margin{
@@ -98,24 +82,23 @@
     }
      .attribution{
       text-align: center;
-      max-width: 320px;
-      label,
-      p{
-        text-align: left;
+      p {
+        margin-bottom: 5px;
       }
-      label{
+      label {
         display: block;
+        margin-bottom: 5px;
       }
     }
      .footer-wa-link{
       position: static;
     }
     .lang-select{
+      padding-top: 25px;
       & > *{
         float: none;
       }
       .lang-container{
-        // width: 307px!important;
         text-align: center;
       }
     }
@@ -133,14 +116,7 @@
 
 @media(min-width: 1280px){
   .site-footer{
-    .footer-powered-section{
-      margin-left: 20px;
-    }
     .attribution{
-
-      width: auto;
-      max-width: 220px;
-      margin-left: 20px;
       label{
         display: block;
       }

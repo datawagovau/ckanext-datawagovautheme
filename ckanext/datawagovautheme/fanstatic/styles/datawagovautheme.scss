@@ -153,16 +153,9 @@ and "Search Your Data" boxes line up. */
 body, html{
   overflow-x: hidden;
 }
-.row{
-  margin-left: 0;
-}
 .paragraph-copyright{
   font-size: 17px;
   line-height: 1.3;
-}
-
-[role=main] {
-    padding-bottom: 0;
 }
 
 .datawa-dataset-read,
@@ -176,41 +169,32 @@ body, html{
 }
 
 @media (min-width: $tablet-top + 1px) {
-    .wrapper-datawa {
-        background-image: url('/datawa_nav.png');
-        background-repeat: repeat-y;
-        background-position: -119px 0px;
-    }
+  .wrapper-datawa {
+    display: flex;
+  }
 }
 @media (min-width: $desktop-top + 1px) {
-    .wrapper-datawa {
-        background-position: -79px 0px;
-        #dataset-edit {
-          .info-block.info-inline {
-            width: 36%;
-            padding-left: 10px;
-            padding-top: 0;
-          }
-        }
+  [role=main] {
+    #dataset-edit {
+      .info-block.info-inline {
+        width: 36%;
+        padding-left: 10px;
+        padding-top: 0;
+      }
     }
-    @media (min-width: $wide-top + 1px) {
-        .wrapper-datawa {
-            background-position: -69px 0px;
-        }
-    }
+  }
 }
 @media (min-width: $hd-top + 1px) {
-    .wrapper-datawa {
-        background-position: -49px 0px;
-        #dataset-edit {
-          .info-block.info-inline {
-            width: 48%;
-            padding-left: 10px;
-            padding-top: 0;
-          }
-        }
+  [role=main] {
+    // background-position: -49px 0px;
+    #dataset-edit {
+      .info-block.info-inline {
+        width: 48%;
+        padding-left: 10px;
+        padding-top: 0;
+      }
     }
-
+  }
 }
 
 .toolbar {
@@ -236,20 +220,22 @@ body, html{
     }
 }
 
-.secondary.span3 {
+.secondary.col-sm-3 {
     padding-top: 20px;
+    padding-right: 0;
+    border-right: 1px solid #c7cacd;
     @media (min-width: $tablet-top) {
+      background: $aside-span3-bg;
+      &:before {
+        content: ' ';
+        display: block;
         background: $aside-span3-bg;
-        &:before {
-            content: ' ';
-            display: block;
-            background: $aside-span3-bg;
-            position: absolute;
-            width: 9999px;
-            top: -1px;
-            bottom: 0;
-            left: -9999px;
-        }
+        position: absolute;
+        width: 9999px;
+        top: -1px;
+        bottom: 0;
+        left: -9999px;
+      }
     }
     h2.module-heading {
         border-top: 0;
@@ -377,31 +363,35 @@ body, html{
 }
 
 .datawa-resource-read {
-    .wrapper-datawa {
-        @media (min-width: $tablet-top) {
-            .span3 {
-                border-right: 1px solid $btn-grey-border;
-                .license {
-                    margin-bottom: 50px;
-                }
-            }
-            background-image: none;
-            .module-resource {
-                .module-content:first-child {
-                    margin-top: 0;
-                    padding-top: 30px;
-                }
-            }
-        }
+  .wrapper-datawa {
+    display: block;
+    .secondary.col-sm-3:before {
+      content: none;
     }
-    .secondary.span3 {
-        @media (min-width: $tablet-top) {
-            background: $aside-span3-bg;
-            &:before {
-                background: $grey-fe;
-            }
+    @media (min-width: $tablet-top) {
+      .col-md-3 {
+        border-right: 1px solid $btn-grey-border;
+        .license {
+          margin-bottom: 50px;
         }
+      }
+      background-image: none;
+      .module-resource {
+        .module-content:first-child {
+          margin-top: 0;
+          padding-top: 30px;
+        }
+      }
     }
+  }
+  .secondary.col-md-3 {
+    @media (min-width: $tablet-top) {
+      background: $aside-span3-bg;
+      &:before {
+        background: $grey-fe;
+      }
+    }
+  }
 }
 .wrapper-datawa {
     .context-info p,
@@ -420,20 +410,6 @@ body, html{
 }
 
 @media(min-width: $wide-top + 1px){
-  .container,
-  .navbar-static-top .container,
-  .navbar-fixed-top .container,
-  .navbar-fixed-bottom .container{
-    width: 1280px;
-    padding-left: 20px;
-    padding-right: 25px;
-    box-sizing: border-box;
-  }
-  .site-footer .container{
-    // padding-left: 0;
-    // padding-right: 0;
-  }
-
   #content,
   .homepage [role="main"] .container{
     padding-left: 78px;
@@ -545,11 +521,6 @@ body, html{
       margin-left: 0;
     }
   }
-  .site-footer{
-    .attribution:first-child{
-      margin-left: 91px;
-    }
-  }
 }
 @media(max-width: $hd-top) and (min-width: $wide-top + 1px){
   .container{
@@ -578,7 +549,6 @@ body, html{
 @media(max-width: $wide-top) and (min-width: $desktop-top + 1px){
   .container{
     width: 917px;
-    // &#content,
     &.homepage [role="main"] .container{
       padding-right: 38px;
     }
@@ -596,11 +566,6 @@ body, html{
     width: 448px;
     &:first-child{
       margin-left: 0;
-    }
-  }
-  .site-footer{
-    .attribution:first-child{
-      margin-left: 8px;
     }
   }
 }
@@ -658,12 +623,6 @@ body, html{
   .secondary.span3{
     width: 100%;
   }
-  .container{
-    width: 660px;
-  }
-  .span6{
-    width: 330px;
-  }
   .span9 .page-header{
     margin-left: 0;
   }
@@ -671,8 +630,6 @@ body, html{
     text-align: right;
   }
   .attribution{
-    width: 220px;
-    float: right;
     &:first-child{
       margin-bottom: 20px;
     }
