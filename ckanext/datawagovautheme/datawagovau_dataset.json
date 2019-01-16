@@ -31,12 +31,12 @@
         {
             "field_name":"access_level",
             "label": "Access Level",
-            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for more information.",
+            "help_text": "Provide an access level label for your dataset. These will appear on your dataset to give users an indication of data availability. This doesn't affect access to your data - you'll still need to secure individual resources if required.",
             "help_inline": true,
           "form_include_blank_choice": true,
           "preset": "select",
           "form_attrs": {
-            "data-module": "access-level-select",
+            "data-module": "toggling-select",
             "data-module-match": "^open",
             "data-module-target": "#field-access_url",
             "data-module-extend-to": ".control-group,.form-group"
@@ -55,14 +55,14 @@
             "field_name": "data_access_statement",
             "label": "Data Access Statement",
             "form_snippet": "markdown.html",
-          "help_text": "Brief statement describing the access arrangements. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for tips.",
+          "help_text": "A brief statement clarifying access and use of this dataset. Default text will be used if you don’t supply your own, but it’s recommended that you provide specific statements for all datasets with an access level of \"Open - Login\" and lower. You can find the default access statements on the <a href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> - these may also be helpful for writing your own.",
           "form_placeholder": "A good data access statement should include the following:\n\n- Clarification of the access level. e.g. Government Use Only: This dataset has been made available to [x], [y] and [z] agencies.\n- Reasons for any restrictions. e.g. Open - Login: This data is only available to registered users because [organisation] is required by legislation to track usage.\n- Any conditions of use you’d like to highlight, and/or reminding users to check the licence information.\n- How to apply for or enquire about access."
         },
         {
             "field_name": "access_url",
-            "label": "Data Access URL",
+            "label": "Request Access URL",
             "help_inline": true,
-          "help_text": "If the dataset is not “Public Anonymous” access, this may be used to link users to additional information about how they may be able to obtain access.",
+          "help_text": "If you want to direct users enquiring about access to a webform or other webpage, enter a URL for the \"Request Access\" button on your dataset. If you don't supply a URL, the button will direct users to email the dataset maintainer provided.",
           "validators": "ignore_empty url_validator"
         },
         {
@@ -85,8 +85,47 @@
 	           "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
             "form_snippet": "license.html",
             "help_text": "Licenses for <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a> (Licensing Creative Commons is endorsed by WA Government and the recommended default under the Open Data Policy)",
-            "help_inline": true
+          "help_inline": true,
+          "form_attrs": {
+            "data-module": "toggling-select",
+            "data-module-match": "^custom_",
+            "data-module-inverse": "true",
+            "data-module-target": "#field-custom_license_url",
+            "data-module-extend-to": ".control-group,.form-group"
+          }
         },
+          {
+            "field_name": "custom_license_url",
+            "label": "Custom License URL",
+            "help_text": "Enter the link to your custom licence. When users click on the licence information for your dataset, they'll be taken to this URL.",
+            "help_inline": true,
+            "validators": "ignore_empty url_validator"
+          },
+          {
+            "field_name":"has_additional_licensing_options",
+            "label": "Has additional licensing options",
+            "preset": "select",
+            "form_include_blank_choice": false,
+            "required": true,
+            "form_attrs": {
+              "data-module": "toggling-select",
+              "data-module-match": "^False$",
+              "data-module-target": "#field-additional_licenses_url",
+              "data-module-extend-to": ".control-group,.form-group"
+            },
+            "choices": [
+              {"value":"False", "label":"No"},
+              {"value":"True", "label":"Yes"}
+            ],
+            "validators": "ignore_missing scheming_required scheming_choices"
+          },
+          {
+            "field_name": "additional_licenses_url",
+            "label": "Additional Licensing Options URL",
+            "help_text": "Enter the link to your additional licence options. An \"Additonal licence options available\" link will be added to your dataset's licence information.",
+            "help_inline": true,
+            "validators": "ignore_empty url_validator"
+          },
         {
             "field_name": "owner_org",
             "label": "Organization",
@@ -117,7 +156,10 @@
             "help_inline": true,
             "form_placeholder": "Joe Bloggs",
             "display_property": "dc:creator",
-            "hide_field": "true"
+          "hide_field": "true",
+          "validators": "scheming_required",
+          "required": true
+
         },
         {
             "field_name": "author_email",
@@ -125,7 +167,10 @@
             "form_placeholder": "joe@example.com",
             "display_property": "dc:creator",
             "display_snippet": "email.html",
-            "display_email_name_field": "author"
+          "display_email_name_field": "author",
+          "validators": "scheming_required email_validator",
+          "required": true
+
         },
         {
             "field_name": "maintainer",
@@ -139,10 +184,14 @@
         {
             "field_name": "maintainer_email",
             "label": "Maintainer Email",
+          "help_text": "The name and email address of the person who is responsible for maintaining the dataset on data.wa.gov.au. The contact provided here will be used as the contact point for users who have questions about the dataset.",
+          "help_inline": true,
             "form_placeholder": "joe@example.com",
             "display_property": "dc:contributor",
             "display_snippet": "email.html",
-            "display_email_name_field": "maintainer"
+          "display_email_name_field": "maintainer",
+          "validators": "scheming_required email_validator",
+          "required": true
         },
         {
             "field_name":"theme",
@@ -309,11 +358,13 @@
         },
         {
             "field_name": "spatial",
-            "label": "Geospatial Coverage",
+            "label": "Dataset Coverage",
 	    "display_property": "dcat:Dataset/dct:spatial",
             "form_placeholder": "Paste a valid GeoJSON geometry",
             "form_snippet":"spatial.html",
-            "display_snippet":"spatial.html",
+          "display_snippet":"spatial.html",
+          "help_inline": true,
+          "help_text": "Define the area covered by the records in the dataset by selecting from the pre-defined list, drawing on the map. Alternatively, provide a GeoJSON Polygon or MultiPolygon. (Note: Geospatial data hosted in SLIP will automatically populate this field.)",
             "choices": [
 {"label":"Western Australia",
                 "value":{

@@ -1,11 +1,12 @@
-ckan.module('access-level-select', function($, _) {
+ckan.module('toggling-select', function($, _) {
   'use strict';
 
   return {
     options: {
       match: null,
       target: null,
-      extendTo: null
+      extendTo: null,
+      inverse: false
     },
     initialize: function() {
       $.proxyAll(this, /_on/);
@@ -19,7 +20,7 @@ ckan.module('access-level-select', function($, _) {
       if (this.options.extendTo) {
         target = target.closest(this.options.extendTo);
       }
-      val.match(this.options.match)
+      !!val.match(this.options.match) ^ this.options.inverse
         ? (target.find('input').attr('disabled', true), target.hide())
         : (target.find('input').removeAttr('disabled'), target.show());
     }
