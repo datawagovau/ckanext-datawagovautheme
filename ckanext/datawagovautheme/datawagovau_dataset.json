@@ -39,7 +39,7 @@
             "data-module": "access-level-select",
             "data-module-match": "^open",
             "data-module-target": "#field-access_url",
-            "data-module-extend-to": ".control-group"
+            "data-module-extend-to": ".control-group,.form-group"
           },
             "choices": [
               {"value":"open", "label":"Open"},
