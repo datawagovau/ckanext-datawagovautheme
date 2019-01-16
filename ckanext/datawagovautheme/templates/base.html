@@ -1,15 +1,16 @@
 {% ckan_extends %}
 
 {% block styles %}
-  {{ super() }}
-  {% resource 'datawagovautheme/styles/datawagovautheme.css' %}
-  {% resource 'datawagovautheme/drop_down_menu.js' %}
+    {{ super() }}
+    {% resource 'datawagovautheme/styles/datawagovautheme.css' %}
+    {% resource 'datawagovautheme/drop_down_menu.js' %}
 {% endblock %}
 
 {% block scripts %}
-  {{ super() }}
-  {% resource "datawagovautheme/datawa-organization-opener.js" %}
-  {% resource "datawagovautheme/datawa.js" %}
+    {{ super() }}
+    {% resource "datawagovautheme/datawa-organization-opener.js" %}
+    {% resource "datawagovautheme/datawa.js" %}
+    {% resource "datawagovautheme/scripts" %}
 {% endblock %}
 
 {% block meta %}
