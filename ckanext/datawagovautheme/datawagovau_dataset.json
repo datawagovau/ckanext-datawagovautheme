@@ -175,11 +175,12 @@
         {
             "field_name": "maintainer",
             "label": "Maintainer",
-            "help_text": "The name and email address of the person who is responsible for maintaining the dataset on <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a>.",
+            "help_text": "The name and email address of the person who is responsible for maintaining the dataset on data.wa.gov.au. The contact provided here will be used as the contact point for users who have questions about the dataset.",
             "help_inline": true,
             "form_placeholder": "Joe Bloggs",
             "display_property": "dc:contributor",
-            "hide_field": "true"
+            "hide_field": "true",
+            "required": true
         },
         {
             "field_name": "maintainer_email",
@@ -3040,6 +3041,21 @@
             "label": "Format",
 	    "preset": "resource_format_autocomplete",
 	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format"
+        },
+        {
+            "field_name":"access_level",
+            "label": "Access Level",
+            "help_text": "Provide an access level label for this resource. These will appear next to the resource to give users an indication of data availability. This doesn't affect access to the resource - you'll still need to secure access to the resource yourself.",
+            "preset": "select",
+            "choices": [
+              {"value":"open", "label":"Open"},
+              {"value":"open_login", "label":"Open - Login"},
+              {"value":"fees_apply", "label":"Fees Apply"},
+              {"value":"restricted", "label":"Restricted"},
+              {"value": "govt_only", "label": "Government Use Only"}
+            ],
+            "validators": "ignore_missing scheming_required  scheming_choices",
+            "required": true
         }
     ]
 }
