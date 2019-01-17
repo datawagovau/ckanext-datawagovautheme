@@ -3047,6 +3047,11 @@
             "label": "Access Level",
             "help_text": "Provide an access level label for this resource. These will appear next to the resource to give users an indication of data availability. This doesn't affect access to the resource - you'll still need to secure access to the resource yourself.",
             "preset": "select",
+            "form_attrs": {
+                "data-module": "resource-warning",
+                "data-module-match": "open",
+                "data-module-target": "#res-access-level-warning"
+            },
             "choices": [
               {"value":"open", "label":"Open"},
               {"value":"open_login", "label":"Open - Login"},
@@ -3055,7 +3060,8 @@
               {"value": "govt_only", "label": "Government Use Only"}
             ],
             "validators": "ignore_missing scheming_required  scheming_choices",
-            "required": true
+            "required": true,
+            "form_snippet": "res_access_level_select.html"
         }
     ]
 }
