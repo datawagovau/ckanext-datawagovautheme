@@ -1,0 +1,7 @@
+{% ckan_extends %}
+{% block license_content_inner %}
+    <!-- <span style="background: #084a78; padding: 3px 0px 4px 4px; border-radius: 5px"> -->
+        {#{ h.wa_license_icon(pkg_dict.license_id) }#}
+    <!-- </span> -->
+    {{ license_string(pkg_dict) }}
+{% endblock %}

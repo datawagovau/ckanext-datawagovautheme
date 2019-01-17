@@ -1,40 +1,39 @@
-
-from ckan.plugins import (toolkit, IConfigurer, SingletonPlugin,
-                          ITemplateHelpers, implements, IPackageController)
 import datetime
-from ckan.common import _, c
-from ckan.model.license import LicenseRegister, DefaultLicense
 
-
-class CustomLicense(DefaultLicense):
-    id = "custom_license"
-    is_generic = True
-
-    @property
-    def title(self):
-        return _("Custom License (See attached resource)")
+from ckan.common import c
+import ckan.lib.helpers as h
+import ckan.plugins as plugins
+import ckan.plugins.toolkit as toolkit
+from markupsafe import Markup
 
 
 def get_current_year():
     return datetime.datetime.today().year
 
 
-original_licenses = LicenseRegister._create_license_list
+def wa_license_icon(id):
+    icons = {
+        'cc-by': ['cc', 'cc-by'],
+        'cc-nc': ['cc', 'cc-by', 'cc-nc'],
+        'cc-by-sa': ['cc', 'cc-by', 'cc-sa'],
+        'cc-zero': ['cc', 'cc-zero'],
+    }
+    if id not in icons:
+        return ''
+    # return h.url_for_static('license-{}.png'.format(id))
+    return Markup(
+        ''.join(
+            '<img width=20 src="{}">'.
+            format(h.url_for_static('{}.png'.format(icon)))
+            for icon in icons[id]
+        )
+    )
 
 
-def updated_licenses(self, license_data, license_url=''):
-    if isinstance(license_data, list):
-        license_data.append(CustomLicense())
-    original_licenses(self, license_data, license_url)
-
-
-LicenseRegister._create_license_list = updated_licenses
-
-
-class CustomTheme(SingletonPlugin):
-    implements(IConfigurer)
-    implements(ITemplateHelpers)
-    implements(IPackageController, inherit=True)
+class CustomTheme(plugins.SingletonPlugin):
+    plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IPackageController, inherit=True)
 
     # IPackageController
 
@@ -63,5 +62,6 @@ class CustomTheme(SingletonPlugin):
     # ITemplateHelpers
     def get_helpers(self):
         return {
-            'get_current_year': get_current_year
+            'get_current_year': get_current_year,
+            'wa_license_icon': wa_license_icon
         }
