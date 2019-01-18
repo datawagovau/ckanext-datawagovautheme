@@ -37,3 +37,19 @@
 		</p>
 	</div>
 {% endcall %}
+
+{% set uploaded = data.url_type if data and data.url_type else false %}
+{% set data_exists = true if data else false %}
+<div class="form-group">
+  <div
+    id="res-uploaded-warning"
+    data-module="resource-uploaded-warning"
+    data-module-uploaded="{{ uploaded }}"
+    data-module-edit="{{ data_exists }}"
+    class="info-block">
+    <p style="color: #89221d;">
+      <i style="color:#bb362f;" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+      Resources uploaded and hosted within data.wa.gov.au can’t be restricted. To set an Access Level other than "Open" for this resource, upload it as a link and secure the resource yourself. (Note: Geospatial data hosted in SLIP will automatically populate and secure [if applicable] your resources.)
+    </p>
+  </div>
+</div>

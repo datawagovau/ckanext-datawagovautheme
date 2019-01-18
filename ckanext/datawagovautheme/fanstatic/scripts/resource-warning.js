@@ -19,9 +19,9 @@ ckan.module('resource-warning', function($, _) {
       var target = $(this.options.target);
 
       jQuery.inArray(val, options) > -1 ? (
-          target.attr('disabled', true), target.hide()
+          target.hide()
         ):(
-          target.removeAttr('disabled'), target.show()
+          target.show()
         );
     }
   };
