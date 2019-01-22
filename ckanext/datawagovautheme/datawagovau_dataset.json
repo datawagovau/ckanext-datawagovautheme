@@ -42,11 +42,12 @@
             "data-module-extend-to": ".control-group,.form-group"
           },
             "choices": [
-              {"value":"open", "label":"Open"},
-              {"value":"open_login", "label":"Open - Login"},
-              {"value":"fees_apply", "label":"Fees Apply"},
-              {"value":"restricted", "label":"Restricted"},
-              {"value": "govt_only", "label": "Government Use Only"}
+              {"value": "open", "label": "Open"},
+              {"value": "open_login", "label": "Open - Login"},
+              {"value": "fees_apply", "label": "Fees Apply"},
+              {"value": "restricted", "label": "Restricted"},
+              {"value": "govt_only", "label": "Government Use Only"},
+              {"value": "mixed", "label": "Mixed"}
             ],
           "validators": "ignore_missing scheming_required  scheming_choices",
           "required": true
