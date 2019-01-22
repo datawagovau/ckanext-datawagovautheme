@@ -15,20 +15,23 @@ ckan.module('resource-uploaded-warning', function($, _) {
       } else {
         this._updateWarning(false);
       }
-      $('.image-upload .controls').on('click', this._onClick);
+      $('.image-upload .controls a, .image-upload .controls input').on('click', this._onClick);
     },
     _updateWarning(value) {
+      var level_access = $('#field-access_level'),
+          war_msg = $('#res-uploaded-warning');
       value ? (
-          $('#field-access_level').closest('.form-group').css('display', 'None'),
-          $('#res-uploaded-warning').show()
+          level_access.val('open'),
+          level_access.closest('.form-group').css('display', 'None'),
+          war_msg.show()
         ):(
-          $('#field-access_level').closest('.form-group').css('display', 'Block'),
-          $('#res-uploaded-warning').hide()
+          level_access.closest('.form-group').css('display', 'Block'),
+          war_msg.hide()
         );
     },
     _onClick: function(event) {
-      var name = event.target.name;
-      var text = event.target.text;
+      var name = event.currentTarget.name;
+      var text = event.currentTarget.text;
 
       if (name && name == 'upload' && !text) {
         this._updateWarning(true);
