@@ -30,6 +30,58 @@ def wa_license_icon(id):
     )
 
 
+def access_level_text(access_level):
+    access_level_text = {
+        'open': "This dataset is available for use by everyone",
+        'open_login': "This dataset is available for use by everyone - login required",
+        'fees_apply': "This dataset is available for use subject to payment",
+        'restricted': "This dataset is available for use subject to approval",
+        'govt_only': "This dataset is available for government use only",
+        'mixed': "A variety of access levels apply to this dataset's resources"
+    }
+    if access_level in access_level_text:
+        return access_level_text[access_level]
+    return ''
+
+
+def license_data(pkg):
+    license_id = ''
+    license_icon= ''
+    license_title = ''
+    license_url = ''
+    license_specified = True
+
+    if pkg['license_id']:
+        license_id = pkg['license_id']
+        license_title = pkg['license_title']
+        if license_id.startswith('custom'):
+            license_icon = 'custom'
+            if 'custom_license_url' in pkg and pkg['custom_license_url']:
+                license_url = pkg['custom_license_url']
+            else:
+                license_title = 'Custom licence not supplied'
+                license_specified = False
+        else:
+            license_icon = license_id
+            license_url = pkg['license_url']
+    else:
+        license_id = 'not_specified'
+        license_icon = 'not_specified'
+        license_title = 'Licence not supplied'
+        license_specified = False
+
+
+    license_data = {
+        'license_id' : license_id,
+        'license_icon': license_icon,
+        'license_title': license_title,
+        'license_url': license_url,
+        'license_specified': license_specified
+    }
+
+    return license_data
+
+
 class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
@@ -63,5 +115,7 @@ class CustomTheme(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'get_current_year': get_current_year,
-            'wa_license_icon': wa_license_icon
+            'wa_license_icon': wa_license_icon,
+            'access_level_text': access_level_text,
+            'license_data': license_data
         }

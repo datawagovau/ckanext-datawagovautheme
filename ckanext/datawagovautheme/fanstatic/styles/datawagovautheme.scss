@@ -728,3 +728,142 @@ body, html{
     }
   }
 }
+
+#access-and-use-card{
+    margin: 30px 0;
+    h1, h2, h3, h4, h5 {
+      color: #0c4a77;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        width: 660px;
+        box-shadow: 4px 4px 18px -6px rgba(0, 0, 0, 0.75);
+        background-color: transparent;
+        border-radius: 6px;
+        margin: 0 auto;
+    }
+
+    .row {
+        margin: 0;
+        width: 100%;
+        background-color: rgb(228, 233, 237);
+    }
+
+    .sub_title {
+        line-height: 26px;
+        font-weight: bold;
+        color: #0c4a77;
+        text-transform: uppercase;
+    }
+
+    .card_body_text {
+        line-height: 18px;
+        color: rgb(86, 86, 86);
+    }
+
+    /* Blue Card Header */
+    .card_header {
+        background-color: rgb(12, 74, 119);
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    .card_title {
+        font-size: 22px;
+        line-height: 24px;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        padding: 18px;
+        font-family: "Open Sans", sans-serif;
+    }
+    .license-url {
+      display: flex;
+      text-decoration: none;
+      color: #0c4a77;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+    /* Access and Licence Row */
+    .access_and_license_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .access_and_licence_col {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 32px;
+        padding-right: 32px;
+        display: flex;
+        max-width: 50%;
+        width: 50%;
+        flex-wrap: wrap;
+    }
+
+    .sub_column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon_column {
+        flex: 0 0 74px;
+    }
+
+    .icon_cell {
+        flex: 1;
+        color: white;
+        flex: 2;
+    }
+
+    .icon_cell.access_icon > img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon_cell.licence_icon > img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .addt_licence_options {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .addt_licence_options_text {
+        padding-top: 12px;
+        color: rgb(12, 74, 119);
+        line-height: 18px;
+    }
+
+    /* Data Access Statement */
+    .data_access_statement_container {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 24px;
+    }
+
+    /* Request Access Button */
+    .call_to_action_container {
+        border-radius: 0px 0px 6px 6px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .call_to_action_button_container {
+        padding-left: 32px;
+        padding-right: 28px;
+        padding-bottom: 24px;
+    }
+}

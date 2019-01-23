@@ -1,0 +1,97 @@
+{% set schema = h.scheming_get_dataset_schema('dataset') %}
+{% if pkg.access_level %}
+	{% set access_level_options = h.scheming_field_by_name(schema.dataset_fields, 'access_level').choices %}
+	{% set access_level_title = h.scheming_choices_label(access_level_options, pkg.access_level) %}
+	{% set access_level_text = h.access_level_text(pkg.access_level) %}
+	{% set access_level_icon = pkg.access_level %}
+{% else %}
+	{% set access_level_title = 'Unknown' %}
+	{% set access_level_text =  'No access level has been defined' %}
+	{% set access_level_icon =  'not_specified' %}
+{% endif %}
+
+{% set license_data = h.license_data(pkg) %}
+{% set access_level_placeholders = h.scheming_field_by_name(schema.dataset_fields, 'access_level')['choices_placeholder_text'] %}
+
+<div id="access-and-use-card">
+	<div class="card">
+	    <div class="row card_header"><div class="card_title">Access & Use Information</div></div>
+	    <div class="row access_and_license_row">
+	        <div class="access_and_licence_col">
+	            <div class="sub_column icon_column">
+	                <div class="icon_cell access_icon">
+	                    <img src="/lock_icons/{{access_level_icon}}.png" />
+	                </div>
+	            </div>
+	            <div class="sub_column">
+	                <div class="sub_title">{{ access_level_title }}</div>
+
+	                <div class="card_body_text">{{ access_level_text }} </div>
+	            </div>
+	        </div>
+	        <div class="access_and_licence_col">
+		        {% if license_data['license_specified'] %}
+			        <a class="license-url" href="{{ license_data['license_url'] }}" target="_blank">
+			            <div class="sub_column icon_column">
+			                <div class="icon_cell licence_icon">
+			                    <img src="/license_icons/{{ license_data['license_icon'] }}.png" />
+			                </div>
+			            </div>
+
+			            <div class="sub_column">
+			                <div class="sub_title">License</div>
+
+			                <div class="card_body_text">{{ license_data['license_title'] }}</div>
+			            </div>
+			        </a>
+		        {% else %}
+		            <div class="sub_column icon_column">
+		                <div class="icon_cell licence_icon">
+		                    <img src="/license_icons/{{ license_data['license_icon'] }}.png" />
+		                </div>
+		            </div>
+
+		            <div class="sub_column">
+		                <div class="sub_title">License</div>
+
+		                <div class="card_body_text">{{ license_data['license_title'] }}</div>
+		            </div>
+		            <div class="addt_licence_options">
+		            	<a class="license-url" href="mailto:{{ pkg.maintainer_email }}?cc=opendata@landgate.wa.gov.au&amp;subject=Licence Options - {{ pkg.title }}" target="_blank">
+		            		<div class="card_body_text addt_licence_options_text">Request licence options</div>
+		            	</a> 
+		            </div>
+		        {% endif %}
+				{% if pkg.has_additional_licensing_options and pkg.additional_licenses_url %}
+	            <div class="addt_licence_options">
+	            	<a class="license-url" href="{{ pkg.additional_licenses_url }}" target="_blank">
+	            		<div class="card_body_text addt_licence_options_text">Additional licence options available</div>
+	            	</a> 
+	            </div>
+	            {% endif %}
+	        </div>
+	    </div>
+	    {% if pkg.data_access_statement %}
+	    <div class="row">
+	        <div class="data_access_statement_container">
+	            <div class="sub_title">Data Access Statement</div>
+	            <div class="card_body_text">
+					{{ h.render_markdown(pkg.data_access_statement) }}
+	        </div>
+	    </div>
+	    {% else %}
+	    	{% if not pkg.data_access_statement and pkg.access_level and pkg.access_level != 'open' %}
+			    <div class="row">
+			        <div class="data_access_statement_container">
+			            <div class="sub_title">Data Access Statement</div>
+			            <div class="card_body_text">
+							<i>{{access_level_placeholders[pkg.access_level]|safe}}</i>
+			        </div>
+			    </div>
+	    	{% endif %}
+	    {% endif %}
+	    <div class="row call_to_action_container">
+	        <div class="call_to_action_button_container"><a href="https://example.com" class="btn btn-primary"> Request access </a></div>
+	    </div>
+	</div>
+</div>
