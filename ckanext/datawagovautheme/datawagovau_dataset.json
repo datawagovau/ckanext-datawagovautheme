@@ -31,29 +31,48 @@
         {
             "field_name":"access_level",
             "label": "Access Level",
-            "help_text": "Describes how open this dataset is. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for more information.",
+            "help_text": "Provide an access level label for your dataset. These will appear on your dataset to give users an indication of data availability. This doesn't affect access to your data - you'll still need to secure individual resources if required.",
             "help_inline": true,
-            "form_include_blank_choice": true,
-            "preset": "select",
+          "form_include_blank_choice": true,
+          "preset": "select",
+          "form_attrs": {
+            "data-module": "toggling-select",
+            "data-module-match": "^open",
+            "data-module-target": "#field-access_url",
+            "data-module-extend-to": ".control-group,.form-group"
+          },
             "choices": [
-                {"value":"public_anonymous", "label":"Open - Free and publicly available"},
-                {"value":"secured_public", "label":"Open - Free and login required"},
-                {"value":"restricted_public", "label":"Closed - Subject to approval or payment"},
-                {"value":"non_public", "label":"Restricted - Government use only"}
-            ]
+              {"value": "open", "label": "Open"},
+              {"value": "open_login", "label": "Open - Login"},
+              {"value": "fees_apply", "label": "Fees Apply"},
+              {"value": "restricted", "label": "Restricted"},
+              {"value": "govt_only", "label": "Government Use Only"},
+              {"value": "mixed", "label": "Mixed"}
+            ],
+            "choices_placeholder_text": {
+                "open_login": "<p>This dataset has been classified as <strong>Open - Login</strong> by the data publisher. A specific Data Access Statement has not been supplied. Typically, logging in is required for reporting and tracking purposes.</p><p><strong>Open - Login</strong> datasets are available for use by everyone but require logging in. For datasets in the Shared Land Information Platform (SLIP), you’ll need to register a SLIP login.</p><p>Use of this data may be subject to licence restrictions - be sure to read the licence information provided above.</p>",
+                "fees_apply": "<p>This dataset has been classified as <strong>Fees Apply</strong> by the data publisher. A specific Data Access Statement has not been supplied. Typically, fees are managed by the organisation publishing the data.</p><p><strong>Fees Apply</strong> datasets are generally available for use by everyone but require payment of a regular or once-off fee. Contact the data publisher via the Request Access button to enquire about access and fees.</p><p>Use of this data may be subject to licence restrictions - be sure to check the Licence information above.</p>",
+                "restricted": "<p>This dataset has been classified as <strong>Restricted</strong> by the data publisher. A specific Data Access Statement has not been supplied. Typically, restricted data is sensitive in some way.</p><p>You’ll need approval from the data publisher to access a <strong>Restricted</strong> dataset. Contact the data publisher via the Request Access button to enquire about access.</p><p>Use of this data may be subject to licence restrictions - be sure to check the Licence information above.</p>",
+                "govt_only": "<p>This dataset has been classified as <strong>Government Use Only</strong> by the data publisher. A specific Data Access Statement has not been supplied. Typically, data that’s restricted to government users is sensitive in some way. Data may be restricted to specific government organisations or certain levels of government (such as WA state government).</p><p><strong>Government Use Only</strong> datasets are generally accessed through the Shared Land Information Platform (SLIP). If your organisation is authorised to access this dataset, you’ll need to register a SLIP login and join your organisation’s group. If your organisation is not authorised to access this dataset and you would like to enquire about alternatives, contact the data publisher via the Request Access button.</p><p>Use of this data may be subject to licence restrictions - be sure to check the Licence information above.</p>",
+                "mixed": "<p>This dataset has been classified as <strong>Mixed Access</strong> by the data publisher. A specific Data Access Statement has not been supplied. Typically, <strong>Mixed Access</strong> datasets are available as a variety of resources, with some types of resources being more sensitive than others.</p><p>Check the access level of the resource you require. If the resource is not <strong>Open</strong> or <strong>Open - Login</strong>, you’ll need to contact the data publisher via the Request Access button to enquire about access.</p><p>Use of this data may be subject to licence restrictions - be sure to check the Licence information above.</p>"
+
+            },
+          "validators": "ignore_missing scheming_required  scheming_choices",
+          "required": true
         },
         {
             "field_name": "data_access_statement",
             "label": "Data Access Statement",
             "form_snippet": "markdown.html",
-            "display_snippet": "datawa_markdown.html",
-            "help_text": "Brief statement describing the access arrangements. Please refer to the <a target=\"_blank\" href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> for tips."
+          "help_text": "A brief statement clarifying access and use of this dataset. Default text will be used if you don’t supply your own, but it’s recommended that you provide specific statements for all datasets with an access level of \"Open - Login\" and lower. You can find the default access statements on the <a href=\"https://toolkit.data.wa.gov.au/hc/en-gb/articles/333757040596-Preparing-great-metadata\">Data Toolkit</a> - these may also be helpful for writing your own.",
+          "form_placeholder": "A good data access statement should include the following:\n\n- Clarification of the access level. e.g. Government Use Only: This dataset has been made available to [x], [y] and [z] agencies.\n- Reasons for any restrictions. e.g. Open - Login: This data is only available to registered users because [organisation] is required by legislation to track usage.\n- Any conditions of use you’d like to highlight, and/or reminding users to check the licence information.\n- How to apply for or enquire about access."
         },
         {
             "field_name": "access_url",
-            "label": "Access URL",
+            "label": "Request Access URL",
             "help_inline": true,
-            "help_text": "If the dataset is not “Public Anonymous” access, this may be used to link users to additional information about how they may be able to obtain access."
+          "help_text": "If you want to direct users enquiring about access to a webform or other webpage, enter a URL for the \"Request Access\" button on your dataset. If you don't supply a URL, the button will direct users to email the dataset maintainer provided.",
+          "validators": "ignore_empty url_validator"
         },
         {
             "field_name": "tag_string",
@@ -75,8 +94,47 @@
 	           "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dct:license",
             "form_snippet": "license.html",
             "help_text": "Licenses for <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a> (Licensing Creative Commons is endorsed by WA Government and the recommended default under the Open Data Policy)",
-            "help_inline": true
+          "help_inline": true,
+          "form_attrs": {
+            "data-module": "toggling-select",
+            "data-module-match": "^custom_",
+            "data-module-inverse": "true",
+            "data-module-target": "#field-custom_license_url",
+            "data-module-extend-to": ".control-group,.form-group"
+          }
         },
+          {
+            "field_name": "custom_license_url",
+            "label": "Custom License URL",
+            "help_text": "Enter the link to your custom licence. When users click on the licence information for your dataset, they'll be taken to this URL.",
+            "help_inline": true,
+            "validators": "ignore_empty url_validator"
+          },
+          {
+            "field_name":"has_additional_licensing_options",
+            "label": "Has additional licensing options",
+            "preset": "select",
+            "form_include_blank_choice": false,
+            "required": true,
+            "form_attrs": {
+              "data-module": "toggling-select",
+              "data-module-match": "^False$",
+              "data-module-target": "#field-additional_licenses_url",
+              "data-module-extend-to": ".control-group,.form-group"
+            },
+            "choices": [
+              {"value":"False", "label":"No"},
+              {"value":"True", "label":"Yes"}
+            ],
+            "validators": "ignore_missing scheming_required scheming_choices"
+          },
+          {
+            "field_name": "additional_licenses_url",
+            "label": "Additional Licensing Options URL",
+            "help_text": "Enter the link to your additional licence options. An \"Additonal licence options available\" link will be added to your dataset's licence information.",
+            "help_inline": true,
+            "validators": "ignore_empty url_validator"
+          },
         {
             "field_name": "owner_org",
             "label": "Organization",
@@ -107,7 +165,10 @@
             "help_inline": true,
             "form_placeholder": "Joe Bloggs",
             "display_property": "dc:creator",
-            "hide_field": "true"
+          "hide_field": "true",
+          "validators": "scheming_required",
+          "required": true
+
         },
         {
             "field_name": "author_email",
@@ -115,24 +176,32 @@
             "form_placeholder": "joe@example.com",
             "display_property": "dc:creator",
             "display_snippet": "email.html",
-            "display_email_name_field": "author"
+          "display_email_name_field": "author",
+          "validators": "scheming_required email_validator",
+          "required": true
+
         },
         {
             "field_name": "maintainer",
             "label": "Maintainer",
-            "help_text": "The name and email address of the person who is responsible for maintaining the dataset on <a target=\"_blank\" href=\"https://data.wa.gov.au/\">data.wa.gov.au</a>.",
+            "help_text": "The name and email address of the person who is responsible for maintaining the dataset on data.wa.gov.au. The contact provided here will be used as the contact point for users who have questions about the dataset.",
             "help_inline": true,
             "form_placeholder": "Joe Bloggs",
             "display_property": "dc:contributor",
-            "hide_field": "true"
+            "hide_field": "true",
+            "required": true
         },
         {
             "field_name": "maintainer_email",
             "label": "Maintainer Email",
+          "help_text": "The name and email address of the person who is responsible for maintaining the dataset on data.wa.gov.au. The contact provided here will be used as the contact point for users who have questions about the dataset.",
+          "help_inline": true,
             "form_placeholder": "joe@example.com",
             "display_property": "dc:contributor",
             "display_snippet": "email.html",
-            "display_email_name_field": "maintainer"
+          "display_email_name_field": "maintainer",
+          "validators": "scheming_required email_validator",
+          "required": true
         },
         {
             "field_name":"theme",
@@ -299,11 +368,13 @@
         },
         {
             "field_name": "spatial",
-            "label": "Geospatial Coverage",
+            "label": "Dataset Coverage",
 	    "display_property": "dcat:Dataset/dct:spatial",
             "form_placeholder": "Paste a valid GeoJSON geometry",
             "form_snippet":"spatial.html",
-            "display_snippet":"spatial.html",
+          "display_snippet":"spatial.html",
+          "help_inline": true,
+          "help_text": "Define the area covered by the records in the dataset by selecting from the pre-defined list, drawing on the map. Alternatively, provide a GeoJSON Polygon or MultiPolygon. (Note: Geospatial data hosted in SLIP will automatically populate this field.)",
             "choices": [
 {"label":"Western Australia",
                 "value":{
@@ -2979,6 +3050,27 @@
             "label": "Format",
 	    "preset": "resource_format_autocomplete",
 	    "display_property": "dcat:Dataset/dcat:distribution/dcat:Distribution/dcat:format"
+        },
+        {
+            "field_name":"access_level",
+            "label": "Access Level",
+            "help_text": "Provide an access level label for this resource. These will appear next to the resource to give users an indication of data availability. This doesn't affect access to the resource - you'll still need to secure access to the resource yourself.",
+            "preset": "select",
+            "form_attrs": {
+                "data-module": "resource-warning",
+                "data-module-match": "open",
+                "data-module-target": "#res-access-level-warning"
+            },
+            "choices": [
+              {"value":"open", "label":"Open"},
+              {"value":"open_login", "label":"Open - Login"},
+              {"value":"fees_apply", "label":"Fees Apply"},
+              {"value":"restricted", "label":"Restricted"},
+              {"value": "govt_only", "label": "Government Use Only"}
+            ],
+            "validators": "ignore_missing scheming_required  scheming_choices",
+            "required": true,
+            "form_snippet": "res_access_level_select.html"
         }
     ]
 }

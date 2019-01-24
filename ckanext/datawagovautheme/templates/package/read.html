@@ -38,5 +38,7 @@
         {% block package_notes %}
           {{ super() }}
         {% endblock %}
+
+        {% snippet "./package/snippets/access_and_use_card.html", pkg=pkg %}
 {% endblock %}
 
