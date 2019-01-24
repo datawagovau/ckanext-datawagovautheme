@@ -1520,6 +1520,17 @@ and "Search Your Data" boxes line up. */
 .dataset-item .dataset-resources {
   margin-left: 0; }
 
+#dataset-resources .resource-list .resource-item {
+  padding-left: 90px; }
+  #dataset-resources .resource-list .resource-item .resource-access-level-icon {
+    position: absolute;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    top: 11px; }
+  #dataset-resources .resource-list .resource-item .format-label {
+    left: 45px; }
+
 .tag-list.well li {
   margin-right: 0;
   margin-left: 5px; }
