@@ -1,5 +1,7 @@
 {% ckan_extends %}
 
+{% set schema = h.scheming_get_dataset_schema('dataset') %}
+
 {% block package_description %}
     {% if h.get_pkg_dict_extra(pkg,'harvest_source_title') %}
     <span class="dataset-private label label-inverse">
@@ -39,6 +41,9 @@
           {{ super() }}
         {% endblock %}
 
-        {% snippet "./package/snippets/access_and_use_card.html", pkg=pkg %}
+        {% snippet "./package/snippets/access_and_use_card.html", pkg=pkg, schema=schema %}
 {% endblock %}
 
+  {% block package_resources %}
+    {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources, schema=schema %}
+  {% endblock %}
