@@ -100,6 +100,24 @@ and "Search Your Data" boxes line up. */
   margin-left: 0;
 }
 
+#dataset-resources {
+  .resource-list {
+    .resource-item {
+      padding-left: 90px;
+      .resource-access-level-icon {
+        position: absolute;
+        left: 5px;
+        width: 32px;
+        height: 32px;
+        top: 11px;
+      }
+      .format-label {
+        left: 45px
+      }
+    }
+  }
+}
+
 .tag-list.well {
   li {
     margin-right: 0;

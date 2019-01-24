@@ -1,4 +1,3 @@
-{% set schema = h.scheming_get_dataset_schema('dataset') %}
 {% if pkg.access_level %}
 	{% set access_level_options = h.scheming_field_by_name(schema.dataset_fields, 'access_level').choices %}
 	{% set access_level_title = h.scheming_choices_label(access_level_options, pkg.access_level) %}
