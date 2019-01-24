@@ -63,7 +63,8 @@ def license_data(pkg):
                 license_specified = False
         else:
             license_icon = license_id
-            license_url = pkg['license_url']
+            if 'license_url' in pkg:
+                license_url = pkg['license_url']
     else:
         license_id = 'not_specified'
         license_icon = 'not_specified'
