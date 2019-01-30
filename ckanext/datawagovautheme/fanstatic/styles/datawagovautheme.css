@@ -1076,6 +1076,11 @@ ul.nav {
         text-decoration: underline; }
   .dataset-item .dataset-resources a, .dataset-item .dataset-resources .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-resources a, .dataset-item .dataset-resources .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-resources #publisher-tree > ul > li {
     text-decoration: none; }
+  .dataset-item .dataset-item-access-level {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -2px; }
 
 ul.dataset-list {
   margin-left: 0; }

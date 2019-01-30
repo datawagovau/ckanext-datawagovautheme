@@ -19,6 +19,12 @@
       text-decoration: none;
     }
   }
+  .dataset-item-access-level {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -2px;
+  }
 }
 ul.dataset-list{
   margin-left: 0;

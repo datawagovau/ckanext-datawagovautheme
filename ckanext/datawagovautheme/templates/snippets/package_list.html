@@ -1,0 +1,10 @@
+{% ckan_extends %}
+
+{% set schema = h.scheming_get_dataset_schema('dataset') %}
+{% set access_level_options = h.scheming_field_by_name(schema.dataset_fields, 'access_level').choices %}
+
+{% block package_list_inner %}
+	{% for package in packages %}
+		{% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title, schema=schema, access_level_options=access_level_options %}
+	{% endfor %}
+{% endblock %}
