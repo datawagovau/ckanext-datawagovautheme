@@ -1,6 +1,6 @@
 import datetime
 
-from ckan.common import c
+from ckan.common import c, _
 import ckan.lib.helpers as h
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
@@ -87,6 +87,7 @@ class CustomTheme(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IPackageController, inherit=True)
+    plugins.implements(plugins.IFacets, inherit=True)
 
     # IPackageController
 
@@ -120,3 +121,8 @@ class CustomTheme(plugins.SingletonPlugin):
             'access_level_text': access_level_text,
             'license_data': license_data
         }
+
+    # Ifacets
+    def dataset_facets(self, facets_dict, package_type):
+        facets_dict['access_level'] = _('Access Level')
+        return facets_dict
