@@ -1,5 +1,15 @@
 {% ckan_extends %}
 
+{% if package.access_level %}
+	{% set access_level_title = h.scheming_choices_label(access_level_options, package.access_level) %}
+	{% set access_level_text = h.access_level_text(package.access_level) %}
+	{% set access_level_icon = package.access_level %}
+{% else %}
+	{% set access_level_title = 'Unknown' %}
+	{% set access_level_text =  'No access level has been defined' %}
+	{% set access_level_icon =  'not_specified' %}
+{% endif %}
+
 {% block heading_private %}
   {% if package.private %}
     <span class="dataset-private label label-private">
@@ -7,4 +17,10 @@
       {{ _('Private') }}
     </span>
   {% endif %}
+{% endblock %}
+
+
+{% block heading_title %}
+    <img class="dataset-item-access-level" src="/lock_icons/{{access_level_icon}}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}" />
+	{{ h.link_to(h.truncate(title, truncate_title), h.url_for(package.type + '_read', controller='package', action='read', id=package.name)) }}
 {% endblock %}
