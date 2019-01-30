@@ -1,0 +1,28 @@
+{% extends "snippets/facet_list.html" %}
+
+
+{% block facet_list_items %}
+	{% with items = items or h.get_facet_items_dict(name, 25) %}
+		{% if items %}
+		  <nav>
+		    <ul class="{{ nav_class or 'list-unstyled nav nav-simple nav-facet' }}">
+		      {% for item in items %}
+		        {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
+		        {% set label = h.scheming_choices_label(access_level_options ,item.display_name) %}
+		        {% set label_truncated = h.truncate(label, 22) if not label_function else label %}
+		        {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
+		          <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
+		            <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
+		              <span class="item-label">{{ label_truncated }}</span>
+		              <span class="hidden separator"> - </span>
+		              <span class="item-count badge">{{ count }}</span>
+		            </a>
+		          </li>
+		      {% endfor %}
+		    </ul>
+		  </nav>
+		{% else %}
+		  <p class="module-content empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
+		{% endif %}
+	{% endwith %}
+{% endblock %}
