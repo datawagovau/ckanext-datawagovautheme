@@ -1089,6 +1089,13 @@ ul.dataset-list {
   hyphens: none;
   word-break: break-word; }
 
+.resource-level-res {
+  margin: 20px 0; }
+  .resource-level-res .resource-access-level-icon {
+    width: 32px; }
+  .resource-level-res .resource-access-level-icon, .resource-level-res .access-level-text {
+    display: inline-block; }
+
 .wrapper-datawa h1.dataset-title {
   hyphens: none;
   word-break: break-word; }
