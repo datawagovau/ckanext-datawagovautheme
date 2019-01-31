@@ -36,6 +36,16 @@ ul.dataset-list{
   }
 }
 
+.resource-level-res {
+  margin: 20px 0;
+  .resource-access-level-icon {
+    width: 32px;
+  }
+  .resource-access-level-icon, .access-level-text {
+    display: inline-block;
+  }
+}
+
 .wrapper-datawa {
     h1.dataset-title {
         hyphens: none;

@@ -1,7 +1,42 @@
 {% ckan_extends %}
 
+{% do exclude_fields.append('access_level') %}
+
 {% block maintag %}<div role="main" class="datawa-resource-read">{% endblock %}
 
 {%- block resource_license -%}
   {% snippet "snippets/license.html", pkg_dict=pkg %}
+{% endblock %}
+
+
+{% block resource_content %}
+	{% set schema = h.scheming_get_dataset_schema('dataset') %}
+	{% set access_level_options = h.scheming_field_by_name(schema.resource_fields, 'access_level').choices %}
+	{% set access_level = res.access_level if res.access_level else 'not_specified' %}
+	{% set access_level_title = h.scheming_choices_label(access_level_options, res.access_level) if res.access_level else 'Unknown' %}
+	{% set access_level_text = h.access_level_text(res.access_level) if res.access_level else 'No access level has been defined' %}
+
+	{% block resource_read_title %}
+		<h1 class="page-heading">{{ h.resource_display_name(res) | truncate(50) }}</h1>{% endblock %}
+	{% block resource_read_url %}
+		{% if res.url and h.is_url(res.url) %}
+			<p class="text-muted ellipsis">{{ _('URL:') }} <a class="resource-url-analytics" href="{{ res.url }}" title="{{ res.url }}">{{ res.url }}</a></p>
+		{% elif res.url %}
+			<p class="text-muted break-word">{{ _('URL:') }} {{ res.url }}</p>
+		{% endif %}
+	{% endblock %}
+		<div class="prose notes" property="rdfs:label">
+		{% if res.description %}
+			{{ h.render_markdown(res.description) }}
+		{% endif %}
+		{% if not res.description and c.package.notes %}
+			<h3>{{ _('From the dataset abstract') }}</h3>
+			<blockquote>{{ h.markdown_extract(h.get_translated(c.package, 'notes')) }}</blockquote>
+			<p>{% trans dataset=c.package.title, url=h.url_for(controller='package', action='read', id=c.package['name']) %}Source: <a href="{{ url }}">{{ dataset }}</a>{% endtrans %}
+		{% endif %}
+		</div>
+		<div class="resource-level-res">
+			<img class="resource-access-level-icon" src="/lock_icons/{{ access_level }}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}">
+			<div class="access-level-text"><strong>{{ access_level_title }}</strong> - {{ access_level_text }}</div>
+		</div>
 {% endblock %}
