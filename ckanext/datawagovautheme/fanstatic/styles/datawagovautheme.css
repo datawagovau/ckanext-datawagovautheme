@@ -519,22 +519,32 @@ ul.nav {
     .masthead .section {
       float: none; } }
   .masthead #dwga-header-container .dwga-header-row {
-    position: relative;
-    clear: both; }
+    position: relative; }
+  .masthead #dwga-header-container .navbar-collapse {
+    padding: 0; }
   @media (min-width: 768px) {
     .masthead #dwga-header-container {
       height: 130px; }
       .masthead #dwga-header-container .hide-desktop {
         display: none; }
-      .masthead #dwga-header-container .nav-collapse {
-        float: none;
+      .masthead #dwga-header-container .navbar-collapse {
         padding-top: 0;
         position: absolute;
-        right: 6%;
+        right: 4%;
         bottom: 12px; } }
+  @media (max-width: 1099px) {
+    .masthead #dwga-header-container .navbar-collapse {
+      position: relative; } }
+  @media (max-width: 979px) {
+    .masthead #dwga-header-container .navbar-collapse {
+      bottom: 6px; } }
+  @media (max-width: 767px) {
+    .masthead #dwga-header-container .navbar-collapse {
+      float: none; } }
   @media (min-width: 1500px) {
-    .masthead #dwga-header-container .nav-collapse {
-      right: 10%; } }
+    .masthead #dwga-header-container .navbar-collapse {
+      right: 10%;
+      position: absolute; } }
   @media (max-width: 767px) {
     .masthead #dwga-header-container .in.collapse {
       margin-left: -20px;
@@ -743,16 +753,19 @@ ul.nav {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%); }
-.container-header .navbar-toggle.collapsed {
+.container-header .navbar-toggle, .container-header .navbar-toggle.collapsed {
+  z-index: 1;
   border-radius: 0;
   background: #69737c;
   width: 48px;
   height: 47px;
   border-bottom: 2px solid #44505b; }
-  .container-header .navbar-toggle.collapsed .icon-bar {
+  .container-header .navbar-toggle .icon-bar, .container-header .navbar-toggle.collapsed .icon-bar {
     width: 100%;
     height: 3px;
     background-color: #f5f5f5; }
+  .container-header .navbar-toggle:focus, .container-header .navbar-toggle:hover, .container-header .navbar-toggle.collapsed:focus, .container-header .navbar-toggle.collapsed:hover {
+    background-color: #69737c; }
 
 @media (min-width: 768px) {
   html body .hide-desktop {
@@ -811,7 +824,7 @@ ul.nav {
     padding-left: 15px;
     padding-right: 15px; }
 
-  .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+  .navbar-collapse .navigation .nav li a, .navbar-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .navbar-collapse .navigation .nav li #publisher-tree > ul > li {
     padding-left: 19px;
     padding-right: 19px; } }
 @media (max-width: 979px) {
