@@ -1,7 +1,7 @@
 {% ckan_extends %}
 
 {% if package.access_level %}
-	{% set access_level_title = h.scheming_choices_label(access_level_options, package.access_level) %}
+	{% set access_level_title = h.datawa_get_option_label(access_level_opt, package.access_level) %}
 	{% set access_level_text = h.access_level_text(package.access_level) %}
 	{% set access_level_icon = package.access_level %}
 {% else %}

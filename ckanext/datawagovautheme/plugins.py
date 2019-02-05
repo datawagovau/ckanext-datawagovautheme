@@ -6,6 +6,8 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from markupsafe import Markup
 
+import ckanext.scheming.helpers as sh
+
 
 def get_current_year():
     return datetime.datetime.today().year
@@ -30,6 +32,24 @@ def wa_license_icon(id):
     )
 
 
+def datawa_scheming_select_options(field_name):
+    schema = sh.scheming_get_dataset_schema('dataset')
+    try:
+        access_level_options = sh.scheming_field_by_name(
+            schema['dataset_fields'], field_name)['choices']
+        options = {i['value']: i['label'] for i in access_level_options}
+    except Exception as e:
+        raise e
+    return options
+
+
+def datawa_get_option_label(options, option):
+    if option in options:
+        option_label = options[option]
+        return option_label
+    return option
+
+
 def access_level_text(access_level):
     access_level_text = {
         'open': "This dataset is available for use by everyone",
@@ -51,7 +71,7 @@ def license_data(pkg):
     license_url = ''
     license_specified = True
 
-    if pkg['license_id']:
+    if 'license_id' in pkg and pkg['license_id']:
         license_id = pkg['license_id']
         license_title = pkg['license_title']
         if license_id.startswith('custom'):
@@ -119,7 +139,9 @@ class CustomTheme(plugins.SingletonPlugin):
             'get_current_year': get_current_year,
             'wa_license_icon': wa_license_icon,
             'access_level_text': access_level_text,
-            'license_data': license_data
+            'license_data': license_data,
+            'datawa_scheming_select_options': datawa_scheming_select_options,
+            'datawa_get_option_label': datawa_get_option_label
         }
 
     # Ifacets

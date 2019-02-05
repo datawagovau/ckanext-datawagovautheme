@@ -88,7 +88,7 @@
       <div class="col-md-12">
         {% block header_logo %}
           <div class="dwga-logo dwga-inlineblock">
-            <a class="logo pull-left" href="{{ h.url('home') }}"><img
+            <a class="logo pull-left" href="{{ h.url('home.index') }}"><img
               src="/Logo_n.png" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
           </div>
           <div class="dwga-title dwga-inlineblock">
@@ -124,7 +124,7 @@
               <ul class="nav header-child-menu collapse" id="header-dropdown">
                 {% block header_site_navigation_tabs %}
                   {{ h.build_nav_main(
-                    ('home', _('Data Home')),
+                    ('home.index', _('Data Home')),
                     ('search', _('Datasets')),
                     ('organizations_index', _('Organizations')),
                     ('group_index', _('Groups')),
@@ -153,7 +153,7 @@
     <ul class="nav header-secondary-menu">
       {% block header_site_secondary_tabs %}
         {{ h.build_nav_main(
-          ('home', _('Data Home')),
+          ('home.index', _('Data Home')),
           ('search', _('Datasets')),
           ('organizations_index', _('Organizations')),
           ('group_index', _('Groups')),
