@@ -12,7 +12,12 @@ setup(
     namespace_packages=['ckanext'],
     packages=['ckanext.datawagovautheme'],
     zip_safe=False,
-    entry_points = """
+    include_package_data=True,
+    package_dir={'ckanext.datawagovautheme': 'ckanext/datawagovautheme'},
+    package_data={'ckanext.datawagovautheme': ['*.json', 'fanstatic/*.js', 'fanstatic/styles/*.css', 'fanstatic/styles/*.scss', 'templates/*.html', 'templates/*/*.html',
+                                               'templates/*/*/*.html', 'static/datacats/*.png', 'static/fonts/arial/*.eot', 'static/fonts/arial/*.svg', 'static/fonts/arial/*.woff', 'static/fonts/arial/*.woff2', 'static/fonts/arial/*.ttf', 'static/*.png', 'static/*.ico']},
+
+    entry_points="""
         [ckan.plugins]
         datawagovau_theme = ckanext.datawagovautheme.plugins:CustomTheme
     """
