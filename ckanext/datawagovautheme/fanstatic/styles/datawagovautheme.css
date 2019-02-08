@@ -1472,6 +1472,10 @@ boxes. */
   color: #69737c;
   background-color: white; }
 
+/* Change the border colors of the "Search" box. */
+.homepage .module-search .search-giant input {
+  border: 1px solid #c7cacd }
+
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
   color: #69737c;
