@@ -178,6 +178,8 @@ small {
   .wrapper-datawa .module.module-resource .resource-url-analytics,
   .wrapper-datawa .module.module-resource .btn-success {
     color: #fff; }
+  .wrapper-datawa .module.module-resource .resource-url-link {
+    color: #20399d; }
   .wrapper-datawa .module.module-resource .nav-tabs-plain {
     min-height: 49px; }
     .wrapper-datawa .module.module-resource .nav-tabs-plain li {
