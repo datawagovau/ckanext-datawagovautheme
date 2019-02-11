@@ -591,19 +591,23 @@ ul.nav {
     width: 102px;
     height: 102px;
     margin-top: 8px;
-    float: left;
-    background: url("/Logo_n.png") 50% 50% no-repeat;
-    background-size: contain; }
+    float: left; }
     @media (max-width: 767px) {
       .masthead #dwga-header-container .dwga-logo {
         width: 80px;
         height: 78px;
         margin: 6px 0 24px; } }
-    .masthead #dwga-header-container .dwga-logo:hover {
-      background: url("/Logo_r.png") 50% 50% no-repeat;
-      background-size: contain; }
     .masthead #dwga-header-container .dwga-logo .logo {
-      display: none; }
+      width: 100%;
+      height: 100%;
+      background: url("/Logo_n.png") 50% 50% no-repeat;
+      background-size: contain;
+      display: block; }
+      .masthead #dwga-header-container .dwga-logo .logo:hover {
+        background: url("/Logo_r.png") 50% 50% no-repeat;
+        background-size: contain; }
+      .masthead #dwga-header-container .dwga-logo .logo img {
+        display: none; }
   .masthead #dwga-header-container .dwga-title h1 {
     float: none;
     font-size: 35px;
@@ -2164,3 +2168,5 @@ body, html {
     padding-left: 32px;
     padding-right: 28px;
     padding-bottom: 24px; }
+
+/*# sourceMappingURL=datawagovautheme.css.map */
