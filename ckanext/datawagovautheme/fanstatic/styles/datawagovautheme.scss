@@ -761,8 +761,7 @@ body, html{
         align-items: flex-start;
         font-family: Arial, sans-serif;
         font-size: 16px;
-        width: 660px;
-        box-shadow: 4px 4px 18px -6px rgba(0, 0, 0, 0.75);
+        width: 100%;
         background-color: transparent;
         border-radius: 6px;
         margin: 0 auto;
@@ -798,7 +797,7 @@ body, html{
         color: #ffffff;
         font-weight: bold;
         text-align: center;
-        padding: 18px;
+        padding: 14px;
         font-family: "Open Sans", sans-serif;
     }
     .license-url {
@@ -818,14 +817,16 @@ body, html{
     }
 
     .access_and_licence_col {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        padding-left: 32px;
-        padding-right: 32px;
+        padding: 24px 16px 24px 16px;
         display: flex;
         max-width: 50%;
         width: 50%;
         flex-wrap: wrap;
+        @media(max-width: $tablet-top){
+            width: 49%;
+            max-width: 100%;
+            min-width: 330px;
+        }
     }
 
     .sub_column {
@@ -850,11 +851,15 @@ body, html{
     }
 
     .icon_cell.licence_icon > img {
-        width: 68px;
-        height: 68px;
+        width: 60px;
+        height: 60px;
     }
 
     .addt_licence_options {
+        @media(max-width: $tablet-top){
+            flex-basis: 100%;
+        }
+        width: 100%;
         display: flex;
         flex-direction: row;
     }
@@ -867,9 +872,7 @@ body, html{
 
     /* Data Access Statement */
     .data_access_statement_container {
-        padding-left: 32px;
-        padding-right: 32px;
-        padding-bottom: 24px;
+        padding: 0px 16px 8px 16px;
     }
 
     /* Request Access Button */
@@ -880,8 +883,6 @@ body, html{
     }
 
     .call_to_action_button_container {
-        padding-left: 32px;
-        padding-right: 28px;
-        padding-bottom: 24px;
+        padding: 0px 16px 24px 16px;
     }
 }
