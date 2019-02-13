@@ -3055,7 +3055,8 @@
             "field_name":"access_level",
             "label": "Access Level",
             "help_text": "Provide an access level label for this resource. These will appear next to the resource to give users an indication of data availability. This doesn't affect access to the resource - you'll still need to secure access to the resource yourself.",
-            "preset": "select",
+          "form_include_blank_choice": true,
+          "preset": "select",
             "form_attrs": {
                 "data-module": "resource-warning",
                 "data-module-match": "open",
