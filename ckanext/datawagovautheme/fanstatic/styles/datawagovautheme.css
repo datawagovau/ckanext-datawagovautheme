@@ -2085,8 +2085,7 @@ body, html {
     align-items: flex-start;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    width: 660px;
-    box-shadow: 4px 4px 18px -6px rgba(0, 0, 0, 0.75);
+    width: 100%;
     background-color: transparent;
     border-radius: 6px;
     margin: 0 auto; }
@@ -2111,7 +2110,7 @@ body, html {
     color: #ffffff;
     font-weight: bold;
     text-align: center;
-    padding: 18px;
+    padding: 14px;
     font-family: "Open Sans", sans-serif; }
   #access-and-use-card .license-url {
     display: flex;
@@ -2125,14 +2124,16 @@ body, html {
     justify-content: flex-start;
     flex-wrap: wrap; }
   #access-and-use-card .access_and_licence_col {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 24px 16px 24px 16px;
     display: flex;
     max-width: 50%;
     width: 50%;
     flex-wrap: wrap; }
+    @media (max-width: 979px) {
+      #access-and-use-card .access_and_licence_col {
+        width: 49%;
+        max-width: 100%;
+        min-width: 330px; } }
   #access-and-use-card .sub_column {
     flex: 1;
     display: flex;
@@ -2147,26 +2148,24 @@ body, html {
     width: 60px;
     height: 60px; }
   #access-and-use-card .icon_cell.licence_icon > img {
-    width: 68px;
-    height: 68px; }
+    width: 60px;
+    height: 60px; }
   #access-and-use-card .addt_licence_options {
+    width: 100%;
     display: flex;
     flex-direction: row; }
+    @media (max-width: 979px) {
+      #access-and-use-card .addt_licence_options {
+        flex-basis: 100%; } }
   #access-and-use-card .addt_licence_options_text {
     padding-top: 12px;
     color: #0c4a77;
     line-height: 18px; }
   #access-and-use-card .data_access_statement_container {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 24px; }
+    padding: 0px 16px 8px 16px; }
   #access-and-use-card .call_to_action_container {
     border-radius: 0px 0px 6px 6px;
     display: flex;
     justify-content: flex-end; }
   #access-and-use-card .call_to_action_button_container {
-    padding-left: 32px;
-    padding-right: 28px;
-    padding-bottom: 24px; }
-
-/*# sourceMappingURL=datawagovautheme.css.map */
+    padding: 0px 16px 24px 16px; }
