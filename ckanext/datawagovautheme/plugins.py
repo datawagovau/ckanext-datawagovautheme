@@ -1,5 +1,6 @@
 import datetime
 from collections import OrderedDict
+import json
 
 from ckan.common import c, _
 import ckan.lib.helpers as h
@@ -51,15 +52,17 @@ def datawa_get_option_label(options, option):
     return option
 
 
-def access_level_text(access_level):
+def access_level_text(access_level=None, all=False, as_json=False):
     access_level_text = {
-        'open': "This dataset is available for use by everyone",
-        'open_login': "This dataset is available for use by everyone - login required",
-        'fees_apply': "This dataset is available for use subject to payment",
-        'restricted': "This dataset is available for use subject to approval",
-        'govt_only': "This dataset is available for government use only",
-        'mixed': "A variety of access levels apply to this dataset's resources"
+        "open": "This dataset is available for use by everyone",
+        "open_login": "This dataset is available for use by everyone - login required",
+        "fees_apply": "This dataset is available for use subject to payment",
+        "restricted": "This dataset is available for use subject to approval",
+        "govt_only": "This dataset is available for government use only",
+        "mixed": "A variety of access levels apply to this dataset's resources"
     }
+    if all:
+        return json.dumps(access_level_text) if as_json else access_level_text
     if access_level in access_level_text:
         return access_level_text[access_level]
     return ''

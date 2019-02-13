@@ -30,29 +30,8 @@
     )
 %}
     {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
-	<div id="res-access-level-warning" class="info-block">
-		<p style="color: #89221d;">
-			<i style="color:#bb362f;" class="fa fa-exclamation-circle" aria-hidden="true"></i>
-			You have chosen an access level for this resource that will require the resource to be secured. This is only a label and doesn't affect access to the resource - you'll still need to secure access to the resource yourself if its dataset's visibility is not set to "private". (Note: Geospatial data hosted in SLIP will automatically populate and secure [if applicable] your resources.)
-		</p>
-	</div>
 {% endcall %}
 
-{% set uploaded = data.url_type if data and data.url_type else false %}
-{% set data_exists = true if data else false %}
-<div class="form-group">
-  <div
-    id="res-uploaded-warning"
-    data-module="resource-uploaded-warning"
-    data-module-uploaded="{{ uploaded }}"
-    data-module-edit="{{ data_exists }}"
-    class="info-block">
-    <p style="color: #89221d;">
-      <i style="color:#bb362f;" class="fa fa-exclamation-circle" aria-hidden="true"></i>
-      Resources uploaded and hosted within data.wa.gov.au can’t be restricted. To set an Access Level other than "Open" for this resource, upload it as a link and secure the resource yourself. (Note: Geospatial data hosted in SLIP will automatically populate and secure [if applicable] your resources.)
-    </p>
-  </div>
-</div>
 <div class="form-group">
   <div
     id="access-level-tooltips"

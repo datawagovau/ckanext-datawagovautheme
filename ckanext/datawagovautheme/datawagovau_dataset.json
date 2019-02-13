@@ -35,6 +35,7 @@
             "help_inline": true,
           "form_include_blank_choice": true,
           "preset": "select",
+          "form_snippet": "access_level.html",
           "form_attrs": {
             "data-module": "toggling-select",
             "data-module-match": "^open",
