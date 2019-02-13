@@ -1,4 +1,5 @@
 import datetime
+from collections import OrderedDict
 
 from ckan.common import c, _
 import ckan.lib.helpers as h
@@ -146,5 +147,14 @@ class CustomTheme(plugins.SingletonPlugin):
 
     # Ifacets
     def dataset_facets(self, facets_dict, package_type):
+        ## Updating Formats position
+        fct_keys = [key for key in facets_dict.keys()]
+        res_fmt = fct_keys.pop(fct_keys.index('res_format')) if 'res_format' in fct_keys else None
+        org_fct_index = fct_keys.index('organization') if 'organization' in fct_keys else None
+        if res_fmt and org_fct_index is not None:
+            fct_keys.insert(org_fct_index + 1, res_fmt)
+            updated_facet_dict = OrderedDict([(key,facets_dict[key]) for key in fct_keys])
+            facets_dict = updated_facet_dict
+
         facets_dict['access_level'] = _('Access Level')
         return facets_dict
