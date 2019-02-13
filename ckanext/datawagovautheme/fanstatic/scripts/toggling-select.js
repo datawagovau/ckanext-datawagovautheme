@@ -20,7 +20,7 @@ ckan.module('toggling-select', function($, _) {
       if (this.options.extendTo) {
         target = target.closest(this.options.extendTo);
       }
-      !!val.match(this.options.match) ^ this.options.inverse
+      !(!val.match(this.options.match) ^ val == '') ^ this.options.inverse
         ? (target.find('input').attr('disabled', true), target.hide())
         : (target.find('input').removeAttr('disabled'), target.show());
     }
