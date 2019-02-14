@@ -100,8 +100,7 @@ and "Search Your Data" boxes line up. */
   margin-left: 0;
 }
 
-#dataset-resources {
-  .resource-list {
+.resource-list {
     .resource-item {
       padding-left: 90px;
       .resource-access-level-icon {
@@ -115,8 +114,8 @@ and "Search Your Data" boxes line up. */
         left: 45px
       }
     }
-  }
 }
+
 
 .tag-list.well {
   li {
