@@ -108,6 +108,21 @@ and "Search Your Data" boxes line up. */
   }
 }
 
+#res-access-level-warning, #res-uploaded-warning {
+    &> p {
+        background-color: rgba(187, 54, 47, 0.8);
+        color: #ffffff;
+        padding: 20px;
+        font-size: 13px;
+    }
+    p i.fa {
+        color: #ffffff;
+        font-size: 57px;
+        float: left;
+        padding-right: 10px;
+    }
+}
+
 .resource-list {
     .resource-item {
       padding-left: 90px;
