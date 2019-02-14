@@ -15,7 +15,10 @@
   <div class="tags">
     <h3>{{ _('Popular tags') }}</h3>
     {% for tag in tags %}
-      <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+      <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">
+      {# {{ h.truncate(tag.display_name, 22) }} #}
+      {{ tag.display_name }}
+      </a>
     {% endfor %}
   </div>
 </div>
