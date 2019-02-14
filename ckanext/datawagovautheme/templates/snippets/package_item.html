@@ -8,3 +8,10 @@
     </span>
   {% endif %}
 {% endblock %}
+
+{% block heading_title %}
+{#  
+  {{ h.link_to(h.truncate(title, truncate_title), h.url_for(package.type + '_read', controller='package', action='read', id=package.name)) }} 
+#}
+  {{ h.link_to(h.truncate(title, truncate_title), h.url_for('dataset_read', controller='package', action='read', id=package.name)) }}
+{% endblock %}
