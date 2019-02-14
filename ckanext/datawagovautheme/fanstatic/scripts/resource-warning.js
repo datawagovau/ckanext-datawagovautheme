@@ -18,7 +18,7 @@ ckan.module('resource-warning', function($, _) {
       var val = this.el.val();
       var target = $(this.options.target);
 
-      jQuery.inArray(val, options) > -1 ? (
+      jQuery.inArray(val, options) > -1 ^  val == ''? (
           target.hide()
         ):(
           target.show()
