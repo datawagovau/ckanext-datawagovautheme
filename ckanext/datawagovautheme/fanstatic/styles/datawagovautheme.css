@@ -1082,8 +1082,11 @@ ul.nav {
   .datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li:focus {
     text-decoration: underline; }
 
+.search-form {
+  border-bottom: 1px solid #e4e1e1; }
+
 .dataset-item {
-  border-bottom: 1px dotted #efefef; }
+  border-bottom: 1px solid #e4e1e1; }
   .dataset-item .dataset-heading {
     font-size: 22px; }
     .dataset-item .dataset-heading a, .dataset-item .dataset-heading .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-heading a, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li {
