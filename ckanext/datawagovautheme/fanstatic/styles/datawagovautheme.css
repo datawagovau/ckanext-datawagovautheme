@@ -1550,6 +1550,10 @@ and "Search Your Data" boxes line up. */
 
 .dataset-item .dataset-resources {
   margin-left: 0; }
+  .dataset-item .dataset-resources li a.label, .dataset-item .dataset-resources li .datawa-organization-list #publisher-tree > ul > li.label, .datawa-organization-list .dataset-item .dataset-resources li #publisher-tree > ul > li.label {
+    opacity: 0.65; }
+    .dataset-item .dataset-resources li a.label:hover, .dataset-item .dataset-resources li .datawa-organization-list #publisher-tree > ul > li.label:hover, .datawa-organization-list .dataset-item .dataset-resources li #publisher-tree > ul > li.label:hover {
+      opacity: 1; }
 
 .resource-list .resource-item {
   padding-left: 90px; }

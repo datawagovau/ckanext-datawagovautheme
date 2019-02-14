@@ -98,6 +98,14 @@ and "Search Your Data" boxes line up. */
 
 .dataset-item .dataset-resources {
   margin-left: 0;
+  li {
+    a.label {
+        opacity: 0.65;
+        &:hover {
+            opacity: 1;
+        }
+    }
+  }
 }
 
 .resource-list {
