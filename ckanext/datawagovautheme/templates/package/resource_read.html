@@ -36,7 +36,7 @@
 		{% endif %}
 		</div>
 		<div class="resource-level-res">
-			<img class="resource-access-level-icon" src="/lock_icons/{{ access_level }}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}">
+			<img data-toggle="modal" data-target="#access-level-legend" class="access-level-pointer resource-access-level-icon" src="/lock_icons/{{ access_level }}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}">
 			<div class="access-level-text"><strong>{{ access_level_title }}</strong> - {{ access_level_text }}</div>
 		</div>
 {% endblock %}

@@ -84,6 +84,10 @@ and "Search Your Data" boxes line up. */
   }
 }
 
+.modal-open {
+    padding-right: 0px !important;
+}
+
 .module-resource {
   .actions {
     top: 4px;
@@ -188,6 +192,37 @@ and "Search Your Data" boxes line up. */
       opacity: 0.8;
     }
   }
+}
+.access-level-pointer {
+    cursor: pointer;
+}
+.access-level-legend-modal {
+    .modal-dialog {
+        width: auto;
+        max-width: 650px;
+    }
+    .ac-l-close-modal {
+        position: absolute;
+        z-index: 9999;
+        right: 0;
+        margin: 5px 10px;
+        cursor: pointer;
+        i {
+            color: #084a78;
+        }
+    }
+    .access-level-legend-item {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .access-level-icon {
+            width: 32px;
+            height: 32px;
+            position: relative;
+            top: -3px;
+        }
+    }
 }
 
 body, html{
