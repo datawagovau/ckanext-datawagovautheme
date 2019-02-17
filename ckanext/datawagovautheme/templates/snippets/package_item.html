@@ -21,7 +21,7 @@
 
 
 {% block heading_title %}
-    <img class="dataset-item-access-level" src="/lock_icons/{{access_level_icon}}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}" />
+    <img data-toggle="modal" data-target="#access-level-legend" class="access-level-pointer dataset-item-access-level" src="/lock_icons/{{access_level_icon}}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}" />
 	{{ h.link_to(h.truncate(title, truncate_title), h.url_for(package.type + '_read', controller='package', action='read', id=package.name)) }}
 {% endblock %}
 
