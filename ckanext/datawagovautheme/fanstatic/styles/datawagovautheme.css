@@ -110,6 +110,8 @@ small {
     border-bottom: 3px solid #cccfd1;
     color: #69737c;
     font-size: 16px;
+    /* set background color for secondary button */
+    background: #f7f7f7;
     background-image: none; }
   .wrapper-datawa .btn-group > .btn {
     border-radius: 0; }
