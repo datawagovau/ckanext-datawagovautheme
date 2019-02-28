@@ -1,5 +1,15 @@
 {% ckan_extends %}
 
+{% if package.access_level %}
+	{% set access_level_title = h.datawa_get_option_label(access_level_opt, package.access_level) %}
+	{% set access_level_text = h.access_level_text(package.access_level) %}
+	{% set access_level_icon = package.access_level %}
+{% else %}
+	{% set access_level_title = 'Unknown' %}
+	{% set access_level_text =  'No access level has been defined' %}
+	{% set access_level_icon =  'not_specified' %}
+{% endif %}
+
 {% block heading_private %}
   {% if package.private %}
     <span class="dataset-private label label-private">
@@ -9,6 +19,24 @@
   {% endif %}
 {% endblock %}
 
+
 {% block heading_title %}
-  {{ h.link_to(h.truncate(title, truncate_title), h.url_for('dataset_read', controller='package', action='read', id=package.name)) }}
+    <img data-toggle="modal" data-target="#access-level-legend" class="access-level-pointer dataset-item-access-level" src="/lock_icons/{{access_level_icon}}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}" />
+	{{ h.link_to(h.truncate(title, truncate_title), h.url_for(package.type + '_read', controller='package', action='read', id=package.name)) }}
+{% endblock %}
+
+{% block resources %}
+    {% if package.resources and not hide_resources %}
+      {% block resources_outer %}
+        <ul class="dataset-resources list-unstyled">
+          {% block resources_inner %}
+            {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+            <li>
+              <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label" data-format="{{ resource.lower() }}">{{ resource }}</a>
+            </li>
+            {% endfor %}
+          {% endblock %}
+        </ul>
+      {% endblock %}
+    {% endif %}
 {% endblock %}

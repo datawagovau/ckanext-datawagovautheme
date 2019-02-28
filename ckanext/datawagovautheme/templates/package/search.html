@@ -1,6 +1,8 @@
 {% extends "page.html" %}
 {% import 'macros/form.html' as form %}
 
+{% set access_level_opt = h.datawa_scheming_select_options('access_level') %}
+
 {% block subtitle %}{{ _("Datasets") }}{% endblock %}
 
 {% block breadcrumb_content %}
@@ -37,7 +39,7 @@
         {% snippet 'snippets/search_form.html', form_id='dataset-search-form', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, show_empty=request.params, error=c.query_error, fields=c.fields %}
       {% endblock %}
       {% block package_search_results_list %}
-        {{ h.snippet('snippets/package_list.html', packages=c.page.items) }}
+        {{ h.snippet('snippets/package_list.html', packages=c.page.items, access_level_opt=access_level_opt) }}
       {% endblock %}
     </div>
 
@@ -71,12 +73,20 @@
 {% endblock %}
 
 
-{% block secondary_content %}{% snippet "spatial/snippets/spatial_query.html", default_extent="[[-40,110], [0, 130]]" %}
-<div class="filters">
-  <div>
-    {% for facet in c.facet_titles %}
-      {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
-    {% endfor %}
+{% block secondary_content %}
+  <div class="filters">
+      {{ h.snippet('snippets/access_level_facet.html', title=c.facet_titles['access_level'], name='access_level', access_level_opt=access_level_opt) }}
+  </div>
+  {% snippet "spatial/snippets/spatial_query.html", default_extent="[[-40,110], [0, 130]]" %}
+  <div class="filters">
+    <div>
+      {% for facet in c.facet_titles %}
+        {% if facet != 'access_level' %}
+          {{ h.snippet('snippets/facet_list.html', title=c.facet_titles[facet], name=facet) }}
+        {% endif%}
+      {% endfor %}
+    </div>
+    <a class="close no-text hide-filters"><i class="icon-remove-sign"></i><span class="text">close</span></a>
   </div>
   <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
 </div>

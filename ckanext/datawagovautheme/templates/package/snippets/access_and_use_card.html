@@ -1,0 +1,103 @@
+{% if pkg.access_level %}
+	{% set access_level_options = h.scheming_field_by_name(schema.dataset_fields, 'access_level').choices %}
+	{% set access_level_title = h.scheming_choices_label(access_level_options, pkg.access_level) %}
+	{% set access_level_text = h.access_level_text(pkg.access_level) %}
+	{% set access_level_icon = pkg.access_level %}
+{% else %}
+	{% set access_level_title = 'Unknown' %}
+	{% set access_level_text =  'No access level has been defined' %}
+	{% set access_level_icon =  'not_specified' %}
+{% endif %}
+
+{% set license_data = h.license_data(pkg) %}
+{% set access_level_placeholders = h.scheming_field_by_name(schema.dataset_fields, 'access_level')['choices_placeholder_text'] %}
+
+<div id="access-and-use-card">
+	<div class="card">
+	    <div class="row card_header"><div class="card_title">Access & Use Information</div></div>
+	    <div class="row access_and_license_row">
+	        <div data-toggle="modal" data-target="#access-level-legend" class="access-level-pointer access_and_licence_col">
+	            <div class="sub_column icon_column">
+	                <div class="icon_cell access_icon">
+	                    <img src="/lock_icons/{{access_level_icon}}.png" />
+	                </div>
+	            </div>
+	            <div class="sub_column">
+	                <div class="sub_title">{{ access_level_title }}</div>
+
+	                <div class="card_body_text">{{ access_level_text }} </div>
+	            </div>
+	        </div>
+	        <div class="access_and_licence_col">
+		        {% if license_data['license_specified'] %}
+			        <a class="license-url" href="{{ license_data['license_url'] }}" target="_blank">
+			            <div class="sub_column icon_column">
+			                <div class="icon_cell licence_icon">
+			                    <img src="/license_icons/{{ license_data['license_icon'] }}.png" />
+			                </div>
+			            </div>
+
+			            <div class="sub_column">
+			                <div class="sub_title">License</div>
+
+			                <div class="card_body_text">{{ license_data['license_title'] }}</div>
+			            </div>
+			        </a>
+		        {% else %}
+		            <div class="sub_column icon_column">
+		                <div class="icon_cell licence_icon">
+		                    <img src="/license_icons/{{ license_data['license_icon'] }}.png" />
+		                </div>
+		            </div>
+
+		            <div class="sub_column">
+		                <div class="sub_title">License</div>
+
+		                <div class="card_body_text">{{ license_data['license_title'] }}</div>
+		            </div>
+		            <div class="addt_licence_options">
+						<a class="license-url" href="mailto:{{ pkg.maintainer_email }}?cc=opendata@landgate.wa.gov.au&amp;subject=Licence Options - {{ pkg.title }}&amp;body=Hello%2C%0A%0AI%20found%20the%20above%20dataset%20on%20data.wa.gov.au%20and%20would%20like%20to%20use%20it.%20However%2C%20as%20no%20licence%20has%20been%20supplied%2C%20I%E2%80%99m%20unclear%20on%20any%20restrictions%20there%20may%20be%20around%20its%20use.%20What%20licence%20terms%20and%20conditions%20apply%20to%20the%20use%20of%20this%20data%3F%0A%0AOrganisation%20name%3A%0AContact%20name%3A%0AEmail%3A%0APhone%3A" target="_blank">
+		            		<div class="card_body_text addt_licence_options_text">Request licence options</div>
+		            	</a> 
+		            </div>
+		        {% endif %}
+				{% if pkg.has_additional_licensing_options and pkg.additional_licenses_url %}
+	            <div class="addt_licence_options">
+	            	<a class="license-url" href="{{ pkg.additional_licenses_url }}" target="_blank">
+	            		<div class="card_body_text addt_licence_options_text">Additional licence options available</div>
+	            	</a> 
+	            </div>
+	            {% endif %}
+	        </div>
+	    </div>
+	    {% if pkg.data_access_statement %}
+	    <div class="row">
+	        <div class="data_access_statement_container">
+	            <div class="sub_title">Data Access Statement</div>
+	            <div class="card_body_text">
+					{{ h.render_markdown(pkg.data_access_statement) }}
+	        </div>
+	    </div>
+	    {% else %}
+	    	{% if not pkg.data_access_statement and pkg.access_level and pkg.access_level != 'open' %}
+			    <div class="row">
+			        <div class="data_access_statement_container">
+			            <div class="sub_title">Data Access Statement</div>
+			            <div class="card_body_text">
+							<i>{{access_level_placeholders[pkg.access_level]|safe}}</i>
+			        </div>
+			    </div>
+	    	{% endif %}
+	    {% endif %}
+	    {% if pkg.access_level and not pkg.access_level.startswith('open') %}
+		    <div class="row call_to_action_container">
+		        <div class="call_to_action_button_container">
+					{% if pkg.access_url %}
+		        		<a href="{{ pkg.access_url }}" class="btn btn-primary" target="_blank"> Request access </a></div>
+		        	{% else %}
+		        		<a href="mailto:{{ pkg.maintainer_email }}?cc=opendata@landgate.wa.gov.au&amp;subject=Data Enquiry - {{ pkg.title }}&amp;body=Hello%2C%0A%0AI%E2%80%99d%20like%20to%20enquire%20about%20access%20to%20this%20data.%0A%0AReason%20for%20requesting%20access%3A%0AOrganisation%20name%3A%0AContact%20name%3A%0AEmail%3A%0APhone%3A%20" class="btn btn-primary" target="_blank"> Request access </a></div>
+		        	{% endif %}
+		    </div>
+	    {% endif %}
+	</div>
+</div>

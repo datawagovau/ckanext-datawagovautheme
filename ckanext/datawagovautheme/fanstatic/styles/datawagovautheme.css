@@ -180,6 +180,8 @@ small {
   .wrapper-datawa .module.module-resource .resource-url-analytics,
   .wrapper-datawa .module.module-resource .btn-success {
     color: #fff; }
+  .wrapper-datawa .module.module-resource .resource-url-link {
+    color: #20399d; }
   .wrapper-datawa .module.module-resource .nav-tabs-plain {
     min-height: 49px; }
     .wrapper-datawa .module.module-resource .nav-tabs-plain li {
@@ -521,22 +523,32 @@ ul.nav {
     .masthead .section {
       float: none; } }
   .masthead #dwga-header-container .dwga-header-row {
-    position: relative;
-    clear: both; }
+    position: relative; }
+  .masthead #dwga-header-container .navbar-collapse {
+    padding: 0; }
   @media (min-width: 768px) {
     .masthead #dwga-header-container {
       height: 130px; }
       .masthead #dwga-header-container .hide-desktop {
         display: none; }
-      .masthead #dwga-header-container .nav-collapse {
-        float: none;
+      .masthead #dwga-header-container .navbar-collapse {
         padding-top: 0;
         position: absolute;
-        right: 6%;
+        right: 4%;
         bottom: 12px; } }
+  @media (max-width: 1099px) {
+    .masthead #dwga-header-container .navbar-collapse {
+      position: relative; } }
+  @media (max-width: 979px) {
+    .masthead #dwga-header-container .navbar-collapse {
+      bottom: 6px; } }
+  @media (max-width: 767px) {
+    .masthead #dwga-header-container .navbar-collapse {
+      float: none; } }
   @media (min-width: 1500px) {
-    .masthead #dwga-header-container .nav-collapse {
-      right: 10%; } }
+    .masthead #dwga-header-container .navbar-collapse {
+      right: 10%;
+      position: absolute; } }
   @media (max-width: 767px) {
     .masthead #dwga-header-container .in.collapse {
       margin-left: -20px;
@@ -581,19 +593,23 @@ ul.nav {
     width: 102px;
     height: 102px;
     margin-top: 8px;
-    float: left;
-    background: url("/Logo_n.png") 50% 50% no-repeat;
-    background-size: contain; }
+    float: left; }
     @media (max-width: 767px) {
       .masthead #dwga-header-container .dwga-logo {
         width: 80px;
         height: 78px;
         margin: 6px 0 24px; } }
-    .masthead #dwga-header-container .dwga-logo:hover {
-      background: url("/Logo_r.png") 50% 50% no-repeat;
-      background-size: contain; }
     .masthead #dwga-header-container .dwga-logo .logo {
-      display: none; }
+      width: 100%;
+      height: 100%;
+      background: url("/Logo_n.png") 50% 50% no-repeat;
+      background-size: contain;
+      display: block; }
+      .masthead #dwga-header-container .dwga-logo .logo:hover {
+        background: url("/Logo_r.png") 50% 50% no-repeat;
+        background-size: contain; }
+      .masthead #dwga-header-container .dwga-logo .logo img {
+        display: none; }
   .masthead #dwga-header-container .dwga-title h1 {
     float: none;
     font-size: 35px;
@@ -745,16 +761,19 @@ ul.nav {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%); }
-.container-header .navbar-toggle.collapsed {
+.container-header .navbar-toggle, .container-header .navbar-toggle.collapsed {
+  z-index: 1;
   border-radius: 0;
   background: #69737c;
   width: 48px;
   height: 47px;
   border-bottom: 2px solid #44505b; }
-  .container-header .navbar-toggle.collapsed .icon-bar {
+  .container-header .navbar-toggle .icon-bar, .container-header .navbar-toggle.collapsed .icon-bar {
     width: 100%;
     height: 3px;
     background-color: #f5f5f5; }
+  .container-header .navbar-toggle:focus, .container-header .navbar-toggle:hover, .container-header .navbar-toggle.collapsed:focus, .container-header .navbar-toggle.collapsed:hover {
+    background-color: #69737c; }
 
 @media (min-width: 768px) {
   html body .hide-desktop {
@@ -813,7 +832,7 @@ ul.nav {
     padding-left: 15px;
     padding-right: 15px; }
 
-  .nav-collapse .navigation .nav li a, .nav-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .nav-collapse .navigation .nav li #publisher-tree > ul > li {
+  .navbar-collapse .navigation .nav li a, .navbar-collapse .navigation .nav li .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .navbar-collapse .navigation .nav li #publisher-tree > ul > li {
     padding-left: 19px;
     padding-right: 19px; } }
 @media (max-width: 979px) {
@@ -1065,8 +1084,11 @@ ul.nav {
   .datawa-organization-list .datawa-org-read .wrapper-datawa .activity #publisher-tree > ul > li:focus {
     text-decoration: underline; }
 
+.search-form {
+  border-bottom: 1px solid #e4e1e1; }
+
 .dataset-item {
-  border-bottom: 1px dotted #efefef; }
+  border-bottom: 1px solid #e4e1e1; }
   .dataset-item .dataset-heading {
     font-size: 22px; }
     .dataset-item .dataset-heading a, .dataset-item .dataset-heading .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-heading a, .dataset-item .dataset-heading .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-heading #publisher-tree > ul > li {
@@ -1078,6 +1100,11 @@ ul.nav {
         text-decoration: underline; }
   .dataset-item .dataset-resources a, .dataset-item .dataset-resources .group-list .module-heading h3 a, .group-list .module-heading h3 .dataset-item .dataset-resources a, .dataset-item .dataset-resources .datawa-organization-list #publisher-tree > ul > li, .datawa-organization-list .dataset-item .dataset-resources #publisher-tree > ul > li {
     text-decoration: none; }
+  .dataset-item .dataset-item-access-level {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -2px; }
 
 ul.dataset-list {
   margin-left: 0; }
@@ -1085,6 +1112,13 @@ ul.dataset-list {
 .context-info h1.heading {
   hyphens: none;
   word-break: break-word; }
+
+.resource-level-res {
+  margin: 20px 0; }
+  .resource-level-res .resource-access-level-icon {
+    width: 32px; }
+  .resource-level-res .resource-access-level-icon, .resource-level-res .access-level-text {
+    display: inline-block; }
 
 .wrapper-datawa h1.dataset-title {
   hyphens: none;
@@ -1515,6 +1549,9 @@ and "Search Your Data" boxes line up. */
   word-break: break-word;
   word-wrap: break-word; }
 
+.modal-open {
+  padding-right: 0px !important; }
+
 .module-resource .actions {
   top: 4px; }
 
@@ -1525,6 +1562,32 @@ and "Search Your Data" boxes line up. */
 
 .dataset-item .dataset-resources {
   margin-left: 0; }
+  .dataset-item .dataset-resources li a.label, .dataset-item .dataset-resources li .datawa-organization-list #publisher-tree > ul > li.label, .datawa-organization-list .dataset-item .dataset-resources li #publisher-tree > ul > li.label {
+    opacity: 0.65; }
+    .dataset-item .dataset-resources li a.label:hover, .dataset-item .dataset-resources li .datawa-organization-list #publisher-tree > ul > li.label:hover, .datawa-organization-list .dataset-item .dataset-resources li #publisher-tree > ul > li.label:hover {
+      opacity: 1; }
+
+#res-access-level-warning > p, #res-uploaded-warning > p {
+  background-color: rgba(187, 54, 47, 0.8);
+  color: #ffffff;
+  padding: 20px;
+  font-size: 13px; }
+#res-access-level-warning p i.fa, #res-uploaded-warning p i.fa {
+  color: #ffffff;
+  font-size: 57px;
+  float: left;
+  padding-right: 10px; }
+
+.resource-list .resource-item {
+  padding-left: 90px; }
+  .resource-list .resource-item .resource-access-level-icon {
+    position: absolute;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    top: 11px; }
+  .resource-list .resource-item .format-label {
+    left: 45px; }
 
 .tag-list.well li {
   margin-right: 0;
@@ -1563,8 +1626,37 @@ and "Search Your Data" boxes line up. */
 .dataset-map-expanded #dataset-map-edit-buttons a.btn.apply.disabled, .dataset-map-expanded #dataset-map-edit-buttons .datawa-organization-list #publisher-tree > ul > li.btn.apply.disabled, .datawa-organization-list .dataset-map-expanded #dataset-map-edit-buttons #publisher-tree > ul > li.btn.apply.disabled {
   opacity: 0.8; }
 
+.access-level-pointer {
+  cursor: pointer; }
+
+.access-level-legend-modal .modal-dialog {
+  width: auto;
+  max-width: 650px; }
+.access-level-legend-modal .ac-l-close-modal {
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  margin: 5px 10px;
+  cursor: pointer; }
+  .access-level-legend-modal .ac-l-close-modal i {
+    color: #084a78; }
+.access-level-legend-modal .access-level-legend-item {
+  margin-bottom: 10px; }
+  .access-level-legend-modal .access-level-legend-item:last-child {
+    margin-bottom: 0; }
+  .access-level-legend-modal .access-level-legend-item .access-level-icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: -3px; }
+
 body, html {
   overflow-x: hidden; }
+
+.form-group .controls input, .form-group .controls select, .control-medium .controls input, .control-medium .controls select {
+  width: 50%; }
+.form-group .controls #field-title, .form-group .controls #field-notes, .form-group .controls #field-data_access_statement, .form-group .controls #field-image-url, .form-group .controls #field-name, .control-medium .controls #field-title, .control-medium .controls #field-notes, .control-medium .controls #field-data_access_statement, .control-medium .controls #field-image-url, .control-medium .controls #field-name {
+  width: 100%; }
 
 .paragraph-copyright {
   font-size: 17px;
@@ -1584,9 +1676,9 @@ body, html {
     display: flex; } }
 @media (min-width: 1100px) {
   [role=main] #dataset-edit .info-block.info-inline {
-    width: 36%;
+    width: 75%;
     padding-left: 10px;
-    padding-top: 0; } }
+    padding-top: 10px; } }
 @media (min-width: 1500px) {
   [role=main] #dataset-edit .info-block.info-inline {
     width: 48%;
@@ -2032,5 +2124,104 @@ body, html {
     width: 77%; }
     .media-grid .media-item img {
       width: 100%; } }
-
-/*# sourceMappingURL=datawagovautheme.css.map */
+#access-and-use-card {
+  margin: 30px 0;
+  /* Blue Card Header */
+  /* Access and Licence Row */
+  /* Data Access Statement */
+  /* Request Access Button */ }
+  #access-and-use-card h1, #access-and-use-card h2, #access-and-use-card h3, #access-and-use-card h4, #access-and-use-card h5 {
+    color: #0c4a77; }
+  #access-and-use-card .card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 6px;
+    margin: 0 auto; }
+  #access-and-use-card .row {
+    margin: 0;
+    width: 100%;
+    background-color: #e4e9ed; }
+  #access-and-use-card .sub_title {
+    line-height: 26px;
+    font-weight: bold;
+    color: #0c4a77;
+    text-transform: uppercase; }
+  #access-and-use-card .card_body_text {
+    line-height: 18px;
+    color: #565656; }
+  #access-and-use-card .card_header {
+    background-color: #0c4a77;
+    border-radius: 6px 6px 0px 0px; }
+  #access-and-use-card .card_title {
+    font-size: 22px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px;
+    font-family: "Open Sans", sans-serif; }
+  #access-and-use-card .license-url {
+    display: flex;
+    text-decoration: none;
+    color: #0c4a77; }
+    #access-and-use-card .license-url:hover, #access-and-use-card .license-url:focus {
+      text-decoration: none; }
+  #access-and-use-card .access_and_license_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+  #access-and-use-card .access_and_licence_col {
+    padding: 24px 16px 24px 16px;
+    display: flex;
+    max-width: 50%;
+    width: 50%;
+    flex-wrap: wrap; }
+    @media (max-width: 979px) {
+      #access-and-use-card .access_and_licence_col {
+        width: 49%;
+        max-width: 100%;
+        min-width: 330px; } }
+  #access-and-use-card .sub_column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+  #access-and-use-card .icon_column {
+    flex: 0 0 74px; }
+  #access-and-use-card .icon_cell {
+    flex: 1;
+    color: white;
+    flex: 2; }
+  #access-and-use-card .icon_cell.access_icon > img {
+    width: 60px;
+    height: 60px; }
+  #access-and-use-card .icon_cell.licence_icon > img {
+    width: 60px;
+    height: 60px; }
+  #access-and-use-card .addt_licence_options {
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    @media (max-width: 979px) {
+      #access-and-use-card .addt_licence_options {
+        flex-basis: 100%; } }
+  #access-and-use-card .addt_licence_options_text {
+    padding-top: 12px;
+    color: #0c4a77;
+    line-height: 18px; }
+  #access-and-use-card .data_access_statement_container {
+    padding: 0px 16px 8px 16px; }
+  #access-and-use-card .call_to_action_container {
+    border-radius: 0px 0px 6px 6px;
+    display: flex;
+    justify-content: flex-end; }
+  #access-and-use-card .call_to_action_button_container {
+    padding: 0px 16px 24px 16px; }
