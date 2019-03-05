@@ -15,7 +15,7 @@
 {% block resource_item_title %}
 	<img data-toggle="modal" data-target="#access-level-legend" class="access-level-pointer resource-access-level-icon" src="/lock_icons/{{ access_level }}.png" alt="{{ access_level }}" title="{{ access_level_title }} - {{ access_level_text }}">
 	<a class="heading" href="{{ url }}" title="{{ res.name or res.description }}">
-		{{ h.resource_display_name(res) | truncate(50) }}
+		{{ h.resource_display_name(res) }}
 		<span class="format-label" property="dc:format" data-format="{{ res.format.lower() or 'data' }}">{{ h.get_translated(res, 'format') }}</span>
 		{{ h.popular('views', res.tracking_summary.total, min=10) }}
 	</a>

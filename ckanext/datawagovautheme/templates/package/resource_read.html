@@ -8,6 +8,10 @@
   {% snippet "snippets/license.html", pkg_dict=pkg %}
 {% endblock %}
 
+{% block breadcrumb_content %}
+  {{ super() }}
+  <li class="active"><a href="">{{ h.resource_display_name(res) }}</a></li>
+{% endblock %}
 
 {% block resource_content %}
 	{% set schema = h.scheming_get_dataset_schema('dataset') %}
