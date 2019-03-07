@@ -14,7 +14,7 @@ ckan.module('access-level-tooltips', function($, _) {
       if (access_level) {
         $.each(access_level.children(), function(index, option){
             if (option.value in list) {
-                option.setAttribute('title', option.text + ' - ' + list[option.value]);
+                option.textContent = option.text + ' - ' + list[option.value];
             }
         });
       };
