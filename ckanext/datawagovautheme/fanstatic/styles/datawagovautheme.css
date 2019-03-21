@@ -110,8 +110,6 @@ small {
     border-bottom: 3px solid #cccfd1;
     color: #69737c;
     font-size: 16px;
-    /* set background color for secondary button */
-    background: #f7f7f7;
     background-image: none; }
   .wrapper-datawa .btn-group > .btn {
     border-radius: 0; }
@@ -318,6 +316,9 @@ small {
     border-bottom-color: #002542; }
   .btn-primary i, .btn-primary:focus i, .btn-success i, .btn-success:focus i {
     color: #fff; }
+
+.btn-default {
+  background-color: #f7f7f7; }
 
 a.tag, .group-list .module-heading h3 a.tag, .datawa-organization-list #publisher-tree > ul > li.tag {
   color: #565656;
@@ -1508,10 +1509,6 @@ boxes. */
   color: #69737c;
   background-color: white; }
 
-/* Change the border colors of the "Search" box. */
-.homepage .module-search .search-giant input {
-  border: 1px solid #c7cacd }
-
 /* Change the background color of the "Popular Tags" box. */
 .homepage .module-search .tags {
   color: #69737c;
@@ -1655,6 +1652,8 @@ body, html {
 
 .form-group .controls input, .form-group .controls select, .control-medium .controls input, .control-medium .controls select {
   width: 50%; }
+.form-group .controls .checkbox input, .control-medium .controls .checkbox input {
+  width: 5%; }
 .form-group .controls #field-title, .form-group .controls #field-notes, .form-group .controls #field-data_access_statement, .form-group .controls #field-image-url, .form-group .controls #field-name, .control-medium .controls #field-title, .control-medium .controls #field-notes, .control-medium .controls #field-data_access_statement, .control-medium .controls #field-image-url, .control-medium .controls #field-name {
   width: 100%; }
 
@@ -2225,3 +2224,5 @@ body, html {
     justify-content: flex-end; }
   #access-and-use-card .call_to_action_button_container {
     padding: 0px 16px 24px 16px; }
+
+/*# sourceMappingURL=datawagovautheme.css.map */
