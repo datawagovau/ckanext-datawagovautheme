@@ -234,6 +234,9 @@ body, html{
         input, select {
             width: 50%;
         }
+        .checkbox input {
+            width: 5%;
+        }
         #field-title, #field-notes, #field-data_access_statement, #field-image-url, #field-name {
             width: 100%;
         }
