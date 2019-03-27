@@ -76,6 +76,7 @@
 	            <div class="sub_title">Data Access Statement</div>
 	            <div class="card_body_text">
 					{{ h.render_markdown(pkg.data_access_statement) }}
+				</div>
 	        </div>
 	    </div>
 	    {% else %}
@@ -85,6 +86,7 @@
 			            <div class="sub_title">Data Access Statement</div>
 			            <div class="card_body_text">
 							{{access_level_placeholders[pkg.access_level]|safe}}
+						</div>
 			        </div>
 			    </div>
 	    	{% endif %}
