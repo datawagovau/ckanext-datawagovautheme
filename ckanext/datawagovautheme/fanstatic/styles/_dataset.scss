@@ -1,5 +1,9 @@
+.search-form {
+    border-bottom: 1px solid #e4e1e1;
+}
+
 .dataset-item{
-  border-bottom: 1px dotted #efefef;
+  border-bottom: 1px solid #e4e1e1;
   .dataset-heading{
     font-size: $h3-fz;
     a{
@@ -19,6 +23,12 @@
       text-decoration: none;
     }
   }
+  .dataset-item-access-level {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -2px;
+  }
 }
 ul.dataset-list{
   margin-left: 0;
@@ -27,6 +37,16 @@ ul.dataset-list{
   h1.heading{
     hyphens: none;
     word-break: break-word;
+  }
+}
+
+.resource-level-res {
+  margin: 20px 0;
+  .resource-access-level-icon {
+    width: 32px;
+  }
+  .resource-access-level-icon, .access-level-text {
+    display: inline-block;
   }
 }
 

@@ -1,0 +1,6 @@
+{% if 'section_title' in field %}
+    <h3>{{ field.section_title }}</h3>
+{% endif %}
+
+<input type="hidden" id='field-{{ field.field_name }}' name="{{ field.field_name }}" value="{{ data[field.field_name] }}" {% if data_module is defined %}data-module="{{data_module}}"{% endif %}
+    {% if field.display_property %} property="{{ field.display_property }}" {% endif %} />

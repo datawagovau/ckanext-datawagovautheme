@@ -1,0 +1,12 @@
+{% ckan_extends %}
+
+{% if not access_level_opt %}
+	{% set access_level_opt = h.datawa_scheming_select_options('access_level') %}
+{% endif %}
+
+
+{% block package_list_inner %}
+	{% for package in packages %}
+		{% snippet 'snippets/package_item.html', package=package, item_class=item_class, hide_resources=hide_resources, banner=banner, truncate=truncate, truncate_title=truncate_title, access_level_opt=access_level_opt %}
+	{% endfor %}
+{% endblock %}

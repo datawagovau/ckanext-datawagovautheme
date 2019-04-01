@@ -6,3 +6,42 @@
   {{ super() }}
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
 {% endblock %}
+
+{% block main_content %}
+  <div class="modal fade access-level-legend-modal" id="access-level-legend" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <span class="ac-l-close-modal"><i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i></span>
+        <div class="modal-body">
+          <div>
+              <div class="access-level-legend-item">
+                <img class="access-level-icon" src="/lock_icons/open.png" alt="open" title="Open - This dataset is available for use by everyone" />
+                <span><strong>Open</strong> - This dataset is available for use by everyone</span>
+              </div>
+              <div class="access-level-legend-item">
+                <img class="access-level-icon" src="/lock_icons/open_login.png" alt="open_login" title="Open - Login - This dataset is available for use by everyone - login required" />
+                <span><strong>Open - Login</strong> - This dataset is available for use by everyone - login required</span>
+              </div>
+              <div class="access-level-legend-item">
+                <img class="access-level-icon" src="/lock_icons/fees_apply.png" alt="fees_apply" title="Fees Apply - This dataset is available for use subject to payment" />
+                <span><strong>Fees Apply</strong> - This dataset is available for use subject to payment</span>
+              </div>
+              <div class="access-level-legend-item">
+                <img class="access-level-icon" src="/lock_icons/restricted.png" alt="restricted" title="Restricted - This dataset is available for use subject to approval" />
+                <span><strong>Restricted</strong> - This dataset is available for use subject to approval</span>
+              </div>
+              <div class="access-level-legend-item">
+                <img class="access-level-icon" src="/lock_icons/govt_only.png" alt="govt_only" title="Government Use Only - This dataset is available for government use only" />
+                <span><strong>Government Use Only</strong> - This dataset is available for government use only</span>
+              </div>
+              <div class="access-level-legend-item">
+                <img class="access-level-icon" src="/lock_icons/mixed.png" alt="mixed" title="Open - A variety of access levels apply to this dataset's resources" />
+                <span><strong>Mixed</strong> - A variety of access levels apply to this dataset's resources</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ super() }}
+{% endblock %}
