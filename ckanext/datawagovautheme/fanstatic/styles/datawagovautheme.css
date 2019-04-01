@@ -2181,8 +2181,8 @@ body, html {
   #access-and-use-card .access_and_licence_col {
     padding: 24px 16px 24px 16px;
     display: flex;
-    max-width: 50%;
-    width: 50%;
+    max-width: 49%;
+    width: 49%;
     flex-wrap: wrap; }
     @media (max-width: 979px) {
       #access-and-use-card .access_and_licence_col {
