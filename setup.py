@@ -20,5 +20,8 @@ setup(
     entry_points="""
         [ckan.plugins]
         datawagovau_theme = ckanext.datawagovautheme.plugins:CustomTheme
+        [paste.paster_command]
+        wa = ckanext.datawagovautheme.command:WaCommand
+
     """
 )
